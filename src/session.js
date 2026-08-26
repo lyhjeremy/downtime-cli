@@ -20,10 +20,9 @@ function exitCodeFor(code, signal) {
 }
 
 async function drain(stream) {
-  return new Promise((resolve) => {
-    if (stream.write('')) resolve()
-    else stream.once('drain', resolve)
-  })
+  // The callback fires once this chunk is flushed, which is necessarily after
+  // everything queued ahead of it.
+  return new Promise((resolve) => stream.write('', () => resolve()))
 }
 
 /**
@@ -37,6 +36,7 @@ export async function runSession({ command, args, config, contentOptions = {} })
   const runner = new Runner(command, args, {
     thresholdSeconds: config.entry.thresholdSeconds,
     forwardStdin: !interactive,
+    forceColor: interactive,
   })
 
   // Piped input or piped output means there is no terminal to take over. Behave
@@ -92,13 +92,19 @@ export async function runSession({ command, args, config, contentOptions = {} })
     })
 
     screen.enter(handleKey)
+    screen.onEnd(() => {
+      // stdin closed, so no key can ever arrive. Never leave the session stuck
+      // behind a prompt nobody can answer.
+      if (finished) finish()
+      else leaveDowntime({ resumeOutput: true })
+    })
     screen.onResize(paint)
     paint()
     ticker = setInterval(paint, TICK_MS)
     ticker.unref?.()
   }
 
-  function leaveDowntime() {
+  function leaveDowntime({ resumeOutput = false } = {}) {
     if (!inDowntime) return
     inDowntime = false
     if (ticker) clearInterval(ticker)
@@ -107,6 +113,12 @@ export async function runSession({ command, args, config, contentOptions = {} })
       content?.stop()
     } catch {}
     screen.leave()
+    if (resumeOutput) {
+      // Bailing out early while the command is still going: hand back everything
+      // held so far and let the rest stream through as it normally would.
+      runner.stopCapture()
+      runner.flush()
+    }
   }
 
   function handleKey(key) {
@@ -121,12 +133,16 @@ export async function runSession({ command, args, config, contentOptions = {} })
       finish()
       return
     }
-    const changed = content?.onKey(key)
-    if (changed) {
-      paint()
-      // With immediate exit the task can only finish while a question is open,
-      // so nothing to check here. finish_round waits for the user's Enter.
+    if (key === 'q' || key === '\x1b') {
+      // Escape hatch: leave the game but let the command carry on. Without this
+      // the only way out of downtime mode is to kill the thing you were waiting
+      // for.
+      if (finished) finish()
+      else leaveDowntime({ resumeOutput: true })
+      return
     }
+    const changed = content?.onKey(key)
+    if (changed) paint()
   }
 
   // Manual entry: a single quiet line, and one key to accept it.
@@ -200,6 +216,12 @@ export async function runSession({ command, args, config, contentOptions = {} })
 
   let interrupts = 0
   function interrupt() {
+    if (finished) {
+      // The command is already gone. There is nothing to signal, and swallowing
+      // this would leave the session hanging with no way out.
+      finish()
+      return
+    }
     interrupts += 1
     runner.signal(interrupts === 1 ? 'SIGINT' : 'SIGKILL')
   }
@@ -219,12 +241,8 @@ export async function runSession({ command, args, config, contentOptions = {} })
       finish()
       return
     }
-    if (config.exit.mode === 'finish_round' && content?.canExit && !content.canExit()) {
-      // Mid-question. Show the quiet indicator and let them land the answer.
-      paint()
-      return
-    }
     if (config.exit.mode === 'finish_round') {
+      // Show the quiet indicator and let them land the answer in their own time.
       paint()
       return
     }

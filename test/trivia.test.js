@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { createTrivia, buildQueue, loadQuestions } from '../src/content/trivia/index.js'
+import { createTrivia, buildQueue, loadQuestions, NICE, MISS } from '../src/content/trivia/index.js'
 
 const sample = [
   { id: 'q1', question: 'One?', choices: ['a', 'b', 'c', 'd'], correctIndex: 0, funFact: 'fact one', explanation: 'why one', category: 'test', difficulty: 'easy' },
@@ -31,9 +31,9 @@ test('a correct answer is scored and rewarded with the fun fact', () => {
   assert.equal(mod.onKey(rightKey(mod)), true)
   assert.deepEqual(mod.stats(), { asked: 1, correct: 1 })
   const frame = mod.render(viewport)
-  assert.match(frame, /Correct/)
-  assert.ok(frame.includes(q.funFact))
-  assert.ok(!frame.includes(q.explanation))
+  assert.ok(NICE.some((line) => frame.includes(line)), 'no reaction shown')
+  assert.ok(frame.includes(q.funFact), 'the fun fact is the reward for being right')
+  assert.ok(!frame.includes(q.explanation), 'the correction belongs to wrong answers only')
 })
 
 test('a wrong answer shows the right one plus the explanation', () => {
@@ -42,9 +42,9 @@ test('a wrong answer shows the right one plus the explanation', () => {
   mod.onKey(wrongKey(mod))
   assert.deepEqual(mod.stats(), { asked: 1, correct: 0 })
   const frame = mod.render(viewport)
-  assert.match(frame, /Not quite/)
-  assert.ok(frame.includes(`The answer is ${LETTERS[q.correctIndex]})`))
-  assert.ok(frame.includes(q.explanation))
+  assert.ok(MISS.some((line) => frame.includes(line)), 'no reaction shown')
+  assert.ok(frame.includes(`It was ${LETTERS[q.correctIndex]}, ${q.choices[q.correctIndex]}.`))
+  assert.ok(frame.includes(q.explanation), 'a wrong answer still has to teach something')
 })
 
 test('numbers work as well as letters', () => {
@@ -110,4 +110,27 @@ test('the real bank drives the module without error', () => {
     mod.onKey('n')
   }
   mod.stop()
+})
+
+test('reactions vary between questions but never within one', () => {
+  const mod = newTrivia()
+  const first = mod.render(viewport)
+  assert.equal(mod.render(viewport), first)
+})
+
+test('the frame stays inside a short terminal window', () => {
+  const mod = createTrivia({ questions: loadQuestions(), persist: false })
+  mod.start({ requestRender() {}, requestExit() {} })
+  for (const rows of [12, 16, 24, 60]) {
+    mod.onKey(LETTERS[mod.current().correctIndex])
+    const lines = mod.render({ ...viewport, rows, columns: 60 }).split('\n')
+    assert.ok(lines.length <= rows, `frame was ${lines.length} lines in a ${rows}-row window`)
+    mod.onKey('n')
+  }
+})
+
+test('the category is shown so the topic changes visibly', () => {
+  const mod = createTrivia({ questions: loadQuestions(), persist: false })
+  mod.start({ requestRender() {}, requestExit() {} })
+  assert.ok(mod.render(viewport).includes(mod.current().category.toUpperCase()))
 })

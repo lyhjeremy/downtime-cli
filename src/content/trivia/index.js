@@ -2,10 +2,22 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { loadState, saveState } from '../../state.js'
-import { bold, dim, gray, green, red, cyan, yellow, wrapText } from '../../tui/ansi.js'
+import { bold, dim, gray, green, red, cyan, yellow, wrapText, visibleLength } from '../../tui/ansi.js'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const LETTERS = ['a', 'b', 'c', 'd']
+
+// Reactions rotate so the screen does not say the same word at you all evening.
+// They are picked from the question id rather than at random, so a given
+// question always reads the same way and the tests stay honest.
+export const NICE = ['Nice one.', 'Got it.', 'Correct.', "That's the one.", 'Spot on.', 'Yes.']
+export const MISS = ['Not this time.', 'Nope.', 'Not quite.', 'Close, but no.']
+
+function pick(list, seed) {
+  let hash = 0
+  for (let i = 0; i < seed.length; i++) hash = (hash * 31 + seed.charCodeAt(i)) >>> 0
+  return list[hash % list.length]
+}
 
 export function loadQuestions(path = join(here, 'questions.json')) {
   const parsed = JSON.parse(readFileSync(path, 'utf8'))
@@ -22,8 +34,8 @@ function shuffle(items, random = Math.random) {
 }
 
 /**
- * Picks an order that puts never-seen questions first, then falls back to
- * previously-seen ones (shuffled) so a long session never runs dry.
+ * Puts never-seen questions first, then previously-seen ones, so a long wait
+ * never runs dry but a short one never repeats.
  */
 export function buildQueue(questions, seenIds, random = Math.random) {
   const seen = new Set(seenIds)
@@ -41,15 +53,13 @@ export function createTrivia(options = {}) {
   let queue = buildQueue(questions, state.seenQuestionIds, random)
   let index = 0
   let current = null
-  let selected = null // index of the answer the user pressed
+  let selected = null
   let asked = 0
   let correct = 0
-  let ctx = null
   const seenThisSession = []
 
   function nextQuestion() {
     if (index >= queue.length) {
-      // Everything has been shown once this session; reshuffle rather than stop.
       queue = shuffle(questions, random)
       index = 0
     }
@@ -62,23 +72,14 @@ export function createTrivia(options = {}) {
     id: 'trivia',
     title: 'Trivia',
 
-    start(context) {
-      ctx = context
+    start() {
       nextQuestion()
-    },
-
-    // True while a question is on screen and unanswered. finish_round uses this
-    // to decide whether the user is mid-thought.
-    get answered() {
-      return selected !== null
     },
 
     canExit() {
       return selected !== null
     },
 
-    // The question on screen right now. Used by the tests, and by any future
-    // content that wants to theme itself around what is being asked.
     current() {
       return current
     },
@@ -105,13 +106,7 @@ export function createTrivia(options = {}) {
     },
 
     render(viewport) {
-      return renderFrame({
-        question: current,
-        selected,
-        asked,
-        correct,
-        viewport,
-      })
+      return renderFrame({ question: current, selected, asked, correct, viewport })
     },
 
     summary() {
@@ -124,102 +119,17 @@ export function createTrivia(options = {}) {
 
     stop() {
       if (!persist) return
-      const merged = [...state.seenQuestionIds.filter((id) => !seenThisSession.includes(id)), ...seenThisSession]
-      saveState({ seenQuestionIds: merged })
+      const kept = state.seenQuestionIds.filter((id) => !seenThisSession.includes(id))
+      saveState({ seenQuestionIds: [...kept, ...seenThisSession] })
     },
   }
 }
 
-function formatElapsed(ms) {
+export function formatElapsed(ms) {
   const total = Math.floor(ms / 1000)
   const minutes = Math.floor(total / 60)
   const seconds = total % 60
   return minutes > 0 ? `${minutes}m ${String(seconds).padStart(2, '0')}s` : `${seconds}s`
-}
-
-export function renderFrame({ question, selected, asked, correct, viewport }) {
-  const columns = Math.max(40, Math.min(viewport.columns || 80, 100))
-  const width = columns - 4
-  const lines = []
-  const pad = '  '
-
-  // Header
-  const tally = asked > 0 ? `${correct}/${asked}` : ''
-  const left = cyan('downtime')
-  const right = dim(formatElapsed(viewport.elapsedMs) + (tally ? ` · ${tally}` : ''))
-  lines.push('')
-  lines.push(pad + left + ' '.repeat(Math.max(1, width - 8 - stripLen(right))) + right)
-  lines.push(pad + dim('─'.repeat(width)))
-  lines.push('')
-
-  if (!question) {
-    lines.push(pad + dim('No questions available.'))
-    return lines.join('\n')
-  }
-
-  // Question
-  for (const line of wrapText(question.question, width)) {
-    lines.push(pad + bold(line))
-  }
-  lines.push('')
-
-  // Choices
-  question.choices.forEach((choice, i) => {
-    const letter = LETTERS[i]
-    const isCorrect = i === question.correctIndex
-    const isPicked = i === selected
-    let marker = ' '
-    let text = `${letter}) ${choice}`
-    if (selected !== null) {
-      if (isCorrect) {
-        marker = green('✓')
-        text = green(text)
-      } else if (isPicked) {
-        marker = red('✗')
-        text = red(text)
-      } else {
-        text = dim(text)
-      }
-    }
-    const wrapped = wrapText(text, width - 6)
-    lines.push(pad + `  ${marker} ` + wrapped[0])
-    for (const cont of wrapped.slice(1)) lines.push(pad + '     ' + cont)
-  })
-  lines.push('')
-
-  // Feedback
-  if (selected !== null) {
-    const gotIt = selected === question.correctIndex
-    lines.push(pad + (gotIt ? green(bold('Correct.')) : yellow(bold('Not quite.'))))
-    const body = gotIt
-      ? question.funFact
-      : `The answer is ${LETTERS[question.correctIndex]}) ${question.choices[question.correctIndex]}. ${question.explanation}`
-    for (const line of wrapText(body, width)) {
-      lines.push(pad + gray(line))
-    }
-    lines.push('')
-  }
-
-  // Footer
-  const hint =
-    selected === null
-      ? 'press a-d or 1-4 to answer'
-      : viewport.taskFinished
-        ? '[n] one more · [enter] back to your task'
-        : '[n] next question'
-  const status = viewport.taskFinished
-    ? green('✅ task finished')
-    : dim(`⏳ ${truncate(viewport.command, Math.max(12, width - 24))} · running`)
-
-  lines.push(pad + dim('─'.repeat(width)))
-  lines.push(pad + dim(hint))
-  lines.push(pad + status)
-
-  return lines.join('\n')
-}
-
-function stripLen(s) {
-  return String(s).replace(/\x1b\[[0-9;?]*[a-zA-Z]/g, '').length
 }
 
 function truncate(s, max) {
@@ -227,4 +137,101 @@ function truncate(s, max) {
   return str.length <= max ? str : str.slice(0, Math.max(1, max - 1)) + '…'
 }
 
-export { formatElapsed }
+export function renderFrame({ question, selected, asked, correct, viewport }) {
+  const rows = Math.max(8, viewport.rows || 24)
+  const columns = Math.max(40, Math.min(viewport.columns || 80, 92))
+  const width = columns - 4
+  const pad = '  '
+  const answered = selected !== null
+
+  if (!question) return `\n${pad}${dim('No questions available.')}\n`
+
+  // Every line carries a priority. 0 has to survive; higher numbers are given
+  // up first when the window is short. Breathing room goes before content, and
+  // content goes before the keys you need to get out of here.
+  const lines = []
+  const add = (text, priority = 0) => lines.push({ text, priority })
+
+  const left = cyan('downtime')
+  const tally = asked > 0 ? ` ${dim('·')} ${correct} of ${asked}` : ''
+  const right = dim(formatElapsed(viewport.elapsedMs)) + tally
+  const gap = Math.max(1, width - visibleLength(left) - visibleLength(right))
+
+  add('', 9)
+  add(pad + left + ' '.repeat(gap) + right, 1)
+  add('', 9)
+  if (question.category) {
+    add(pad + dim(question.category.toUpperCase()), 6)
+    add('', 8)
+  }
+
+  for (const line of wrapText(question.question, width)) add(pad + bold(line), 0)
+  add('', 7)
+
+  question.choices.forEach((choice, i) => {
+    const isCorrect = i === question.correctIndex
+    const isPicked = i === selected
+    let mark = ' '
+    let label = dim(LETTERS[i])
+    let text = choice
+    if (answered) {
+      if (isCorrect) {
+        mark = green('✓')
+        label = green(LETTERS[i])
+        text = green(choice)
+      } else if (isPicked) {
+        mark = red('✗')
+        label = red(LETTERS[i])
+        text = red(choice)
+      } else {
+        text = dim(choice)
+      }
+    }
+    const wrapped = wrapText(text, width - 7)
+    add(pad + `  ${mark} ${label}  ` + wrapped[0], 0)
+    for (const cont of wrapped.slice(1)) add(pad + ' '.repeat(7) + cont, 0)
+  })
+
+  // Being right earns a fact, being wrong earns a different one, and neither is
+  // a telling-off.
+  if (answered) {
+    const gotIt = selected === question.correctIndex
+    add('', 7)
+    if (gotIt) {
+      add(pad + green('✓ ') + bold(pick(NICE, question.id)), 2)
+      for (const line of wrapText(question.funFact, width - 2)) add(pad + '  ' + gray(line), 3)
+    } else {
+      add(pad + yellow('· ') + bold(pick(MISS, question.id)), 2)
+      const answer = `It was ${LETTERS[question.correctIndex]}, ${question.choices[question.correctIndex]}.`
+      for (const line of wrapText(`${answer} ${question.explanation}`, width - 2)) {
+        add(pad + '  ' + gray(line), 3)
+      }
+    }
+  }
+
+  const hints = answered
+    ? viewport.taskFinished
+      ? `${bold('[enter]')} back to your task   ${dim('[n] one more')}`
+      : `${bold('[n]')} next question   ${dim('[q] back to your task')}`
+    : dim('press a-d or 1-4')
+  const status = viewport.taskFinished
+    ? green('✅ task finished')
+    : dim(`⏳ ${truncate(viewport.command, Math.max(10, width - 24))}`)
+  const statusGap = Math.max(2, width - visibleLength(hints) - visibleLength(status))
+  add('', 8)
+  add(pad + dim('─'.repeat(width)), 5)
+  add(pad + hints + ' '.repeat(statusGap) + status, 0)
+
+  // Give up the least important lines until it fits. Dropping from the end of a
+  // priority band means a long fact is shortened rather than beheaded.
+  while (lines.length > rows) {
+    let worst = -1
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].priority > 0 && (worst === -1 || lines[i].priority >= lines[worst].priority)) worst = i
+    }
+    if (worst === -1) break
+    lines.splice(worst, 1)
+  }
+
+  return lines.slice(0, rows).map((line) => line.text).join('\n')
+}

@@ -21,6 +21,7 @@ export class Runner extends EventEmitter {
     this.args = args
     this.thresholdMs = Math.round((options.thresholdSeconds ?? 5) * 1000)
     this.forwardStdin = Boolean(options.forwardStdin)
+    this.forceColor = Boolean(options.forceColor)
     this.child = null
     this.startedAt = null
     this.finishedAt = null
@@ -45,6 +46,7 @@ export class Runner extends EventEmitter {
       // the keyboard, and a child sharing the TTY would fight it for keystrokes.
       stdio: [this.forwardStdin ? 'inherit' : 'ignore', 'pipe', 'pipe'],
       detached: this.detached,
+      env: this.#childEnv(),
     })
 
     this.child.on('error', (err) => {
@@ -87,6 +89,17 @@ export class Runner extends EventEmitter {
       startedAt: this.startedAt,
     })
     return this
+  }
+
+  // Capturing means the child writes to a pipe, and most tools turn colour off
+  // when they see one. The output is still going to end up on a terminal, so we
+  // ask for colour back. Anything the user has set themselves wins.
+  #childEnv() {
+    if (!this.forceColor) return process.env
+    const env = { ...process.env }
+    if (env.FORCE_COLOR === undefined) env.FORCE_COLOR = '1'
+    if (env.CLICOLOR_FORCE === undefined) env.CLICOLOR_FORCE = '1'
+    return env
   }
 
   #onOutput(stream, chunk) {

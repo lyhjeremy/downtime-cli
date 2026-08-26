@@ -49,11 +49,11 @@
   "question": "Which of these animals is a marsupial?",
   "choices": [
    "Platypus",
-   "Otter",
+   "Wombat",
    "Hedgehog",
-   "Wombat"
+   "Otter"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "Wombats produce cube-shaped droppings, formed by the varying stiffness of the intestine wall. The cubes do not roll away, which helps mark territory.",
   "explanation": "The platypus is a monotreme, one of the very few mammals that lay eggs, so it sits in its own group.",
   "category": "animals",
@@ -109,11 +109,11 @@
   "question": "Which bird is famous for being unable to fly despite having wings?",
   "choices": [
    "Swift",
-   "Kingfisher",
+   "Penguin",
    "Albatross",
-   "Penguin"
+   "Kingfisher"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "Penguin wings became flippers. Underwater they are effectively flying, and some species reach speeds of 30 kilometres per hour.",
   "explanation": "The albatross is the opposite case, with the largest wingspan of any bird and the ability to glide for hours without a flap.",
   "category": "animals",
@@ -139,11 +139,11 @@
   "question": "Which animal has the longest lifespan?",
   "choices": [
    "Galapagos tortoise",
-   "Greenland shark",
+   "African elephant",
    "Bowhead whale",
-   "African elephant"
+   "Greenland shark"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "Some are estimated at over 300 years old. They do not reach breeding age until around 150.",
   "explanation": "Bowhead whales can pass 200 years, which is remarkable, but the Greenland shark still outlasts them.",
   "category": "animals",
@@ -151,18 +151,18 @@
  },
  {
   "id": "ani-011",
-  "question": "How many legs does a spider have?",
+  "question": "What do spiders do that means a dead one curls up?",
   "choices": [
-   "Six",
-   "Eight",
-   "Ten",
-   "Twelve"
+   "Their muscles contract",
+   "They extend legs with fluid pressure, not muscle",
+   "Their exoskeleton shrinks",
+   "They dry out instantly"
   ],
   "correctIndex": 1,
-  "funFact": "Spiders have no muscles to extend their legs. They pump fluid in under pressure, which is why a dead spider curls up.",
-  "explanation": "Six legs means an insect. Spiders are arachnids, along with scorpions, mites and ticks.",
+  "funFact": "Spiders have muscles to fold their legs but none to straighten them. They pump fluid in under pressure instead, and when the pressure goes, so does the leg.",
+  "explanation": "That hydraulic system is also why a spider that loses too much fluid cannot walk.",
   "category": "animals",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "ani-012",
@@ -196,44 +196,44 @@
  },
  {
   "id": "ani-014",
-  "question": "What is the tallest animal in the world?",
+  "question": "How many neck vertebrae does a giraffe have?",
   "choices": [
-   "Elephant",
-   "Ostrich",
-   "Giraffe",
-   "Camel"
+   "Seven, the same as you",
+   "Twelve",
+   "Twenty",
+   "Thirty-two"
   ],
-  "correctIndex": 2,
-  "funFact": "A giraffe has the same number of neck vertebrae as a human, seven. Each one is just enormously elongated.",
-  "explanation": "The ostrich is the tallest bird at around 2.7 metres, but a giraffe can reach nearly twice that.",
+  "correctIndex": 0,
+  "funFact": "Nearly every mammal has seven, from mice to whales. The giraffe's are simply enormous, with some over 25 centimetres each.",
+  "explanation": "Sloths and manatees are the rare exceptions that break the rule.",
   "category": "animals",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "ani-015",
-  "question": "Which insect produces honey?",
+  "question": "How much honey does a single worker bee make in its whole life?",
   "choices": [
-   "Wasp",
-   "Hornet",
-   "Bee",
-   "Ant"
+   "About a jar",
+   "About a tablespoon",
+   "About a twelfth of a teaspoon",
+   "About a cup"
   ],
   "correctIndex": 2,
-  "funFact": "A single worker bee makes about a twelfth of a teaspoon of honey in its entire life.",
-  "explanation": "Wasps and hornets are close relatives and some feed on nectar, but they do not store honey.",
+  "funFact": "A twelfth of a teaspoon. A jar of honey represents the entire working lives of hundreds of bees and a collective flight distance of several times round the Earth.",
+  "explanation": "Worker bees live about six weeks in summer, and only part of that is spent foraging.",
   "category": "animals",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "ani-016",
   "question": "What does a chameleon primarily change colour for?",
   "choices": [
    "Camouflage",
-   "Confusing predators",
+   "Communication and temperature",
    "Attracting prey",
-   "Communication and temperature"
+   "Confusing predators"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "Colour changes mostly signal mood and status to other chameleons, or help regulate heat. Camouflage is a side benefit rather than the main purpose.",
   "explanation": "Most chameleons are already well matched to their surroundings, so they do not need to change colour to hide.",
   "category": "animals",
@@ -258,12 +258,12 @@
   "id": "ani-018",
   "question": "What is the largest species of big cat?",
   "choices": [
-   "Tiger",
    "Lion",
+   "Tiger",
    "Jaguar",
    "Leopard"
   ],
-  "correctIndex": 0,
+  "correctIndex": 1,
   "funFact": "Siberian tigers can weigh over 300 kilograms. Their stripes are on the skin as well as the fur, so the pattern shows if shaved.",
   "explanation": "Lions are close in weight but generally shorter in body length, and tigers hold the record.",
   "category": "animals",
@@ -319,11 +319,11 @@
   "question": "Which animal's fingerprints are almost identical to a human's?",
   "choices": [
    "Chimpanzee",
-   "Orangutan",
+   "Koala",
    "Gorilla",
-   "Koala"
+   "Orangutan"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "Koala prints are so similar that they have reportedly caused confusion at crime scenes. The similarity evolved independently of primates.",
   "explanation": "Great apes do have fingerprints, but the koala's are the ones close enough to be mistaken for human under a lens.",
   "category": "animals",
@@ -454,11 +454,11 @@
   "question": "Who wrote the play 'A Doll's House'?",
   "choices": [
    "Anton Chekhov",
-   "Oscar Wilde",
+   "Henrik Ibsen",
    "August Strindberg",
-   "Henrik Ibsen"
+   "Oscar Wilde"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "The sound of the front door slamming at the end was described as echoing across Europe. Some early productions demanded an altered, softer ending.",
   "explanation": "Chekhov and Strindberg were writing around the same time, which makes them reasonable guesses.",
   "category": "arts",
@@ -526,18 +526,18 @@
  },
  {
   "id": "art-011",
-  "question": "Which colour is made by mixing blue and yellow?",
+  "question": "Why do screens make yellow without any yellow light?",
   "choices": [
-   "Purple",
-   "Orange",
-   "Brown",
-   "Green"
+   "A yellow filter",
+   "Red and green light together",
+   "A coating on the glass",
+   "They do emit yellow"
   ],
-  "correctIndex": 3,
-  "funFact": "That rule holds for paint but not for light. Mixing blue and yellow light gives something close to white.",
-  "explanation": "Purple comes from blue and red, and orange from red and yellow.",
+  "correctIndex": 1,
+  "funFact": "Your eye has no yellow detector. Red and green cones firing together is what yellow is, so a screen can fake it perfectly with two colours.",
+  "explanation": "That is why screens need only red, green and blue, while paint needs a genuine yellow pigment.",
   "category": "arts",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "art-012",
@@ -589,11 +589,11 @@
   "question": "'The Starry Night' depicts the view from where?",
   "choices": [
    "A Paris studio",
-   "An asylum window",
+   "A hilltop in Provence",
    "A ship at sea",
-   "A hilltop in Provence"
+   "An asylum window"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "Van Gogh painted it from memory during his stay at Saint-Rémy in 1889, adding a village that was not actually visible.",
   "explanation": "He was in Provence, but the specific view was from the window of the asylum where he was staying.",
   "category": "arts",
@@ -664,11 +664,11 @@
   "question": "Which novel opens with the line 'Call me Ishmael'?",
   "choices": [
    "Robinson Crusoe",
-   "Moby-Dick",
+   "The Old Man and the Sea",
    "Treasure Island",
-   "The Old Man and the Sea"
+   "Moby-Dick"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "It sold poorly and was largely forgotten during Melville's lifetime. Its reputation was rebuilt in the 1920s, thirty years after he died.",
   "explanation": "All four are sea stories, which is what makes the other options plausible.",
   "category": "arts",
@@ -679,11 +679,11 @@
   "question": "What art movement is Claude Monet associated with?",
   "choices": [
    "Cubism",
-   "Impressionism",
+   "Surrealism",
    "Baroque",
-   "Surrealism"
+   "Impressionism"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "The movement was named, mockingly, after his painting 'Impression, Sunrise'. The artists adopted the insult as their label.",
   "explanation": "Cubism came later with Picasso and Braque, and Baroque was two centuries earlier.",
   "category": "arts",
@@ -828,12 +828,12 @@
   "id": "bod-006",
   "question": "What is the smallest bone in the human body?",
   "choices": [
-   "Stapes, in the ear",
+   "The kneecap",
    "The tip of the little finger",
    "A bone in the nose",
-   "The kneecap"
+   "Stapes, in the ear"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "It is about three millimetres long and it is fully grown at birth, unlike every other bone.",
   "explanation": "The three smallest bones are all in the middle ear, transmitting vibration from the eardrum inward.",
   "category": "body",
@@ -873,12 +873,12 @@
   "id": "bod-009",
   "question": "What is the fastest-healing tissue in the human body?",
   "choices": [
-   "The cornea",
    "Skin",
    "Bone",
+   "The cornea",
    "Muscle"
   ],
-  "correctIndex": 0,
+  "correctIndex": 2,
   "funFact": "Minor corneal scratches often heal within a day or two. The cornea has no blood vessels, which is also why corneal transplants are rarely rejected.",
   "explanation": "Skin heals fast but takes days to weeks, and bone takes months.",
   "category": "body",
@@ -901,18 +901,18 @@
  },
  {
   "id": "bod-011",
-  "question": "Which blood cells fight infection?",
+  "question": "How long does it take a red blood cell to travel all the way round your body?",
   "choices": [
-   "Red cells",
-   "Plasma cells only",
-   "Platelets",
-   "White cells"
+   "About 20 seconds",
+   "About 5 minutes",
+   "About 30 minutes",
+   "About 2 hours"
   ],
-  "correctIndex": 3,
-  "funFact": "They are outnumbered by red cells roughly 700 to one, and several distinct types handle different kinds of threat.",
-  "explanation": "Red cells carry oxygen and platelets handle clotting.",
+  "correctIndex": 0,
+  "funFact": "About 20 seconds for a full circuit. Each cell makes the trip roughly 170,000 times before it wears out after about four months.",
+  "explanation": "The heart pumps enough blood in a day to fill a small swimming pool.",
   "category": "body",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "bod-012",
@@ -963,12 +963,12 @@
   "id": "bod-015",
   "question": "What is the medical term for the kneecap?",
   "choices": [
-   "Patella",
+   "Sternum",
    "Scapula",
    "Clavicle",
-   "Sternum"
+   "Patella"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "It is a sesamoid bone, meaning it sits inside a tendon rather than joining two bones. It is the largest of its kind in the body.",
   "explanation": "The scapula is the shoulder blade, the clavicle the collarbone and the sternum the breastbone.",
   "category": "body",
@@ -1036,18 +1036,18 @@
  },
  {
   "id": "bod-020",
-  "question": "What is the function of red blood cells?",
+  "question": "Roughly how much of your body is made of cells that are not human?",
   "choices": [
-   "Carry oxygen",
-   "Fight bacteria",
-   "Clot wounds",
-   "Produce hormones"
+   "Almost none",
+   "About a tenth",
+   "Around half, by cell count",
+   "Over 90 percent"
   ],
-  "correctIndex": 0,
-  "funFact": "They lose their nucleus as they mature, which frees up space for more haemoglobin but means they cannot repair themselves and last about four months.",
-  "explanation": "Fighting bacteria is the white cells' job and clotting is done by platelets.",
+  "correctIndex": 2,
+  "funFact": "Bacterial cells roughly match human cells in number, though they are far smaller and make up only a couple of kilograms.",
+  "explanation": "The old claim of ten to one has been revised down by better counting, but the rough parity holds.",
   "category": "body",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "bod-021",
@@ -1143,12 +1143,12 @@
   "id": "fud-002",
   "question": "What are capers?",
   "choices": [
-   "Flower buds",
    "Small unripe olives",
+   "Immature grapes",
    "Seed pods",
-   "Immature grapes"
+   "Flower buds"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "They are picked before opening and then cured in salt or brine. Left alone they would become a large white flower.",
   "explanation": "They look like small olives once cured, which is where the confusion comes from.",
   "category": "food",
@@ -1159,11 +1159,11 @@
   "question": "Which country consumes the most coffee per person?",
   "choices": [
    "Italy",
-   "United States",
    "Brazil",
-   "Finland"
+   "Finland",
+   "United States"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "Finns drink roughly 12 kilograms of coffee per person per year, and Nordic countries take most of the top spots.",
   "explanation": "Brazil grows the most coffee but does not lead on drinking it, and Italian servings are small even if frequent.",
   "category": "food",
@@ -1174,11 +1174,11 @@
   "question": "A tomato is botanically classified as what?",
   "choices": [
    "A vegetable",
-   "A fruit",
+   "A legume",
    "A tuber",
-   "A legume"
+   "A fruit"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "The US Supreme Court ruled in 1893 that it counted as a vegetable for tax purposes, while accepting it was botanically a fruit.",
   "explanation": "Anything that develops from a flower's ovary and holds seeds is a fruit, which also covers cucumbers and peppers.",
   "category": "food",
@@ -1204,11 +1204,11 @@
   "question": "Which of these is a traditional ingredient in authentic Italian carbonara?",
   "choices": [
    "Cream",
-   "Guanciale",
+   "Peas",
    "Garlic",
-   "Peas"
+   "Guanciale"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "The sauce is made from egg, cheese and rendered pork fat. The creaminess is emulsion, not cream.",
   "explanation": "Cream is a common addition outside Italy but is not part of the traditional recipe.",
   "category": "food",
@@ -1234,11 +1234,11 @@
   "question": "Which fruit was once so rare in Europe that people rented them for parties?",
   "choices": [
    "Banana",
-   "Pineapple",
+   "Kiwi",
    "Mango",
-   "Kiwi"
+   "Pineapple"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "In 18th century Britain a single pineapple could cost the equivalent of thousands today, so hosts hired one as a centrepiece and returned it.",
   "explanation": "They were extremely hard to grow in a cold climate and slow to import before fast shipping.",
   "category": "food",
@@ -1265,10 +1265,10 @@
   "choices": [
    "Hazelnut",
    "Walnut",
-   "Cashew",
-   "Almond"
+   "Almond",
+   "Cashew"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "Almonds are not really nuts. They are the seed inside a fruit closely related to the peach.",
   "explanation": "Hazelnut paste is the base of praline and gianduja, which are the ones most often mistaken for marzipan.",
   "category": "food",
@@ -1294,11 +1294,11 @@
   "question": "Which country did the croissant originate in?",
   "choices": [
    "France",
-   "Austria",
+   "Switzerland",
    "Belgium",
-   "Switzerland"
+   "Austria"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "Its ancestor is the Viennese kipferl. It reached Paris in the 1800s and only became laminated with butter later.",
   "explanation": "France perfected the modern version, which is why it is thought of as French, but the shape came from Vienna.",
   "category": "food",
@@ -1306,18 +1306,18 @@
  },
  {
   "id": "fud-013",
-  "question": "What is the main ingredient of traditional hummus?",
+  "question": "Why does asparagus make some people's urine smell, but not others?",
   "choices": [
-   "Lentils",
-   "White beans",
-   "Chickpeas",
-   "Butter beans"
+   "Diet differences",
+   "Some people cannot smell the compound",
+   "Only some people produce it",
+   "Cooking method"
   ],
-  "correctIndex": 2,
-  "funFact": "The word hummus is simply Arabic for chickpea. The full name of the dish means chickpeas with tahini.",
-  "explanation": "Lentils and white beans make perfectly good dips but produce something else entirely.",
+  "correctIndex": 1,
+  "funFact": "Nearly everyone produces the sulphur compounds. The variation is in the nose, not the kidneys, and it comes down to a genetic difference in smell receptors.",
+  "explanation": "Studies have found people who cannot detect it in their own urine also cannot detect it in anyone else's.",
   "category": "food",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "fud-014",
@@ -1339,11 +1339,11 @@
   "question": "Which part of the plant is cinnamon?",
   "choices": [
    "Root",
-   "Bark",
+   "Leaf",
    "Seed",
-   "Leaf"
+   "Bark"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "The inner bark is stripped and dried, and it curls into quills on its own as it loses moisture.",
   "explanation": "Ginger and turmeric are the roots, and cloves are dried flower buds.",
   "category": "food",
@@ -1353,12 +1353,12 @@
   "id": "fud-016",
   "question": "What is the difference between an espresso and a ristretto?",
   "choices": [
-   "Ristretto uses less water",
+   "Ristretto has milk",
    "Ristretto is served cold",
    "Ristretto uses a different bean",
-   "Ristretto has milk"
+   "Ristretto uses less water"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "Less water pulled through the same grounds gives a sweeter, less bitter shot, since bitter compounds extract later.",
   "explanation": "A lungo is the opposite, pulled with more water for a longer and more bitter shot.",
   "category": "food",
@@ -1413,12 +1413,12 @@
   "id": "fud-020",
   "question": "What is the world's most widely consumed beverage after water?",
   "choices": [
-   "Tea",
    "Coffee",
+   "Milk",
    "Beer",
-   "Milk"
+   "Tea"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "All true tea, from green to black, comes from one plant. The difference is entirely in how the leaves are processed.",
   "explanation": "Coffee is more valuable as a traded commodity in some years, but tea is drunk by far more people.",
   "category": "food",
@@ -1444,11 +1444,11 @@
   "question": "What does 'sushi' actually refer to?",
   "choices": [
    "Raw fish",
-   "Seasoned rice",
+   "Wasabi paste",
    "Seaweed wrapping",
-   "Wasabi paste"
+   "Seasoned rice"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "The name comes from the sour taste of the vinegared rice. Sushi with no fish at all is still sushi.",
   "explanation": "Raw fish on its own is sashimi, which is a different dish entirely.",
   "category": "food",
@@ -1535,10 +1535,10 @@
   "choices": [
    "Amazon",
    "Yangtze",
-   "Mississippi",
-   "Nile"
+   "Nile",
+   "Mississippi"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "The Nile and the Amazon are close enough that the answer depends on where you decide the Amazon starts. Surveys have argued both ways.",
   "explanation": "The Amazon carries far more water, roughly a fifth of all river flow reaching the oceans, but is usually measured as slightly shorter.",
   "category": "geography",
@@ -1549,11 +1549,11 @@
   "question": "Which sea is the saltiest large body of water on Earth's surface?",
   "choices": [
    "Red Sea",
-   "Mediterranean",
    "Caspian Sea",
-   "Dead Sea"
+   "Dead Sea",
+   "Mediterranean"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "It is about ten times saltier than the ocean, which is why you float in it without trying. Its surface is also the lowest land point on Earth.",
   "explanation": "The Red Sea is unusually salty for an open sea, but the Dead Sea is a landlocked lake with no outlet, so salt accumulates.",
   "category": "geography",
@@ -1564,11 +1564,11 @@
   "question": "Mount Kilimanjaro is in which country?",
   "choices": [
    "Kenya",
-   "Tanzania",
    "Uganda",
+   "Tanzania",
    "Ethiopia"
   ],
-  "correctIndex": 1,
+  "correctIndex": 2,
   "funFact": "It is the tallest free-standing mountain in the world, meaning it is not part of a range. It rises straight off the plain.",
   "explanation": "The Kenyan border runs close by and the classic photographs are often taken from Kenya, which is where the confusion comes from.",
   "category": "geography",
@@ -1608,12 +1608,12 @@
   "id": "geo-008",
   "question": "Which two countries share the longest international border?",
   "choices": [
-   "USA and Canada",
    "Russia and China",
+   "USA and Canada",
    "Argentina and Chile",
    "India and Bangladesh"
   ],
-  "correctIndex": 0,
+  "correctIndex": 1,
   "funFact": "It runs about 8,900 kilometres. A long stretch of it follows the 49th parallel in an almost perfectly straight line.",
   "explanation": "Argentina and Chile share the longest border in the southern hemisphere, but it is roughly half the length.",
   "category": "geography",
@@ -1699,11 +1699,11 @@
   "question": "Which country has the longest coastline?",
   "choices": [
    "Australia",
-   "Canada",
+   "Russia",
    "Indonesia",
-   "Russia"
+   "Canada"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "Roughly 200,000 kilometres of it, largely because of the tens of thousands of Arctic islands in the north.",
   "explanation": "Indonesia has more islands but they are clustered, while Canada's Arctic archipelago is enormous and deeply indented.",
   "category": "geography",
@@ -1711,29 +1711,29 @@
  },
  {
   "id": "geo-015",
-  "question": "What is the official language of Brazil?",
+  "question": "Which country has a town where the sun does not rise for months, so residents get paid to live there?",
   "choices": [
-   "Spanish",
-   "Portuguese",
-   "Brazilian",
-   "French"
+   "Norway",
+   "Canada",
+   "Russia",
+   "Greenland"
   ],
-  "correctIndex": 1,
-  "funFact": "Brazil has more Portuguese speakers than Portugal by a factor of about twenty. It is the largest Portuguese-speaking country by far.",
-  "explanation": "Most of South America speaks Spanish, which is why Brazil stands out. The 1494 Treaty of Tordesillas is the reason.",
+  "correctIndex": 0,
+  "funFact": "Svalbard has polar night from late October to mid-February. It is also visa-free for anyone, which makes it one of the strangest places in the world to move to.",
+  "explanation": "Several Arctic countries have polar night, but Svalbard's open settlement rules make it the standout case.",
   "category": "geography",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "geo-016",
   "question": "Which US state is closest to Africa?",
   "choices": [
    "Florida",
-   "Maine",
    "South Carolina",
+   "Maine",
    "Hawaii"
   ],
-  "correctIndex": 1,
+  "correctIndex": 2,
   "funFact": "Maine's Quoddy Head is the nearest point, because the coastline curves east far more than a flat map suggests.",
   "explanation": "Florida feels closer because it is further south, but Africa's western bulge means the shortest line runs from the northeast.",
   "category": "geography",
@@ -1756,18 +1756,18 @@
  },
  {
   "id": "geo-018",
-  "question": "Which city is known as the Eternal City?",
+  "question": "What is odd about the Caspian Sea?",
   "choices": [
-   "Athens",
-   "Cairo",
-   "Jerusalem",
-   "Rome"
+   "It has no water in summer",
+   "Nobody agrees whether it is a sea or a lake",
+   "It is entirely artificial",
+   "It freezes completely"
   ],
-  "correctIndex": 3,
-  "funFact": "The nickname comes from the Roman belief that the city would go on forever no matter what happened to the empire around it.",
-  "explanation": "Athens is older as a continuously inhabited city, but the Eternal City tag has been attached to Rome since antiquity.",
+  "correctIndex": 1,
+  "funFact": "The distinction decides how its oil and gas are divided between five countries, so the argument is worth billions and has run for decades.",
+  "explanation": "It is landlocked like a lake but salty and vast like a sea, and international law treats the two very differently.",
   "category": "geography",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "geo-019",
@@ -1818,12 +1818,12 @@
   "id": "geo-022",
   "question": "What is the highest waterfall in the world?",
   "choices": [
-   "Angel Falls",
    "Niagara Falls",
    "Victoria Falls",
+   "Angel Falls",
    "Iguazu Falls"
   ],
-  "correctIndex": 0,
+  "correctIndex": 2,
   "funFact": "It drops 979 metres in Venezuela, so far that in the dry season much of the water turns to mist before reaching the ground.",
   "explanation": "Victoria and Niagara are far wider and carry more water, but they are nowhere near as tall.",
   "category": "geography",
@@ -1906,18 +1906,18 @@
  },
  {
   "id": "his-003",
-  "question": "Who was the first President of the United States?",
+  "question": "Which US president had a pet alligator, according to persistent accounts?",
   "choices": [
-   "Thomas Jefferson",
-   "George Washington",
-   "John Adams",
-   "Benjamin Franklin"
+   "John Quincy Adams",
+   "Abraham Lincoln",
+   "Theodore Roosevelt",
+   "Thomas Jefferson"
   ],
-  "correctIndex": 1,
-  "funFact": "He turned down the chance to serve a third term, setting a two-term custom that held for 150 years before it became law.",
-  "explanation": "Adams was the second president and Jefferson the third. Franklin never held the office.",
+  "correctIndex": 0,
+  "funFact": "It was reportedly a gift from the Marquis de Lafayette and kept in a White House bathroom. Adams also swam naked in the Potomac most mornings.",
+  "explanation": "Roosevelt had the larger menagerie overall, including a badger and a one-legged rooster, which is why he is the tempting guess.",
   "category": "history",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "his-004",
@@ -1998,12 +1998,12 @@
   "id": "his-009",
   "question": "Who was the first woman to win a Nobel Prize?",
   "choices": [
-   "Marie Curie",
+   "Ada Lovelace",
    "Rosalind Franklin",
    "Dorothy Hodgkin",
-   "Ada Lovelace"
+   "Marie Curie"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "She then won a second, in a different science, and remains the only person to have won Nobel Prizes in two separate sciences.",
   "explanation": "Rosalind Franklin's work was central to the structure of DNA but she died before the prize was awarded, and it is not given posthumously.",
   "category": "history",
@@ -2074,11 +2074,11 @@
   "question": "Which city was buried by the eruption of Mount Vesuvius in AD 79?",
   "choices": [
    "Ostia",
-   "Pompeii",
+   "Ravenna",
    "Carthage",
-   "Ravenna"
+   "Pompeii"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "The ash preserved everything, including graffiti on the walls. Much of what we know about ordinary Roman life comes from those scribbles.",
   "explanation": "Herculaneum was buried in the same eruption and is often the answer people half-remember.",
   "category": "history",
@@ -2086,31 +2086,31 @@
  },
  {
   "id": "his-015",
-  "question": "In what year did the Titanic sink?",
+  "question": "A novel published in 1898 described an unsinkable liner hitting an iceberg. What was the ship called?",
   "choices": [
-   "1905",
-   "1912",
-   "1918",
-   "1923"
+   "Gigantic",
+   "Titan",
+   "Olympic",
+   "Leviathan"
   ],
   "correctIndex": 1,
-  "funFact": "The wreck was not found until 1985, more than 70 years later, and it sits about 3,800 metres down.",
-  "explanation": "It sank on its maiden voyage, four days out from Southampton, in April 1912.",
+  "funFact": "Morgan Robertson's Titan was strikingly similar in size, speed and shortage of lifeboats. He wrote it fourteen years before the Titanic sailed.",
+  "explanation": "Some details were revised in later editions after 1912, which muddies just how uncanny the original was.",
   "category": "history",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "his-016",
-  "question": "Which of these was invented first?",
+  "question": "Oxford University is older than which of these?",
   "choices": [
-   "The telephone",
-   "The light bulb",
-   "The printing press",
-   "Photography"
+   "The Aztec Empire",
+   "The Roman Empire",
+   "The Great Wall",
+   "Ancient Greece"
   ],
-  "correctIndex": 2,
-  "funFact": "Gutenberg's press arrived around 1440. The others all came in the 1800s, more than three centuries later.",
-  "explanation": "Photography was the earliest of the other three, appearing in the 1820s and 1830s.",
+  "correctIndex": 0,
+  "funFact": "Teaching at Oxford began around 1096. The Aztec capital was founded in 1325, more than two centuries later.",
+  "explanation": "The other three are all far older, which is what makes the Aztec comparison so jarring.",
   "category": "history",
   "difficulty": "moderate"
  },
@@ -2119,11 +2119,11 @@
   "question": "Cleopatra lived closer in time to which of these?",
   "choices": [
    "The building of the Great Pyramid",
-   "The Moon landing",
+   "Neither, she is exactly halfway",
    "Both are equally distant",
-   "Neither, she is exactly halfway"
+   "The Moon landing"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "The Great Pyramid was already about 2,500 years old in her lifetime. She lived roughly 2,000 years before the Moon landing.",
   "explanation": "Ancient Egypt lasted so long that most of its history was already ancient by the time Cleopatra was born.",
   "category": "history",
@@ -2149,11 +2149,11 @@
   "question": "Who was the longest-reigning British monarch?",
   "choices": [
    "Queen Victoria",
-   "Elizabeth II",
    "George III",
+   "Elizabeth II",
    "Henry VIII"
   ],
-  "correctIndex": 1,
+  "correctIndex": 2,
   "funFact": "She reigned just over 70 years, passing Victoria's record in 2015. Victoria had held it since 1901.",
   "explanation": "Victoria reigned for 63 years, which was the record for over a century.",
   "category": "history",
@@ -2194,11 +2194,11 @@
   "question": "Which country was the first to give women the vote nationally?",
   "choices": [
    "United States",
-   "New Zealand",
+   "Finland",
    "United Kingdom",
-   "Finland"
+   "New Zealand"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "New Zealand did it in 1893. Women there could vote for decades before they could stand for parliament.",
   "explanation": "Finland was first to grant both the vote and the right to stand, in 1906, which is why it often gets named.",
   "category": "history",
@@ -2223,12 +2223,12 @@
   "id": "his-024",
   "question": "What was the name of the first successful powered aeroplane flight's aircraft?",
   "choices": [
-   "Wright Flyer",
    "Spirit of St Louis",
+   "Wright Flyer",
    "Kitty Hawk",
    "Enola Gay"
   ],
-  "correctIndex": 0,
+  "correctIndex": 1,
   "funFact": "The first flight in 1903 lasted 12 seconds and covered about 37 metres, shorter than the wingspan of many airliners today.",
   "explanation": "Kitty Hawk is the place in North Carolina where it happened, not the name of the aircraft.",
   "category": "history",
@@ -2247,6 +2247,381 @@
   "funFact": "It dissolved into 15 separate countries on the last day of 1991, and the flag came down over the Kremlin on Christmas Day.",
   "explanation": "The Warsaw Pact also ended in 1991, but the dissolution of the Soviet Union is the larger event of that year.",
   "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-001",
+  "question": "The microwave oven was discovered when an engineer noticed what?",
+  "choices": [
+   "A melted chocolate bar in his pocket",
+   "A warm cup of tea",
+   "Popcorn popping on a shelf",
+   "A radar dish glowing"
+  ],
+  "correctIndex": 0,
+  "funFact": "Percy Spencer was standing near a magnetron in 1945 when the bar in his pocket melted. He tried popcorn next, then an egg, which exploded in a colleague's face.",
+  "explanation": "The popcorn came second, as a deliberate test rather than the original clue.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-002",
+  "question": "Penicillin was discovered because Alexander Fleming did what?",
+  "choices": [
+   "Ran a careful experiment",
+   "Went on holiday and left dishes out",
+   "Misread a colleague's notes",
+   "Tested 600 moulds"
+  ],
+  "correctIndex": 1,
+  "funFact": "He returned in 1928 to find mould on a petri dish with a clear ring around it where bacteria had died. He then failed to purify it, and it took another decade and other scientists to turn it into a drug.",
+  "explanation": "The observation was luck. Recognising what it meant was not, which is the part that earned the Nobel Prize.",
+  "category": "inventions",
+  "difficulty": "easy"
+ },
+ {
+  "id": "inv-003",
+  "question": "Post-it Notes came from an attempt to invent what?",
+  "choices": [
+   "A super-strong adhesive",
+   "A removable wallpaper",
+   "A dry-erase surface",
+   "A book binding glue"
+  ],
+  "correctIndex": 0,
+  "funFact": "The weak adhesive was considered a failure for five years until a colleague used it to stop bookmarks falling out of his hymn book.",
+  "explanation": "It was a failed strong glue, not a deliberately weak one, which is why nobody knew what to do with it at first.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-004",
+  "question": "Velcro was inspired by what?",
+  "choices": [
+   "Fish scales",
+   "Bird feathers",
+   "Burrs stuck to a dog",
+   "Spider silk"
+  ],
+  "correctIndex": 2,
+  "funFact": "A Swiss engineer looked at the burrs under a microscope after a walk in 1941 and saw tiny hooks. It took him about eight years to reproduce them in fabric.",
+  "explanation": "The name is a blend of the French words for velvet and hook.",
+  "category": "inventions",
+  "difficulty": "easy"
+ },
+ {
+  "id": "inv-005",
+  "question": "What was Play-Doh originally sold as?",
+  "choices": [
+   "A modelling clay",
+   "A wallpaper cleaner",
+   "A fire retardant",
+   "A shoe polish"
+  ],
+  "correctIndex": 1,
+  "funFact": "It was made to rub soot off wallpaper. When homes switched from coal heating the market collapsed, and a relative who taught nursery school suggested selling it to children.",
+  "explanation": "The recipe barely changed. Only the colour, the smell and the customer did.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-006",
+  "question": "The pacemaker was invented when an engineer did what?",
+  "choices": [
+   "Grabbed the wrong resistor",
+   "Dropped a radio in water",
+   "Copied a fish's nerves",
+   "Mismeasured a heartbeat"
+  ],
+  "correctIndex": 0,
+  "funFact": "Wilson Greatbatch reached for a 10,000 ohm resistor and fitted a 1 megohm one instead. The circuit pulsed rhythmically, and he recognised the rhythm.",
+  "explanation": "He was building a heart rhythm recorder at the time, not a stimulator, so the mistake pointed at a different device entirely.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-007",
+  "question": "Safety glass was discovered when a chemist did what?",
+  "choices": [
+   "Dropped a coated flask",
+   "Left glass in sunlight",
+   "Mixed two solvents",
+   "Heated glass too slowly"
+  ],
+  "correctIndex": 0,
+  "funFact": "Édouard Bénédictus dropped a flask that had held a cellulose solution. It cracked but held its shape, and he thought of the car windscreen injuries in the news.",
+  "explanation": "The residue on the inside acted as a film holding the fragments together, which is exactly how laminated glass works today.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-008",
+  "question": "Who was the first person to be granted a patent for the telephone?",
+  "choices": [
+   "Elisha Gray",
+   "Alexander Graham Bell",
+   "Antonio Meucci",
+   "Thomas Edison"
+  ],
+  "correctIndex": 1,
+  "funFact": "Bell and Gray filed on the same day in 1876, and the order of filing has been argued about ever since.",
+  "explanation": "Meucci demonstrated a working device earlier but could not afford to maintain his patent caveat.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-009",
+  "question": "The Slinky was invented when an engineer knocked over what?",
+  "choices": [
+   "A spring from a shelf",
+   "A box of wire",
+   "A shipboard instrument",
+   "A toy prototype"
+  ],
+  "correctIndex": 0,
+  "funFact": "Richard James was working on springs to stabilise ship instruments. One fell and 'walked' down a stack of books, and his wife found the name in a dictionary.",
+  "explanation": "It was a naval engineering component before it was ever a toy.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-010",
+  "question": "Which of these did NOT start life as a medicine?",
+  "choices": [
+   "Coca-Cola",
+   "Listerine",
+   "Bubble wrap",
+   "Corn flakes"
+  ],
+  "correctIndex": 2,
+  "funFact": "Listerine was sold as a surgical antiseptic and then a floor cleaner before someone marketed bad breath as a condition. Corn flakes were developed as a bland health food.",
+  "explanation": "Bubble wrap was aimed at wallpaper and greenhouses. Unglamorous, but never medical.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-011",
+  "question": "X-rays were discovered when Röntgen noticed what?",
+  "choices": [
+   "A fogged photographic plate",
+   "A compass twitching",
+   "His hand feeling warm",
+   "A glowing screen across the room"
+  ],
+  "correctIndex": 3,
+  "funFact": "A screen coated in fluorescent material lit up while his tube was covered in black cardboard. The first X-ray image ever taken was of his wife's hand, and she reportedly said she had seen her own death.",
+  "explanation": "He called them X because he did not know what they were, and the placeholder name stuck.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-012",
+  "question": "Who invented the World Wide Web?",
+  "choices": [
+   "Vint Cerf",
+   "Bob Kahn",
+   "Marc Andreessen",
+   "Tim Berners-Lee"
+  ],
+  "correctIndex": 3,
+  "funFact": "He wrote the proposal at CERN in 1989. His manager's note on it read 'vague but exciting'. He then gave the whole thing away royalty free.",
+  "explanation": "Cerf and Kahn built the internet's underlying protocols, which is a different and earlier layer.",
+  "category": "inventions",
+  "difficulty": "easy"
+ },
+ {
+  "id": "inv-013",
+  "question": "The first webcam was pointed at what?",
+  "choices": [
+   "A coffee pot",
+   "A car park",
+   "A fish tank",
+   "A lab door"
+  ],
+  "correctIndex": 0,
+  "funFact": "Cambridge researchers were tired of walking to an empty pot, so they set a camera on it in 1991. When it was finally switched off in 2001 the pot sold at auction.",
+  "explanation": "It went online properly in 1993 and became one of the internet's first minor celebrities.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-014",
+  "question": "What was the first product sold with a barcode scan?",
+  "choices": [
+   "A tin of soup",
+   "A packet of chewing gum",
+   "A bottle of milk",
+   "A loaf of bread"
+  ],
+  "correctIndex": 1,
+  "funFact": "A ten-pack of Wrigley's gum in Ohio, 1974. It was chosen partly to prove the system could read a label on something that small.",
+  "explanation": "That specific packet is now in a museum, which is a strange fate for chewing gum.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-015",
+  "question": "Ada Lovelace is credited with writing the first what?",
+  "choices": [
+   "Computer program",
+   "Mechanical calculator",
+   "Punch card system",
+   "Programming language"
+  ],
+  "correctIndex": 0,
+  "funFact": "Her 1843 notes on Babbage's Analytical Engine included an algorithm for computing Bernoulli numbers, and she suggested such a machine might one day compose music.",
+  "explanation": "The machine itself was never built in her lifetime, so the program was never run.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-016",
+  "question": "The dishwasher was invented by Josephine Cochrane because she was tired of what?",
+  "choices": [
+   "Washing up herself",
+   "The cost of new plates",
+   "Servants chipping her china",
+   "Slow restaurant service"
+  ],
+  "correctIndex": 2,
+  "funFact": "She said that if nobody else was going to invent it, she would do it herself. Her first customers were hotels and restaurants, not homes.",
+  "explanation": "She reportedly rarely washed dishes herself, which is what makes the real motive so specific.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-017",
+  "question": "What did the inventor of the Segway predict for it?",
+  "choices": [
+   "A niche tourist vehicle",
+   "That cities would be redesigned around it",
+   "A military transport",
+   "A children's toy"
+  ],
+  "correctIndex": 1,
+  "funFact": "It was hyped before launch as more important than the internet. It ended up mostly carrying tourists and mall security.",
+  "explanation": "The prediction was that it would be to the car what the car was to the horse.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-018",
+  "question": "Super Glue was developed while trying to make what?",
+  "choices": [
+   "A waterproof coating",
+   "A dental cement",
+   "A paint thinner",
+   "Clear gun sights"
+  ],
+  "correctIndex": 3,
+  "funFact": "The cyanoacrylates stuck to everything and ruined the equipment, so they were shelved. Nine years later the same chemist realised that sticking to everything was the product.",
+  "explanation": "It was rejected twice for being too sticky before anyone thought to sell it as glue.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-019",
+  "question": "Hedy Lamarr, the film star, co-invented an early version of what?",
+  "choices": [
+   "Radar",
+   "Frequency hopping, behind wireless tech",
+   "Night vision",
+   "The transistor"
+  ],
+  "correctIndex": 1,
+  "funFact": "She and composer George Antheil patented a frequency-hopping system in 1942 using a mechanism based on player piano rolls. Related ideas underpin Bluetooth and Wi-Fi.",
+  "explanation": "The navy shelved it at the time, and she got little recognition until decades later.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-020",
+  "question": "The first alarm clock that could ring at any hour was patented in 1847. What could earlier ones do?",
+  "choices": [
+   "Ring only at 4am",
+   "Ring only on the hour",
+   "Only chime, never ring",
+   "Only be set a day ahead"
+  ],
+  "correctIndex": 0,
+  "funFact": "An American model from 1787 rang only at 4am, which suited its maker's own routine perfectly and nobody else's.",
+  "explanation": "Fixed-time alarms came first because an adjustable mechanism is considerably harder to build.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-021",
+  "question": "What was the original purpose of the treadmill?",
+  "choices": [
+   "Exercise",
+   "Testing shoes",
+   "Grinding grain by animals",
+   "Prison punishment"
+  ],
+  "correctIndex": 3,
+  "funFact": "Victorian prisons used them to grind grain and to break prisoners' spirits, sometimes for six hours a day. Oscar Wilde served time on one.",
+  "explanation": "It was reinvented as exercise equipment in the 20th century, long after being abolished as cruel.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-022",
+  "question": "Which came first?",
+  "choices": [
+   "The fax machine",
+   "The American Civil War",
+   "The light bulb",
+   "The telephone"
+  ],
+  "correctIndex": 0,
+  "funFact": "A working fax was patented in 1843, nearly twenty years before the Civil War and over thirty before the telephone. The technology then waited a century for a use.",
+  "explanation": "Alexander Bain's device scanned a message with a pendulum and reproduced it over a wire.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-023",
+  "question": "The inventor of the Pringles can is connected to it how?",
+  "choices": [
+   "He designed the crisp too",
+   "His ashes were buried in one",
+   "He never ate one",
+   "He sued over the shape"
+  ],
+  "correctIndex": 1,
+  "funFact": "Fredric Baur was proud enough of the tube that his family honoured his request. They stopped at a shop on the way to the funeral to buy one.",
+  "explanation": "He designed the packaging, not the crisp, and considered it his best work.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-024",
+  "question": "What did the first computer mouse's shell get made from?",
+  "choices": [
+   "Plastic",
+   "Bakelite",
+   "Metal",
+   "Wood"
+  ],
+  "correctIndex": 3,
+  "funFact": "Douglas Engelbart's 1964 prototype was a carved wooden block with two perpendicular wheels. The name came from the cord trailing out the back like a tail.",
+  "explanation": "It was a hand-built research prototype, so wood was simply the easiest material to shape.",
+  "category": "inventions",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "inv-025",
+  "question": "Which was invented first?",
+  "choices": [
+   "The wheel",
+   "The plough",
+   "Woven cloth",
+   "Sewing needles"
+  ],
+  "correctIndex": 3,
+  "funFact": "Bone needles are around 50,000 years old. The wheel is roughly 5,500 years old, which makes needles nearly ten times older.",
+  "explanation": "Sewing clothing mattered long before moving heavy loads did, which is why the tools arrived in that order.",
+  "category": "inventions",
   "difficulty": "moderate"
  },
  {
@@ -2404,11 +2779,11 @@
   "question": "What does 'RSVP' stand for?",
   "choices": [
    "Reply Soon Very Promptly",
-   "Répondez s'il vous plaît",
+   "Received Simple Verbal Promise",
    "Reserve Seating Very Personal",
-   "Received Simple Verbal Promise"
+   "Répondez s'il vous plaît"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "It is French for please reply, and it has stayed in English invitations for more than a century without ever being translated.",
   "explanation": "The French phrase is where the letters come from, which is why the initials do not map onto English words.",
   "category": "language",
@@ -2449,11 +2824,11 @@
   "question": "What is the plural of 'octopus' most often preferred by dictionaries?",
   "choices": [
    "Octopi",
-   "Octopuses",
+   "Octopus",
    "Octopodes",
-   "Octopus"
+   "Octopuses"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "Octopi applies a Latin rule to a Greek word, which is why purists dislike it. Octopodes is technically defensible and almost never used.",
   "explanation": "All three appear in dictionaries, but octopuses is the form usually listed first.",
   "category": "language",
@@ -2476,18 +2851,18 @@
  },
  {
   "id": "lan-016",
-  "question": "What is an anagram?",
+  "question": "What is unusual about the sentence 'Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo'?",
   "choices": [
-   "A rearrangement of letters",
-   "A shortened phrase",
-   "A rhyming pair",
-   "A foreign loanword"
+   "It is grammatically valid",
+   "It is the longest palindrome",
+   "It uses every letter",
+   "It has no verbs"
   ],
   "correctIndex": 0,
-  "funFact": "Listen and silent use the same letters, as do astronomer and moon starer.",
-  "explanation": "A shortened phrase is an abbreviation or acronym, which is the usual mix-up.",
+  "funFact": "It works because buffalo is a city, an animal and a verb meaning to bully. It roughly means bison from Buffalo, bullied by bison from Buffalo, bully other bison from Buffalo.",
+  "explanation": "It is a real and much-studied example of how far English grammar can be pushed with one word.",
   "category": "language",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "lan-017",
@@ -2523,12 +2898,12 @@
   "id": "lan-019",
   "question": "Which of these languages is not Indo-European?",
   "choices": [
-   "Finnish",
    "Persian",
+   "Finnish",
    "Greek",
    "Welsh"
   ],
-  "correctIndex": 0,
+  "correctIndex": 1,
   "funFact": "Finnish belongs to the Uralic family alongside Estonian and Hungarian, which makes it unrelated to almost all its neighbours.",
   "explanation": "Persian and Welsh look very different from each other but both sit on the Indo-European tree.",
   "category": "language",
@@ -2584,11 +2959,11 @@
   "question": "What language was originally spoken by the Vikings?",
   "choices": [
    "Old English",
-   "Old Frisian",
+   "Old Norse",
    "Gothic",
-   "Old Norse"
+   "Old Frisian"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "It gave English a surprising number of everyday words, including sky, egg, knife, husband and both they and them.",
   "explanation": "Old English was spoken by the Anglo-Saxons the Vikings were raiding, so the two were in contact but distinct.",
   "category": "language",
@@ -2625,6 +3000,3381 @@
   "difficulty": "moderate"
  },
  {
+  "id": "mov-001",
+  "question": "In Jaws, the shark barely appears on screen because of what?",
+  "choices": [
+   "Budget cuts",
+   "A deliberate artistic choice from the start",
+   "Censorship rules",
+   "The mechanical shark kept breaking"
+  ],
+  "correctIndex": 3,
+  "funFact": "Spielberg later said the malfunction made the film. Suggesting the shark turned out to be far more frightening than showing it.",
+  "explanation": "The plan was to feature it heavily. The restraint everyone praises was forced by a broken prop.",
+  "category": "movies",
+  "difficulty": "easy"
+ },
+ {
+  "id": "mov-002",
+  "question": "What sound was used for the T. rex's roar in Jurassic Park?",
+  "choices": [
+   "A lion slowed down",
+   "Synthesised entirely",
+   "A whale call",
+   "A mix including a baby elephant"
+  ],
+  "correctIndex": 3,
+  "funFact": "It blends baby elephant, tiger and alligator. The velociraptor communication sounds are mating tortoises, which the sound designer enjoyed not telling people.",
+  "explanation": "Almost no dinosaur sound in the film is a single animal. They are all layered composites.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-003",
+  "question": "Which film was the first feature-length fully computer-animated movie?",
+  "choices": [
+   "Shrek",
+   "Antz",
+   "A Bug's Life",
+   "Toy Story"
+  ],
+  "correctIndex": 3,
+  "funFact": "1995. The team avoided anything soft or organic because cloth, skin and hair were beyond the technology, which is partly why the characters are plastic toys.",
+  "explanation": "The technical limits shaped the story. Hard shiny surfaces were what computers could render convincingly.",
+  "category": "movies",
+  "difficulty": "easy"
+ },
+ {
+  "id": "mov-004",
+  "question": "The Wilhelm Scream is what?",
+  "choices": [
+   "A stock sound effect reused for decades",
+   "An actor's trademark",
+   "A recording technique",
+   "A type of camera move"
+  ],
+  "correctIndex": 0,
+  "funFact": "Recorded in 1951, it has been slipped into hundreds of films as an in-joke by sound designers, including Star Wars and Indiana Jones.",
+  "explanation": "It is named after a character who screams it in a 1953 western, not after the original uncredited actor.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-005",
+  "question": "In The Wizard of Oz, what were the ruby slippers in the original book?",
+  "choices": [
+   "Ruby",
+   "Gold",
+   "Glass",
+   "Silver"
+  ],
+  "correctIndex": 3,
+  "funFact": "They were changed to ruby to show off Technicolor, which was the whole point of the production.",
+  "explanation": "Silver slippers on a yellow brick road had symbolic readings in the book that the film had no interest in.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-006",
+  "question": "What is the highest-grossing film of all time when adjusted for inflation, by most estimates?",
+  "choices": [
+   "Avatar",
+   "Titanic",
+   "Gone with the Wind",
+   "Star Wars"
+  ],
+  "correctIndex": 2,
+  "funFact": "A 1939 film still tops the inflation-adjusted list. It was rereleased repeatedly over decades, which modern blockbusters cannot match.",
+  "explanation": "Avatar leads on raw unadjusted takings, which is the figure usually quoted.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-007",
+  "question": "Alfred Hitchcock appeared in his own films as what?",
+  "choices": [
+   "A named character",
+   "He never appeared",
+   "The narrator",
+   "A brief silent cameo"
+  ],
+  "correctIndex": 3,
+  "funFact": "He appeared in around 40 of them and started scheduling the cameos early in each film, because audiences watching for him were missing the plot.",
+  "explanation": "In Lifeboat, set entirely on a small boat, he solved the problem by appearing in a newspaper advertisement.",
+  "category": "movies",
+  "difficulty": "easy"
+ },
+ {
+  "id": "mov-008",
+  "question": "The dream levels in Inception are distinguished partly by what practical trick?",
+  "choices": [
+   "A rotating corridor set",
+   "Different film stocks",
+   "Colour filters only",
+   "Different aspect ratios"
+  ],
+  "correctIndex": 0,
+  "funFact": "The hotel corridor fight was shot in a giant rotating drum with the actor genuinely tumbling. The zero-gravity look is a real set spinning.",
+  "explanation": "It was built rather than computer generated, which is why the physics of the actors' bodies looks right.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-009",
+  "question": "What language is spoken by the Na'vi in Avatar?",
+  "choices": [
+   "Improvised gibberish",
+   "A constructed language with grammar",
+   "Reversed English",
+   "Modified Swahili"
+  ],
+  "correctIndex": 1,
+  "funFact": "A linguist was hired to build it properly, with its own grammar and around a thousand words. People now speak it as a hobby.",
+  "explanation": "It follows the same tradition as Klingon and Dothraki, which were also built by linguists rather than invented on set.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-010",
+  "question": "In Psycho, the famous shower scene blood was actually what?",
+  "choices": [
+   "Chocolate syrup",
+   "Red paint",
+   "Beetroot juice",
+   "Corn syrup and dye"
+  ],
+  "correctIndex": 0,
+  "funFact": "The film is black and white, so what mattered was how it flowed and how dark it read on camera. Chocolate syrup was ideal.",
+  "explanation": "The scene has about 50 cuts in under a minute and the knife never visibly touches her.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-011",
+  "question": "Which actor has played James Bond in the most official films?",
+  "choices": [
+   "Sean Connery",
+   "Roger Moore",
+   "Daniel Craig",
+   "Pierce Brosnan"
+  ],
+  "correctIndex": 1,
+  "funFact": "Roger Moore did seven, one more than Connery's six official appearances. He was also the oldest actor to play the part, finishing at 57.",
+  "explanation": "Connery made a seventh Bond film, but it was made outside the official series.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-012",
+  "question": "What was unusual about the making of The Blair Witch Project's cast?",
+  "choices": [
+   "They were never paid",
+   "They improvised with real fear tactics",
+   "They were all related",
+   "They never met before filming ended"
+  ],
+  "correctIndex": 1,
+  "funFact": "Directions were left in barrels in the woods, food was reduced as filming went on, and the crew made noises outside the tent at night to unsettle them.",
+  "explanation": "The actors used their own names, and some viewers genuinely believed the footage was real.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-013",
+  "question": "The Lord of the Rings trilogy was filmed how?",
+  "choices": [
+   "One film at a time",
+   "All three simultaneously",
+   "Two first, then one",
+   "Entirely on sound stages"
+  ],
+  "correctIndex": 1,
+  "funFact": "All three were shot back to back over about 15 months, which is why the cast visibly do not age across a story spanning years.",
+  "explanation": "Pickups continued for years afterwards, but the main shoot was one continuous production.",
+  "category": "movies",
+  "difficulty": "easy"
+ },
+ {
+  "id": "mov-014",
+  "question": "What did Charlie Chaplin reportedly do at a Charlie Chaplin lookalike contest?",
+  "choices": [
+   "Won it",
+   "Refused to enter",
+   "Lost",
+   "Judged it"
+  ],
+  "correctIndex": 2,
+  "funFact": "The story is widely repeated and the details are shaky, but Chaplin himself told a version of it. He supposedly did not even make the final.",
+  "explanation": "The tale survives because it is a perfect joke about impersonation, whether or not it happened exactly as told.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-015",
+  "question": "Which of these films won the first Academy Award for Best Picture?",
+  "choices": [
+   "Wings",
+   "The Jazz Singer",
+   "Metropolis",
+   "Sunrise"
+  ],
+  "correctIndex": 0,
+  "funFact": "Wings, a silent film from 1927, remains the only silent film to win the top award until The Artist in 2011.",
+  "explanation": "The Jazz Singer was the sound breakthrough of the same period but was given an honorary award instead.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-016",
+  "question": "In the original Star Wars, what was Chewbacca's voice made from?",
+  "choices": [
+   "A processed human voice",
+   "A camel only",
+   "A synthesiser",
+   "Bear, walrus and other animal recordings"
+  ],
+  "correctIndex": 3,
+  "funFact": "The sound designer recorded animals at zoos and blended them. A particularly cooperative bear called Tarik provided much of it.",
+  "explanation": "R2-D2's voice, by contrast, is largely a synthesiser mixed with the designer's own vocalisations.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-017",
+  "question": "What is a 'MacGuffin'?",
+  "choices": [
+   "A plot device everyone wants that barely matters",
+   "A camera lens",
+   "A type of stunt",
+   "An unbilled cameo"
+  ],
+  "correctIndex": 0,
+  "funFact": "Hitchcock popularised the term and delighted in pointing out that the audience should not care what it actually is. The briefcase in Pulp Fiction is never opened for exactly this reason.",
+  "explanation": "It drives the plot by being desired, and its actual nature is deliberately unimportant.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-018",
+  "question": "Which film is famous for having no visible cuts, appearing as one continuous shot?",
+  "choices": [
+   "Birdman",
+   "Gravity",
+   "Dunkirk",
+   "The Revenant"
+  ],
+  "correctIndex": 0,
+  "funFact": "It is stitched from long takes with hidden joins. Hitchcock tried the same trick decades earlier in Rope, hiding cuts behind actors' backs.",
+  "explanation": "1917 uses the same technique, so both are reasonable answers, but Birdman is the more famous example.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-019",
+  "question": "Why do so many films use the same 'inconceivable' Hollywood telephone prefix, 555?",
+  "choices": [
+   "It is reserved for fiction",
+   "It is cheaper to license",
+   "It sounds better on camera",
+   "No reason, just habit"
+  ],
+  "correctIndex": 0,
+  "funFact": "Numbers starting 555-01 are set aside so films can show a number without sending viewers calling a real household.",
+  "explanation": "Films that used real numbers by accident have caused genuine problems for whoever owned them.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-020",
+  "question": "The Matrix's green tint was chosen to suggest what?",
+  "choices": [
+   "Nature",
+   "Nausea",
+   "Money",
+   "Old monochrome computer monitors"
+  ],
+  "correctIndex": 3,
+  "funFact": "Scenes in the real world are tinted blue instead, so you can tell where you are from the colour alone without being told.",
+  "explanation": "The green is a direct nod to phosphor CRT terminals, which is also why the falling code is green.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-021",
+  "question": "Which animated film's studio nearly lost the whole project to a deleted directory?",
+  "choices": [
+   "Shrek",
+   "Toy Story 2",
+   "Frozen",
+   "Finding Nemo"
+  ],
+  "correctIndex": 1,
+  "funFact": "A stray delete command wiped most of the film off the servers, and the backups were faulty. It survived because an employee on maternity leave had a copy at home.",
+  "explanation": "The film was then largely rewritten anyway, so the rescued version was not the one released.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-022",
+  "question": "How long is the average shot length in modern action films compared with the 1950s?",
+  "choices": [
+   "Much longer",
+   "About the same",
+   "Dramatically shorter",
+   "Twice as long"
+  ],
+  "correctIndex": 2,
+  "funFact": "Averages have dropped from around 10 seconds to under 3 in many action films, and some sequences average well under 2.",
+  "explanation": "The style is often called intensified continuity, and it is measurable rather than a matter of opinion.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-023",
+  "question": "What was the first film to be shown with synchronised recorded sound throughout?",
+  "choices": [
+   "The Jazz Singer",
+   "Lights of New York",
+   "Don Juan",
+   "Steamboat Willie"
+  ],
+  "correctIndex": 1,
+  "funFact": "The Jazz Singer is remembered as the first talkie but is mostly silent with a few sound sequences. Lights of New York in 1928 was the first all-talking feature.",
+  "explanation": "Don Juan came earlier with a synchronised score but no dialogue at all.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-024",
+  "question": "In Singin' in the Rain, what was mixed into the rain to make it show up on camera?",
+  "choices": [
+   "Milk",
+   "Soap",
+   "Glycerine",
+   "Nothing"
+  ],
+  "correctIndex": 0,
+  "funFact": "Water alone is nearly invisible on film, so milk was added. Gene Kelly reportedly danced the number with a fever.",
+  "explanation": "Backlighting also helps, but the classic studio fix for visible rain was to make it slightly opaque.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mov-025",
+  "question": "What does the clapperboard at the start of a take actually do?",
+  "choices": [
+   "Marks the take number only",
+   "Syncs picture with separately recorded sound",
+   "Sets the camera exposure",
+   "Signals actors to begin"
+  ],
+  "correctIndex": 1,
+  "funFact": "Picture and sound were recorded on separate machines for most of film history. The sharp clap gives the editor one frame and one spike to line up.",
+  "explanation": "It carries the scene and take information too, but the snap itself exists purely for synchronisation.",
+  "category": "movies",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-001",
+  "question": "What is the best-selling single of all time?",
+  "choices": [
+   "Candle in the Wind 1997",
+   "White Christmas",
+   "Thriller",
+   "Imagine"
+  ],
+  "correctIndex": 1,
+  "funFact": "Bing Crosby's version from 1942 is estimated at over 50 million copies. It held the record before charts were even properly tracked.",
+  "explanation": "Candle in the Wind 1997 is the best seller of the modern chart era, which is why it is often quoted instead.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-002",
+  "question": "Why is a piano called a pianoforte?",
+  "choices": [
+   "Its inventor's name",
+   "It could play soft and loud",
+   "It has forte pedals",
+   "From the Italian for keyboard"
+  ],
+  "correctIndex": 1,
+  "funFact": "The harpsichord plucked strings, so every note came out at the same volume no matter how you played. Hammers meant dynamics for the first time.",
+  "explanation": "Piano means soft and forte means loud, so the name is literally a description of what was new about it.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-003",
+  "question": "Beethoven composed some of his greatest work while what?",
+  "choices": [
+   "Losing his hearing",
+   "In prison",
+   "Blind",
+   "Living abroad"
+  ],
+  "correctIndex": 0,
+  "funFact": "By the premiere of the Ninth Symphony he could not hear the applause and had to be turned around to see it.",
+  "explanation": "His deafness came on gradually from his late twenties and was almost total by the end.",
+  "category": "music",
+  "difficulty": "easy"
+ },
+ {
+  "id": "mus-004",
+  "question": "What is the most recorded song in history, by most counts?",
+  "choices": [
+   "Yesterday",
+   "Summertime",
+   "Happy Birthday",
+   "Hallelujah"
+  ],
+  "correctIndex": 1,
+  "funFact": "Gershwin's Summertime has been recorded well over 25,000 times. Yesterday is usually second with a few thousand.",
+  "explanation": "Its simple structure makes it endlessly adaptable, which is why jazz musicians in particular keep returning to it.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-005",
+  "question": "How many strings does a standard harp have, roughly?",
+  "choices": [
+   "12",
+   "24",
+   "47",
+   "88"
+  ],
+  "correctIndex": 2,
+  "funFact": "A concert harp has 47 strings and seven pedals, each with three positions, so the player is doing complex work with both feet.",
+  "explanation": "88 is the piano's key count, which is the number most people reach for.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-006",
+  "question": "What does the metronome measure?",
+  "choices": [
+   "Pitch",
+   "Volume",
+   "Beats per minute",
+   "Key signature"
+  ],
+  "correctIndex": 2,
+  "funFact": "Beethoven was one of the first composers to write metronome marks into his scores. Many of his markings look implausibly fast, and musicians have argued about why for two centuries.",
+  "explanation": "A tuner handles pitch. The metronome is purely about time.",
+  "category": "music",
+  "difficulty": "easy"
+ },
+ {
+  "id": "mus-007",
+  "question": "Which instrument family does the saxophone belong to?",
+  "choices": [
+   "Brass",
+   "Percussion",
+   "Woodwind",
+   "String"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is made of brass but classified by how the sound is made, and it uses a reed. Adolphe Sax invented it in the 1840s trying to bridge the two families.",
+  "explanation": "Classification follows the mechanism, not the material, which is why a wooden flute is not a woodwind by material either.",
+  "category": "music",
+  "difficulty": "easy"
+ },
+ {
+  "id": "mus-008",
+  "question": "The song 'Happy Birthday to You' was subject to what for decades?",
+  "choices": [
+   "A ban in schools",
+   "A recording embargo",
+   "A royal decree",
+   "A disputed copyright claim"
+  ],
+  "correctIndex": 3,
+  "funFact": "A publisher collected royalties for years, which is why restaurants invented their own birthday songs. A court ruled the claim invalid in 2016 and it is now public domain.",
+  "explanation": "The melody dates to the 1890s as a classroom greeting song, and the birthday lyrics came later.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-009",
+  "question": "What is 4'33\" by John Cage?",
+  "choices": [
+   "A piece of silence",
+   "A piano concerto",
+   "A drum solo",
+   "An electronic work"
+  ],
+  "correctIndex": 0,
+  "funFact": "The performer sits without playing for four minutes and 33 seconds. The point is that the audience hears the room, and there is no such thing as silence.",
+  "explanation": "It is written in three movements with rests, so it is a real score, just one with no notes.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-010",
+  "question": "Why do orchestras tune to the oboe?",
+  "choices": [
+   "It is loudest",
+   "Its pitch is stable and it cuts through",
+   "Tradition from the church",
+   "It is the oldest instrument"
+  ],
+  "correctIndex": 1,
+  "funFact": "The oboe holds its pitch well and its tone is piercing enough to be heard over everyone. Strings drift with temperature far more.",
+  "explanation": "When a piano is involved the orchestra tunes to that instead, because a piano cannot be retuned mid-concert.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-011",
+  "question": "Which band holds the record for most weeks on the UK singles chart with one song?",
+  "choices": [
+   "Queen",
+   "The Beatles",
+   "Journey",
+   "Oasis"
+  ],
+  "correctIndex": 0,
+  "funFact": "Bohemian Rhapsody was released in 1975, ran nearly six minutes, had no chorus and a full opera section. The record company was certain it would fail.",
+  "explanation": "Streaming has kept several old songs charting for years, which is why these records now behave very strangely.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-012",
+  "question": "What is perfect pitch?",
+  "choices": [
+   "Singing exactly in tune",
+   "Naming any note without a reference",
+   "Hearing above 20 kHz",
+   "Playing without sheet music"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is far more common among speakers of tonal languages, where pitch already changes a word's meaning, which suggests it is partly learned in early childhood.",
+  "explanation": "Singing in tune is relative pitch, and that can be trained at any age.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-013",
+  "question": "The theremin is played how?",
+  "choices": [
+   "With a bow",
+   "Without touching it",
+   "With foot pedals only",
+   "By blowing across it"
+  ],
+  "correctIndex": 1,
+  "funFact": "The player's hands disturb electromagnetic fields around two antennas, one for pitch and one for volume. Its inventor was later kidnapped and put to work by Soviet intelligence.",
+  "explanation": "It is the only major instrument played entirely without physical contact.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-014",
+  "question": "What tempo marking means 'walking pace'?",
+  "choices": [
+   "Allegro",
+   "Andante",
+   "Largo",
+   "Presto"
+  ],
+  "correctIndex": 1,
+  "funFact": "Most Italian tempo terms are ordinary words. Allegro means cheerful rather than fast, and largo means broad.",
+  "explanation": "Largo is slow and broad, allegro is brisk, and presto is very fast.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-015",
+  "question": "Which of these is a genuine musical instrument?",
+  "choices": [
+   "The glass armonica",
+   "The steam violin",
+   "The wind organ pipe cello",
+   "The lightning harp"
+  ],
+  "correctIndex": 0,
+  "funFact": "Benjamin Franklin invented it: spinning glass bowls played with wet fingers. It was briefly popular, then abandoned amid rumours it caused madness in players.",
+  "explanation": "The eerie sound is the same physics as running a finger round a wine glass rim.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-016",
+  "question": "What does 'a cappella' literally mean?",
+  "choices": [
+   "Without instruments",
+   "In the chapel style",
+   "With many voices",
+   "Softly"
+  ],
+  "correctIndex": 1,
+  "funFact": "It described church music, which happened to be unaccompanied. The meaning shifted to the absence of instruments rather than the setting.",
+  "explanation": "It now simply means voices alone, in any genre at all.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-017",
+  "question": "Why do so many pop songs sound like they share the same chords?",
+  "choices": [
+   "Copyright rules",
+   "Four chords cover an enormous amount of Western pop",
+   "Studio software defaults",
+   "A licensing agreement"
+  ],
+  "correctIndex": 1,
+  "funFact": "One four-chord progression underpins hundreds of hits across decades. A comedy band built a whole act out of medleying them together.",
+  "explanation": "Chord progressions are not copyrightable, which is why the same handful appears endlessly.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-018",
+  "question": "What is the lowest note on a standard piano?",
+  "choices": [
+   "A0",
+   "C1",
+   "E0",
+   "F0"
+  ],
+  "correctIndex": 0,
+  "funFact": "A0 vibrates at about 27.5 hertz, near the bottom of what people hear as pitch rather than as a rumble.",
+  "explanation": "The keyboard runs A0 to C8, which is why it starts and ends on unexpected letters.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-019",
+  "question": "Vinyl records rotate at 33, 45 or 78 rpm. Why 78?",
+  "choices": [
+   "It was optimal for sound",
+   "It was a patent requirement",
+   "It matched film frame rates",
+   "It came from early motor gearing"
+  ],
+  "correctIndex": 3,
+  "funFact": "78.26 rpm fell out of a common motor and gear combination in the 1920s. It was standardised because that is what the machines happened to do.",
+  "explanation": "33 and 45 were later deliberate choices, but 78 was inherited from hardware.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-020",
+  "question": "What is a 'earworm' called in the research literature?",
+  "choices": [
+   "Involuntary musical imagery",
+   "Auditory looping",
+   "Melodic fixation",
+   "Tonal recall"
+  ],
+  "correctIndex": 0,
+  "funFact": "Songs that get stuck tend to be moderately fast with an unusual interval or a small unexpected leap. Unfinished songs stick harder than complete ones.",
+  "explanation": "The German word Ohrwurm was borrowed directly into English as earworm.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-021",
+  "question": "How many keys are black on a standard piano?",
+  "choices": [
+   "30",
+   "36",
+   "40",
+   "24"
+  ],
+  "correctIndex": 1,
+  "funFact": "Thirty-six black and fifty-two white. The pattern of twos and threes exists so you can find your place without looking.",
+  "explanation": "The black keys are grouped precisely so a player's hand can navigate by feel.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-022",
+  "question": "Which came first?",
+  "choices": [
+   "The electric guitar",
+   "The synthesiser",
+   "Recorded sound",
+   "Sheet music printing"
+  ],
+  "correctIndex": 3,
+  "funFact": "Printed sheet music dates to the late 1400s, four centuries before Edison recorded sound in 1877.",
+  "explanation": "Printing made music distributable long before anyone could capture a performance.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-023",
+  "question": "What does the 'blues' scale add compared with a major scale?",
+  "choices": [
+   "Flattened notes often called blue notes",
+   "An extra octave",
+   "A minor key signature",
+   "Two more sharps"
+  ],
+  "correctIndex": 0,
+  "funFact": "The characteristic bent notes sit between the fixed pitches of a piano, which is why a guitar or a voice can play them properly and a keyboard has to fake it.",
+  "explanation": "The flattened third, fifth and seventh give the sound its particular ache.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-024",
+  "question": "Mozart wrote his first symphony at what age?",
+  "choices": [
+   "Eight",
+   "Fifteen",
+   "Twenty",
+   "Five"
+  ],
+  "correctIndex": 0,
+  "funFact": "He was eight, and it was probably written while the family was in London and his father was ill. He wrote over 600 works before dying at 35.",
+  "explanation": "He was performing publicly from about five, but the first symphony came a few years later.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "mus-025",
+  "question": "Why did CDs originally hold about 74 minutes of audio?",
+  "choices": [
+   "A disc size limit",
+   "To fit Beethoven's Ninth on one disc",
+   "Laser wavelength limits",
+   "Random choice"
+  ],
+  "correctIndex": 1,
+  "funFact": "The story goes that an executive insisted the format hold the whole Ninth Symphony without a break. It is repeated so often that the company itself now tells it.",
+  "explanation": "The engineering could have supported other sizes, so the constraint was a preference rather than a limit.",
+  "category": "music",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-001",
+  "question": "In Greek myth, what was Achilles' mother trying to do when she created his weak point?",
+  "choices": [
+   "Hide him from the gods",
+   "Make him immortal",
+   "Punish him",
+   "Test a prophecy"
+  ],
+  "correctIndex": 1,
+  "funFact": "She dipped him in the River Styx holding him by the heel, so the one patch her fingers covered stayed vulnerable. The heel detail does not appear in Homer at all and was added centuries later.",
+  "explanation": "The attempt worked everywhere the water touched, which is exactly what made the one dry spot fatal.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-002",
+  "question": "What is a kraken, in Norse legend?",
+  "choices": [
+   "A giant sea monster",
+   "A fire spirit",
+   "A wolf",
+   "A one-eyed giant"
+  ],
+  "correctIndex": 0,
+  "funFact": "Descriptions probably come from real sightings of giant squid, which can reach 13 metres and were dismissed as sailors' nonsense until specimens were finally recovered.",
+  "explanation": "Norse legend also has the wolf Fenrir and various giants, but the kraken is firmly maritime.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-003",
+  "question": "Which day of the week is named after the Norse god Thor?",
+  "choices": [
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday"
+  ],
+  "correctIndex": 2,
+  "funFact": "Tuesday is Tyr, Wednesday is Odin, Thursday is Thor and Friday is Frigg. Saturday is the odd one out, keeping the Roman Saturn.",
+  "explanation": "English weekday names are mostly Norse gods sitting inside a Roman calendar.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-004",
+  "question": "In Egyptian belief, what was weighed against the heart after death?",
+  "choices": [
+   "A coin",
+   "A grain of wheat",
+   "A scarab",
+   "A feather"
+  ],
+  "correctIndex": 3,
+  "funFact": "The feather of Maat, representing truth. A heart heavier than the feather was fed to a waiting creature, ending the person's existence entirely.",
+  "explanation": "The heart was left in the body during mummification for exactly this reason, while the brain was discarded.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-005",
+  "question": "What does 'Pandora's box' refer to in the original story?",
+  "choices": [
+   "A box",
+   "A locked room",
+   "A chest of gold",
+   "A large jar"
+  ],
+  "correctIndex": 3,
+  "funFact": "It was a pithos, a big storage jar. A 16th century translator used the Latin for box and the mistranslation has outlived the original.",
+  "explanation": "The one thing left inside after everything escaped was hope, which scholars still argue about the meaning of.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-006",
+  "question": "In Japanese folklore, what is a kitsune?",
+  "choices": [
+   "A fox with magical powers",
+   "A river spirit",
+   "A mountain demon",
+   "A talking cat"
+  ],
+  "correctIndex": 0,
+  "funFact": "They gain a tail with age, up to nine, and the oldest are said to turn white or gold. Shapeshifting into a human is their signature trick.",
+  "explanation": "The cat equivalent is the bakeneko, which is a separate tradition entirely.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-007",
+  "question": "Which Greek figure was punished by having to push a boulder uphill forever?",
+  "choices": [
+   "Tantalus",
+   "Prometheus",
+   "Sisyphus",
+   "Atlas"
+  ],
+  "correctIndex": 2,
+  "funFact": "He was punished for cheating death twice, including talking his way out of the underworld once he was already there.",
+  "explanation": "Tantalus stood in water he could never drink, Prometheus had his liver eaten daily, and Atlas held up the sky.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-008",
+  "question": "What is the significance of a phoenix?",
+  "choices": [
+   "It grants wishes",
+   "It guards treasure",
+   "It is reborn from its own ashes",
+   "It predicts storms"
+  ],
+  "correctIndex": 2,
+  "funFact": "Versions appear in Greek, Egyptian, Persian and Chinese traditions, which is unusual for a mythical creature. The lifespan given ranges from 500 to over 1,400 years.",
+  "explanation": "Treasure guarding is a dragon's job in most traditions.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-009",
+  "question": "In Norse myth, what is Ragnarök?",
+  "choices": [
+   "A feast",
+   "A realm of the dead",
+   "A weapon",
+   "The end of the world"
+  ],
+  "correctIndex": 3,
+  "funFact": "Unusually for a mythology, it is prophesied in detail including which gods die and how. The world is then reborn, so it is an ending with a sequel.",
+  "explanation": "Valhalla is the hall of the slain, and Mjölnir is the weapon. Ragnarök is the event they are all building towards.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-010",
+  "question": "The Minotaur was kept in what?",
+  "choices": [
+   "A tower",
+   "A labyrinth",
+   "A cave",
+   "A ship"
+  ],
+  "correctIndex": 1,
+  "funFact": "Daedalus built it so cleverly that he could barely escape it himself. He and his son later flew out of Crete on wings of feathers and wax.",
+  "explanation": "Theseus found his way back out using a thread given to him by Ariadne.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-011",
+  "question": "What are the Fates, in Greek myth, usually shown doing?",
+  "choices": [
+   "Spinning and cutting thread",
+   "Weighing souls",
+   "Guarding gates",
+   "Reading stars"
+  ],
+  "correctIndex": 0,
+  "funFact": "One spins the thread of a life, one measures it and one cuts it. Even Zeus was generally shown as unable to overrule them.",
+  "explanation": "The Norse Norns do essentially the same job, which suggests a shared Indo-European origin.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-012",
+  "question": "In Hindu tradition, what is Ganesha known for?",
+  "choices": [
+   "An elephant head and removing obstacles",
+   "Controlling the sea",
+   "Guarding the underworld",
+   "Bringing rain"
+  ],
+  "correctIndex": 0,
+  "funFact": "He is invoked at the start of new ventures, which is why he appears at the beginning of books and ceremonies.",
+  "explanation": "Several stories explain the elephant head, and they disagree with each other, which is normal for a tradition this old.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-013",
+  "question": "What was the Trojan Horse, according to the story?",
+  "choices": [
+   "A real horse",
+   "A hollow wooden statue",
+   "A siege tower",
+   "A ship's figurehead"
+  ],
+  "correctIndex": 1,
+  "funFact": "There is no archaeological evidence for it, and some historians suspect it describes a siege engine, since those were sometimes named after animals.",
+  "explanation": "Homer's Iliad does not actually contain the horse. It appears in the Odyssey and later works.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-014",
+  "question": "Which creature is said to turn people to stone with a look?",
+  "choices": [
+   "Chimera",
+   "Medusa",
+   "Harpy",
+   "Siren"
+  ],
+  "correctIndex": 1,
+  "funFact": "Perseus used a polished shield as a mirror to avoid looking at her directly. In some versions her severed head kept working afterwards.",
+  "explanation": "Sirens lured sailors with song, and harpies snatched food and people.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-015",
+  "question": "In Irish folklore, what does a banshee's cry signify?",
+  "choices": [
+   "A coming death",
+   "A hidden treasure",
+   "A change of season",
+   "A broken promise"
+  ],
+  "correctIndex": 0,
+  "funFact": "The name comes from words meaning woman of the fairy mound. She is not a cause of death, only an announcement of it.",
+  "explanation": "Leprechauns are the treasure-related figures, and they are a separate tradition.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-016",
+  "question": "What is ambrosia in Greek myth?",
+  "choices": [
+   "A weapon",
+   "Food of the gods",
+   "A river",
+   "A punishment"
+  ],
+  "correctIndex": 1,
+  "funFact": "Ambrosia and nectar granted immortality. Mortals who ate it in stories tended to come to a bad end anyway.",
+  "explanation": "The word has since been attached to a fruit dessert, which is a considerable demotion.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-017",
+  "question": "The story of a great flood appears in which of these?",
+  "choices": [
+   "Only the Bible",
+   "Only Mesopotamian myth",
+   "Many unrelated traditions worldwide",
+   "Only European folklore"
+  ],
+  "correctIndex": 2,
+  "funFact": "Flood stories appear across Mesopotamia, India, Greece, the Americas and Australia. The Epic of Gilgamesh contains a version predating the biblical account.",
+  "explanation": "Living near rivers and coasts makes catastrophic flooding a shared human experience, which is the simplest explanation.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-018",
+  "question": "What is a golem, in Jewish folklore?",
+  "choices": [
+   "A figure of clay brought to life",
+   "A wandering spirit",
+   "A guardian angel",
+   "A cursed object"
+  ],
+  "correctIndex": 0,
+  "funFact": "It is animated by a written word and deactivated by altering or removing it. The story is a direct ancestor of a great deal of modern fiction about artificial beings.",
+  "explanation": "The most famous version protects the Jewish quarter of Prague, in a legend attached to a 16th century rabbi.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-019",
+  "question": "Which god is associated with the sea in Roman mythology?",
+  "choices": [
+   "Neptune",
+   "Mars",
+   "Mercury",
+   "Vulcan"
+  ],
+  "correctIndex": 0,
+  "funFact": "He is the Roman version of the Greek Poseidon, and the planet Neptune was named for him after being predicted mathematically before it was ever seen.",
+  "explanation": "Mars is war, Mercury is messages and trade, and Vulcan is the forge.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-020",
+  "question": "What happens to someone who eats food in the underworld, in the Persephone story?",
+  "choices": [
+   "Nothing",
+   "They gain immortality",
+   "They forget everything",
+   "They must return there"
+  ],
+  "correctIndex": 3,
+  "funFact": "She ate a handful of pomegranate seeds and had to spend part of each year below. That absence is the myth's explanation for winter.",
+  "explanation": "The number of seeds varies between versions, which is why the length of winter does too.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-021",
+  "question": "In Aboriginal Australian tradition, what is the Dreaming?",
+  "choices": [
+   "A nightly ritual",
+   "A framework of creation and law",
+   "A type of song",
+   "A burial practice"
+  ],
+  "correctIndex": 1,
+  "funFact": "It describes the formation of the land and the rules for living in it, and it is understood as ongoing rather than as a past event.",
+  "explanation": "The English word is an imperfect translation of concepts that differ between hundreds of distinct language groups.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-022",
+  "question": "What is the Norse Bifröst?",
+  "choices": [
+   "A hammer",
+   "A ship",
+   "A wolf",
+   "A rainbow bridge"
+  ],
+  "correctIndex": 3,
+  "funFact": "It connects the human world to the realm of the gods and is guarded by Heimdall, who is said to hear grass growing.",
+  "explanation": "Mjölnir is the hammer, Fenrir the wolf, and Naglfar the ship made of dead people's nails.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-023",
+  "question": "King Midas was cursed with what ability?",
+  "choices": [
+   "Understanding animals",
+   "Never sleeping",
+   "Speaking only truth",
+   "Turning things to gold"
+  ],
+  "correctIndex": 3,
+  "funFact": "The problem arrives when he touches food, and in most versions his daughter. He asked for it as a gift, which is what makes it a cautionary tale.",
+  "explanation": "He had a second story too, in which he was given donkey ears for judging a music contest badly.",
+  "category": "mythology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myh-024",
+  "question": "What is a chimera, strictly speaking?",
+  "choices": [
+   "A creature made of parts of several animals",
+   "A giant snake",
+   "A ghost",
+   "A two-headed dog"
+  ],
+  "correctIndex": 0,
+  "funFact": "Lion, goat and serpent in the classical description. Biologists borrowed the word for an organism containing cells from more than one individual.",
+  "explanation": "The two-headed dog is Orthrus, and the three-headed one is Cerberus.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myh-025",
+  "question": "Atlas was condemned to hold up what?",
+  "choices": [
+   "The Earth",
+   "The sky",
+   "A mountain",
+   "The sea"
+  ],
+  "correctIndex": 1,
+  "funFact": "He holds up the heavens, not the globe. The image of him carrying a sphere comes from later art and helped attach his name to books of maps.",
+  "explanation": "Depicting the sky as a sphere is what makes the statues look like he is holding the Earth.",
+  "category": "mythology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-001",
+  "question": "How many senses do humans have?",
+  "choices": [
+   "Five",
+   "Six",
+   "Somewhere around twenty",
+   "Three"
+  ],
+  "correctIndex": 2,
+  "funFact": "Balance, temperature, pain, body position, hunger and thirst all have their own receptors. The famous five come from Aristotle, not from biology.",
+  "explanation": "Estimates vary from about nine to over thirty depending on how you count, but it is definitely not five.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-002",
+  "question": "Can you see the Great Wall of China from space with the naked eye?",
+  "choices": [
+   "Yes, easily",
+   "Yes, on a clear day",
+   "No",
+   "Only the western section"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is long but only a few metres wide, roughly like trying to spot a human hair from two kilometres away. Astronauts have repeatedly said they cannot see it.",
+  "explanation": "Motorways and airports are far easier to pick out from orbit because they are wider and more reflective.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-003",
+  "question": "Do we use only 10 percent of our brains?",
+  "choices": [
+   "Yes",
+   "No, we use nearly all of it",
+   "Only 40 percent",
+   "Only during sleep"
+  ],
+  "correctIndex": 1,
+  "funFact": "Brain scans show activity across essentially the whole organ over a day. It also burns about 20 percent of your energy, which would be an absurd waste if 90 percent were idle.",
+  "explanation": "Damage to almost any small region causes noticeable problems, which would not happen if most of it were spare.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-004",
+  "question": "What happens to a goldfish's memory after three seconds?",
+  "choices": [
+   "It resets",
+   "Nothing, they remember for months",
+   "It halves",
+   "They remember only food"
+  ],
+  "correctIndex": 1,
+  "funFact": "Goldfish have been trained to push levers at set times of day and to navigate mazes. They can remember tasks for months.",
+  "explanation": "The three-second story has no research behind it and appears to be pure folklore.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-005",
+  "question": "Do bulls charge because they see red?",
+  "choices": [
+   "Yes",
+   "Only in bright light",
+   "Only young bulls",
+   "No, they are colourblind to red"
+  ],
+  "correctIndex": 3,
+  "funFact": "Cattle cannot distinguish red the way we do. They charge the movement of the cape, and the colour is entirely for the audience.",
+  "explanation": "Tests with differently coloured cloths show bulls respond to the motion, not the shade.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-006",
+  "question": "Does lightning strike the same place twice?",
+  "choices": [
+   "Never",
+   "Only in storms over water",
+   "Constantly",
+   "Only on metal"
+  ],
+  "correctIndex": 2,
+  "funFact": "The Empire State Building is hit around 20 to 25 times a year. Tall pointed objects are struck repeatedly, which is the whole principle behind lightning rods.",
+  "explanation": "The saying is about coincidence, not physics, and as physics it is simply wrong.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-007",
+  "question": "What did people in Columbus's time believe about the Earth's shape?",
+  "choices": [
+   "That it was flat",
+   "That it was round",
+   "That it was a disc on a turtle",
+   "Opinions were evenly split"
+  ],
+  "correctIndex": 1,
+  "funFact": "Educated Europeans had known it was round since the ancient Greeks. The flat-earth-in-1492 story was popularised by a fanciful 19th century biography.",
+  "explanation": "The real argument with Columbus was about the size of the Earth. His critics were right that he had badly underestimated it.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-008",
+  "question": "Does shaving make hair grow back thicker?",
+  "choices": [
+   "Yes",
+   "No",
+   "Only on the face",
+   "Only after several years"
+  ],
+  "correctIndex": 1,
+  "funFact": "A razor cuts the shaft at its widest point and leaves a blunt end, which feels coarser as it grows out. The follicle is untouched.",
+  "explanation": "Growth rate and thickness are set below the skin, where a razor never reaches.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-009",
+  "question": "How long does chewing gum stay in your stomach if swallowed?",
+  "choices": [
+   "Seven years",
+   "About as long as anything else",
+   "Forever",
+   "Six months"
+  ],
+  "correctIndex": 1,
+  "funFact": "The gum base is not digested, but it does not need to be. It passes through on the normal schedule like sweetcorn.",
+  "explanation": "Seven years is a parental deterrent with no medical basis.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-010",
+  "question": "Do Vikings' helmets have horns?",
+  "choices": [
+   "Yes, in battle only",
+   "Yes, for ceremony",
+   "No, that came from opera",
+   "Only for chieftains"
+  ],
+  "correctIndex": 2,
+  "funFact": "Not one horned Viking helmet has ever been excavated. A costume designer for a Wagner opera in the 1870s put horns on stage and the image stuck.",
+  "explanation": "Horns would be a gift to an opponent in a fight, giving them something to grab.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-011",
+  "question": "Does cracking your knuckles cause arthritis?",
+  "choices": [
+   "Yes",
+   "Only in cold weather",
+   "Only after decades",
+   "No"
+  ],
+  "correctIndex": 3,
+  "funFact": "A doctor cracked the knuckles on one hand only for over sixty years and compared them at the end. No difference. He was given an Ig Nobel Prize for it.",
+  "explanation": "The sound is a gas bubble collapsing in the joint fluid, which does no lasting harm.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-012",
+  "question": "Is glass a slow-moving liquid, as old window panes supposedly show?",
+  "choices": [
+   "Yes",
+   "No, it is an amorphous solid",
+   "Only leaded glass",
+   "Only above 30 degrees"
+  ],
+  "correctIndex": 1,
+  "funFact": "Old panes are thicker at the bottom because of how they were made, and installers usually put the heavy edge down. Roman glass thousands of years older has not sagged at all.",
+  "explanation": "Glass at room temperature would take longer than the age of the universe to visibly flow.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-013",
+  "question": "Do different parts of the tongue taste different flavours?",
+  "choices": [
+   "Yes, the classic tongue map",
+   "Only in children",
+   "Only sweet is localised",
+   "No, that map is a mistranslation"
+  ],
+  "correctIndex": 3,
+  "funFact": "The map came from a German paper misread in translation in 1901. All five basic tastes are detected across the whole tongue.",
+  "explanation": "There are small differences in sensitivity, but nothing like the neat zoned diagram in old textbooks.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-014",
+  "question": "Does the Coriolis effect determine which way a bathtub drains?",
+  "choices": [
+   "Yes, opposite in each hemisphere",
+   "Only in perfectly still water",
+   "Only at the equator",
+   "No, the basin's shape decides"
+  ],
+  "correctIndex": 3,
+  "funFact": "The effect is real but far too weak at that scale. Any tilt, jet or leftover swirl in the water completely overwhelms it.",
+  "explanation": "It genuinely governs hurricanes and ocean currents, which are millions of times larger.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-015",
+  "question": "Was the guillotine invented by a man named Guillotin?",
+  "choices": [
+   "Yes, he built it",
+   "No, the name is a coincidence",
+   "Yes, and he died on it",
+   "No, he only proposed its use"
+  ],
+  "correctIndex": 3,
+  "funFact": "Joseph-Ignace Guillotin opposed the death penalty and argued for a quicker method as a step towards abolishing it. His family later petitioned to change their name.",
+  "explanation": "Similar machines existed for centuries beforehand in Scotland and Italy. He argued for it; he did not design it.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-016",
+  "question": "Do camels store water in their humps?",
+  "choices": [
+   "Yes",
+   "No, they store fat",
+   "Yes, but only one hump does",
+   "Only during drought"
+  ],
+  "correctIndex": 1,
+  "funFact": "The hump is fat, which doubles as insulation kept off the back where it would trap heat. Their water tolerance comes from unusually tough blood cells.",
+  "explanation": "A camel can drink over 100 litres in ten minutes, which is where the water reputation comes from.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-017",
+  "question": "Do ostriches bury their heads in the sand?",
+  "choices": [
+   "Yes, when frightened",
+   "Only females",
+   "No",
+   "Only to sleep"
+  ],
+  "correctIndex": 2,
+  "funFact": "They turn their eggs in nests dug in the ground, which from a distance looks like burying the head. Frightened ostriches either run at 70 kilometres an hour or kick.",
+  "explanation": "An animal that put its head underground would suffocate, which is a strong argument against the behaviour existing.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-018",
+  "question": "Does sugar make children hyperactive?",
+  "choices": [
+   "Yes",
+   "No, studies find no effect",
+   "Only refined sugar",
+   "Only in large doses"
+  ],
+  "correctIndex": 1,
+  "funFact": "In blind trials, parents told their child had been given sugar rated them as more hyperactive, even when the child had not. The effect is in the observer.",
+  "explanation": "Dozens of controlled studies have looked for it and found nothing.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-019",
+  "question": "Is the tongue the strongest muscle in the body?",
+  "choices": [
+   "Yes, by force",
+   "Yes, by endurance",
+   "No, it is not a single muscle",
+   "Yes, relative to size"
+  ],
+  "correctIndex": 2,
+  "funFact": "The tongue is eight muscles working together and is not exceptionally strong by any measure. The claim survives because it sounds like something you ought to know.",
+  "explanation": "By force the jaw wins, by continuous work the heart, and by size relative to power the eye muscles do well.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-020",
+  "question": "Did Marie Antoinette say 'let them eat cake'?",
+  "choices": [
+   "Yes, at her trial",
+   "No, it predates her",
+   "Yes, in a letter",
+   "No, she said it about bread"
+  ],
+  "correctIndex": 1,
+  "funFact": "Rousseau attributed the line to an unnamed princess in a book written when Marie Antoinette was about ten and living in Austria.",
+  "explanation": "It was attached to her decades later as propaganda, and no contemporary source records her saying it.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-021",
+  "question": "Do humans have exactly five fingers because of some deep mathematical rule?",
+  "choices": [
+   "Yes, it is optimal",
+   "No, it is a frozen accident",
+   "Yes, five is the strongest",
+   "No, most mammals have six"
+  ],
+  "correctIndex": 1,
+  "funFact": "Early land vertebrates experimented with seven and eight digits. Five became fixed early and every descendant inherited it, whales and bats included.",
+  "explanation": "There is no evidence five is optimal. It simply got locked in before the group diversified.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-022",
+  "question": "Does hair and fingernail growth continue after death?",
+  "choices": [
+   "Yes, for days",
+   "No, the skin retracts",
+   "Yes, but only nails",
+   "Only in cold conditions"
+  ],
+  "correctIndex": 1,
+  "funFact": "Dehydration pulls the skin back from nails and follicles, exposing more of what was already there. Nothing is growing.",
+  "explanation": "Growth needs a working blood supply, which stops with everything else.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-023",
+  "question": "Is the five-second rule for dropped food real?",
+  "choices": [
+   "Yes, under five seconds is safe",
+   "No, transfer is immediate",
+   "Only on carpet",
+   "Only for dry food"
+  ],
+  "correctIndex": 1,
+  "funFact": "Bacteria transfer on contact. Moisture matters far more than time, so a wet slice picks up more in one second than a dry biscuit does in ten.",
+  "explanation": "Longer contact does transfer more, so time is not irrelevant, but there is no safe window.",
+  "category": "myths",
+  "difficulty": "easy"
+ },
+ {
+  "id": "myt-024",
+  "question": "Do lemmings deliberately jump off cliffs?",
+  "choices": [
+   "Yes, to control population",
+   "Only during migration",
+   "Yes, but rarely",
+   "No, a documentary staged it"
+  ],
+  "correctIndex": 3,
+  "funFact": "A 1958 Disney documentary drove them off a cliff for the camera. The myth existed before, but the film cemented it as something people had seen.",
+  "explanation": "Lemmings do migrate in large numbers and some drown crossing water, which is where the story started.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "myt-025",
+  "question": "Does a duck's quack echo?",
+  "choices": [
+   "No, uniquely",
+   "Only indoors",
+   "Yes, like any sound",
+   "Only the male's"
+  ],
+  "correctIndex": 2,
+  "funFact": "Acoustics researchers tested this in an echo chamber. It echoes. The echo is just soft and fades into the quack's own long decay, so nobody notices.",
+  "explanation": "No sound can avoid echoing. Physics does not make exceptions for ducks.",
+  "category": "myths",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-001",
+  "question": "In a room of 23 people, roughly what is the chance two share a birthday?",
+  "choices": [
+   "6 percent",
+   "23 percent",
+   "50 percent",
+   "90 percent"
+  ],
+  "correctIndex": 2,
+  "funFact": "It feels far too high because people imagine matching their own birthday. What matters is all 253 possible pairs in the room.",
+  "explanation": "By 70 people it is over 99 percent, which still surprises most people.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-002",
+  "question": "Fold a piece of paper in half 42 times. Roughly how thick would it be?",
+  "choices": [
+   "A metre",
+   "A kilometre",
+   "The distance to the Moon",
+   "The width of a house"
+  ],
+  "correctIndex": 2,
+  "funFact": "Doubling is brutally fast. Fold it 103 times and it exceeds the diameter of the observable universe.",
+  "explanation": "You cannot physically do it, but the arithmetic is the point.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-003",
+  "question": "What is the only even prime number?",
+  "choices": [
+   "0",
+   "1",
+   "2",
+   "4"
+  ],
+  "correctIndex": 2,
+  "funFact": "Every other even number is divisible by two, which disqualifies it. Mathematicians sometimes call 2 the oddest prime.",
+  "explanation": "1 is not prime by definition, a convention adopted so that factorisation is unique.",
+  "category": "numbers",
+  "difficulty": "easy"
+ },
+ {
+  "id": "num-004",
+  "question": "If you shuffle a deck of cards properly, that order has probably occurred how many times before?",
+  "choices": [
+   "Millions",
+   "Thousands",
+   "Almost certainly never",
+   "Once a day somewhere"
+  ],
+  "correctIndex": 2,
+  "funFact": "There are about 8 followed by 67 zeros possible orderings. Every properly shuffled deck in history is effectively a new one.",
+  "explanation": "Even if everyone alive shuffled once a second since the Big Bang, you would not scratch the surface.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-005",
+  "question": "What is a googol?",
+  "choices": [
+   "1 followed by 100 zeros",
+   "The largest known prime",
+   "1 followed by a million zeros",
+   "An imaginary number"
+  ],
+  "correctIndex": 0,
+  "funFact": "The name was invented by a mathematician's nine-year-old nephew. A googolplex is 1 followed by a googol zeros, which cannot be written out in the observable universe.",
+  "explanation": "A search company later took a misspelling of it as a name.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-006",
+  "question": "Roughly how many people do you need for a 99 percent chance two share a birthday?",
+  "choices": [
+   "57",
+   "183",
+   "365",
+   "730"
+  ],
+  "correctIndex": 0,
+  "funFact": "Fifty-seven. Not 183, and certainly not 365. The number of pairs grows with the square of the group.",
+  "explanation": "You need 367 people for a guarantee, thanks to leap years, but the probability curve gets there long before.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-007",
+  "question": "What is unusual about the number 6,174?",
+  "choices": [
+   "It is prime",
+   "It has no factors",
+   "It is a perfect square",
+   "Kaprekar's routine always reaches it"
+  ],
+  "correctIndex": 3,
+  "funFact": "Take any four-digit number with at least two different digits, sort the digits up and down, subtract, and repeat. You always land on 6,174 within seven steps.",
+  "explanation": "It is not prime and not a square. It is simply a strange attractor for that particular procedure.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-008",
+  "question": "How many grains of rice are on the last square if you double from one grain across a chessboard?",
+  "choices": [
+   "About a million",
+   "About a billion",
+   "Over 9 quintillion",
+   "About a trillion"
+  ],
+  "correctIndex": 2,
+  "funFact": "Over 9 quintillion on the final square alone, more rice than has ever been grown. The legend ends with the inventor being executed or promoted, depending on the version.",
+  "explanation": "The total across all 64 squares is roughly double the final square again.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-009",
+  "question": "What does Benford's Law describe?",
+  "choices": [
+   "How leading digits are distributed in real data",
+   "How primes thin out",
+   "The growth of populations",
+   "Rounding errors"
+  ],
+  "correctIndex": 0,
+  "funFact": "In many real datasets the leading digit is 1 about 30 percent of the time and 9 under 5 percent. Auditors use it to spot fabricated figures, because invented numbers are too uniform.",
+  "explanation": "It holds for river lengths, street addresses and share prices, but not for things like heights that cluster around an average.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-010",
+  "question": "Roughly how likely are you to win a typical big national lottery jackpot?",
+  "choices": [
+   "1 in a million",
+   "1 in 14 million or worse",
+   "1 in 100,000",
+   "1 in 500,000"
+  ],
+  "correctIndex": 1,
+  "funFact": "Odds of 1 in 14 million or considerably worse are typical. You are more likely to be struck by lightning in a given year, several times over.",
+  "explanation": "Buying two tickets doubles your chance, which sounds good until you notice what it is doubling.",
+  "category": "numbers",
+  "difficulty": "easy"
+ },
+ {
+  "id": "num-011",
+  "question": "What is zero to the power of zero usually defined as?",
+  "choices": [
+   "0",
+   "1",
+   "Undefined",
+   "Infinity"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is defined as 1 in most contexts because it makes an enormous number of formulas work cleanly. In some analytic contexts it is left undefined.",
+  "explanation": "It is a convention chosen for usefulness, not a fact derived from the arithmetic.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-012",
+  "question": "How many different ways can you arrange 10 books on a shelf?",
+  "choices": [
+   "100",
+   "1,000",
+   "About 3.6 million",
+   "About 100,000"
+  ],
+  "correctIndex": 2,
+  "funFact": "10 factorial is 3,628,800. Arranging one a second, it would take over 40 days to get through them all.",
+  "explanation": "Factorials grow faster than almost anyone's intuition expects.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-013",
+  "question": "The Fibonacci sequence appears in nature most reliably in what?",
+  "choices": [
+   "Petal and spiral counts",
+   "Animal lifespans",
+   "Rainfall patterns",
+   "Tidal cycles"
+  ],
+  "correctIndex": 0,
+  "funFact": "Sunflower seed spirals and pine cones follow it because packing seeds at the golden angle fills space most efficiently.",
+  "explanation": "It shows up much less often than popular articles claim, but the plant packing cases are genuine.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-014",
+  "question": "What is the Monty Hall problem's correct strategy?",
+  "choices": [
+   "Stay with your door",
+   "Pick randomly again",
+   "It makes no difference",
+   "Switch doors"
+  ],
+  "correctIndex": 3,
+  "funFact": "Switching wins two times in three. Thousands of people, including mathematicians, wrote in to insist this was wrong when it was published.",
+  "explanation": "The host knowingly opens a losing door, and that information is what shifts the odds.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-015",
+  "question": "Roughly how many seconds are in a non-leap year?",
+  "choices": [
+   "About 31.5 million",
+   "About 3 million",
+   "About 500 million",
+   "About 8 million"
+  ],
+  "correctIndex": 0,
+  "funFact": "31,536,000. A handy approximation is pi times ten million, which is accurate to under half a percent.",
+  "explanation": "The pi coincidence is genuinely useful and completely accidental.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-016",
+  "question": "What is special about 1729?",
+  "choices": [
+   "It is prime",
+   "It is the smallest sum of two cubes in two ways",
+   "It has no divisors",
+   "It is a perfect number"
+  ],
+  "correctIndex": 1,
+  "funFact": "Ramanujan said it from a hospital bed when Hardy remarked his taxi number was dull. It is 1 cubed plus 12 cubed, and also 9 cubed plus 10 cubed.",
+  "explanation": "It is not prime, being 7 times 13 times 19.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-017",
+  "question": "If a bat and ball cost £1.10 together, and the bat costs £1 more than the ball, what does the ball cost?",
+  "choices": [
+   "10p",
+   "5p",
+   "1p",
+   "11p"
+  ],
+  "correctIndex": 1,
+  "funFact": "Most people answer 10p instantly. If the ball were 10p the bat would be £1.10 and the total £1.20. The correct answer is 5p.",
+  "explanation": "It is the standard test case for fast intuitive answers overriding slow checking.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-018",
+  "question": "How many digits of pi are enough to calculate the circumference of the observable universe to the width of a hydrogen atom?",
+  "choices": [
+   "About 40",
+   "About 1,000",
+   "About a million",
+   "About 10"
+  ],
+  "correctIndex": 0,
+  "funFact": "Around 40 digits. NASA uses about 15 for interplanetary navigation. Everything past that is recreational.",
+  "explanation": "Trillions of digits have been computed, entirely as a test of computers and algorithms.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-019",
+  "question": "What is a prime number?",
+  "choices": [
+   "Any odd number",
+   "Divisible only by 1 and itself",
+   "A number ending in 1, 3, 7 or 9",
+   "A number with exactly two digits"
+  ],
+  "correctIndex": 1,
+  "funFact": "There are infinitely many, proved by Euclid around 300 BC with an argument short enough to fit in a paragraph.",
+  "explanation": "2 is prime and even, and 9 is odd but not prime, so oddness has nothing to do with it.",
+  "category": "numbers",
+  "difficulty": "easy"
+ },
+ {
+  "id": "num-020",
+  "question": "Why do so many prices end in 99?",
+  "choices": [
+   "Tax rules",
+   "Printing costs",
+   "Rounding conventions",
+   "People anchor on the leftmost digit"
+  ],
+  "correctIndex": 3,
+  "funFact": "£9.99 is read as roughly nine rather than roughly ten. One theory adds that odd amounts forced cashiers to open the till and record the sale, deterring theft.",
+  "explanation": "The effect is measurable in sales data, which is why it has survived for over a century.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-021",
+  "question": "What happens if you add up all the numbers on a roulette wheel?",
+  "choices": [
+   "666",
+   "500",
+   "1,000",
+   "365"
+  ],
+  "correctIndex": 0,
+  "funFact": "1 through 36 sums to 666, which is why roulette is sometimes called the devil's game.",
+  "explanation": "The formula for adding 1 to n gives n times n plus 1, divided by 2, which is 36 times 37 over 2.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-022",
+  "question": "How long would it take to count to one billion out loud, non-stop?",
+  "choices": [
+   "About a month",
+   "About 3 years",
+   "Over 30 years",
+   "About 100 years"
+  ],
+  "correctIndex": 2,
+  "funFact": "At one number a second with no sleep, over 31 years. Counting to a million takes about 11 days, which shows how far apart the two numbers really are.",
+  "explanation": "A billion is a thousand millions, and that thousand-fold gap is what intuition flattens.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-023",
+  "question": "What is the golden ratio, approximately?",
+  "choices": [
+   "1.414",
+   "1.618",
+   "2.718",
+   "3.142"
+  ],
+  "correctIndex": 1,
+  "funFact": "Its claimed appearances in the Parthenon and Renaissance art are mostly retrofitted. Its appearances in plant growth are real.",
+  "explanation": "1.414 is the square root of 2, 2.718 is e, and 3.142 is pi.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "num-024",
+  "question": "If you flip a fair coin and get heads nine times in a row, what is the chance of heads next?",
+  "choices": [
+   "Much less than half",
+   "It depends on the coin's age",
+   "Much more than half",
+   "Exactly half"
+  ],
+  "correctIndex": 3,
+  "funFact": "The coin has no memory. Believing the run must correct itself is the gambler's fallacy, and it has taken a great deal of money off a great many people.",
+  "explanation": "The chance of getting ten in a row from the start is small, but you have already spent nine of those flips.",
+  "category": "numbers",
+  "difficulty": "easy"
+ },
+ {
+  "id": "num-025",
+  "question": "How many possible positions are there in chess, roughly, compared with atoms in the observable universe?",
+  "choices": [
+   "Far fewer",
+   "About the same",
+   "Far more legal game sequences than atoms",
+   "Exactly equal"
+  ],
+  "correctIndex": 2,
+  "funFact": "The number of possible games is estimated at around 10 to the power of 120, vastly more than the roughly 10 to the power of 80 atoms in the observable universe.",
+  "explanation": "Board positions number around 10 to the power of 44, which is fewer than atoms. Game sequences are the enormous figure.",
+  "category": "numbers",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-001",
+  "question": "In Switzerland, what is it illegal to own only one of?",
+  "choices": [
+   "Guinea pig",
+   "Cat",
+   "Goldfish",
+   "Parrot"
+  ],
+  "correctIndex": 0,
+  "funFact": "Guinea pigs are considered social enough that keeping one alone counts as neglect. Rental services exist for when one of a pair dies.",
+  "explanation": "The law covers several social species, but guinea pigs are the famous case.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-002",
+  "question": "What did a Japanese railway station famously appoint as its stationmaster?",
+  "choices": [
+   "A dog",
+   "A robot",
+   "A retired driver",
+   "A cat"
+  ],
+  "correctIndex": 3,
+  "funFact": "A calico cat named Tama was made stationmaster in 2007 and tourism to the line rose sharply. She was given a custom hat and, later, a shrine.",
+  "explanation": "The station was facing closure, and the cat is widely credited with saving the line.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-003",
+  "question": "There is a village in Norway that installed mirrors on a mountainside to do what?",
+  "choices": [
+   "Reflect sunlight into the town",
+   "Warn of avalanches",
+   "Signal aircraft",
+   "Melt snow"
+  ],
+  "correctIndex": 0,
+  "funFact": "Rjukan sits so deep in a valley that it gets no direct sun for half the year. Three large mirrors track the sun and bounce a patch of light onto the square.",
+  "explanation": "The idea was proposed a century earlier and finally built in 2013.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-004",
+  "question": "What happens to Bhutan's national happiness measure?",
+  "choices": [
+   "It is a formal government index",
+   "It is a tourist slogan",
+   "It is measured only in the capital",
+   "It was abandoned in 1990"
+  ],
+  "correctIndex": 0,
+  "funFact": "Gross National Happiness is a real policy framework with survey instruments and indicators, used alongside conventional economics.",
+  "explanation": "It began in the 1970s and covers areas like health, education, culture and ecological resilience.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-005",
+  "question": "Why did Australia once lose a war against birds?",
+  "choices": [
+   "It never happened",
+   "Seagulls closed an airport",
+   "Cockatoos destroyed power lines",
+   "Emus proved impossible to cull with machine guns"
+  ],
+  "correctIndex": 3,
+  "funFact": "In 1932 soldiers were sent with machine guns against emus damaging crops. The birds scattered efficiently, and the operation was abandoned as a failure.",
+  "explanation": "It is genuinely known as the Emu War, and the emus are generally recorded as having won.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-006",
+  "question": "Why does the Icelandic phone book list people by first name?",
+  "choices": [
+   "Surnames change every generation",
+   "Alphabetical tradition",
+   "There are only 20 surnames",
+   "To save printing space"
+  ],
+  "correctIndex": 0,
+  "funFact": "Icelandic surnames are patronymic, so a family does not share one. Your second name usually means son or daughter of your father, and it changes with every generation.",
+  "explanation": "Sorting by a name that resets each generation would be useless, so directories sort by first name and often list occupations too.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-007",
+  "question": "What did the Netherlands do with many of its prisons in the 2010s?",
+  "choices": [
+   "Doubled capacity",
+   "Closed some for lack of prisoners",
+   "Converted them to schools only",
+   "Privatised all of them"
+  ],
+  "correctIndex": 1,
+  "funFact": "Falling crime and a preference for non-custodial sentences left cells empty. Some were rented to other countries and others became housing for asylum seekers.",
+  "explanation": "Several were indeed converted, including into hotels, but the closures came first.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-008",
+  "question": "There is a town in Norway where it is technically illegal to do what?",
+  "choices": [
+   "Die",
+   "Sleep outdoors",
+   "Own a car",
+   "Whistle"
+  ],
+  "correctIndex": 0,
+  "funFact": "Longyearbyen's permafrost prevents bodies from decomposing, and preserved 1918 flu virus was found there. Seriously ill residents are flown to the mainland.",
+  "explanation": "It is more a strong policy than a criminal law, but burials have not been permitted for decades.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-009",
+  "question": "Before cheap alarm clocks, what did a 'knocker-up' do for a living?",
+  "choices": [
+   "Wake people for work",
+   "Test walls for weakness",
+   "Knock down condemned houses",
+   "Collect debts"
+  ],
+  "correctIndex": 0,
+  "funFact": "Before cheap alarm clocks, a knocker-up tapped on bedroom windows with a long pole for a small weekly fee. The job survived into the 1950s in some industrial towns.",
+  "explanation": "The obvious question, who woke the knocker-up, was a standing joke at the time too.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-010",
+  "question": "What was sold in the world's first recorded advertisement dispute over a 'tulip'?",
+  "choices": [
+   "An actual tulip bulb",
+   "A painting",
+   "A ship",
+   "A house"
+  ],
+  "correctIndex": 0,
+  "funFact": "During the 1630s Dutch tulip mania, single bulbs briefly traded for the price of a house. The crash is one of the earliest documented speculative bubbles.",
+  "explanation": "Modern historians argue the mania was smaller than legend suggests, but the extreme prices are documented.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-011",
+  "question": "Which country has a national animal that does not exist?",
+  "choices": [
+   "Scotland",
+   "Wales",
+   "Norway",
+   "Portugal"
+  ],
+  "correctIndex": 0,
+  "funFact": "Scotland's national animal is the unicorn, chosen partly because in heraldry it was the natural opponent of the English lion.",
+  "explanation": "Wales uses a dragon, which is also mythical but is technically a national symbol rather than the national animal.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-012",
+  "question": "What did a 1962 outbreak in Tanzania involve?",
+  "choices": [
+   "Contagious laughter",
+   "Mass sleepwalking",
+   "Sudden muteness",
+   "Uncontrollable dancing"
+  ],
+  "correctIndex": 0,
+  "funFact": "It started with three schoolgirls and spread to over a thousand people across months, closing schools. It is generally understood as mass psychogenic illness.",
+  "explanation": "A dancing outbreak did happen, but in Strasbourg in 1518, which is a different famous case.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-013",
+  "question": "Why does Japan have a black egg tradition at Owakudani?",
+  "choices": [
+   "They come from black hens",
+   "Volcanic ash is added",
+   "They are dyed for festivals",
+   "Eggs boiled in sulphur springs turn black"
+  ],
+  "correctIndex": 3,
+  "funFact": "Sulphur and iron in the hot spring react with the shell. Eating one is said to add seven years to your life, which is a fairly specific promise.",
+  "explanation": "The inside is an ordinary boiled egg. Only the shell changes colour.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-014",
+  "question": "What is strange about the sale of the Eiffel Tower in 1925?",
+  "choices": [
+   "A con man sold it for scrap, twice",
+   "It was sold to a museum",
+   "It was nearly demolished",
+   "It was rented to a circus"
+  ],
+  "correctIndex": 0,
+  "funFact": "Victor Lustig posed as a government official, convinced scrap dealers the tower was being dismantled, and took the money. When the first victim was too embarrassed to report it, he did it again.",
+  "explanation": "The tower genuinely was in poor repair at the time, which is what made the story plausible.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-015",
+  "question": "Which of these is a real unit of measurement?",
+  "choices": [
+   "The smoot",
+   "The blimp",
+   "The gronk",
+   "The whisker"
+  ],
+  "correctIndex": 0,
+  "funFact": "A Massachusetts bridge was measured in 1958 using a student named Oliver Smoot as the ruler. The markings are repainted every year and police use them to report incident locations.",
+  "explanation": "He later became chairman of a standards organisation, which is a very good ending to the story.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-016",
+  "question": "What did a Belgian town's annual festival throw at visitors until recently?",
+  "choices": [
+   "Oranges",
+   "Flowers",
+   "Cats",
+   "Bread"
+  ],
+  "correctIndex": 2,
+  "funFact": "Ypres has a cat festival with medieval roots. Live cats were once thrown from the belfry; today they use plush toys, and a jester apologises for the past.",
+  "explanation": "An Italian town does throw oranges, in a large annual battle, so that answer is not far off.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-017",
+  "question": "What is peculiar about the border between the Netherlands and Belgium at Baarle?",
+  "choices": [
+   "It runs through houses and cafés",
+   "It moves every year",
+   "It is unmarked",
+   "It is patrolled by boat"
+  ],
+  "correctIndex": 0,
+  "funFact": "There are enclaves inside enclaves, and the border crosses buildings. Some front doors have been moved so a house sits in the more convenient country.",
+  "explanation": "Crosses are painted on the pavement so you can see which country you are standing in.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-018",
+  "question": "What did Finland's postal service once officially offer?",
+  "choices": [
+   "A postcode for Santa Claus",
+   "Free stamps for life",
+   "Delivery by reindeer",
+   "A letter-writing hotline"
+  ],
+  "correctIndex": 0,
+  "funFact": "Santa's official Finnish address receives hundreds of thousands of letters a year from all over the world, and many get a reply.",
+  "explanation": "Several countries run similar schemes, but the Finnish one is the most established.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-019",
+  "question": "Why is there a permanent flame burning at a site in Turkmenistan?",
+  "choices": [
+   "A gas crater set alight in 1971",
+   "A religious ritual",
+   "A volcanic vent",
+   "An oil refinery"
+  ],
+  "correctIndex": 0,
+  "funFact": "A drilling accident opened a gas crater, and it was set alight expecting it to burn out in weeks. It has been burning for over fifty years.",
+  "explanation": "It is nicknamed the Door to Hell and has become an unlikely tourist site.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-020",
+  "question": "What happened when a US state considered legally defining the value of pi?",
+  "choices": [
+   "It passed unanimously",
+   "A bill nearly passed with a wrong value",
+   "It set pi to exactly 3",
+   "Nothing, it is a myth"
+  ],
+  "correctIndex": 1,
+  "funFact": "An 1897 Indiana bill implied an incorrect value. It passed the House and was only stopped in the Senate because a mathematician happened to be visiting that day.",
+  "explanation": "The bill was really about a claimed method of squaring the circle, which is impossible.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-021",
+  "question": "What is unusual about the Wollemi pine?",
+  "choices": [
+   "It was known only as a fossil until 1994",
+   "It grows underwater",
+   "It has no leaves",
+   "It flowers once a century"
+  ],
+  "correctIndex": 0,
+  "funFact": "Fewer than a hundred wild trees were found in a canyon near Sydney. The exact location is kept secret, and the species is now sold in garden centres to spread it around.",
+  "explanation": "It had been assumed extinct for around two million years.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-022",
+  "question": "What did a 1904 Olympic marathon winner reportedly do during the race?",
+  "choices": [
+   "Ride part of it in a car",
+   "Swim a river",
+   "Change shoes six times",
+   "Stop for a nap"
+  ],
+  "correctIndex": 0,
+  "funFact": "Fred Lorz rode for about 18 kilometres and was disqualified. The actual winner was given strychnine and brandy by his handlers as a stimulant and nearly died.",
+  "explanation": "That race is widely considered the strangest marathon ever run.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-023",
+  "question": "What is the 'Great Stink' of 1858 remembered for?",
+  "choices": [
+   "Forcing London to build sewers",
+   "Closing a coal mine",
+   "A failed perfume factory",
+   "A volcanic eruption"
+  ],
+  "correctIndex": 0,
+  "funFact": "The Thames smelled so bad that Parliament, sitting right beside it, hung curtains soaked in chemicals and then rapidly approved a sewer system it had refused for years.",
+  "explanation": "The resulting network by Joseph Bazalgette is still largely in use.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-024",
+  "question": "Why do some countries drive on the left?",
+  "choices": [
+   "Historic habit of keeping sword arm free",
+   "Colder climates",
+   "Engine design",
+   "Random assignment"
+  ],
+  "correctIndex": 0,
+  "funFact": "Right-handed riders kept to the left so their sword arm faced oncoming strangers. Large wagons with a driver seated on the left later pushed much of the world the other way.",
+  "explanation": "About a third of the world's population still drives on the left, so it is not a small minority.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "odd-025",
+  "question": "What is the shortest commercial flight in the world, roughly?",
+  "choices": [
+   "Under two minutes",
+   "About ten minutes",
+   "About twenty minutes",
+   "About forty minutes"
+  ],
+  "correctIndex": 0,
+  "funFact": "The hop between two Orkney islands is scheduled at about a minute and a half, and with a good wind has been done in under half a minute.",
+  "explanation": "The taxiing takes considerably longer than the flight itself.",
+  "category": "oddities",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-001",
+  "question": "Why do most bathtubs and bottles of ketchup have that particular red?",
+  "choices": [
+   "Tradition from Roman dyes",
+   "Nothing, the colours are unrelated",
+   "A 1950s marketing agreement",
+   "Iron oxide requirements"
+  ],
+  "correctIndex": 1,
+  "funFact": "Trick question. There is no shared reason, and the instinct to assume a hidden connection between unrelated things has a name: apophenia.",
+  "explanation": "Tomatoes are red because of lycopene, and bath enamel is whatever the manufacturer chose. Not everything has a story behind it.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-002",
+  "question": "The QWERTY keyboard layout was designed to do what?",
+  "choices": [
+   "Slow typists down",
+   "Fit a patent loophole",
+   "Match Morse code",
+   "Reduce typewriter jams"
+  ],
+  "correctIndex": 3,
+  "funFact": "The slowing-down story is the popular one and is mostly wrong. Splitting up common letter pairs stopped neighbouring typebars colliding, and typists got faster as a result.",
+  "explanation": "Jamming was the actual problem being solved. The layout survived because retraining millions of typists was never worth it.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-003",
+  "question": "Where does the word 'salary' come from?",
+  "choices": [
+   "Salt",
+   "Silver",
+   "Soldier",
+   "Sales"
+  ],
+  "correctIndex": 0,
+  "funFact": "From the Latin salarium, connected to salt. Whether Roman soldiers were literally paid in salt is disputed, but the word carries the association either way.",
+  "explanation": "The same root gives us the phrase about being worth your salt.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-004",
+  "question": "Why are pencils yellow?",
+  "choices": [
+   "The graphite stains other colours",
+   "A patent required it",
+   "Yellow paint was cheapest",
+   "To imitate prized Chinese graphite"
+  ],
+  "correctIndex": 3,
+  "funFact": "In the 1890s the best graphite came from China, so an Austrian company painted its pencils yellow to signal the connection. Everyone copied it.",
+  "explanation": "Yellow was associated with royalty and respect in China, and the marketing stuck for over a century.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-005",
+  "question": "The 'jack' in a deck of cards used to be called what?",
+  "choices": [
+   "The page",
+   "The squire",
+   "The knave",
+   "The valet"
+  ],
+  "correctIndex": 2,
+  "funFact": "It was renamed because abbreviating knave to Kn was too easily confused with the King's K on cramped card indices.",
+  "explanation": "Jack was originally a slightly rude nickname for the knave, then it became the official name.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-006",
+  "question": "Why is a marathon 26.2 miles rather than a round number?",
+  "choices": [
+   "The exact distance Pheidippides ran",
+   "The length of the first stadium track",
+   "A rounding error in metric conversion",
+   "To finish in front of the royal box"
+  ],
+  "correctIndex": 3,
+  "funFact": "The 1908 London course was extended so it could start at Windsor Castle and end in front of the royal box. That awkward number then became the world standard.",
+  "explanation": "The original Greek run was roughly 25 miles. The extra mile and a bit is pure royal convenience.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-007",
+  "question": "Where did the 'bug' in computer bug come from?",
+  "choices": [
+   "A moth found in a relay",
+   "Slang for an engineering fault",
+   "A cartoon in a trade magazine",
+   "The Latin for defect"
+  ],
+  "correctIndex": 1,
+  "funFact": "Engineers were calling faults bugs well before the famous 1947 moth. The moth is celebrated because someone taped it into a logbook and wrote 'first actual case of bug being found'. The joke only works if the word already existed.",
+  "explanation": "Edison used the word in this sense in the 1870s, decades before any computer existed.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-008",
+  "question": "Why do ships use 'knots' for speed?",
+  "choices": [
+   "Knots in the rigging",
+   "Knots on a rope thrown overboard",
+   "A captain named Knott",
+   "Knots in navigational charts"
+  ],
+  "correctIndex": 1,
+  "funFact": "A rope with evenly spaced knots was dropped behind the ship with a float on the end. You counted the knots that ran out in a fixed time, measured by a sandglass.",
+  "explanation": "That is also why a ship's log is called a log. The float on the end of the rope was a wooden log.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-009",
+  "question": "The word 'sandwich' comes from what?",
+  "choices": [
+   "A Dutch bread style",
+   "An English town",
+   "An aristocrat's title",
+   "A French verb"
+  ],
+  "correctIndex": 2,
+  "funFact": "The Earl of Sandwich is said to have asked for meat between bread so he could keep working, or gambling, without cutlery. His title comes from the town, so both answers are half right.",
+  "explanation": "The town of Sandwich in Kent gave the earldom its name, and the earl gave the food its name.",
+  "category": "origins",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ori-010",
+  "question": "Why are wedding rings worn on the fourth finger in many cultures?",
+  "choices": [
+   "A vein believed to run to the heart",
+   "It is the weakest finger",
+   "Church regulation",
+   "To keep the hand free for work"
+  ],
+  "correctIndex": 0,
+  "funFact": "The Romans believed in the vena amoris, a vein running straight from that finger to the heart. There is no such vein, but the custom outlived the anatomy.",
+  "explanation": "Anatomically every finger connects to the heart in the same unremarkable way.",
+  "category": "origins",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ori-011",
+  "question": "What was Bubble Wrap originally invented as?",
+  "choices": [
+   "Packing material",
+   "A children's toy",
+   "Greenhouse insulation",
+   "Textured wallpaper"
+  ],
+  "correctIndex": 3,
+  "funFact": "Two engineers sealed two shower curtains together in 1957 hoping for a fashionable wallpaper. Nobody wanted it. They tried greenhouse insulation next, which also failed, before IBM used it to ship computers.",
+  "explanation": "Packaging was the third idea, and the only one that worked.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-012",
+  "question": "Why do British taxis have such a famously tight turning circle?",
+  "choices": [
+   "Narrow medieval streets",
+   "A hotel's roundabout",
+   "Racing regulations",
+   "To fit on ferries"
+  ],
+  "correctIndex": 1,
+  "funFact": "The rule is often traced to the small roundabout at the Savoy Hotel entrance, which a cab had to be able to turn in. It became a licensing requirement.",
+  "explanation": "Savoy Court is also the only street in Britain where traffic legally drives on the right.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-013",
+  "question": "The phrase 'break a leg' is thought to mean what?",
+  "choices": [
+   "Bow so low you bend your knee",
+   "Actually break a leg",
+   "Cross the leg line onto the stage",
+   "Nobody agrees"
+  ],
+  "correctIndex": 3,
+  "funFact": "Theories include bowing, the stage leg line, and simple reverse superstition. No explanation has ever been settled on, which is unusual for such a well-known phrase.",
+  "explanation": "Several competing origins exist and none has good evidence, so honest dictionaries say the origin is unknown.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-014",
+  "question": "Why is the standard railway gauge 4 feet 8.5 inches, an oddly specific number?",
+  "choices": [
+   "Roman chariot axles",
+   "A committee compromise",
+   "Optimal for steam engines",
+   "An early engineer's existing wagonway"
+  ],
+  "correctIndex": 3,
+  "funFact": "George Stephenson used the gauge of the colliery wagonways he already knew. The popular story about Roman chariots is a nice tale with no real evidence behind it.",
+  "explanation": "It was inherited from horse-drawn mining tramways, then standardised because changing it later would have been ruinous.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-015",
+  "question": "What did the first vending machine, in Roman Egypt, dispense?",
+  "choices": [
+   "Wine",
+   "Holy water",
+   "Bread",
+   "Coins"
+  ],
+  "correctIndex": 1,
+  "funFact": "Hero of Alexandria described a machine where a coin fell on a pan, tipping a lever that released a measured amount of holy water. Roughly two thousand years ago.",
+  "explanation": "It was built to stop worshippers taking more than their share.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-016",
+  "question": "Where does the @ symbol's Dutch name, 'apenstaartje', translate to?",
+  "choices": [
+   "Little monkey tail",
+   "Curly a",
+   "Snail shell",
+   "Elephant trunk"
+  ],
+  "correctIndex": 0,
+  "funFact": "Many languages named it after an animal. It is a snail in Italian and French, a little mouse in Chinese, and a strudel in Hebrew.",
+  "explanation": "Almost nowhere outside English is it called an 'at sign'.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-017",
+  "question": "Why do we say 'hello' when answering the phone?",
+  "choices": [
+   "It was already a common greeting",
+   "Edison suggested it",
+   "Bell insisted on it",
+   "It tested clearest on early lines"
+  ],
+  "correctIndex": 1,
+  "funFact": "Alexander Graham Bell wanted 'ahoy'. Edison pushed 'hello', and Edison won. We could all have been answering the phone like sailors.",
+  "explanation": "Hello existed as a word for hailing someone, but it was rare as a greeting before the telephone.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-018",
+  "question": "The Tour de France was created for what purpose?",
+  "choices": [
+   "To sell newspapers",
+   "To promote cycling safety",
+   "To celebrate a treaty",
+   "To test bicycle designs"
+  ],
+  "correctIndex": 0,
+  "funFact": "A newspaper invented it in 1903 as a circulation stunt against a rival. It worked so well that the paper's readership quadrupled.",
+  "explanation": "The yellow jersey is yellow because that newspaper was printed on yellow paper.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-019",
+  "question": "Where did the piggy bank get its shape?",
+  "choices": [
+   "A pun on a type of clay",
+   "Pigs symbolised wealth",
+   "A Victorian toy design",
+   "Medieval tax collectors"
+  ],
+  "correctIndex": 0,
+  "funFact": "An orange clay called pygg was used for cheap household jars. Over time people forgot the clay and heard the animal, and potters started making actual pigs.",
+  "explanation": "The pig arrived by mishearing rather than by symbolism, which is a rare and well-documented case.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-020",
+  "question": "Why is the space bar so much bigger than every other key?",
+  "choices": [
+   "Spaces are the most typed character",
+   "Typists use their strongest digit",
+   "It balances the keyboard",
+   "Early patents required it"
+  ],
+  "correctIndex": 0,
+  "funFact": "The space is the single most frequently typed character in English, more common than the letter e.",
+  "explanation": "It is hit with the thumb, which is strong, but the size is about how often it is used.",
+  "category": "origins",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ori-021",
+  "question": "The word 'nightmare' originally referred to what?",
+  "choices": [
+   "A female horse",
+   "A dark night",
+   "A bad omen",
+   "A crushing spirit"
+  ],
+  "correctIndex": 3,
+  "funFact": "The mare was a mythological creature that sat on sleepers' chests. The name likely describes sleep paralysis, which really does feel like being pinned down.",
+  "explanation": "Nothing to do with horses. The two words are unrelated despite the spelling.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-022",
+  "question": "Why do American light switches go up for on while British ones go down?",
+  "choices": [
+   "Electrical standards differ",
+   "No agreed reason",
+   "Voltage safety rules",
+   "Different inventors"
+  ],
+  "correctIndex": 1,
+  "funFact": "There is no technical reason at all. Two conventions formed independently and both hardened into national habit.",
+  "explanation": "The wiring is identical either way. It is pure convention, which is why it feels so wrong to visitors.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-023",
+  "question": "What were the first Frisbees?",
+  "choices": [
+   "Aircraft parts",
+   "Gramophone records",
+   "Bin lids",
+   "Pie tins"
+  ],
+  "correctIndex": 3,
+  "funFact": "Students threw empty tins from the Frisbie Pie Company. When a plastic version was made, the name was kept and respelled.",
+  "explanation": "The inventor originally marketed it as a flying saucer to ride the UFO craze, and it sold badly under that name.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-024",
+  "question": "Where does the term 'deadline' come from?",
+  "choices": [
+   "Printing press schedules",
+   "Naval navigation",
+   "A prison camp boundary",
+   "Railway timetables"
+  ],
+  "correctIndex": 2,
+  "funFact": "It described a line around a prison camp that prisoners would be shot for crossing. The publishing sense came later and much more gently.",
+  "explanation": "The American Civil War usage is the earliest recorded, which is a grim origin for such an everyday office word.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ori-025",
+  "question": "Why does a golf ball have dimples?",
+  "choices": [
+   "To grip the club face",
+   "To help it roll straight",
+   "To reduce manufacturing cost",
+   "They make it fly further"
+  ],
+  "correctIndex": 3,
+  "funFact": "Players noticed old scuffed balls flew better than new smooth ones. The dimples cut drag by keeping air clinging to the surface longer, roughly doubling the distance.",
+  "explanation": "A smooth ball would go about half as far, which is why the design went from accident to standard.",
+  "category": "origins",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-001",
+  "question": "What is the 'cocktail party effect'?",
+  "choices": [
+   "Forgetting names at parties",
+   "Talking louder in groups",
+   "Hearing your name across a noisy room",
+   "Drinking faster in company"
+  ],
+  "correctIndex": 2,
+  "funFact": "Your brain is monitoring conversations you are not consciously listening to, which is why your own name cuts through instantly.",
+  "explanation": "It shows that filtering out background speech is not the same as ignoring it entirely.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-002",
+  "question": "Roughly how many things can most people hold in working memory at once?",
+  "choices": [
+   "Around 4",
+   "Around 12",
+   "Around 20",
+   "Just 1"
+  ],
+  "correctIndex": 0,
+  "funFact": "The famous figure was seven plus or minus two, but later work put it closer to four. Phone numbers are chunked into groups for exactly this reason.",
+  "explanation": "Grouping items into meaningful chunks is what lets people appear to remember more than four.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-003",
+  "question": "What is the 'Baader-Meinhof phenomenon'?",
+  "choices": [
+   "Fear of crowds",
+   "Noticing something everywhere after first learning it",
+   "Forgetting recent events",
+   "Preferring familiar music"
+  ],
+  "correctIndex": 1,
+  "funFact": "Learn a new word and it seems to appear constantly for a week. The frequency has not changed, only your attention, plus a bias that makes each sighting feel confirming.",
+  "explanation": "It is also called the frequency illusion, which is the clearer name.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-004",
+  "question": "What does the 'Dunning-Kruger effect' describe?",
+  "choices": [
+   "Overconfidence at low skill levels",
+   "Fear of public speaking",
+   "Memory loss under stress",
+   "Improved recall when tired"
+  ],
+  "correctIndex": 0,
+  "funFact": "The same lack of skill that causes poor performance also prevents you from recognising it. Experts, meanwhile, tend to underrate themselves.",
+  "explanation": "The effect is smaller and more disputed than internet usage suggests, but the core finding has held up reasonably well.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-005",
+  "question": "Why does time seem to pass faster as you get older?",
+  "choices": [
+   "Slower neural processing",
+   "Fewer novel experiences to mark time",
+   "Worse memory",
+   "Longer days"
+  ],
+  "correctIndex": 1,
+  "funFact": "Novelty creates dense memories, so a week of travel feels longer in hindsight than a month of routine. Childhood is almost entirely novelty.",
+  "explanation": "Time feels normal as it passes. It is the looking back that compresses.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-006",
+  "question": "What is the placebo effect?",
+  "choices": [
+   "Real improvement from an inactive treatment",
+   "Lying to patients",
+   "A drug side effect",
+   "A statistical error"
+  ],
+  "correctIndex": 0,
+  "funFact": "It works to some degree even when patients are told they are taking a placebo, which is deeply strange and reliably reproduced.",
+  "explanation": "The improvement is genuine and measurable. It is the mechanism, not the effect, that is not the drug.",
+  "category": "psychology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "psy-007",
+  "question": "In the 'bystander effect', what makes someone less likely to help?",
+  "choices": [
+   "Being tired",
+   "Poor lighting",
+   "Being alone",
+   "The presence of other people"
+  ],
+  "correctIndex": 3,
+  "funFact": "Responsibility feels diluted across the group. Naming one specific person and asking them directly cuts straight through it.",
+  "explanation": "The original case that made it famous was later shown to have been badly misreported, but the effect itself is real.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-008",
+  "question": "What is 'pareidolia'?",
+  "choices": [
+   "Seeing faces in random objects",
+   "Fear of open spaces",
+   "Hearing colours",
+   "Losing your sense of direction"
+  ],
+  "correctIndex": 0,
+  "funFact": "Faces in plug sockets, clouds and burnt toast. The brain runs an aggressive face detector because missing a real face was historically far more costly than a false alarm.",
+  "explanation": "Hearing colours is synaesthesia, which is a different and much rarer thing.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-009",
+  "question": "What does the 'Zeigarnik effect' suggest about unfinished tasks?",
+  "choices": [
+   "They are forgotten faster",
+   "They are remembered better",
+   "They cause fatigue",
+   "They are completed sooner"
+  ],
+  "correctIndex": 1,
+  "funFact": "It came from noticing that waiters remembered unpaid orders in detail and forgot them the moment the bill was settled.",
+  "explanation": "It is why an interrupted task nags at you and a finished one evaporates.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-010",
+  "question": "What is 'anchoring' in decision making?",
+  "choices": [
+   "Sticking to a first impression number",
+   "Refusing to decide",
+   "Choosing the middle option",
+   "Copying the group"
+  ],
+  "correctIndex": 0,
+  "funFact": "People asked to estimate a figure after seeing a completely irrelevant number are pulled towards it. Even spinning a wheel of fortune first shifts the answers.",
+  "explanation": "It is why the first price mentioned in a negotiation carries so much weight.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-011",
+  "question": "Why do most people find their own recorded voice unpleasant?",
+  "choices": [
+   "Bad microphones",
+   "Nervousness",
+   "You normally hear it through bone as well",
+   "Recording removes bass"
+  ],
+  "correctIndex": 2,
+  "funFact": "Sound conducted through your skull adds lower frequencies. A recording gives you only the air-conducted version, which is genuinely a different voice from the one you know.",
+  "explanation": "The recording is what everyone else has always heard, which is the uncomfortable part.",
+  "category": "psychology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "psy-012",
+  "question": "What is 'confirmation bias'?",
+  "choices": [
+   "Remembering only bad news",
+   "Trusting experts",
+   "Changing your mind too easily",
+   "Favouring evidence that fits what you believe"
+  ],
+  "correctIndex": 3,
+  "funFact": "It affects what you go looking for, what you notice and how hard you scrutinise it. Weak evidence for your side gets waved through; strong evidence against it gets picked apart.",
+  "explanation": "It operates on gathering and interpreting, not just on recall.",
+  "category": "psychology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "psy-013",
+  "question": "What did the 'marshmallow test' originally claim to predict?",
+  "choices": [
+   "Intelligence",
+   "Risk of allergies",
+   "Food preferences",
+   "Later life outcomes from delayed gratification"
+  ],
+  "correctIndex": 3,
+  "funFact": "Larger replications found the effect largely disappears once family background is accounted for. Waiting may say more about whether a child expects promises to be kept.",
+  "explanation": "The original study was small, and the strong version of the claim has not held up.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-014",
+  "question": "What is 'the curse of knowledge'?",
+  "choices": [
+   "Forgetting what you learned",
+   "Knowing too many facts",
+   "Learning too fast",
+   "Being unable to imagine not knowing something"
+  ],
+  "correctIndex": 3,
+  "funFact": "In one experiment, people tapping out a well-known tune expected half their listeners to name it. About one in forty did. In their own head, the music was playing.",
+  "explanation": "It is why experts write confusing documentation without realising it.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-015",
+  "question": "What does 'priming' mean in psychology?",
+  "choices": [
+   "Preparing for a test",
+   "Exposure to one stimulus influencing a later response",
+   "Repeating information",
+   "Learning while asleep"
+  ],
+  "correctIndex": 1,
+  "funFact": "Some of the flashiest priming results have failed to replicate, and it became a central example in psychology's replication crisis. Simpler forms, like word priming, remain solid.",
+  "explanation": "Seeing the word doctor makes you recognise the word nurse slightly faster, which is the well-established version.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-016",
+  "question": "Why can you not tickle yourself effectively?",
+  "choices": [
+   "The brain predicts your own movement",
+   "Your hands are the wrong shape",
+   "You are not surprised",
+   "Nerves adapt too fast"
+  ],
+  "correctIndex": 0,
+  "funFact": "The cerebellum predicts the sensation from your own motor command and dampens it. Add a delay with a robot arm and self-tickling starts working.",
+  "explanation": "It is the prediction, not the surprise, that does it, which is why the robot delay experiment is so telling.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-017",
+  "question": "What is the 'IKEA effect'?",
+  "choices": [
+   "Frustration with instructions",
+   "Getting lost in stores",
+   "Buying more than planned",
+   "Valuing things more because you built them"
+  ],
+  "correctIndex": 3,
+  "funFact": "People priced their own wobbly self-assembled boxes as highly as expert-made versions. Partial effort is enough; the item does not have to be good.",
+  "explanation": "It applies to anything you contributed labour to, not just furniture.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-018",
+  "question": "What is 'change blindness'?",
+  "choices": [
+   "Missing large changes in a scene",
+   "A form of colour blindness",
+   "Fear of change",
+   "Losing night vision"
+  ],
+  "correctIndex": 0,
+  "funFact": "In one study an experimenter was swapped for a different person mid-conversation while a door passed between them. Around half the participants did not notice.",
+  "explanation": "Vision is far more reconstructed and far less photographic than it feels.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-019",
+  "question": "What does the 'peak-end rule' say about how we remember experiences?",
+  "choices": [
+   "We average every moment",
+   "We remember the longest part",
+   "We remember the beginning",
+   "We remember the most intense point and the ending"
+  ],
+  "correctIndex": 3,
+  "funFact": "Duration barely registers. A longer unpleasant procedure with a milder ending is remembered as better than a shorter one that ends at full intensity.",
+  "explanation": "That finding has real consequences for how medical procedures and holidays are designed.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-020",
+  "question": "Why do people yawn when they see someone else yawn?",
+  "choices": [
+   "Oxygen shortage spreads",
+   "Pure coincidence",
+   "Air pressure changes",
+   "It is linked to empathy and social bonding"
+  ],
+  "correctIndex": 3,
+  "funFact": "Contagious yawning is stronger with people you are close to, and appears in chimpanzees and dogs too. Dogs yawn back at their owners.",
+  "explanation": "The oxygen explanation for yawning generally has been tested and does not hold up well.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-021",
+  "question": "What is 'the spotlight effect'?",
+  "choices": [
+   "Overestimating how much others notice you",
+   "Fear of stages",
+   "Better memory under bright light",
+   "Preferring central seats"
+  ],
+  "correctIndex": 0,
+  "funFact": "Students asked to wear an embarrassing shirt guessed about half the room noticed. The real figure was closer to a quarter, and most could not recall it afterwards.",
+  "explanation": "Everyone is starring in their own experience, which leaves less attention for yours than it feels like.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-022",
+  "question": "What is the 'mere exposure effect'?",
+  "choices": [
+   "Liking things more the more you see them",
+   "Getting bored by repetition",
+   "Sunburn risk",
+   "Learning by watching"
+  ],
+  "correctIndex": 0,
+  "funFact": "It works even when you do not consciously remember the exposure. It is why a song you disliked becomes tolerable, then good, on the radio.",
+  "explanation": "There is a limit: past a point, overexposure reverses it.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-023",
+  "question": "What is 'sunk cost fallacy'?",
+  "choices": [
+   "Continuing because of what you already spent",
+   "Underestimating costs",
+   "Spending on the wrong thing",
+   "Refusing to invest"
+  ],
+  "correctIndex": 0,
+  "funFact": "The money is gone either way, so it should not affect the decision. Humans are unusual in this: some animals appear to make the rational choice more readily.",
+  "explanation": "Sitting through a bad film because you paid for the ticket is the everyday version.",
+  "category": "psychology",
+  "difficulty": "easy"
+ },
+ {
+  "id": "psy-024",
+  "question": "What does 'flow' describe?",
+  "choices": [
+   "Absorbed focus where time disappears",
+   "A relaxation technique",
+   "A memory method",
+   "A sleep stage"
+  ],
+  "correctIndex": 0,
+  "funFact": "It sits in a narrow band where the challenge roughly matches your skill. Too easy is boring, too hard is anxious, and the sweet spot moves as you improve.",
+  "explanation": "Mihaly Csikszentmihalyi named it after interviewing people about when they felt most alive.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "psy-025",
+  "question": "Why is it hard to return to a task after an interruption?",
+  "choices": [
+   "Attention residue from the previous task",
+   "Loss of motivation",
+   "Physical fatigue",
+   "Forgetting the task entirely"
+  ],
+  "correctIndex": 0,
+  "funFact": "Part of your attention stays with the interrupting task for a while afterwards. Estimates of full recovery time vary but are consistently measured in minutes, not seconds.",
+  "explanation": "This is exactly why a quick phone scroll during a build is more expensive than it feels.",
+  "category": "psychology",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-001",
+  "question": "What is the shortest war in recorded history?",
+  "choices": [
+   "Six days",
+   "Around 40 minutes",
+   "Three hours",
+   "One week"
+  ],
+  "correctIndex": 1,
+  "funFact": "The Anglo-Zanzibar War of 1896 lasted roughly 38 to 45 minutes. The sultan's palace was shelled and it was over before most people knew it had started.",
+  "explanation": "The Six-Day War is short by modern standards, but this one was shorter than a lunch break.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-002",
+  "question": "What is the longest recorded flight of a chicken?",
+  "choices": [
+   "3 seconds",
+   "13 seconds",
+   "2 minutes",
+   "Half an hour"
+  ],
+  "correctIndex": 1,
+  "funFact": "Thirteen seconds, covering about 90 metres. Chickens can get airborne but their breast muscles tire almost immediately.",
+  "explanation": "They are descended from birds that flew perfectly well. Domestic breeding is what took it away.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-003",
+  "question": "How long was the longest continuous hiccup bout on record?",
+  "choices": [
+   "Six days",
+   "Eight months",
+   "68 years",
+   "Four years"
+  ],
+  "correctIndex": 2,
+  "funFact": "Charles Osborne hiccupped from 1922 to 1990, an estimated 430 million times. He married twice and had eight children through it.",
+  "explanation": "They stopped on their own about a year before he died, for no reason anyone could identify.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-004",
+  "question": "What is the oldest known living individual tree, roughly?",
+  "choices": [
+   "1,200 years",
+   "2,500 years",
+   "4,800 years",
+   "10,000 years"
+  ],
+  "correctIndex": 2,
+  "funFact": "A bristlecone pine in California is around 4,800 years old, meaning it was already a sapling when the pyramids were being built.",
+  "explanation": "Some clonal colonies are far older, but as a single continuously living trunk the bristlecones lead.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-005",
+  "question": "What is the deepest a human has been in the ocean?",
+  "choices": [
+   "About 2 kilometres",
+   "About 6 kilometres",
+   "About 11 kilometres",
+   "About 20 kilometres"
+  ],
+  "correctIndex": 2,
+  "funFact": "Nearly 11 kilometres, at the bottom of the Mariana Trench. More people have walked on the Moon than have been to the deepest point of the ocean.",
+  "explanation": "The pressure there is over a thousand times that at the surface.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-006",
+  "question": "What is the loudest sound ever recorded on Earth?",
+  "choices": [
+   "A nuclear test",
+   "The Krakatoa eruption",
+   "A meteor airburst",
+   "The Tunguska event"
+  ],
+  "correctIndex": 1,
+  "funFact": "The 1883 eruption was heard 4,800 kilometres away and burst the eardrums of sailors 65 kilometres off. The pressure wave circled the globe several times.",
+  "explanation": "It is estimated at around 180 decibels at a distance of 160 kilometres, far beyond anything since.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-007",
+  "question": "What is the longest anyone has gone without sleep in a documented study?",
+  "choices": [
+   "About 3 days",
+   "About 11 days",
+   "About 20 days",
+   "About 40 days"
+  ],
+  "correctIndex": 1,
+  "funFact": "A schoolboy, Randy Gardner, managed about 11 days in 1964 for a science fair. Record bodies stopped tracking it because of the health risks.",
+  "explanation": "He suffered severe cognitive problems by the end but recovered after sleeping about 14 hours.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-008",
+  "question": "Which country has the most pyramids?",
+  "choices": [
+   "Egypt",
+   "Mexico",
+   "Sudan",
+   "Peru"
+  ],
+  "correctIndex": 2,
+  "funFact": "Sudan has around 250, roughly twice Egypt's count. They are smaller and steeper, built by the kingdom of Kush.",
+  "explanation": "Egypt gets the attention because its pyramids are far larger and much better known.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-009",
+  "question": "What is the fastest speed reached by a human outside a vehicle in free fall?",
+  "choices": [
+   "Around 200 km/h",
+   "Around 500 km/h",
+   "Over 1,300 km/h",
+   "Over 3,000 km/h"
+  ],
+  "correctIndex": 2,
+  "funFact": "Felix Baumgartner passed the speed of sound in 2012, jumping from about 39 kilometres up. The air was so thin there was nothing to slow him.",
+  "explanation": "Terminal velocity in thick air near the ground is closer to 200 km/h, which is why altitude mattered so much.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-010",
+  "question": "What is the longest street name or place name in the world usually said to be?",
+  "choices": [
+   "A Welsh village",
+   "A Thai capital's full name",
+   "A New Zealand hill",
+   "All three are contenders"
+  ],
+  "correctIndex": 3,
+  "funFact": "The Welsh village runs to 58 letters, the New Zealand hill to 85, and Bangkok's full ceremonial name to well over 160. Which wins depends entirely on the category.",
+  "explanation": "There is no single agreed record because places, hills and official ceremonial names are counted separately.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-011",
+  "question": "How many possible ways are there to shuffle a standard deck of 52 cards?",
+  "choices": [
+   "About a billion",
+   "About a trillion",
+   "More than atoms on Earth",
+   "Exactly 52 factorial, and it is astronomically large"
+  ],
+  "correctIndex": 3,
+  "funFact": "52 factorial is about 8 followed by 67 zeros. Any well-shuffled deck has almost certainly never existed in that order before in human history.",
+  "explanation": "It exceeds the number of atoms making up the Earth by a very wide margin.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-012",
+  "question": "What is the heaviest organ in the human body?",
+  "choices": [
+   "The brain",
+   "The liver",
+   "The skin",
+   "The lungs"
+  ],
+  "correctIndex": 2,
+  "funFact": "Skin weighs around four kilograms in an adult, roughly three times the brain. Whether you call it the heaviest depends on whether you count it as an organ, and anatomists do.",
+  "explanation": "The liver is the heaviest internal organ at around 1.5 kilograms.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-013",
+  "question": "What is the highest recorded body temperature someone has survived?",
+  "choices": [
+   "41 degrees C",
+   "43 degrees C",
+   "46.5 degrees C",
+   "50 degrees C"
+  ],
+  "correctIndex": 2,
+  "funFact": "A man survived 46.5 degrees Celsius after heatstroke in 1980 and was discharged after 24 days. Most people do not survive above 42.",
+  "explanation": "Proteins begin to denature not far above normal body temperature, which is why the survivable range is so narrow.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-014",
+  "question": "How long can a snail sleep for?",
+  "choices": [
+   "A few hours",
+   "A few days",
+   "Up to three years",
+   "Snails do not sleep"
+  ],
+  "correctIndex": 2,
+  "funFact": "In very dry conditions some snails seal themselves in and go dormant for up to three years, waiting for moisture.",
+  "explanation": "That is estivation rather than ordinary sleep, but they genuinely do not move for that long.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-015",
+  "question": "Which of these has the fastest recorded movement in the animal kingdom?",
+  "choices": [
+   "Cheetah's sprint",
+   "Peregrine falcon's dive",
+   "Mantis shrimp's punch",
+   "Hummingbird's wingbeat"
+  ],
+  "correctIndex": 2,
+  "funFact": "The punch accelerates like a bullet and boils the water around it briefly. It can crack aquarium glass, which makes them awkward pets.",
+  "explanation": "The falcon is the fastest whole animal at over 300 km/h, but the shrimp's limb wins on raw acceleration.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-016",
+  "question": "What is the smallest country by population?",
+  "choices": [
+   "Monaco",
+   "Nauru",
+   "Vatican City",
+   "Tuvalu"
+  ],
+  "correctIndex": 2,
+  "funFact": "Around 800 people, and almost none of them are born there. Citizenship generally comes with a job rather than with birth.",
+  "explanation": "Nauru and Tuvalu have around 11,000 each, which is tiny but still more than ten times as many.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-017",
+  "question": "How many times can a piece of paper be folded in half, in practice?",
+  "choices": [
+   "7",
+   "8",
+   "12 with a very long strip",
+   "Unlimited"
+  ],
+  "correctIndex": 2,
+  "funFact": "A student folded a 1.2 kilometre roll of toilet paper 12 times in 2002, breaking the long-assumed limit of seven and deriving the maths for it.",
+  "explanation": "Seven is the practical limit for ordinary paper, but thickness and length are what actually decide it.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-018",
+  "question": "What is the most common surname in the world?",
+  "choices": [
+   "Smith",
+   "Wang",
+   "Garcia",
+   "Kim"
+  ],
+  "correctIndex": 1,
+  "funFact": "Around 100 million people share it in China alone. Chinese surnames are unusually concentrated: the top three cover a very large share of the population.",
+  "explanation": "Smith is the most common in several English-speaking countries but is nowhere near the global scale.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-019",
+  "question": "Which was the longest reign of any monarch in recorded history?",
+  "choices": [
+   "About 45 years",
+   "About 63 years",
+   "About 72 years",
+   "Over 80 years"
+  ],
+  "correctIndex": 2,
+  "funFact": "Louis XIV of France reigned about 72 years, taking the throne at four years old. He outlived his son and grandson, so his great-grandson succeeded him.",
+  "explanation": "Some ancient claims run longer but are not reliably documented.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-020",
+  "question": "How much of its own body weight can an ant lift?",
+  "choices": [
+   "Twice",
+   "Ten times",
+   "Up to fifty times",
+   "A thousand times"
+  ],
+  "correctIndex": 2,
+  "funFact": "Small things are proportionally strong because muscle strength scales with cross-sectional area while weight scales with volume. Scale an ant up to human size and it would be pitifully weak.",
+  "explanation": "The figure varies by species, but tens of times body weight is the usual range.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-021",
+  "question": "What is the longest word in most major English dictionaries?",
+  "choices": [
+   "Antidisestablishmentarianism",
+   "Floccinaucinihilipilification",
+   "Pneumonoultramicroscopicsilicovolcanoconiosis",
+   "Supercalifragilisticexpialidocious"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is 45 letters and describes a lung disease. It was more or less coined to be long, which is why some dictionaries refuse to include it.",
+  "explanation": "Floccinaucinihilipilification, at 29 letters, is the longest that arose naturally, and it means judging something worthless.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-022",
+  "question": "What is the largest living structure on Earth?",
+  "choices": [
+   "A redwood forest",
+   "The Great Barrier Reef",
+   "A fungus in Oregon",
+   "A coral atoll"
+  ],
+  "correctIndex": 1,
+  "funFact": "It stretches about 2,300 kilometres and is made of billions of tiny animals. The Oregon fungus covers more ground area but far less mass.",
+  "explanation": "The honey fungus in Oregon covers around nine square kilometres and is a strong contender by area.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-023",
+  "question": "How long did the longest recorded game of Monopoly last?",
+  "choices": [
+   "6 hours",
+   "3 days",
+   "70 days",
+   "One year"
+  ],
+  "correctIndex": 2,
+  "funFact": "Seventy straight days. The game was designed to end, but the rules people actually play with, especially skipping auctions, make it drag enormously.",
+  "explanation": "Played strictly by the printed rules a game usually finishes in around 90 minutes.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-024",
+  "question": "What is the driest place on Earth?",
+  "choices": [
+   "The Sahara",
+   "Death Valley",
+   "The Atacama Desert",
+   "The Antarctic Dry Valleys"
+  ],
+  "correctIndex": 3,
+  "funFact": "Some of these valleys have had no meaningful rain for around two million years. Wind strips away any snow before it can settle.",
+  "explanation": "The Atacama has weather stations that have never recorded rain, so it is a close second and often given as the answer.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "rec-025",
+  "question": "What is the longest anyone has held their breath underwater in a static apnea attempt?",
+  "choices": [
+   "About 3 minutes",
+   "About 6 minutes",
+   "Over 20 minutes with oxygen prep",
+   "About 12 minutes"
+  ],
+  "correctIndex": 2,
+  "funFact": "With pure oxygen beforehand, records exceed 24 minutes. Without it, the best marks are closer to 11 or 12 minutes, which is still extraordinary.",
+  "explanation": "Pre-breathing oxygen changes the physiology so much that the two categories are recorded separately.",
+  "category": "records",
+  "difficulty": "moderate"
+ },
+ {
   "id": "sci-001",
   "question": "What is the most abundant gas in Earth's atmosphere?",
   "choices": [
@@ -2641,33 +6391,33 @@
  },
  {
   "id": "sci-002",
-  "question": "What does the 'H' stand for in H2O?",
+  "question": "What happens if you put a glass of water in a vacuum chamber?",
   "choices": [
-   "Hydrogen",
-   "Helium",
-   "Halogen",
-   "Hydroxide"
+   "It freezes",
+   "It evaporates instantly",
+   "Nothing",
+   "It boils, then freezes"
   ],
-  "correctIndex": 0,
-  "funFact": "Hydrogen is the lightest and most common element in the universe, making up roughly three quarters of all ordinary matter.",
-  "explanation": "Helium is He. Water is two hydrogen atoms bonded to one oxygen atom.",
+  "correctIndex": 3,
+  "funFact": "Boiling point depends on pressure, not just heat. Drop the pressure enough and room-temperature water boils, and the evaporation carries away so much energy that what is left freezes solid.",
+  "explanation": "It does both, in that order, which is why the demonstration is such a favourite in physics classes.",
   "category": "science",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "sci-003",
-  "question": "At what temperature does water boil at sea level, in Celsius?",
+  "question": "Hot water can freeze faster than cold water under some conditions. What is this called?",
   "choices": [
-   "90",
-   "100",
-   "110",
-   "120"
+   "The Mpemba effect",
+   "The Leidenfrost effect",
+   "Supercooling",
+   "The Joule effect"
   ],
-  "correctIndex": 1,
-  "funFact": "The Celsius scale was built around this. Zero is water freezing and 100 is water boiling, both at sea-level pressure.",
-  "explanation": "Boiling point drops with altitude. On Everest water boils at about 70 degrees, which is why food takes longer to cook up there.",
+  "correctIndex": 0,
+  "funFact": "A Tanzanian schoolboy noticed it while making ice cream and pestered a visiting physicist until it was investigated. Scientists still argue about the mechanism.",
+  "explanation": "The Leidenfrost effect is a droplet skating on its own vapour above a hot pan, which is a different piece of strange water behaviour.",
   "category": "science",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "sci-004",
@@ -2735,10 +6485,10 @@
   "choices": [
    "Go",
    "Gd",
-   "Ag",
-   "Au"
+   "Au",
+   "Ag"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "Au comes from the Latin aurum. Ag, from argentum, is silver, and mixing those two up is the classic error.",
   "explanation": "Gd is gadolinium and Ag is silver. Several old metals kept symbols based on their Latin names rather than English.",
   "category": "science",
@@ -2776,33 +6526,33 @@
  },
  {
   "id": "sci-011",
-  "question": "What process do plants use to convert light into chemical energy?",
+  "question": "Where does the mass of a large tree mostly come from?",
   "choices": [
-   "Photosynthesis",
-   "Respiration",
-   "Transpiration",
-   "Fermentation"
+   "The soil",
+   "The air",
+   "Water",
+   "Sunlight"
   ],
-  "correctIndex": 0,
-  "funFact": "Plants also respire, all day and all night. Photosynthesis simply outpaces it during daylight.",
-  "explanation": "Transpiration is water moving up through a plant and evaporating from the leaves. It is a different process entirely.",
+  "correctIndex": 1,
+  "funFact": "Almost all of it is carbon pulled out of carbon dioxide in the air. A tree is largely built from thin air, which is why the soil around it does not sink as it grows.",
+  "explanation": "Soil supplies water and minerals, but the bulk of the dry mass arrives through the leaves.",
   "category": "science",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "sci-012",
-  "question": "What is the lightest element on the periodic table?",
+  "question": "If you removed all the empty space from the atoms in every human on Earth, the whole species would fit inside roughly what?",
   "choices": [
-   "Helium",
-   "Hydrogen",
-   "Lithium",
-   "Carbon"
+   "A football stadium",
+   "A sugar cube",
+   "A swimming pool",
+   "A large house"
   ],
   "correctIndex": 1,
-  "funFact": "A hydrogen atom is one proton and one electron, about as simple as matter gets.",
-  "explanation": "Helium is second, and it is the only element discovered in space before it was found on Earth.",
+  "funFact": "Atoms are overwhelmingly empty. If a nucleus were a marble, the nearest electron would be a couple of streets away.",
+  "explanation": "What stops you falling through your chair is electromagnetic repulsion, not solidity.",
   "category": "science",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "sci-013",
@@ -2854,11 +6604,11 @@
   "question": "Which planet-sized rock type makes up most of Earth's crust by weight?",
   "choices": [
    "Limestone",
-   "Marble",
+   "Basalt and granite",
    "Sandstone",
-   "Basalt and granite"
+   "Marble"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "Ocean floor is mostly basalt and continents are mostly granite, which is why continents float higher: granite is less dense.",
   "explanation": "Limestone and sandstone are sedimentary and form a thin surface layer rather than the bulk of the crust.",
   "category": "science",
@@ -2929,11 +6679,11 @@
   "question": "What causes the seasons on Earth?",
   "choices": [
    "Distance from the Sun",
-   "The tilt of Earth's axis",
    "The Moon's pull",
+   "The tilt of Earth's axis",
    "Solar flare cycles"
   ],
-  "correctIndex": 1,
+  "correctIndex": 2,
   "funFact": "Earth is actually closest to the Sun in early January, during the northern winter. The 23.5 degree tilt swamps that difference entirely.",
   "explanation": "If distance drove the seasons, the whole planet would have summer at the same time, and it does not.",
   "category": "science",
@@ -3035,10 +6785,10 @@
   "choices": [
    "Saturn",
    "Neptune",
-   "Uranus",
-   "Jupiter"
+   "Jupiter",
+   "Uranus"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "Jupiter is more massive than every other planet combined, more than twice over.",
   "explanation": "Saturn is second largest by diameter but much less dense. It would float in water, in principle.",
   "category": "space",
@@ -3063,12 +6813,12 @@
   "id": "spc-005",
   "question": "What is the name of the galaxy we live in?",
   "choices": [
-   "The Milky Way",
    "Andromeda",
+   "The Milky Way",
    "Triangulum",
    "Sombrero"
   ],
-  "correctIndex": 0,
+  "correctIndex": 1,
   "funFact": "Andromeda is heading towards us and will merge with the Milky Way in about four billion years. Stars are so far apart that almost none will collide.",
   "explanation": "Andromeda is our nearest large neighbour galaxy, about 2.5 million light years away.",
   "category": "space",
@@ -3093,12 +6843,12 @@
   "id": "spc-007",
   "question": "What is a light year a measure of?",
   "choices": [
-   "Distance",
    "Time",
+   "Distance",
    "Brightness",
    "Speed"
   ],
-  "correctIndex": 0,
+  "correctIndex": 1,
   "funFact": "One light year is about 9.5 trillion kilometres. The word year in the name is what trips everyone up.",
   "explanation": "It is how far light travels in a year, so despite the name it measures distance rather than time.",
   "category": "space",
@@ -3106,18 +6856,18 @@
  },
  {
   "id": "spc-008",
-  "question": "Which planet is known as the Red Planet?",
+  "question": "It rains diamonds on which planets, according to current models?",
   "choices": [
-   "Mars",
-   "Mercury",
-   "Jupiter",
-   "Venus"
+   "Mercury and Venus",
+   "Neptune and Uranus",
+   "Mars only",
+   "None, it is a myth"
   ],
-  "correctIndex": 0,
-  "funFact": "The colour comes from iron oxide in the soil, which is the same chemistry as household rust.",
-  "explanation": "Jupiter has a famous red spot, a storm larger than Earth, but the planet itself is banded cream and brown.",
+  "correctIndex": 1,
+  "funFact": "Extreme pressure squeezes methane into carbon, which crystallises and sinks. Laboratory experiments have reproduced the effect with lasers.",
+  "explanation": "It is a modelled and experimentally supported prediction rather than something anyone has observed directly.",
   "category": "space",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "spc-009",
@@ -3153,12 +6903,12 @@
   "id": "spc-011",
   "question": "What holds the Moon in orbit around the Earth?",
   "choices": [
-   "Gravity",
+   "Earth's rotation",
    "Magnetism",
    "The solar wind",
-   "Earth's rotation"
+   "Gravity"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "The Moon is drifting away from us by about 3.8 centimetres a year, roughly the rate fingernails grow.",
   "explanation": "Earth's magnetic field is far too weak to hold anything that massive, and the Moon is not magnetic in that way.",
   "category": "space",
@@ -3184,11 +6934,11 @@
   "question": "What is the Great Red Spot on Jupiter?",
   "choices": [
    "A crater",
-   "A storm",
+   "A shadow from a moon",
    "A volcano",
-   "A shadow from a moon"
+   "A storm"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "It has been observed for well over 300 years and is wide enough to swallow the Earth, though it has been shrinking in recent decades.",
   "explanation": "Jupiter is a gas giant with no solid surface, so it cannot have craters or volcanoes at all.",
   "category": "space",
@@ -3213,12 +6963,12 @@
   "id": "spc-015",
   "question": "What is a supernova?",
   "choices": [
-   "An exploding star",
    "A new star forming",
+   "A very bright comet",
    "A collision of galaxies",
-   "A very bright comet"
+   "An exploding star"
   ],
-  "correctIndex": 0,
+  "correctIndex": 3,
   "funFact": "Most elements heavier than iron, including the gold in jewellery, were forged in these explosions. The material is genuinely stardust.",
   "explanation": "The name means new star because from Earth one appears where nothing was visible before, but it is a death rather than a birth.",
   "category": "space",
@@ -3290,10 +7040,10 @@
   "choices": [
    "Sirius",
    "Alpha Centauri A",
-   "Betelgeuse",
-   "Proxima Centauri"
+   "Proxima Centauri",
+   "Betelgeuse"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "It sits about 4.2 light years away and is a small red dwarf, far too faint to see without a telescope despite being our nearest neighbour.",
   "explanation": "Sirius is the brightest star in the night sky but is about twice as far away.",
   "category": "space",
@@ -3319,11 +7069,11 @@
   "question": "What are Saturn's rings mostly made of?",
   "choices": [
    "Rock",
-   "Ice",
+   "Dust from its moons",
    "Gas",
-   "Dust from its moons"
+   "Ice"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "They are almost entirely water ice, and though they stretch hundreds of thousands of kilometres across they are often only about ten metres thick.",
   "explanation": "There is rocky dust mixed in, but the reflective brightness comes from ice.",
   "category": "space",
@@ -3349,11 +7099,11 @@
   "question": "Which planet has the strongest winds in the solar system?",
   "choices": [
    "Jupiter",
-   "Earth",
    "Saturn",
-   "Neptune"
+   "Neptune",
+   "Earth"
   ],
-  "correctIndex": 3,
+  "correctIndex": 2,
   "funFact": "Winds there have been clocked above 2,000 kilometres per hour, which is strange for a planet receiving so little sunlight to drive them.",
   "explanation": "Jupiter has the biggest storms by area, but Neptune has the fastest measured wind speeds.",
   "category": "space",
@@ -3376,33 +7126,33 @@
  },
  {
   "id": "spo-001",
-  "question": "How many players are on a football pitch per team at kickoff?",
+  "question": "How far does a footballer typically run in a 90-minute match?",
   "choices": [
-   "Nine",
-   "Ten",
-   "Eleven",
-   "Twelve"
+   "About 4 km",
+   "About 7 km",
+   "About 10 km",
+   "About 18 km"
   ],
   "correctIndex": 2,
-  "funFact": "The number was fixed in the 1860s and has never changed, unlike almost every other rule in the game.",
-  "explanation": "Ten outfield players plus a goalkeeper makes eleven.",
+  "funFact": "Around 10 kilometres, but only a few hundred metres of it at a sprint. Midfielders cover the most; goalkeepers manage about 4.",
+  "explanation": "Tracking data has made this one of the most closely measured numbers in the sport.",
   "category": "sport",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "spo-002",
-  "question": "In which sport would you perform a 'slam dunk'?",
+  "question": "Why is a basketball hoop exactly 10 feet high?",
   "choices": [
-   "Volleyball",
-   "Basketball",
-   "Handball",
-   "Water polo"
+   "Calculated as optimal",
+   "That was the height of the gym balcony rail",
+   "A league vote in 1936",
+   "To match volleyball nets"
   ],
   "correctIndex": 1,
-  "funFact": "It was banned in US college basketball from 1967 to 1976, a rule widely understood to have been aimed at one dominant player.",
-  "explanation": "Volleyball has a spike, which is the closest equivalent move.",
+  "funFact": "James Naismith nailed peach baskets to the running track railing in 1891. It happened to be ten feet, and the game has never changed it.",
+  "explanation": "The first games also had no hole in the basket, so someone had to fetch the ball down after every score.",
   "category": "sport",
-  "difficulty": "easy"
+  "difficulty": "moderate"
  },
  {
   "id": "spo-003",
@@ -3468,12 +7218,12 @@
   "id": "spo-007",
   "question": "What does a yellow card signify in football?",
   "choices": [
-   "A caution",
-   "An immediate sending off",
    "A substitution",
+   "An immediate sending off",
+   "A caution",
    "A goal disallowed"
   ],
-  "correctIndex": 0,
+  "correctIndex": 2,
   "funFact": "The idea came to a referee at a traffic light after a match where players had not understood they were being booked.",
   "explanation": "A red card is the sending off. Two yellows in one match add up to one.",
   "category": "sport",
@@ -3499,11 +7249,11 @@
   "question": "In tennis, what is a score of zero called?",
   "choices": [
    "Nil",
-   "Blank",
+   "Love",
    "Duck",
-   "Love"
+   "Blank"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "One theory traces it to the French l'oeuf, an egg, for the shape of a zero. Another says it simply means playing for love rather than stakes.",
   "explanation": "A duck is cricket, where it means a batter out without scoring.",
   "category": "sport",
@@ -3574,11 +7324,11 @@
   "question": "In which sport is the Ryder Cup contested?",
   "choices": [
    "Sailing",
-   "Cycling",
+   "Golf",
    "Rowing",
-   "Golf"
+   "Cycling"
   ],
-  "correctIndex": 3,
+  "correctIndex": 1,
   "funFact": "It is one of the few elite golf events with no prize money. The teams play for nothing but the trophy.",
   "explanation": "The America's Cup is the sailing one, which is the usual mix-up.",
   "category": "sport",
@@ -3604,11 +7354,11 @@
   "question": "What is the object of the board game Go?",
   "choices": [
    "Capture the king",
-   "Surround territory",
+   "Remove all pieces",
    "Reach the far side",
-   "Remove all pieces"
+   "Surround territory"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "There are more legal Go positions than atoms in the observable universe, which is why it resisted computer play far longer than chess.",
   "explanation": "Capturing the king is chess. In Go, capturing stones is a means to the end of holding territory.",
   "category": "sport",
@@ -3664,11 +7414,11 @@
   "question": "Which athlete holds the men's 100 metres world record?",
   "choices": [
    "Carl Lewis",
-   "Usain Bolt",
+   "Yohan Blake",
    "Tyson Gay",
-   "Yohan Blake"
+   "Usain Bolt"
   ],
-  "correctIndex": 1,
+  "correctIndex": 3,
   "funFact": "He ran 9.58 seconds in Berlin in 2009, and reached a top speed of over 44 kilometres per hour mid-race.",
   "explanation": "The record has stood for well over a decade, which is unusually long for a sprint event.",
   "category": "sport",

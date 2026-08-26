@@ -33,23 +33,24 @@ Requires Node 18 or newer. It has no dependencies.
 ```
 $ downtime run npm run build
 
-  downtime                                              1m 42s · 2/3
+  downtime                                            1m 42s · 2 of 3
+
+  INVENTIONS
+
+  The microwave oven was discovered when an engineer noticed what?
+
+    ✓ a  A melted chocolate bar in his pocket
+      b  A warm cup of tea
+      c  Popcorn popping on a shelf
+      d  A radar dish glowing
+
+  ✓ That's the one.
+    Percy Spencer was standing near a magnetron in 1945 when the bar
+    in his pocket melted. He tried popcorn next, then an egg, which
+    exploded in a colleague's face.
+
   ──────────────────────────────────────────────────────────────────
-
-  Which country has the most time zones?
-
-      a) Russia
-      b) United States
-    ✓ c) France
-      d) China
-
-  Correct.
-  France covers 12 zones because of overseas territories stretching
-  from Tahiti to Réunion. Russia is second with 11.
-
-  ──────────────────────────────────────────────────────────────────
-  [n] next question
-  ⏳ npm run build · running
+  [n] next question   [q] back to your task        ⏳ npm run build
 ```
 
 Then the moment the build finishes:
@@ -64,6 +65,8 @@ Exit code 0 · Trivia: 3/4 correct
 
 Get a question wrong and it shows you the right answer with a short explanation. There is no penalty and no score kept between sessions. Being right earns you a fact, being wrong earns you a different one.
 
+500 questions ship with it, across 20 categories: geography, science, space, animals, history, food, language, arts, sport, the human body, plus origins, myths, inventions, records, movies, music, mythology, psychology, oddities and numbers. They lean towards the surprising rather than the examinable. Where the answer is a widely believed thing that happens to be wrong, the question says so.
+
 ## Behaviour worth knowing
 
 The trivia screen runs on the terminal's alternate buffer, so it never lands in your scrollback. Everything the wrapped command prints while the screen is occupied is held and replayed afterwards in order, on the same stream it came from. `downtime run` exits with the wrapped command's exit code, so it drops into scripts and CI without changing anything.
@@ -74,7 +77,11 @@ One fidelity note: stdout and stderr are captured on separate pipes, so their or
 
 If either stdin or stdout is not a terminal (`downtime run x | tee log`, or anything in CI), downtime steps aside entirely and acts as a transparent wrapper.
 
-Ctrl-C forwards the interrupt to the whole process tree, restores the terminal, prints whatever output was captured, and exits 130. A second Ctrl-C escalates to SIGKILL.
+Ctrl-C forwards the interrupt to the whole process tree, restores the terminal, prints whatever output was captured, and exits 130. A second Ctrl-C escalates to SIGKILL. Once the command has finished, Ctrl-C simply closes the session rather than trying to signal something that is already gone.
+
+Press `q` or Escape to leave the trivia without killing anything. The command carries on, held output is handed back, and the rest streams as normal. You still get the recap when it finishes.
+
+Because output is captured through a pipe, most tools would normally switch their colour off. When your own terminal is a TTY, downtime sets `FORCE_COLOR` and `CLICOLOR_FORCE` for the child so coloured build output survives. Anything you have set yourself takes precedence, and nothing is set when the output is genuinely being piped somewhere.
 
 ## Options
 
@@ -105,6 +112,8 @@ downtime run --threshold 15 -- pytest --exit-first
 
 - `immediate` closes the screen the instant the command exits, mid-question if that is where you are.
 - `finish_round` shows a `✅ task finished` marker instead and lets you land the answer. Press Enter to return whenever you like, or `n` for one more question.
+
+Keys while the trivia is up: `a` to `d` or `1` to `4` to answer, `n` or space for the next question, `q` or Escape to step out without killing the command, Enter to return once the task has finished.
 
 ## Config
 
@@ -156,7 +165,7 @@ The question bank is a single JSON file at `src/content/trivia/questions.json`, 
 
 `funFact` is shown when the player gets it right and `explanation` when they get it wrong, so both should teach something rather than just confirming the answer. Keep questions easy to moderate. The point is a mental break, not a challenge.
 
-`npm test` checks the whole bank for shape, duplicate ids, and whether the correct answer is spread evenly enough across the four positions that always guessing the same letter is not a strategy.
+`npm test` checks the whole bank for shape, duplicate ids, thin or missing reward text, questions that accidentally contain their own answer, and whether the correct answer is spread evenly across the four positions. It is exactly even at present: 125 questions for each of a, b, c and d, so always guessing the same letter gets you nowhere.
 
 ## Architecture
 

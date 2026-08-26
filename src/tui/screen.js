@@ -67,6 +67,13 @@ export class Screen {
     this.active = false
   }
 
+  // Fires when stdin closes for good. Callers use it to avoid waiting on a
+  // keypress that can no longer happen.
+  onEnd(handler) {
+    this.input.once('end', handler)
+    this.cleanupHooks.push(() => this.input.off('end', handler))
+  }
+
   onResize(handler) {
     this.out.on('resize', handler)
     this.cleanupHooks.push(() => this.out.off('resize', handler))

@@ -3,8 +3,9 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { ensureStateDir, stateDir } from './config.js'
 
 // Seen-question tracking so the same trivia does not come round again next week.
-// Capped, because this file should stay a few KB forever.
-const MAX_SEEN = 400
+// The cap sits comfortably above the size of the bundled bank, so a full pass
+// through it is remembered, and the file still stays small.
+const MAX_SEEN = 2000
 
 export function statePath() {
   return join(stateDir(), 'state.json')
