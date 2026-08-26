@@ -1,5 +1,7 @@
 # downtime
 
+[![test](https://github.com/lyhjeremy/downtime-cli/actions/workflows/test.yml/badge.svg)](https://github.com/lyhjeremy/downtime-cli/actions/workflows/test.yml)
+
 Wrap a long-running command. If it takes more than a few seconds, the terminal fills the wait with a couple of trivia questions instead of leaving you to reach for your phone. When the command finishes you get a one-line reminder of what you were doing, then the command's output, untouched.
 
 ```bash
@@ -25,7 +27,7 @@ Nothing else changes. The command's output, its exit code and its behaviour are 
 
 **3. When the command finishes, you land back automatically** with a line telling you what you ran and how long it took, followed by the full output.
 
-That is the whole tool. Everything below is tuning.
+That is the whole tool. Everything below is tuning. There is a one-page version of this at the [field guide](https://claude.ai/code/artifact/c6f50baf-fc3a-481a-ab6c-9948436b6e7a).
 
 ```bash
 downtime config set entry.thresholdSeconds 10   # wait longer before it kicks in
@@ -52,7 +54,7 @@ Or run it without installing:
 npx downtime-cli run npm run build
 ```
 
-Requires Node 18 or newer. It has no dependencies.
+Requires Node 18 or newer. It has no dependencies. Tested on Linux and macOS against Node 18, 20 and 22.
 
 ## How it works
 
