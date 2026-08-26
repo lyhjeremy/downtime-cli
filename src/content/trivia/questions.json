@@ -1,0 +1,3752 @@
+[
+ {
+  "id": "ani-001",
+  "question": "What colour is a polar bear's skin under its fur?",
+  "choices": [
+   "Pink",
+   "White",
+   "Black",
+   "Grey"
+  ],
+  "correctIndex": 2,
+  "funFact": "The fur is not white either. Each hair is transparent and hollow, and scatters light so the coat looks white.",
+  "explanation": "The dark skin absorbs heat from sunlight, which is useful when you live in the Arctic.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-002",
+  "question": "How many hearts does an octopus have?",
+  "choices": [
+   "One",
+   "Two",
+   "Three",
+   "Eight"
+  ],
+  "correctIndex": 2,
+  "funFact": "Two pump blood through the gills and one pumps it round the body. The third stops beating when the octopus swims, which is why they prefer to crawl.",
+  "explanation": "Eight is the number of arms, which is the trap in the question.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-003",
+  "question": "What is the fastest land animal?",
+  "choices": [
+   "Lion",
+   "Pronghorn",
+   "Cheetah",
+   "Greyhound"
+  ],
+  "correctIndex": 2,
+  "funFact": "A cheetah can hit around 100 kilometres per hour but only for about 20 seconds. It overheats and has to stop.",
+  "explanation": "The pronghorn is second fastest but can hold its speed for far longer, so over distance it would win.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-004",
+  "question": "Which of these animals is a marsupial?",
+  "choices": [
+   "Platypus",
+   "Otter",
+   "Hedgehog",
+   "Wombat"
+  ],
+  "correctIndex": 3,
+  "funFact": "Wombats produce cube-shaped droppings, formed by the varying stiffness of the intestine wall. The cubes do not roll away, which helps mark territory.",
+  "explanation": "The platypus is a monotreme, one of the very few mammals that lay eggs, so it sits in its own group.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-005",
+  "question": "What is a group of crows called?",
+  "choices": [
+   "A pack",
+   "A flock",
+   "A gaggle",
+   "A murder"
+  ],
+  "correctIndex": 3,
+  "funFact": "Crows can recognise individual human faces and hold a grudge for years, passing the information to other crows.",
+  "explanation": "A gaggle is geese on the ground. Most of these collective nouns come from a 15th century hunting book.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-006",
+  "question": "Which is the largest animal that has ever lived?",
+  "choices": [
+   "Argentinosaurus",
+   "African elephant",
+   "Blue whale",
+   "Megalodon"
+  ],
+  "correctIndex": 2,
+  "funFact": "Its heart alone can weigh around 180 kilograms, and its call is louder than a jet engine.",
+  "explanation": "The largest dinosaurs were longer in some cases but far lighter, since supporting that mass on land has hard limits.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-007",
+  "question": "How long is an elephant's pregnancy?",
+  "choices": [
+   "9 months",
+   "14 months",
+   "18 months",
+   "22 months"
+  ],
+  "correctIndex": 3,
+  "funFact": "About 22 months, the longest of any land animal. Calves are born already able to walk, which they need to be.",
+  "explanation": "The long gestation gives the brain time to develop, since elephant calves have a great deal to learn from the herd.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-008",
+  "question": "Which bird is famous for being unable to fly despite having wings?",
+  "choices": [
+   "Swift",
+   "Kingfisher",
+   "Albatross",
+   "Penguin"
+  ],
+  "correctIndex": 3,
+  "funFact": "Penguin wings became flippers. Underwater they are effectively flying, and some species reach speeds of 30 kilometres per hour.",
+  "explanation": "The albatross is the opposite case, with the largest wingspan of any bird and the ability to glide for hours without a flap.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-009",
+  "question": "What do you call a baby kangaroo?",
+  "choices": [
+   "Cub",
+   "Kit",
+   "Joey",
+   "Pup"
+  ],
+  "correctIndex": 2,
+  "funFact": "A newborn is about the size of a jellybean. It crawls unaided into the pouch and stays there for months.",
+  "explanation": "Joey is used for the young of most marsupials, not just kangaroos.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-010",
+  "question": "Which animal has the longest lifespan?",
+  "choices": [
+   "Galapagos tortoise",
+   "Greenland shark",
+   "Bowhead whale",
+   "African elephant"
+  ],
+  "correctIndex": 1,
+  "funFact": "Some are estimated at over 300 years old. They do not reach breeding age until around 150.",
+  "explanation": "Bowhead whales can pass 200 years, which is remarkable, but the Greenland shark still outlasts them.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-011",
+  "question": "How many legs does a spider have?",
+  "choices": [
+   "Six",
+   "Eight",
+   "Ten",
+   "Twelve"
+  ],
+  "correctIndex": 1,
+  "funFact": "Spiders have no muscles to extend their legs. They pump fluid in under pressure, which is why a dead spider curls up.",
+  "explanation": "Six legs means an insect. Spiders are arachnids, along with scorpions, mites and ticks.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-012",
+  "question": "What is the only mammal capable of true sustained flight?",
+  "choices": [
+   "Flying squirrel",
+   "Colugo",
+   "Sugar glider",
+   "Bat"
+  ],
+  "correctIndex": 3,
+  "funFact": "Bats make up roughly a fifth of all mammal species. There are more kinds of bat than of any mammal group except rodents.",
+  "explanation": "Flying squirrels, colugos and sugar gliders all glide. None of them can gain height under their own power.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-013",
+  "question": "Which sea creature has three hearts and blue blood?",
+  "choices": [
+   "Jellyfish",
+   "Octopus",
+   "Starfish",
+   "Sea urchin"
+  ],
+  "correctIndex": 1,
+  "funFact": "The blue comes from haemocyanin, which uses copper to carry oxygen instead of the iron in our red haemoglobin.",
+  "explanation": "Jellyfish have no heart, no brain and no blood at all.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-014",
+  "question": "What is the tallest animal in the world?",
+  "choices": [
+   "Elephant",
+   "Ostrich",
+   "Giraffe",
+   "Camel"
+  ],
+  "correctIndex": 2,
+  "funFact": "A giraffe has the same number of neck vertebrae as a human, seven. Each one is just enormously elongated.",
+  "explanation": "The ostrich is the tallest bird at around 2.7 metres, but a giraffe can reach nearly twice that.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-015",
+  "question": "Which insect produces honey?",
+  "choices": [
+   "Wasp",
+   "Hornet",
+   "Bee",
+   "Ant"
+  ],
+  "correctIndex": 2,
+  "funFact": "A single worker bee makes about a twelfth of a teaspoon of honey in its entire life.",
+  "explanation": "Wasps and hornets are close relatives and some feed on nectar, but they do not store honey.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-016",
+  "question": "What does a chameleon primarily change colour for?",
+  "choices": [
+   "Camouflage",
+   "Confusing predators",
+   "Attracting prey",
+   "Communication and temperature"
+  ],
+  "correctIndex": 3,
+  "funFact": "Colour changes mostly signal mood and status to other chameleons, or help regulate heat. Camouflage is a side benefit rather than the main purpose.",
+  "explanation": "Most chameleons are already well matched to their surroundings, so they do not need to change colour to hide.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-017",
+  "question": "Which animal never sleeps in the way we understand sleep?",
+  "choices": [
+   "Giraffe",
+   "Bullfrog",
+   "Dolphin",
+   "Horse"
+  ],
+  "correctIndex": 2,
+  "funFact": "Dolphins rest one half of the brain at a time, keeping one eye open. They have to stay conscious enough to surface and breathe.",
+  "explanation": "Giraffes sleep very little, around 30 minutes a day in short bursts, but they do properly sleep.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-018",
+  "question": "What is the largest species of big cat?",
+  "choices": [
+   "Tiger",
+   "Lion",
+   "Jaguar",
+   "Leopard"
+  ],
+  "correctIndex": 0,
+  "funFact": "Siberian tigers can weigh over 300 kilograms. Their stripes are on the skin as well as the fur, so the pattern shows if shaved.",
+  "explanation": "Lions are close in weight but generally shorter in body length, and tigers hold the record.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-019",
+  "question": "How do snakes mainly smell?",
+  "choices": [
+   "Through nostrils",
+   "With their tongue",
+   "Through their skin",
+   "With their eyes"
+  ],
+  "correctIndex": 1,
+  "funFact": "The forked tip picks up scent from two points at once, so a snake can tell which direction a smell is coming from.",
+  "explanation": "They have nostrils too, but the tongue is doing most of the work, delivering particles to a sensor in the roof of the mouth.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-020",
+  "question": "Which bird lays the largest egg?",
+  "choices": [
+   "Emu",
+   "Albatross",
+   "Condor",
+   "Ostrich"
+  ],
+  "correctIndex": 3,
+  "funFact": "One ostrich egg weighs about 1.4 kilograms, roughly two dozen chicken eggs, and takes around an hour to soft boil.",
+  "explanation": "The emu is second and lays a striking dark green egg, but it is considerably smaller.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-021",
+  "question": "What are baby rabbits called?",
+  "choices": [
+   "Kits",
+   "Pups",
+   "Cubs",
+   "Calves"
+  ],
+  "correctIndex": 0,
+  "funFact": "Rabbits are not rodents. They belong to a separate order called lagomorphs, along with hares and pikas.",
+  "explanation": "Kit is short for kitten, and is also used for young foxes, ferrets and beavers.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-022",
+  "question": "Which animal's fingerprints are almost identical to a human's?",
+  "choices": [
+   "Chimpanzee",
+   "Orangutan",
+   "Gorilla",
+   "Koala"
+  ],
+  "correctIndex": 3,
+  "funFact": "Koala prints are so similar that they have reportedly caused confusion at crime scenes. The similarity evolved independently of primates.",
+  "explanation": "Great apes do have fingerprints, but the koala's are the ones close enough to be mistaken for human under a lens.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "ani-023",
+  "question": "What is the main diet of a giant panda?",
+  "choices": [
+   "Fish",
+   "Insects",
+   "Fruit",
+   "Bamboo"
+  ],
+  "correctIndex": 3,
+  "funFact": "Pandas still have the digestive system of a carnivore, which handles bamboo poorly. They compensate by eating for up to 14 hours a day.",
+  "explanation": "They will occasionally eat small animals or eggs, but around 99 percent of the diet is bamboo.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-024",
+  "question": "Which of these can regrow a lost limb?",
+  "choices": [
+   "Frog",
+   "Starfish",
+   "Snake",
+   "Sparrow"
+  ],
+  "correctIndex": 1,
+  "funFact": "Some starfish species can regrow an entire body from a single arm, provided part of the central disc goes with it.",
+  "explanation": "Frogs regrow tails as tadpoles but lose the ability as adults. Salamanders are the famous exception among vertebrates.",
+  "category": "animals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "ani-025",
+  "question": "What is a group of flamingos called?",
+  "choices": [
+   "A flamboyance",
+   "A parade",
+   "A blush",
+   "A stand"
+  ],
+  "correctIndex": 0,
+  "funFact": "Flamingos are not born pink. They get the colour from pigments in the algae and shrimp they eat.",
+  "explanation": "Stand is also used occasionally, but flamboyance is the collective noun that has stuck.",
+  "category": "animals",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-001",
+  "question": "How many strings does a standard violin have?",
+  "choices": [
+   "Three",
+   "Four",
+   "Five",
+   "Six"
+  ],
+  "correctIndex": 1,
+  "funFact": "They are tuned in fifths: G, D, A and E. The viola and cello use the same interval pattern, just lower.",
+  "explanation": "Six strings means a guitar, which is the usual reflex answer.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-002",
+  "question": "Who composed the Four Seasons?",
+  "choices": [
+   "Bach",
+   "Handel",
+   "Mozart",
+   "Vivaldi"
+  ],
+  "correctIndex": 3,
+  "funFact": "Each concerto came with a sonnet describing what the music depicts, from barking dogs to a summer thunderstorm. Vivaldi may have written the poems himself.",
+  "explanation": "Bach and Handel were contemporaries of Vivaldi and Mozart came later, so all three are plausible-sounding guesses.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-003",
+  "question": "Which artist cut off part of his own ear?",
+  "choices": [
+   "Van Gogh",
+   "Gauguin",
+   "Cézanne",
+   "Monet"
+  ],
+  "correctIndex": 0,
+  "funFact": "He sold almost nothing in his lifetime and painted around 900 works in roughly a decade.",
+  "explanation": "Gauguin was staying with him at the time of the incident, which is why the two names get linked.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-004",
+  "question": "How many keys does a standard full-size piano have?",
+  "choices": [
+   "76",
+   "81",
+   "88",
+   "96"
+  ],
+  "correctIndex": 2,
+  "funFact": "Fifty-two white and thirty-six black. The range was settled in the 1880s and almost nothing has been written that needs more.",
+  "explanation": "Seventy-six is common on electric keyboards, which is where that number comes from.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-005",
+  "question": "Which of these is a woodwind instrument?",
+  "choices": [
+   "Trumpet",
+   "Trombone",
+   "French horn",
+   "Clarinet"
+  ],
+  "correctIndex": 3,
+  "funFact": "The saxophone is a woodwind too, despite being made of brass. The category is about how the sound is produced, using a reed.",
+  "explanation": "The other three are all brass, where the sound comes from the player's lips vibrating against a mouthpiece.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-006",
+  "question": "Who wrote the play 'A Doll's House'?",
+  "choices": [
+   "Anton Chekhov",
+   "Oscar Wilde",
+   "August Strindberg",
+   "Henrik Ibsen"
+  ],
+  "correctIndex": 3,
+  "funFact": "The sound of the front door slamming at the end was described as echoing across Europe. Some early productions demanded an altered, softer ending.",
+  "explanation": "Chekhov and Strindberg were writing around the same time, which makes them reasonable guesses.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-007",
+  "question": "The Mona Lisa hangs in which museum?",
+  "choices": [
+   "Uffizi",
+   "Prado",
+   "Louvre",
+   "Rijksmuseum"
+  ],
+  "correctIndex": 2,
+  "funFact": "It became globally famous partly because it was stolen in 1911. The empty wall drew bigger crowds than the painting had.",
+  "explanation": "The Uffizi in Florence holds a great deal of Leonardo's world, but not this painting.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-008",
+  "question": "In music, what does 'forte' mean?",
+  "choices": [
+   "Slowly",
+   "Softly",
+   "Repeat",
+   "Loudly"
+  ],
+  "correctIndex": 3,
+  "funFact": "Piano means softly, and the instrument's full name, pianoforte, describes the fact that it could play both, unlike the harpsichord before it.",
+  "explanation": "Softly is piano, which is the direct opposite and the easiest to confuse.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-009",
+  "question": "Which artist is associated with melting clocks?",
+  "choices": [
+   "Picasso",
+   "Kandinsky",
+   "Magritte",
+   "Dalí"
+  ],
+  "correctIndex": 3,
+  "funFact": "He said the soft watches were inspired by camembert cheese melting in the sun.",
+  "explanation": "Magritte is the other famous surrealist, known for bowler hats and a pipe that is not a pipe.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-010",
+  "question": "What is the term for a piece of music played by a single performer?",
+  "choices": [
+   "Solo",
+   "Duet",
+   "Trio",
+   "Quartet"
+  ],
+  "correctIndex": 0,
+  "funFact": "The word is simply Italian for alone. The same root gives us solitary and desolate.",
+  "explanation": "A duet is two performers, a trio three and a quartet four.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-011",
+  "question": "Which colour is made by mixing blue and yellow?",
+  "choices": [
+   "Purple",
+   "Orange",
+   "Brown",
+   "Green"
+  ],
+  "correctIndex": 3,
+  "funFact": "That rule holds for paint but not for light. Mixing blue and yellow light gives something close to white.",
+  "explanation": "Purple comes from blue and red, and orange from red and yellow.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-012",
+  "question": "Who directed the film 'Jaws'?",
+  "choices": [
+   "George Lucas",
+   "Martin Scorsese",
+   "Francis Ford Coppola",
+   "Steven Spielberg"
+  ],
+  "correctIndex": 3,
+  "funFact": "The mechanical shark kept breaking, so it barely appears on screen. Hiding it made the film far more frightening than the original plan.",
+  "explanation": "All four were part of the same generation of American directors in the 1970s, which is what makes the question a coin toss for some.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-013",
+  "question": "How many lines does a traditional sonnet have?",
+  "choices": [
+   "8",
+   "12",
+   "14",
+   "16"
+  ],
+  "correctIndex": 2,
+  "funFact": "Shakespeare wrote 154 of them. The form's tight length is part of the point: the argument has to turn and resolve fast.",
+  "explanation": "Twelve lines is closer to a villanelle's stanza structure, and eight would be an octave, which is only half a sonnet.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-014",
+  "question": "Which instrument does a timpanist play?",
+  "choices": [
+   "Kettle drums",
+   "Cymbals",
+   "Xylophone",
+   "Triangle"
+  ],
+  "correctIndex": 0,
+  "funFact": "They are tuned to specific pitches, usually with a foot pedal, which makes them unusual among orchestral drums.",
+  "explanation": "A percussionist covers cymbals, xylophone and triangle. The timpanist normally does nothing else.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-015",
+  "question": "'The Starry Night' depicts the view from where?",
+  "choices": [
+   "A Paris studio",
+   "An asylum window",
+   "A ship at sea",
+   "A hilltop in Provence"
+  ],
+  "correctIndex": 1,
+  "funFact": "Van Gogh painted it from memory during his stay at Saint-Rémy in 1889, adding a village that was not actually visible.",
+  "explanation": "He was in Provence, but the specific view was from the window of the asylum where he was staying.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-016",
+  "question": "What does a conductor's baton primarily communicate?",
+  "choices": [
+   "Volume only",
+   "The key signature",
+   "Which instrument plays next",
+   "Tempo and expression"
+  ],
+  "correctIndex": 3,
+  "funFact": "Before batons, conductors sometimes beat time with a heavy staff on the floor. Lully struck his own foot doing this and died of the infection.",
+  "explanation": "Cues to individual players are usually given with the free hand or a look, not the baton.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-017",
+  "question": "Which of these is a primary colour in additive light mixing?",
+  "choices": [
+   "Yellow",
+   "Cyan",
+   "Magenta",
+   "Green"
+  ],
+  "correctIndex": 3,
+  "funFact": "Screens use red, green and blue. Printers use cyan, magenta and yellow, because ink subtracts light rather than adding it.",
+  "explanation": "Cyan, magenta and yellow are the subtractive primaries, which is the set used for pigment and ink.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-018",
+  "question": "Who sculpted 'David'?",
+  "choices": [
+   "Donatello",
+   "Bernini",
+   "Michelangelo",
+   "Rodin"
+  ],
+  "correctIndex": 2,
+  "funFact": "He carved it from a single block of marble that two other sculptors had already abandoned as unworkable. He was 26.",
+  "explanation": "Donatello and Bernini both made their own famous versions of David, which is exactly why this question catches people.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-019",
+  "question": "What is the highest female singing voice type?",
+  "choices": [
+   "Alto",
+   "Mezzo-soprano",
+   "Contralto",
+   "Soprano"
+  ],
+  "correctIndex": 3,
+  "funFact": "The Queen of the Night aria from The Magic Flute reaches an F6, which is near the top of what any human voice can produce.",
+  "explanation": "Contralto is the lowest female voice, and mezzo-soprano sits in the middle.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-020",
+  "question": "Which novel opens with the line 'Call me Ishmael'?",
+  "choices": [
+   "Robinson Crusoe",
+   "Moby-Dick",
+   "Treasure Island",
+   "The Old Man and the Sea"
+  ],
+  "correctIndex": 1,
+  "funFact": "It sold poorly and was largely forgotten during Melville's lifetime. Its reputation was rebuilt in the 1920s, thirty years after he died.",
+  "explanation": "All four are sea stories, which is what makes the other options plausible.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-021",
+  "question": "What art movement is Claude Monet associated with?",
+  "choices": [
+   "Cubism",
+   "Impressionism",
+   "Baroque",
+   "Surrealism"
+  ],
+  "correctIndex": 1,
+  "funFact": "The movement was named, mockingly, after his painting 'Impression, Sunrise'. The artists adopted the insult as their label.",
+  "explanation": "Cubism came later with Picasso and Braque, and Baroque was two centuries earlier.",
+  "category": "arts",
+  "difficulty": "easy"
+ },
+ {
+  "id": "art-022",
+  "question": "How many movements does a typical classical symphony have?",
+  "choices": [
+   "One",
+   "Two",
+   "Four",
+   "Seven"
+  ],
+  "correctIndex": 2,
+  "funFact": "Usually fast, slow, a dance movement, then a fast finale. Composers broke the pattern often, but that is the template.",
+  "explanation": "A concerto typically has three movements, which is the closest common alternative.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-023",
+  "question": "Which of these instruments is played by plucking with a bow's wood, among other techniques?",
+  "choices": [
+   "Flute",
+   "Organ",
+   "Trumpet",
+   "Double bass"
+  ],
+  "correctIndex": 3,
+  "funFact": "Striking the string with the wood of the bow is called col legno. Some 19th century players refused to do it, worried it would damage the bow.",
+  "explanation": "Only string instruments use a bow at all, and of these options the double bass is the only one.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-024",
+  "question": "Who wrote 'One Hundred Years of Solitude'?",
+  "choices": [
+   "Jorge Luis Borges",
+   "Pablo Neruda",
+   "Mario Vargas Llosa",
+   "Gabriel García Márquez"
+  ],
+  "correctIndex": 3,
+  "funFact": "He wrote it in eighteen months while his family fell into debt, and reportedly had to pawn household items to post the manuscript.",
+  "explanation": "All four are major Latin American writers, and three of them won the Nobel Prize, which makes this a genuinely hard guess.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "art-025",
+  "question": "In photography, what does a lower f-number produce?",
+  "choices": [
+   "A wider aperture and blurrier background",
+   "A narrower aperture",
+   "A longer exposure",
+   "A higher ISO"
+  ],
+  "correctIndex": 0,
+  "funFact": "The number is a ratio of focal length to aperture width, which is why it runs backwards from what people expect.",
+  "explanation": "A higher f-number narrows the aperture and brings more of the scene into focus.",
+  "category": "arts",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-001",
+  "question": "What is the largest organ in the human body?",
+  "choices": [
+   "Skin",
+   "Liver",
+   "Lungs",
+   "Brain"
+  ],
+  "correctIndex": 0,
+  "funFact": "An adult's skin covers about two square metres and weighs roughly four kilograms. It replaces itself entirely about once a month.",
+  "explanation": "The liver is the largest internal organ, which is the answer people usually mean.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-002",
+  "question": "How many chambers does the human heart have?",
+  "choices": [
+   "Two",
+   "Three",
+   "Four",
+   "Six"
+  ],
+  "correctIndex": 2,
+  "funFact": "Two atria on top, two ventricles below. It beats around 100,000 times a day without ever taking a break.",
+  "explanation": "Fish have two chambers and most amphibians have three, so the number varies a lot across animals.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-003",
+  "question": "Which is the longest bone in the human body?",
+  "choices": [
+   "Tibia",
+   "Humerus",
+   "Femur",
+   "Spine"
+  ],
+  "correctIndex": 2,
+  "funFact": "The femur is strong enough to carry roughly 30 times an adult's body weight in compression.",
+  "explanation": "The spine is not a single bone, it is a column of 33 vertebrae.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-004",
+  "question": "Which organ produces insulin?",
+  "choices": [
+   "Liver",
+   "Kidney",
+   "Thyroid",
+   "Pancreas"
+  ],
+  "correctIndex": 3,
+  "funFact": "It comes from clusters of cells called the islets of Langerhans, which make up only about 2 percent of the pancreas.",
+  "explanation": "The liver stores and releases glucose, which is why it is closely involved but is not the source of insulin.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-005",
+  "question": "How many teeth does a typical adult have?",
+  "choices": [
+   "24",
+   "28",
+   "32",
+   "36"
+  ],
+  "correctIndex": 2,
+  "funFact": "That includes four wisdom teeth, which many people never grow at all. Children have 20 milk teeth.",
+  "explanation": "Twenty-eight is the count once wisdom teeth are removed, which is common enough to make it a fair guess.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-006",
+  "question": "What is the smallest bone in the human body?",
+  "choices": [
+   "Stapes, in the ear",
+   "The tip of the little finger",
+   "A bone in the nose",
+   "The kneecap"
+  ],
+  "correctIndex": 0,
+  "funFact": "It is about three millimetres long and it is fully grown at birth, unlike every other bone.",
+  "explanation": "The three smallest bones are all in the middle ear, transmitting vibration from the eardrum inward.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-007",
+  "question": "Roughly what percentage of the human body is water?",
+  "choices": [
+   "20 percent",
+   "40 percent",
+   "60 percent",
+   "90 percent"
+  ],
+  "correctIndex": 2,
+  "funFact": "It varies with age and body composition. Newborns are closer to 75 percent, and it declines over a lifetime.",
+  "explanation": "Ninety percent is closer to the figure for a jellyfish than a person.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-008",
+  "question": "Which part of the eye controls how much light enters?",
+  "choices": [
+   "Cornea",
+   "Retina",
+   "Lens",
+   "Iris"
+  ],
+  "correctIndex": 3,
+  "funFact": "Iris patterns are more distinctive than fingerprints and are stable from about one year old, which is why they work well for identification.",
+  "explanation": "The retina is the light-sensitive layer at the back, and the lens focuses. The iris does the adjusting.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-009",
+  "question": "What is the fastest-healing tissue in the human body?",
+  "choices": [
+   "The cornea",
+   "Skin",
+   "Bone",
+   "Muscle"
+  ],
+  "correctIndex": 0,
+  "funFact": "Minor corneal scratches often heal within a day or two. The cornea has no blood vessels, which is also why corneal transplants are rarely rejected.",
+  "explanation": "Skin heals fast but takes days to weeks, and bone takes months.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-010",
+  "question": "How long is the small intestine in an adult, roughly?",
+  "choices": [
+   "1 metre",
+   "3 metres",
+   "7 metres",
+   "15 metres"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is folded into about 7 metres, and its inner surface is covered in tiny projections that give it the absorbing area of a tennis court.",
+  "explanation": "The large intestine is shorter at about 1.5 metres, despite the name. Large refers to width.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-011",
+  "question": "Which blood cells fight infection?",
+  "choices": [
+   "Red cells",
+   "Plasma cells only",
+   "Platelets",
+   "White cells"
+  ],
+  "correctIndex": 3,
+  "funFact": "They are outnumbered by red cells roughly 700 to one, and several distinct types handle different kinds of threat.",
+  "explanation": "Red cells carry oxygen and platelets handle clotting.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-012",
+  "question": "What is the strongest substance in the human body?",
+  "choices": [
+   "Tooth enamel",
+   "Bone",
+   "Tendon",
+   "Cartilage"
+  ],
+  "correctIndex": 0,
+  "funFact": "It is the hardest substance the body makes, but it contains no living cells, so once it is damaged it cannot repair itself.",
+  "explanation": "Bone is remarkably strong and does regenerate, but enamel is harder.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-013",
+  "question": "How many pairs of ribs does a typical adult have?",
+  "choices": [
+   "Ten",
+   "Twelve",
+   "Fourteen",
+   "Eleven"
+  ],
+  "correctIndex": 1,
+  "funFact": "The bottom two pairs are called floating ribs because they attach only to the spine, not to the breastbone.",
+  "explanation": "Men and women have the same number, despite a persistent belief to the contrary.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-014",
+  "question": "Which sense is most closely linked to memory?",
+  "choices": [
+   "Sight",
+   "Hearing",
+   "Smell",
+   "Touch"
+  ],
+  "correctIndex": 2,
+  "funFact": "Smell signals reach the memory and emotion centres almost directly, bypassing the relay station that other senses pass through.",
+  "explanation": "That anatomical shortcut is why a smell can trigger a vivid memory more suddenly than a photograph.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-015",
+  "question": "What is the medical term for the kneecap?",
+  "choices": [
+   "Patella",
+   "Scapula",
+   "Clavicle",
+   "Sternum"
+  ],
+  "correctIndex": 0,
+  "funFact": "It is a sesamoid bone, meaning it sits inside a tendon rather than joining two bones. It is the largest of its kind in the body.",
+  "explanation": "The scapula is the shoulder blade, the clavicle the collarbone and the sternum the breastbone.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-016",
+  "question": "Roughly how many muscles does it take to smile?",
+  "choices": [
+   "A dozen or so",
+   "Exactly two",
+   "Over a hundred",
+   "None, it is involuntary"
+  ],
+  "correctIndex": 0,
+  "funFact": "The popular claim that frowning takes more muscles than smiling has never held up well. Counts vary depending on how you define the smile.",
+  "explanation": "The face has more than 40 muscles in total, and a genuine smile uses ones around the eyes as well as the mouth.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-017",
+  "question": "Where is the body's hardest working muscle by continuous use?",
+  "choices": [
+   "Calf",
+   "Jaw",
+   "Heart",
+   "Diaphragm"
+  ],
+  "correctIndex": 2,
+  "funFact": "It pumps around 7,500 litres of blood a day and manages this without ever resting for more than a fraction of a second.",
+  "explanation": "The jaw is the strongest by force, which is the other version of this question.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-018",
+  "question": "What does the liver not do?",
+  "choices": [
+   "Filter toxins",
+   "Store glycogen",
+   "Produce bile",
+   "Pump blood"
+  ],
+  "correctIndex": 3,
+  "funFact": "The liver performs hundreds of separate functions and is the only internal organ that can regenerate a substantial amount of lost tissue.",
+  "explanation": "Pumping is the heart's job. The liver does the other three, among many other things.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-019",
+  "question": "How many bones are in the human hand and wrist?",
+  "choices": [
+   "Eight",
+   "Fourteen",
+   "Twenty-seven",
+   "Forty"
+  ],
+  "correctIndex": 2,
+  "funFact": "That is more than a quarter of all the bones in the body, packed into both hands, which is what makes them so dexterous.",
+  "explanation": "Eight of those 27 are in the wrist alone, arranged in two rows.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-020",
+  "question": "What is the function of red blood cells?",
+  "choices": [
+   "Carry oxygen",
+   "Fight bacteria",
+   "Clot wounds",
+   "Produce hormones"
+  ],
+  "correctIndex": 0,
+  "funFact": "They lose their nucleus as they mature, which frees up space for more haemoglobin but means they cannot repair themselves and last about four months.",
+  "explanation": "Fighting bacteria is the white cells' job and clotting is done by platelets.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bod-021",
+  "question": "Which part of the brain controls balance and coordination?",
+  "choices": [
+   "Cerebrum",
+   "Hippocampus",
+   "Brain stem",
+   "Cerebellum"
+  ],
+  "correctIndex": 3,
+  "funFact": "It holds more than half the brain's neurons in about a tenth of its volume, packed extremely densely.",
+  "explanation": "The hippocampus handles memory formation and the brain stem controls automatic functions like breathing.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-022",
+  "question": "Why do we get goosebumps?",
+  "choices": [
+   "A leftover reflex that raised fur",
+   "To cool the skin",
+   "To improve grip",
+   "To seal in sweat"
+  ],
+  "correctIndex": 0,
+  "funFact": "In furry animals the same muscles fluff the coat, trapping air for warmth or making the animal look bigger. On mostly bare human skin it achieves nothing.",
+  "explanation": "The tiny muscles at the base of each hair still contract, they just no longer have enough hair to work with.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-023",
+  "question": "How many chromosomes does a typical human cell contain?",
+  "choices": [
+   "23",
+   "46",
+   "64",
+   "92"
+  ],
+  "correctIndex": 1,
+  "funFact": "They come as 23 pairs, one set from each parent. Sperm and egg cells carry only 23 each, which is how the count stays stable.",
+  "explanation": "Twenty-three is the number of pairs, which is why it is such a common answer to this question.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-024",
+  "question": "What is the largest joint in the human body?",
+  "choices": [
+   "Hip",
+   "Shoulder",
+   "Knee",
+   "Elbow"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is also one of the most complicated, combining hinge and slight rotation, which is part of why it gets injured so often.",
+  "explanation": "The hip carries more load but the knee is the larger joint by surface area.",
+  "category": "body",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "bod-025",
+  "question": "Which vitamin does the body produce from sunlight?",
+  "choices": [
+   "Vitamin A",
+   "Vitamin C",
+   "Vitamin D",
+   "Vitamin K"
+  ],
+  "correctIndex": 2,
+  "funFact": "Ultraviolet light converts a cholesterol derivative in the skin. It is the only vitamin humans reliably make for themselves this way.",
+  "explanation": "Vitamin C has to come from diet entirely, since humans lost the ability to synthesise it long ago.",
+  "category": "body",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-001",
+  "question": "Which spice is the most expensive by weight?",
+  "choices": [
+   "Vanilla",
+   "Cardamom",
+   "Saffron",
+   "Cinnamon"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is the dried stigma of a crocus flower, and each one has just three. It takes roughly 150,000 flowers to make a kilogram.",
+  "explanation": "Vanilla is second and has come close in price during bad harvests, but saffron holds the record comfortably.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-002",
+  "question": "What are capers?",
+  "choices": [
+   "Flower buds",
+   "Small unripe olives",
+   "Seed pods",
+   "Immature grapes"
+  ],
+  "correctIndex": 0,
+  "funFact": "They are picked before opening and then cured in salt or brine. Left alone they would become a large white flower.",
+  "explanation": "They look like small olives once cured, which is where the confusion comes from.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-003",
+  "question": "Which country consumes the most coffee per person?",
+  "choices": [
+   "Italy",
+   "United States",
+   "Brazil",
+   "Finland"
+  ],
+  "correctIndex": 3,
+  "funFact": "Finns drink roughly 12 kilograms of coffee per person per year, and Nordic countries take most of the top spots.",
+  "explanation": "Brazil grows the most coffee but does not lead on drinking it, and Italian servings are small even if frequent.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-004",
+  "question": "A tomato is botanically classified as what?",
+  "choices": [
+   "A vegetable",
+   "A fruit",
+   "A tuber",
+   "A legume"
+  ],
+  "correctIndex": 1,
+  "funFact": "The US Supreme Court ruled in 1893 that it counted as a vegetable for tax purposes, while accepting it was botanically a fruit.",
+  "explanation": "Anything that develops from a flower's ovary and holds seeds is a fruit, which also covers cucumbers and peppers.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-005",
+  "question": "What gives chilli peppers their heat?",
+  "choices": [
+   "Capsaicin",
+   "Piperine",
+   "Allicin",
+   "Menthol"
+  ],
+  "correctIndex": 0,
+  "funFact": "Capsaicin triggers the same nerve receptor that responds to actual heat, which is why your brain genuinely thinks your mouth is burning.",
+  "explanation": "Piperine is what makes black pepper sharp, and allicin is the compound behind garlic.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-006",
+  "question": "Which of these is a traditional ingredient in authentic Italian carbonara?",
+  "choices": [
+   "Cream",
+   "Guanciale",
+   "Garlic",
+   "Peas"
+  ],
+  "correctIndex": 1,
+  "funFact": "The sauce is made from egg, cheese and rendered pork fat. The creaminess is emulsion, not cream.",
+  "explanation": "Cream is a common addition outside Italy but is not part of the traditional recipe.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-007",
+  "question": "What is tofu made from?",
+  "choices": [
+   "Rice",
+   "Wheat",
+   "Soybeans",
+   "Chickpeas"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is made much like cheese. Soy milk is curdled with a coagulant and the curds are pressed into blocks.",
+  "explanation": "Seitan is the one made from wheat, and it is often confused with tofu.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-008",
+  "question": "Which fruit was once so rare in Europe that people rented them for parties?",
+  "choices": [
+   "Banana",
+   "Pineapple",
+   "Mango",
+   "Kiwi"
+  ],
+  "correctIndex": 1,
+  "funFact": "In 18th century Britain a single pineapple could cost the equivalent of thousands today, so hosts hired one as a centrepiece and returned it.",
+  "explanation": "They were extremely hard to grow in a cold climate and slow to import before fast shipping.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-009",
+  "question": "What kind of drink is sake?",
+  "choices": [
+   "Distilled spirit",
+   "Brewed from rice",
+   "Fortified wine",
+   "Fermented fruit"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is brewed more like beer than made like wine, using a mould called koji to convert starch into sugar before fermentation.",
+  "explanation": "It is not distilled, which is why calling it rice wine is only half right.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-010",
+  "question": "Which nut is used to make marzipan?",
+  "choices": [
+   "Hazelnut",
+   "Walnut",
+   "Cashew",
+   "Almond"
+  ],
+  "correctIndex": 3,
+  "funFact": "Almonds are not really nuts. They are the seed inside a fruit closely related to the peach.",
+  "explanation": "Hazelnut paste is the base of praline and gianduja, which are the ones most often mistaken for marzipan.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-011",
+  "question": "What does the term 'al dente' describe?",
+  "choices": [
+   "Lightly salted",
+   "Firm to the bite",
+   "Served cold",
+   "Cooked in one pan"
+  ],
+  "correctIndex": 1,
+  "funFact": "It translates literally as to the tooth. Pasta cooked this way also releases its starch more slowly during digestion.",
+  "explanation": "It refers to texture rather than seasoning or temperature.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-012",
+  "question": "Which country did the croissant originate in?",
+  "choices": [
+   "France",
+   "Austria",
+   "Belgium",
+   "Switzerland"
+  ],
+  "correctIndex": 1,
+  "funFact": "Its ancestor is the Viennese kipferl. It reached Paris in the 1800s and only became laminated with butter later.",
+  "explanation": "France perfected the modern version, which is why it is thought of as French, but the shape came from Vienna.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-013",
+  "question": "What is the main ingredient of traditional hummus?",
+  "choices": [
+   "Lentils",
+   "White beans",
+   "Chickpeas",
+   "Butter beans"
+  ],
+  "correctIndex": 2,
+  "funFact": "The word hummus is simply Arabic for chickpea. The full name of the dish means chickpeas with tahini.",
+  "explanation": "Lentils and white beans make perfectly good dips but produce something else entirely.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-014",
+  "question": "Honey has been found still edible after how long?",
+  "choices": [
+   "10 years",
+   "100 years",
+   "1,000 years",
+   "3,000 years"
+  ],
+  "correctIndex": 3,
+  "funFact": "Pots found in Egyptian tombs were still safe to eat. Honey is too acidic and too low in water for bacteria to survive in it.",
+  "explanation": "It can crystallise or darken over time, but properly sealed it does not spoil in any meaningful sense.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-015",
+  "question": "Which part of the plant is cinnamon?",
+  "choices": [
+   "Root",
+   "Bark",
+   "Seed",
+   "Leaf"
+  ],
+  "correctIndex": 1,
+  "funFact": "The inner bark is stripped and dried, and it curls into quills on its own as it loses moisture.",
+  "explanation": "Ginger and turmeric are the roots, and cloves are dried flower buds.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-016",
+  "question": "What is the difference between an espresso and a ristretto?",
+  "choices": [
+   "Ristretto uses less water",
+   "Ristretto is served cold",
+   "Ristretto uses a different bean",
+   "Ristretto has milk"
+  ],
+  "correctIndex": 0,
+  "funFact": "Less water pulled through the same grounds gives a sweeter, less bitter shot, since bitter compounds extract later.",
+  "explanation": "A lungo is the opposite, pulled with more water for a longer and more bitter shot.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-017",
+  "question": "Which grain is used to make traditional Japanese miso?",
+  "choices": [
+   "Barley or rice with soybeans",
+   "Wheat only",
+   "Corn",
+   "Millet"
+  ],
+  "correctIndex": 0,
+  "funFact": "Miso is fermented for anything from a few weeks to several years. The longer it goes, the darker and saltier it gets.",
+  "explanation": "Soybeans are the constant, and the grain varies by region, which is what makes white and red miso taste so different.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-018",
+  "question": "What makes bread rise?",
+  "choices": [
+   "Salt",
+   "Sugar",
+   "Carbon dioxide from yeast",
+   "Steam only"
+  ],
+  "correctIndex": 2,
+  "funFact": "Yeast eats sugars and gives off CO2 and alcohol. The alcohol bakes off, and the gas bubbles set into the crumb.",
+  "explanation": "Sugar feeds the yeast and salt slows it down, but neither produces the lift directly.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-019",
+  "question": "Which of these cheeses is traditionally made from buffalo milk?",
+  "choices": [
+   "Cheddar",
+   "Brie",
+   "Feta",
+   "Mozzarella di bufala"
+  ],
+  "correctIndex": 3,
+  "funFact": "Water buffalo have been farmed in southern Italy for centuries. Their milk is much richer in fat than cow's milk, which is what gives the cheese its texture.",
+  "explanation": "Most supermarket mozzarella is cow's milk, which is why the buffalo version is labelled separately.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-020",
+  "question": "What is the world's most widely consumed beverage after water?",
+  "choices": [
+   "Tea",
+   "Coffee",
+   "Beer",
+   "Milk"
+  ],
+  "correctIndex": 0,
+  "funFact": "All true tea, from green to black, comes from one plant. The difference is entirely in how the leaves are processed.",
+  "explanation": "Coffee is more valuable as a traded commodity in some years, but tea is drunk by far more people.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fud-021",
+  "question": "Which vegetable is a carrot's wild ancestor most closely related to?",
+  "choices": [
+   "Queen Anne's lace",
+   "Parsnip",
+   "Beetroot",
+   "Turnip"
+  ],
+  "correctIndex": 0,
+  "funFact": "Wild carrots were thin, pale and woody. Orange carrots only became standard in the Netherlands a few hundred years ago; earlier ones were purple or white.",
+  "explanation": "Parsnips are relatives but a separate species. Queen Anne's lace is the wild carrot itself.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-022",
+  "question": "What does 'sushi' actually refer to?",
+  "choices": [
+   "Raw fish",
+   "Seasoned rice",
+   "Seaweed wrapping",
+   "Wasabi paste"
+  ],
+  "correctIndex": 1,
+  "funFact": "The name comes from the sour taste of the vinegared rice. Sushi with no fish at all is still sushi.",
+  "explanation": "Raw fish on its own is sashimi, which is a different dish entirely.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-023",
+  "question": "Which country produces the most olive oil?",
+  "choices": [
+   "Italy",
+   "Greece",
+   "Spain",
+   "Turkey"
+  ],
+  "correctIndex": 2,
+  "funFact": "Spain produces roughly half the world's supply, and a good deal of it is shipped to Italy to be bottled.",
+  "explanation": "Italy is the most famous name in olive oil and is second in production, but Spain grows far more.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-024",
+  "question": "What is the fear of cooking called?",
+  "choices": [
+   "Mageirocophobia",
+   "Cibophobia",
+   "Lachanophobia",
+   "Gastrophobia"
+  ],
+  "correctIndex": 0,
+  "funFact": "Cibophobia is the fear of food itself, and lachanophobia is a fear of vegetables specifically.",
+  "explanation": "The name comes from the Greek word for cook, mageiros.",
+  "category": "food",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "fud-025",
+  "question": "Chocolate comes from the seeds of which tree?",
+  "choices": [
+   "Coffea",
+   "Kola",
+   "Coconut",
+   "Cacao"
+  ],
+  "correctIndex": 3,
+  "funFact": "The pods grow straight out of the trunk rather than the branches, and the raw seeds taste intensely bitter before fermenting.",
+  "explanation": "Kola nuts flavoured early colas, and Coffea is the coffee plant.",
+  "category": "food",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-001",
+  "question": "Which country has the most time zones?",
+  "choices": [
+   "Russia",
+   "United States",
+   "France",
+   "China"
+  ],
+  "correctIndex": 2,
+  "funFact": "France covers 12 zones because of overseas territories stretching from Tahiti to Réunion. Russia is second with 11.",
+  "explanation": "Russia is wider but spans 11 zones. China is almost as wide as the continental US yet runs the whole country on a single clock.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-002",
+  "question": "What is the capital of Australia?",
+  "choices": [
+   "Sydney",
+   "Perth",
+   "Melbourne",
+   "Canberra"
+  ],
+  "correctIndex": 3,
+  "funFact": "Canberra was purpose-built as a compromise after Sydney and Melbourne both wanted the job. It sits roughly between them.",
+  "explanation": "Sydney is the largest city and Melbourne was the temporary capital until 1927, which is why both get guessed so often.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-003",
+  "question": "Which is the longest river in the world by most measurements?",
+  "choices": [
+   "Amazon",
+   "Yangtze",
+   "Mississippi",
+   "Nile"
+  ],
+  "correctIndex": 3,
+  "funFact": "The Nile and the Amazon are close enough that the answer depends on where you decide the Amazon starts. Surveys have argued both ways.",
+  "explanation": "The Amazon carries far more water, roughly a fifth of all river flow reaching the oceans, but is usually measured as slightly shorter.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-004",
+  "question": "Which sea is the saltiest large body of water on Earth's surface?",
+  "choices": [
+   "Red Sea",
+   "Mediterranean",
+   "Caspian Sea",
+   "Dead Sea"
+  ],
+  "correctIndex": 3,
+  "funFact": "It is about ten times saltier than the ocean, which is why you float in it without trying. Its surface is also the lowest land point on Earth.",
+  "explanation": "The Red Sea is unusually salty for an open sea, but the Dead Sea is a landlocked lake with no outlet, so salt accumulates.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-005",
+  "question": "Mount Kilimanjaro is in which country?",
+  "choices": [
+   "Kenya",
+   "Tanzania",
+   "Uganda",
+   "Ethiopia"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is the tallest free-standing mountain in the world, meaning it is not part of a range. It rises straight off the plain.",
+  "explanation": "The Kenyan border runs close by and the classic photographs are often taken from Kenya, which is where the confusion comes from.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-006",
+  "question": "Which country is entirely surrounded by South Africa?",
+  "choices": [
+   "Eswatini",
+   "Botswana",
+   "Lesotho",
+   "Namibia"
+  ],
+  "correctIndex": 2,
+  "funFact": "Lesotho is the only country in the world lying entirely above 1,000 metres. Its lowest point is higher than most countries' highest.",
+  "explanation": "Eswatini is nearly surrounded but shares a border with Mozambique, so it does not count as fully enclosed.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-007",
+  "question": "What is the largest desert in the world?",
+  "choices": [
+   "Sahara",
+   "Gobi",
+   "Arabian",
+   "Antarctic"
+  ],
+  "correctIndex": 3,
+  "funFact": "A desert is defined by how little precipitation it gets, not by heat. Antarctica is the driest continent on Earth.",
+  "explanation": "The Sahara is the largest hot desert, which is the version of the question most people have heard.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-008",
+  "question": "Which two countries share the longest international border?",
+  "choices": [
+   "USA and Canada",
+   "Russia and China",
+   "Argentina and Chile",
+   "India and Bangladesh"
+  ],
+  "correctIndex": 0,
+  "funFact": "It runs about 8,900 kilometres. A long stretch of it follows the 49th parallel in an almost perfectly straight line.",
+  "explanation": "Argentina and Chile share the longest border in the southern hemisphere, but it is roughly half the length.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-009",
+  "question": "Istanbul sits on how many continents?",
+  "choices": [
+   "One",
+   "Two",
+   "Three",
+   "None, it is on an island"
+  ],
+  "correctIndex": 1,
+  "funFact": "The Bosphorus splits it between Europe and Asia. You can commute between continents on the ferry in about twenty minutes.",
+  "explanation": "It is the only major city in the world spread across two continents, which is exactly what makes it a popular question.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-010",
+  "question": "Which is the smallest country in the world by area?",
+  "choices": [
+   "Monaco",
+   "Nauru",
+   "Vatican City",
+   "San Marino"
+  ],
+  "correctIndex": 2,
+  "funFact": "It covers about 0.49 square kilometres, small enough to walk across in fifteen minutes. Monaco is second at roughly four times the size.",
+  "explanation": "Monaco is the smallest country that is not an enclave of another city, which is why it often gets picked.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-011",
+  "question": "The Danube flows through more countries than any other river. Roughly how many?",
+  "choices": [
+   "Four",
+   "Six",
+   "Ten",
+   "Fifteen"
+  ],
+  "correctIndex": 2,
+  "funFact": "It passes through or borders ten countries, and four national capitals sit on it: Vienna, Bratislava, Budapest and Belgrade.",
+  "explanation": "No other river comes close. The Nile touches eleven countries in its basin but flows through far fewer.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-012",
+  "question": "Which ocean is the deepest?",
+  "choices": [
+   "Atlantic",
+   "Indian",
+   "Pacific",
+   "Southern"
+  ],
+  "correctIndex": 2,
+  "funFact": "The Mariana Trench reaches about 11 kilometres down. Everest could sit inside it with two kilometres of water to spare.",
+  "explanation": "The Atlantic's deepest point, the Puerto Rico Trench, is about 8.4 kilometres, well short of the Pacific.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-013",
+  "question": "Reykjavik is the capital of which country?",
+  "choices": [
+   "Norway",
+   "Iceland",
+   "Finland",
+   "Greenland"
+  ],
+  "correctIndex": 1,
+  "funFact": "Almost all of its heating comes from geothermal water piped straight out of the ground. Pavements downtown are heated the same way.",
+  "explanation": "Greenland's capital is Nuuk, and Norway's is Oslo. Reykjavik is the world's northernmost capital of a sovereign state.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-014",
+  "question": "Which country has the longest coastline?",
+  "choices": [
+   "Australia",
+   "Canada",
+   "Indonesia",
+   "Russia"
+  ],
+  "correctIndex": 1,
+  "funFact": "Roughly 200,000 kilometres of it, largely because of the tens of thousands of Arctic islands in the north.",
+  "explanation": "Indonesia has more islands but they are clustered, while Canada's Arctic archipelago is enormous and deeply indented.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-015",
+  "question": "What is the official language of Brazil?",
+  "choices": [
+   "Spanish",
+   "Portuguese",
+   "Brazilian",
+   "French"
+  ],
+  "correctIndex": 1,
+  "funFact": "Brazil has more Portuguese speakers than Portugal by a factor of about twenty. It is the largest Portuguese-speaking country by far.",
+  "explanation": "Most of South America speaks Spanish, which is why Brazil stands out. The 1494 Treaty of Tordesillas is the reason.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-016",
+  "question": "Which US state is closest to Africa?",
+  "choices": [
+   "Florida",
+   "Maine",
+   "South Carolina",
+   "Hawaii"
+  ],
+  "correctIndex": 1,
+  "funFact": "Maine's Quoddy Head is the nearest point, because the coastline curves east far more than a flat map suggests.",
+  "explanation": "Florida feels closer because it is further south, but Africa's western bulge means the shortest line runs from the northeast.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-017",
+  "question": "The Great Barrier Reef lies off the coast of which Australian state?",
+  "choices": [
+   "Western Australia",
+   "Queensland",
+   "New South Wales",
+   "Victoria"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is the largest living structure on Earth and is visible from orbit, stretching about 2,300 kilometres.",
+  "explanation": "It runs along Australia's northeast coast, which is Queensland. New South Wales is further south.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-018",
+  "question": "Which city is known as the Eternal City?",
+  "choices": [
+   "Athens",
+   "Cairo",
+   "Jerusalem",
+   "Rome"
+  ],
+  "correctIndex": 3,
+  "funFact": "The nickname comes from the Roman belief that the city would go on forever no matter what happened to the empire around it.",
+  "explanation": "Athens is older as a continuously inhabited city, but the Eternal City tag has been attached to Rome since antiquity.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-019",
+  "question": "Lake Baikal holds roughly what share of the world's unfrozen fresh surface water?",
+  "choices": [
+   "2 percent",
+   "10 percent",
+   "20 percent",
+   "45 percent"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is also the deepest lake on Earth at over 1,600 metres, and it is home to the world's only exclusively freshwater seal.",
+  "explanation": "It looks modest on a map but it is extraordinarily deep, which is where the volume comes from.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-020",
+  "question": "Which country's flag is the only one that is not a rectangle or square?",
+  "choices": [
+   "Nepal",
+   "Switzerland",
+   "Bhutan",
+   "Vatican City"
+  ],
+  "correctIndex": 0,
+  "funFact": "Nepal's flag is two stacked pennants. Its exact shape is defined in the constitution using a geometric construction.",
+  "explanation": "Switzerland and Vatican City both use squares, which is unusual, but they are still four-sided.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-021",
+  "question": "Which strait separates Spain from Morocco?",
+  "choices": [
+   "Bosphorus",
+   "Strait of Hormuz",
+   "Strait of Gibraltar",
+   "Bering Strait"
+  ],
+  "correctIndex": 2,
+  "funFact": "At its narrowest it is only about 13 kilometres across. On a clear day you can see one continent from the other.",
+  "explanation": "Hormuz is between Iran and Oman, and the Bosphorus is in Turkey.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-022",
+  "question": "What is the highest waterfall in the world?",
+  "choices": [
+   "Angel Falls",
+   "Niagara Falls",
+   "Victoria Falls",
+   "Iguazu Falls"
+  ],
+  "correctIndex": 0,
+  "funFact": "It drops 979 metres in Venezuela, so far that in the dry season much of the water turns to mist before reaching the ground.",
+  "explanation": "Victoria and Niagara are far wider and carry more water, but they are nowhere near as tall.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "geo-023",
+  "question": "Which continent has no active volcanoes at all?",
+  "choices": [
+   "Australia",
+   "Europe",
+   "Antarctica",
+   "None, all have some"
+  ],
+  "correctIndex": 0,
+  "funFact": "Mainland Australia has no active volcanoes because it sits in the middle of its tectonic plate, far from any boundary.",
+  "explanation": "Antarctica has Mount Erebus, which has had a lava lake for decades, and Europe has Etna and Vesuvius.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-024",
+  "question": "Timbuktu is a city in which country?",
+  "choices": [
+   "Egypt",
+   "Mali",
+   "Sudan",
+   "Niger"
+  ],
+  "correctIndex": 1,
+  "funFact": "It was a serious centre of learning in the 1400s, with libraries holding hundreds of thousands of manuscripts. Many still survive.",
+  "explanation": "It sits near the Niger River in Mali, on the southern edge of the Sahara.",
+  "category": "geography",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "geo-025",
+  "question": "Which country lies directly south of the United States?",
+  "choices": [
+   "Guatemala",
+   "Cuba",
+   "Mexico",
+   "Belize"
+  ],
+  "correctIndex": 2,
+  "funFact": "The border runs about 3,145 kilometres, and roughly two-thirds of it is the Rio Grande rather than a surveyed line.",
+  "explanation": "Guatemala and Belize border Mexico, not the United States.",
+  "category": "geography",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-001",
+  "question": "In which year did the Berlin Wall come down?",
+  "choices": [
+   "1989",
+   "1991",
+   "1985",
+   "1993"
+  ],
+  "correctIndex": 0,
+  "funFact": "It fell partly by accident. A spokesman misread a note at a press conference and announced the border was open immediately, and crowds simply went.",
+  "explanation": "1991 is when the Soviet Union dissolved, which is the related date people often reach for.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-002",
+  "question": "Which ancient wonder of the world still stands today?",
+  "choices": [
+   "Hanging Gardens of Babylon",
+   "Colossus of Rhodes",
+   "Lighthouse of Alexandria",
+   "Great Pyramid of Giza"
+  ],
+  "correctIndex": 3,
+  "funFact": "It was the tallest structure built by humans for about 3,800 years, until Lincoln Cathedral's spire went up in the 14th century.",
+  "explanation": "The other six were destroyed by earthquakes, fire or conquest. The Hanging Gardens may never have existed at all.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-003",
+  "question": "Who was the first President of the United States?",
+  "choices": [
+   "Thomas Jefferson",
+   "George Washington",
+   "John Adams",
+   "Benjamin Franklin"
+  ],
+  "correctIndex": 1,
+  "funFact": "He turned down the chance to serve a third term, setting a two-term custom that held for 150 years before it became law.",
+  "explanation": "Adams was the second president and Jefferson the third. Franklin never held the office.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-004",
+  "question": "The Rosetta Stone was key to deciphering which writing system?",
+  "choices": [
+   "Cuneiform",
+   "Linear B",
+   "Egyptian hieroglyphs",
+   "Mayan glyphs"
+  ],
+  "correctIndex": 2,
+  "funFact": "It carries the same decree in three scripts, and the Greek version was already readable. That parallel text cracked the code.",
+  "explanation": "Cuneiform was deciphered separately using inscriptions at Behistun in Persia, which worked on the same principle.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-005",
+  "question": "Which empire was ruled by Genghis Khan?",
+  "choices": [
+   "Ottoman",
+   "Mongol",
+   "Persian",
+   "Byzantine"
+  ],
+  "correctIndex": 1,
+  "funFact": "At its height it was the largest contiguous land empire in history, stretching from Korea to Hungary.",
+  "explanation": "The Ottoman Empire came later and was centred on Anatolia. Genghis Khan died in 1227.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-006",
+  "question": "What was the name of the ship that carried the Pilgrims to America in 1620?",
+  "choices": [
+   "Santa Maria",
+   "Beagle",
+   "Endeavour",
+   "Mayflower"
+  ],
+  "correctIndex": 3,
+  "funFact": "A second ship, the Speedwell, was meant to sail alongside but kept leaking. Its passengers crowded onto the Mayflower instead.",
+  "explanation": "The Santa Maria was Columbus in 1492, the Beagle carried Darwin, and the Endeavour was Captain Cook.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-007",
+  "question": "Which civilisation built Machu Picchu?",
+  "choices": [
+   "Inca",
+   "Aztec",
+   "Maya",
+   "Olmec"
+  ],
+  "correctIndex": 0,
+  "funFact": "The stonework fits so precisely that a blade cannot slide between the blocks, and it was built without mortar in an earthquake zone deliberately.",
+  "explanation": "The Aztecs and Maya were in Mexico and Central America. Machu Picchu is in Peru.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-008",
+  "question": "How long did the Hundred Years' War actually last?",
+  "choices": [
+   "100 years",
+   "81 years",
+   "116 years",
+   "150 years"
+  ],
+  "correctIndex": 2,
+  "funFact": "From 1337 to 1453, with long stretches of truce in between. Nobody called it that at the time; the name was applied centuries later.",
+  "explanation": "The round number in the title is a later convenience rather than a count of the actual years.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-009",
+  "question": "Who was the first woman to win a Nobel Prize?",
+  "choices": [
+   "Marie Curie",
+   "Rosalind Franklin",
+   "Dorothy Hodgkin",
+   "Ada Lovelace"
+  ],
+  "correctIndex": 0,
+  "funFact": "She then won a second, in a different science, and remains the only person to have won Nobel Prizes in two separate sciences.",
+  "explanation": "Rosalind Franklin's work was central to the structure of DNA but she died before the prize was awarded, and it is not given posthumously.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-010",
+  "question": "The Great Fire of London happened in which century?",
+  "choices": [
+   "15th",
+   "16th",
+   "17th",
+   "18th"
+  ],
+  "correctIndex": 2,
+  "funFact": "It started in a bakery on Pudding Lane in 1666, burned for four days, and destroyed most of the medieval city. The recorded death toll was remarkably low.",
+  "explanation": "It came the year after the last major outbreak of plague in the city, which is why the two are often mentioned together.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-011",
+  "question": "Which country gifted the Statue of Liberty to the United States?",
+  "choices": [
+   "Britain",
+   "Spain",
+   "Netherlands",
+   "France"
+  ],
+  "correctIndex": 3,
+  "funFact": "It arrived in 350 pieces packed into 214 crates, and the copper skin is only about 2.4 millimetres thick, roughly two coins.",
+  "explanation": "It was a gift marking the centenary of American independence, and the internal framework was designed by Gustave Eiffel.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-012",
+  "question": "What did the Magna Carta primarily limit?",
+  "choices": [
+   "The power of the king",
+   "The power of the church",
+   "Foreign trade",
+   "Peasant movement"
+  ],
+  "correctIndex": 0,
+  "funFact": "Sealed in 1215 under pressure from rebel barons, it was annulled by the Pope within weeks. It only mattered because later kings kept reissuing it.",
+  "explanation": "It was a deal between the king and his barons, not a general charter of rights, though it came to be read that way.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-013",
+  "question": "Who painted the ceiling of the Sistine Chapel?",
+  "choices": [
+   "Leonardo da Vinci",
+   "Raphael",
+   "Michelangelo",
+   "Botticelli"
+  ],
+  "correctIndex": 2,
+  "funFact": "He considered himself a sculptor rather than a painter and took the commission reluctantly. It took about four years, mostly standing rather than lying down.",
+  "explanation": "Raphael was working in the same building at the same time, on the rooms nearby.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-014",
+  "question": "Which city was buried by the eruption of Mount Vesuvius in AD 79?",
+  "choices": [
+   "Ostia",
+   "Pompeii",
+   "Carthage",
+   "Ravenna"
+  ],
+  "correctIndex": 1,
+  "funFact": "The ash preserved everything, including graffiti on the walls. Much of what we know about ordinary Roman life comes from those scribbles.",
+  "explanation": "Herculaneum was buried in the same eruption and is often the answer people half-remember.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-015",
+  "question": "In what year did the Titanic sink?",
+  "choices": [
+   "1905",
+   "1912",
+   "1918",
+   "1923"
+  ],
+  "correctIndex": 1,
+  "funFact": "The wreck was not found until 1985, more than 70 years later, and it sits about 3,800 metres down.",
+  "explanation": "It sank on its maiden voyage, four days out from Southampton, in April 1912.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-016",
+  "question": "Which of these was invented first?",
+  "choices": [
+   "The telephone",
+   "The light bulb",
+   "The printing press",
+   "Photography"
+  ],
+  "correctIndex": 2,
+  "funFact": "Gutenberg's press arrived around 1440. The others all came in the 1800s, more than three centuries later.",
+  "explanation": "Photography was the earliest of the other three, appearing in the 1820s and 1830s.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-017",
+  "question": "Cleopatra lived closer in time to which of these?",
+  "choices": [
+   "The building of the Great Pyramid",
+   "The Moon landing",
+   "Both are equally distant",
+   "Neither, she is exactly halfway"
+  ],
+  "correctIndex": 1,
+  "funFact": "The Great Pyramid was already about 2,500 years old in her lifetime. She lived roughly 2,000 years before the Moon landing.",
+  "explanation": "Ancient Egypt lasted so long that most of its history was already ancient by the time Cleopatra was born.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-018",
+  "question": "Which war ended with the Treaty of Versailles?",
+  "choices": [
+   "The Crimean War",
+   "The Napoleonic Wars",
+   "The Second World War",
+   "The First World War"
+  ],
+  "correctIndex": 3,
+  "funFact": "It was signed in 1919 in the Hall of Mirrors, deliberately the same room where the German Empire had been proclaimed in 1871.",
+  "explanation": "The Second World War ended with separate surrenders and later treaties, not with Versailles.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-019",
+  "question": "Who was the longest-reigning British monarch?",
+  "choices": [
+   "Queen Victoria",
+   "Elizabeth II",
+   "George III",
+   "Henry VIII"
+  ],
+  "correctIndex": 1,
+  "funFact": "She reigned just over 70 years, passing Victoria's record in 2015. Victoria had held it since 1901.",
+  "explanation": "Victoria reigned for 63 years, which was the record for over a century.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-020",
+  "question": "The Silk Road primarily connected China with where?",
+  "choices": [
+   "Australia",
+   "Southern Africa",
+   "The Mediterranean and Europe",
+   "The Americas"
+  ],
+  "correctIndex": 2,
+  "funFact": "It moved far more than silk. Paper, gunpowder and, less happily, the plague all travelled along the same routes.",
+  "explanation": "It was a network of overland and sea routes across Central Asia rather than a single road.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-021",
+  "question": "What was the Bastille, stormed in 1789?",
+  "choices": [
+   "A prison and fortress",
+   "A cathedral",
+   "A royal palace",
+   "A grain warehouse"
+  ],
+  "correctIndex": 0,
+  "funFact": "Only seven prisoners were inside when the crowd broke in. The real prize was the gunpowder stored there.",
+  "explanation": "It had become a symbol of royal authority, which mattered more than what it actually held.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-022",
+  "question": "Which country was the first to give women the vote nationally?",
+  "choices": [
+   "United States",
+   "New Zealand",
+   "United Kingdom",
+   "Finland"
+  ],
+  "correctIndex": 1,
+  "funFact": "New Zealand did it in 1893. Women there could vote for decades before they could stand for parliament.",
+  "explanation": "Finland was first to grant both the vote and the right to stand, in 1906, which is why it often gets named.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-023",
+  "question": "Hadrian's Wall was built by which empire?",
+  "choices": [
+   "Norman",
+   "Viking",
+   "Saxon",
+   "Roman"
+  ],
+  "correctIndex": 3,
+  "funFact": "It ran about 117 kilometres coast to coast and took roughly six years to build. Much of it was later carted away for local building stone.",
+  "explanation": "The Normans arrived in 1066, nearly a thousand years after the wall was begun in AD 122.",
+  "category": "history",
+  "difficulty": "easy"
+ },
+ {
+  "id": "his-024",
+  "question": "What was the name of the first successful powered aeroplane flight's aircraft?",
+  "choices": [
+   "Wright Flyer",
+   "Spirit of St Louis",
+   "Kitty Hawk",
+   "Enola Gay"
+  ],
+  "correctIndex": 0,
+  "funFact": "The first flight in 1903 lasted 12 seconds and covered about 37 metres, shorter than the wingspan of many airliners today.",
+  "explanation": "Kitty Hawk is the place in North Carolina where it happened, not the name of the aircraft.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "his-025",
+  "question": "Which of these came to an end in 1991?",
+  "choices": [
+   "The Cold War draft",
+   "The Soviet Union",
+   "The Warsaw Pact only",
+   "Apartheid"
+  ],
+  "correctIndex": 1,
+  "funFact": "It dissolved into 15 separate countries on the last day of 1991, and the flag came down over the Kremlin on Christmas Day.",
+  "explanation": "The Warsaw Pact also ended in 1991, but the dissolution of the Soviet Union is the larger event of that year.",
+  "category": "history",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-001",
+  "question": "Which language has the most native speakers worldwide?",
+  "choices": [
+   "Mandarin Chinese",
+   "English",
+   "Spanish",
+   "Hindi"
+  ],
+  "correctIndex": 0,
+  "funFact": "English wins on total speakers once second-language learners are counted, but on native speakers alone Mandarin is well ahead.",
+  "explanation": "Spanish is second on native speakers, and English is third by that measure despite its global reach.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-002",
+  "question": "What is a palindrome?",
+  "choices": [
+   "A word with no vowels",
+   "A word spelled the same backwards",
+   "A word borrowed from Greek",
+   "A word with two meanings"
+  ],
+  "correctIndex": 1,
+  "funFact": "The longest widely accepted English one is 'tattarrattat', coined by James Joyce in Ulysses for a knock at the door.",
+  "explanation": "A word with two meanings is a homonym, which is the term people often reach for instead.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-003",
+  "question": "Which alphabet does Russian use?",
+  "choices": [
+   "Latin",
+   "Greek",
+   "Arabic",
+   "Cyrillic"
+  ],
+  "correctIndex": 3,
+  "funFact": "It was adapted from Greek in the 9th century and is named after Saint Cyril, though he probably devised a different script and his students made this one.",
+  "explanation": "Several letters look like Latin ones but sound completely different, which is what makes it disorienting at first.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-004",
+  "question": "What does the word 'quarantine' originally refer to?",
+  "choices": [
+   "Forty days",
+   "A quarter of a year",
+   "Four people",
+   "A quarter-mile boundary"
+  ],
+  "correctIndex": 0,
+  "funFact": "Ships arriving in Venice during plague years had to wait forty days before anyone could land. The Italian for forty is quaranta.",
+  "explanation": "The link to the number four is real but it is forty rather than a quarter of anything.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-005",
+  "question": "Which of these English words has no rhyme?",
+  "choices": [
+   "Purple",
+   "Bottle",
+   "Yellow",
+   "Window"
+  ],
+  "correctIndex": 0,
+  "funFact": "Orange, silver and month are in the same position. Poets get around it with near rhymes or by inventing words.",
+  "explanation": "Bottle rhymes with throttle, yellow with mellow, and window with, at a push, indigo.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-006",
+  "question": "What is the study of word origins called?",
+  "choices": [
+   "Phonetics",
+   "Syntax",
+   "Semantics",
+   "Etymology"
+  ],
+  "correctIndex": 3,
+  "funFact": "Entomology, one letter different, is the study of insects. The two get mixed up constantly, which is a joke etymologists have long since worn out.",
+  "explanation": "Semantics is the study of meaning and syntax is sentence structure. Etymology traces where words came from.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-007",
+  "question": "Which language is Latin the direct ancestor of?",
+  "choices": [
+   "German",
+   "Greek",
+   "Spanish",
+   "Polish"
+  ],
+  "correctIndex": 2,
+  "funFact": "Spanish, French, Italian, Portuguese and Romanian all descend from spoken Latin, which is why they are called the Romance languages.",
+  "explanation": "German and Polish come from other branches of Indo-European, and Greek is its own branch entirely.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-008",
+  "question": "What is a word that sounds like the noise it describes?",
+  "choices": [
+   "Anagram",
+   "Portmanteau",
+   "Metaphor",
+   "Onomatopoeia"
+  ],
+  "correctIndex": 3,
+  "funFact": "These words differ between languages. A dog says woof in English, wan wan in Japanese and gav gav in Russian.",
+  "explanation": "A portmanteau is two words blended into one, like brunch or smog.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-009",
+  "question": "How many letters are in the Hawaiian alphabet?",
+  "choices": [
+   "13",
+   "21",
+   "26",
+   "30"
+  ],
+  "correctIndex": 0,
+  "funFact": "Five vowels, seven consonants and the okina, a glottal stop. It is one of the smallest alphabets in use.",
+  "explanation": "The small letter count is why Hawaiian words use long strings of vowels.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-010",
+  "question": "What is the most commonly used letter in written English?",
+  "choices": [
+   "A",
+   "T",
+   "E",
+   "S"
+  ],
+  "correctIndex": 2,
+  "funFact": "Its frequency is why it is worth one point in Scrabble and why simple substitution ciphers fall apart so quickly.",
+  "explanation": "T is second and A third. The order barely changes across large samples of English text.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-011",
+  "question": "What does 'RSVP' stand for?",
+  "choices": [
+   "Reply Soon Very Promptly",
+   "Répondez s'il vous plaît",
+   "Reserve Seating Very Personal",
+   "Received Simple Verbal Promise"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is French for please reply, and it has stayed in English invitations for more than a century without ever being translated.",
+  "explanation": "The French phrase is where the letters come from, which is why the initials do not map onto English words.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-012",
+  "question": "Which of these is a pangram?",
+  "choices": [
+   "The rain in Spain",
+   "Pack my box with five dozen liquor jugs",
+   "She sells seashells",
+   "Peter Piper picked a peck"
+  ],
+  "correctIndex": 1,
+  "funFact": "A pangram uses every letter at least once. This one does it in 32 letters, more efficiently than the more famous fox and dog sentence.",
+  "explanation": "The others are tongue twisters, which repeat sounds rather than covering the whole alphabet.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-013",
+  "question": "Which country has the most official languages?",
+  "choices": [
+   "India",
+   "South Africa",
+   "Bolivia",
+   "Switzerland"
+  ],
+  "correctIndex": 2,
+  "funFact": "Bolivia recognises 37, including Spanish and 36 indigenous languages. South Africa has 12 and is often assumed to lead.",
+  "explanation": "India has 22 scheduled languages plus Hindi and English for official use, which is a large number but not the largest.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-014",
+  "question": "What is the plural of 'octopus' most often preferred by dictionaries?",
+  "choices": [
+   "Octopi",
+   "Octopuses",
+   "Octopodes",
+   "Octopus"
+  ],
+  "correctIndex": 1,
+  "funFact": "Octopi applies a Latin rule to a Greek word, which is why purists dislike it. Octopodes is technically defensible and almost never used.",
+  "explanation": "All three appear in dictionaries, but octopuses is the form usually listed first.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-015",
+  "question": "The word 'robot' comes from which language?",
+  "choices": [
+   "Russian",
+   "German",
+   "Czech",
+   "Greek"
+  ],
+  "correctIndex": 2,
+  "funFact": "It first appeared in a 1920 Czech play by Karel Čapek, from a word meaning forced labour. The robots in it were organic rather than mechanical.",
+  "explanation": "It sounds like it should be Greek, since so many technical words are, but this one is much more recent.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-016",
+  "question": "What is an anagram?",
+  "choices": [
+   "A rearrangement of letters",
+   "A shortened phrase",
+   "A rhyming pair",
+   "A foreign loanword"
+  ],
+  "correctIndex": 0,
+  "funFact": "Listen and silent use the same letters, as do astronomer and moon starer.",
+  "explanation": "A shortened phrase is an abbreviation or acronym, which is the usual mix-up.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-017",
+  "question": "Which writing system uses characters that each represent a whole word or idea?",
+  "choices": [
+   "Alphabet",
+   "Syllabary",
+   "Logographic script",
+   "Abjad"
+  ],
+  "correctIndex": 2,
+  "funFact": "Chinese characters work this way, which is why speakers of mutually unintelligible Chinese languages can often read the same text.",
+  "explanation": "A syllabary gives one symbol per syllable, as Japanese kana does, and an abjad writes mainly consonants, as Arabic does.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-018",
+  "question": "What does the prefix 'pseudo' mean?",
+  "choices": [
+   "Small",
+   "Before",
+   "Against",
+   "False"
+  ],
+  "correctIndex": 3,
+  "funFact": "It comes from Greek and turns up everywhere from pseudonym to pseudoscience, always carrying the same sense of pretending.",
+  "explanation": "Anti means against, pre means before, and micro means small.",
+  "category": "language",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lan-019",
+  "question": "Which of these languages is not Indo-European?",
+  "choices": [
+   "Finnish",
+   "Persian",
+   "Greek",
+   "Welsh"
+  ],
+  "correctIndex": 0,
+  "funFact": "Finnish belongs to the Uralic family alongside Estonian and Hungarian, which makes it unrelated to almost all its neighbours.",
+  "explanation": "Persian and Welsh look very different from each other but both sit on the Indo-European tree.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-020",
+  "question": "What is the term for a word that is its own opposite, like 'cleave'?",
+  "choices": [
+   "Contronym",
+   "Synonym",
+   "Eponym",
+   "Acronym"
+  ],
+  "correctIndex": 0,
+  "funFact": "Sanction is another. It means both to permit and to penalise, which makes some legal sentences genuinely ambiguous.",
+  "explanation": "An eponym is a word taken from someone's name, such as sandwich or diesel.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-021",
+  "question": "Braille characters are formed from how many dot positions?",
+  "choices": [
+   "Four",
+   "Six",
+   "Eight",
+   "Twelve"
+  ],
+  "correctIndex": 1,
+  "funFact": "Six dots in two columns of three gives 64 combinations, which is enough for letters, numbers and punctuation. An eight-dot version exists for computing.",
+  "explanation": "Louis Braille based it on a military code for reading messages in the dark, simplified from twelve dots to six.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-022",
+  "question": "Which English word is thought to have the most distinct meanings?",
+  "choices": [
+   "Run",
+   "Go",
+   "Take",
+   "Set"
+  ],
+  "correctIndex": 3,
+  "funFact": "The Oxford English Dictionary long gave 'set' the most senses, though 'run' overtook it in the most recent full revision.",
+  "explanation": "Both are enormous entries. Set held the record for decades, which is why it is the traditional answer.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-023",
+  "question": "What language was originally spoken by the Vikings?",
+  "choices": [
+   "Old English",
+   "Old Frisian",
+   "Gothic",
+   "Old Norse"
+  ],
+  "correctIndex": 3,
+  "funFact": "It gave English a surprising number of everyday words, including sky, egg, knife, husband and both they and them.",
+  "explanation": "Old English was spoken by the Anglo-Saxons the Vikings were raiding, so the two were in contact but distinct.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-024",
+  "question": "What does 'i.e.' stand for?",
+  "choices": [
+   "In example",
+   "Inter alia",
+   "In effect",
+   "Id est, meaning that is"
+  ],
+  "correctIndex": 3,
+  "funFact": "e.g. is the one meaning for example, from exempli gratia. Swapping the two is one of the most common errors in written English.",
+  "explanation": "i.e. restates something more precisely, while e.g. introduces one case out of several.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "lan-025",
+  "question": "Which punctuation mark was once called the 'interrobang'?",
+  "choices": [
+   "A combined question and exclamation mark",
+   "A double comma",
+   "An inverted semicolon",
+   "A triple dot"
+  ],
+  "correctIndex": 0,
+  "funFact": "Invented in 1962 by an advertising executive, it briefly appeared on typewriters and now survives mainly as a Unicode curiosity.",
+  "explanation": "The name blends interrogation and bang, which is printers' slang for the exclamation mark.",
+  "category": "language",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "sci-001",
+  "question": "What is the most abundant gas in Earth's atmosphere?",
+  "choices": [
+   "Nitrogen",
+   "Oxygen",
+   "Carbon dioxide",
+   "Argon"
+  ],
+  "correctIndex": 0,
+  "funFact": "It makes up about 78 percent. Oxygen is only 21 percent, and everything else including argon and CO2 fits in the last 1 percent.",
+  "explanation": "Oxygen is the one we breathe for, so it gets guessed first, but nitrogen is nearly four times more common.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-002",
+  "question": "What does the 'H' stand for in H2O?",
+  "choices": [
+   "Hydrogen",
+   "Helium",
+   "Halogen",
+   "Hydroxide"
+  ],
+  "correctIndex": 0,
+  "funFact": "Hydrogen is the lightest and most common element in the universe, making up roughly three quarters of all ordinary matter.",
+  "explanation": "Helium is He. Water is two hydrogen atoms bonded to one oxygen atom.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-003",
+  "question": "At what temperature does water boil at sea level, in Celsius?",
+  "choices": [
+   "90",
+   "100",
+   "110",
+   "120"
+  ],
+  "correctIndex": 1,
+  "funFact": "The Celsius scale was built around this. Zero is water freezing and 100 is water boiling, both at sea-level pressure.",
+  "explanation": "Boiling point drops with altitude. On Everest water boils at about 70 degrees, which is why food takes longer to cook up there.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-004",
+  "question": "Which particle carries a negative electric charge?",
+  "choices": [
+   "Proton",
+   "Neutron",
+   "Electron",
+   "Photon"
+  ],
+  "correctIndex": 2,
+  "funFact": "Electrons are about 1,800 times lighter than protons, which is why they are the part of the atom that moves around and does chemistry.",
+  "explanation": "Protons are positive, neutrons are neutral, and photons carry no charge at all.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-005",
+  "question": "What is the hardest naturally occurring substance?",
+  "choices": [
+   "Quartz",
+   "Steel",
+   "Diamond",
+   "Titanium"
+  ],
+  "correctIndex": 2,
+  "funFact": "Diamond and graphite are both pure carbon. The only difference is how the atoms are arranged, which is a remarkable amount of variation from one element.",
+  "explanation": "Steel and titanium are strong and tough, but hardness measures resistance to scratching, and diamond tops that scale.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-006",
+  "question": "How many bones does an adult human skeleton have?",
+  "choices": [
+   "186",
+   "206",
+   "256",
+   "306"
+  ],
+  "correctIndex": 1,
+  "funFact": "Babies are born with about 300. Many fuse together during growth, which is how the count drops to 206.",
+  "explanation": "The number changes slightly between people, since some have extra ribs or vertebrae, but 206 is the standard figure.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-007",
+  "question": "What force keeps planets in orbit around the Sun?",
+  "choices": [
+   "Magnetism",
+   "Gravity",
+   "Centrifugal force",
+   "Nuclear force"
+  ],
+  "correctIndex": 1,
+  "funFact": "An orbit is really just falling. A planet is continuously falling towards the Sun and continuously missing it.",
+  "explanation": "Centrifugal force is not a real force, it is a description of what motion feels like from inside a rotating frame.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-008",
+  "question": "What is the chemical symbol for gold?",
+  "choices": [
+   "Go",
+   "Gd",
+   "Ag",
+   "Au"
+  ],
+  "correctIndex": 3,
+  "funFact": "Au comes from the Latin aurum. Ag, from argentum, is silver, and mixing those two up is the classic error.",
+  "explanation": "Gd is gadolinium and Ag is silver. Several old metals kept symbols based on their Latin names rather than English.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-009",
+  "question": "Roughly how fast does light travel in a vacuum?",
+  "choices": [
+   "300 kilometres per second",
+   "3,000 kilometres per second",
+   "300,000 kilometres per second",
+   "3 million kilometres per second"
+  ],
+  "correctIndex": 2,
+  "funFact": "That is about 7.5 laps of the Earth every second. Nothing carrying information can go faster.",
+  "explanation": "The exact figure is 299,792,458 metres per second, which is now used to define the length of the metre.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-010",
+  "question": "Which blood type is the universal donor for red cells?",
+  "choices": [
+   "AB positive",
+   "B negative",
+   "A positive",
+   "O negative"
+  ],
+  "correctIndex": 3,
+  "funFact": "O negative cells carry none of the main markers the immune system reacts to, so they can be given to almost anyone in an emergency.",
+  "explanation": "AB positive is the universal recipient, which is the opposite end of the same idea and easy to swap round.",
+  "category": "science",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "sci-011",
+  "question": "What process do plants use to convert light into chemical energy?",
+  "choices": [
+   "Photosynthesis",
+   "Respiration",
+   "Transpiration",
+   "Fermentation"
+  ],
+  "correctIndex": 0,
+  "funFact": "Plants also respire, all day and all night. Photosynthesis simply outpaces it during daylight.",
+  "explanation": "Transpiration is water moving up through a plant and evaporating from the leaves. It is a different process entirely.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-012",
+  "question": "What is the lightest element on the periodic table?",
+  "choices": [
+   "Helium",
+   "Hydrogen",
+   "Lithium",
+   "Carbon"
+  ],
+  "correctIndex": 1,
+  "funFact": "A hydrogen atom is one proton and one electron, about as simple as matter gets.",
+  "explanation": "Helium is second, and it is the only element discovered in space before it was found on Earth.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-013",
+  "question": "What does DNA stand for?",
+  "choices": [
+   "Deoxyribonucleic acid",
+   "Dinucleic acid",
+   "Diribonucleic acid",
+   "Deoxyribonuclear acid"
+  ],
+  "correctIndex": 0,
+  "funFact": "If you uncoiled all the DNA in one human body and laid it end to end, it would stretch further than the distance to the Sun.",
+  "explanation": "The deoxyribo part names the sugar in its backbone, which is what distinguishes it from RNA.",
+  "category": "science",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "sci-014",
+  "question": "Which scientist proposed the theory of general relativity?",
+  "choices": [
+   "Isaac Newton",
+   "Niels Bohr",
+   "Albert Einstein",
+   "Max Planck"
+  ],
+  "correctIndex": 2,
+  "funFact": "He published it in 1915. It was confirmed four years later when a solar eclipse showed starlight bending around the Sun.",
+  "explanation": "Newton's gravity came 200 years earlier and works well at everyday scales, but breaks down near very large masses.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-015",
+  "question": "What is the pH of pure water at room temperature?",
+  "choices": [
+   "0",
+   "7",
+   "10",
+   "14"
+  ],
+  "correctIndex": 1,
+  "funFact": "The scale is logarithmic, so pH 4 is ten times more acidic than pH 5 and a hundred times more than pH 6.",
+  "explanation": "Zero is strongly acidic and 14 is strongly alkaline. Seven sits exactly in the middle and is called neutral.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-016",
+  "question": "Which planet-sized rock type makes up most of Earth's crust by weight?",
+  "choices": [
+   "Limestone",
+   "Marble",
+   "Sandstone",
+   "Basalt and granite"
+  ],
+  "correctIndex": 3,
+  "funFact": "Ocean floor is mostly basalt and continents are mostly granite, which is why continents float higher: granite is less dense.",
+  "explanation": "Limestone and sandstone are sedimentary and form a thin surface layer rather than the bulk of the crust.",
+  "category": "science",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "sci-017",
+  "question": "What unit measures electrical resistance?",
+  "choices": [
+   "Volt",
+   "Watt",
+   "Ampere",
+   "Ohm"
+  ],
+  "correctIndex": 3,
+  "funFact": "It is named after Georg Ohm, whose law relating voltage, current and resistance was dismissed by his colleagues when he published it.",
+  "explanation": "Volts measure potential difference, amperes measure current and watts measure power.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-018",
+  "question": "Sound travels fastest through which of these?",
+  "choices": [
+   "Steel",
+   "Water",
+   "Air",
+   "A vacuum"
+  ],
+  "correctIndex": 0,
+  "funFact": "Sound is a vibration passing between particles, so the more tightly packed they are the quicker it moves. In steel it is about 15 times faster than in air.",
+  "explanation": "Sound cannot travel through a vacuum at all, because there is nothing there to vibrate.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-019",
+  "question": "What is the study of fungi called?",
+  "choices": [
+   "Mycology",
+   "Botany",
+   "Entomology",
+   "Herpetology"
+  ],
+  "correctIndex": 0,
+  "funFact": "Fungi are genetically closer to animals than to plants, which surprises most people the first time they hear it.",
+  "explanation": "Entomology is insects and herpetology is reptiles and amphibians. Botany is plants, which fungi are not.",
+  "category": "science",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "sci-020",
+  "question": "Which gas do humans exhale in the greatest quantity beyond nitrogen?",
+  "choices": [
+   "Carbon dioxide",
+   "Methane",
+   "Helium",
+   "Oxygen"
+  ],
+  "correctIndex": 3,
+  "funFact": "Exhaled air is still about 16 percent oxygen, only slightly down from the 21 percent going in. That is why mouth-to-mouth resuscitation works.",
+  "explanation": "Carbon dioxide rises sharply on the way out but only to around 4 percent, well below the oxygen still left over.",
+  "category": "science",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "sci-021",
+  "question": "What causes the seasons on Earth?",
+  "choices": [
+   "Distance from the Sun",
+   "The tilt of Earth's axis",
+   "The Moon's pull",
+   "Solar flare cycles"
+  ],
+  "correctIndex": 1,
+  "funFact": "Earth is actually closest to the Sun in early January, during the northern winter. The 23.5 degree tilt swamps that difference entirely.",
+  "explanation": "If distance drove the seasons, the whole planet would have summer at the same time, and it does not.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-022",
+  "question": "What is absolute zero in degrees Celsius?",
+  "choices": [
+   "Minus 100",
+   "Minus 273",
+   "Minus 460",
+   "Zero"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is minus 273.15, the point where particles carry the least possible energy. Nothing has ever reached it, though labs have come within a billionth of a degree.",
+  "explanation": "Minus 460 is roughly right on the Fahrenheit scale, which is where that number comes from.",
+  "category": "science",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "sci-023",
+  "question": "Which of these is not a state of matter in the classic four?",
+  "choices": [
+   "Solid",
+   "Liquid",
+   "Plasma",
+   "Crystal"
+  ],
+  "correctIndex": 3,
+  "funFact": "Plasma is by far the most common state in the universe. Stars are made of it, so most visible matter is plasma.",
+  "explanation": "A crystal is a solid with an ordered structure, so it is a kind of solid rather than a separate state.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-024",
+  "question": "What does a barometer measure?",
+  "choices": [
+   "Humidity",
+   "Wind speed",
+   "Atmospheric pressure",
+   "Rainfall"
+  ],
+  "correctIndex": 2,
+  "funFact": "Falling pressure usually means bad weather is coming, which is why old barometers had storm and fair written on the dial.",
+  "explanation": "Humidity is measured by a hygrometer and wind speed by an anemometer.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sci-025",
+  "question": "Roughly how long does light from the Sun take to reach Earth?",
+  "choices": [
+   "8 seconds",
+   "8 minutes",
+   "8 hours",
+   "8 days"
+  ],
+  "correctIndex": 1,
+  "funFact": "About 8 minutes and 20 seconds. If the Sun went out you would carry on seeing it for that long.",
+  "explanation": "Light from the Moon takes just over a second, and from the next nearest star it takes more than four years.",
+  "category": "science",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-001",
+  "question": "Which planet is closest to the Sun?",
+  "choices": [
+   "Mercury",
+   "Venus",
+   "Earth",
+   "Mars"
+  ],
+  "correctIndex": 0,
+  "funFact": "Despite being closest, Mercury is not the hottest planet. It has almost no atmosphere to trap heat, so Venus beats it.",
+  "explanation": "Venus is second out from the Sun and is the one people usually confuse with Mercury on temperature.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-002",
+  "question": "Which planet has the most moons?",
+  "choices": [
+   "Saturn",
+   "Jupiter",
+   "Uranus",
+   "Neptune"
+  ],
+  "correctIndex": 0,
+  "funFact": "Saturn's count passed 140 as surveys got better, and it keeps climbing. Jupiter is close behind and the two have swapped the record.",
+  "explanation": "Jupiter held the record for years, which is why it is the natural guess, but Saturn overtook it.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-003",
+  "question": "What is the largest planet in our solar system?",
+  "choices": [
+   "Saturn",
+   "Neptune",
+   "Uranus",
+   "Jupiter"
+  ],
+  "correctIndex": 3,
+  "funFact": "Jupiter is more massive than every other planet combined, more than twice over.",
+  "explanation": "Saturn is second largest by diameter but much less dense. It would float in water, in principle.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-004",
+  "question": "Which planet rotates on its side, with an axis tilted about 98 degrees?",
+  "choices": [
+   "Uranus",
+   "Neptune",
+   "Saturn",
+   "Venus"
+  ],
+  "correctIndex": 0,
+  "funFact": "The likely cause is an enormous ancient collision. Each pole gets 42 years of continuous sunlight, then 42 years of dark.",
+  "explanation": "Venus is the other odd one, spinning backwards, but its axis is close to upright.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-005",
+  "question": "What is the name of the galaxy we live in?",
+  "choices": [
+   "The Milky Way",
+   "Andromeda",
+   "Triangulum",
+   "Sombrero"
+  ],
+  "correctIndex": 0,
+  "funFact": "Andromeda is heading towards us and will merge with the Milky Way in about four billion years. Stars are so far apart that almost none will collide.",
+  "explanation": "Andromeda is our nearest large neighbour galaxy, about 2.5 million light years away.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-006",
+  "question": "Who was the first human to travel into space?",
+  "choices": [
+   "Yuri Gagarin",
+   "Neil Armstrong",
+   "Alan Shepard",
+   "Buzz Aldrin"
+  ],
+  "correctIndex": 0,
+  "funFact": "His 1961 flight lasted 108 minutes and a single orbit. He never went to space again and died in a jet crash seven years later.",
+  "explanation": "Armstrong was first on the Moon in 1969, and Shepard was the first American in space, a few weeks after Gagarin.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-007",
+  "question": "What is a light year a measure of?",
+  "choices": [
+   "Distance",
+   "Time",
+   "Brightness",
+   "Speed"
+  ],
+  "correctIndex": 0,
+  "funFact": "One light year is about 9.5 trillion kilometres. The word year in the name is what trips everyone up.",
+  "explanation": "It is how far light travels in a year, so despite the name it measures distance rather than time.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-008",
+  "question": "Which planet is known as the Red Planet?",
+  "choices": [
+   "Mars",
+   "Mercury",
+   "Jupiter",
+   "Venus"
+  ],
+  "correctIndex": 0,
+  "funFact": "The colour comes from iron oxide in the soil, which is the same chemistry as household rust.",
+  "explanation": "Jupiter has a famous red spot, a storm larger than Earth, but the planet itself is banded cream and brown.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-009",
+  "question": "How long is a day on Venus compared with its year?",
+  "choices": [
+   "Much shorter",
+   "About the same",
+   "Longer than its year",
+   "Exactly half"
+  ],
+  "correctIndex": 2,
+  "funFact": "Venus takes 243 Earth days to spin once and 225 to orbit the Sun, so a Venusian day outlasts its year.",
+  "explanation": "It rotates extremely slowly and in the opposite direction to most planets, which makes it the odd one out twice over.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-010",
+  "question": "What was the first artificial satellite put into orbit?",
+  "choices": [
+   "Explorer 1",
+   "Vostok 1",
+   "Sputnik 1",
+   "Telstar"
+  ],
+  "correctIndex": 2,
+  "funFact": "Launched in 1957, it was a metal sphere about the size of a beach ball that did nothing but transmit a beep. The beep was enough to start the space race.",
+  "explanation": "Explorer 1 was the American answer a few months later, and Vostok 1 carried Gagarin in 1961.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-011",
+  "question": "What holds the Moon in orbit around the Earth?",
+  "choices": [
+   "Gravity",
+   "Magnetism",
+   "The solar wind",
+   "Earth's rotation"
+  ],
+  "correctIndex": 0,
+  "funFact": "The Moon is drifting away from us by about 3.8 centimetres a year, roughly the rate fingernails grow.",
+  "explanation": "Earth's magnetic field is far too weak to hold anything that massive, and the Moon is not magnetic in that way.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-012",
+  "question": "Which is the hottest planet in the solar system?",
+  "choices": [
+   "Venus",
+   "Mercury",
+   "Mars",
+   "Jupiter"
+  ],
+  "correctIndex": 0,
+  "funFact": "Surface temperatures reach about 465 degrees Celsius, hot enough to melt lead, and they barely change between day and night.",
+  "explanation": "Mercury is closer to the Sun but has almost no atmosphere. Venus has a thick CO2 blanket that traps the heat.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-013",
+  "question": "What is the Great Red Spot on Jupiter?",
+  "choices": [
+   "A crater",
+   "A storm",
+   "A volcano",
+   "A shadow from a moon"
+  ],
+  "correctIndex": 1,
+  "funFact": "It has been observed for well over 300 years and is wide enough to swallow the Earth, though it has been shrinking in recent decades.",
+  "explanation": "Jupiter is a gas giant with no solid surface, so it cannot have craters or volcanoes at all.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-014",
+  "question": "Roughly how old is the universe?",
+  "choices": [
+   "4.5 billion years",
+   "13.8 billion years",
+   "100 billion years",
+   "500 million years"
+  ],
+  "correctIndex": 1,
+  "funFact": "The 4.5 billion figure is the age of the Earth, which is only about a third of the universe's age.",
+  "explanation": "The number comes from measuring how fast the universe is expanding and from the cosmic microwave background.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-015",
+  "question": "What is a supernova?",
+  "choices": [
+   "An exploding star",
+   "A new star forming",
+   "A collision of galaxies",
+   "A very bright comet"
+  ],
+  "correctIndex": 0,
+  "funFact": "Most elements heavier than iron, including the gold in jewellery, were forged in these explosions. The material is genuinely stardust.",
+  "explanation": "The name means new star because from Earth one appears where nothing was visible before, but it is a death rather than a birth.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-016",
+  "question": "Which spacecraft was the first to leave the solar system into interstellar space?",
+  "choices": [
+   "Voyager 1",
+   "Pioneer 10",
+   "New Horizons",
+   "Cassini"
+  ],
+  "correctIndex": 0,
+  "funFact": "Launched in 1977, it crossed into interstellar space in 2012 and is still sending back data on a transmitter weaker than a fridge bulb.",
+  "explanation": "Pioneer 10 launched earlier but is slower and fell silent in 2003, so Voyager 1 got there first.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-017",
+  "question": "What causes a solar eclipse?",
+  "choices": [
+   "Earth passing between Sun and Moon",
+   "The Moon passing between Sun and Earth",
+   "The Sun dimming briefly",
+   "Earth's shadow on itself"
+  ],
+  "correctIndex": 1,
+  "funFact": "The Sun is about 400 times wider than the Moon and also about 400 times further away, which is why they appear the same size. That coincidence will not last forever.",
+  "explanation": "Earth passing between the Sun and Moon is a lunar eclipse, where the Moon turns coppery red.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-018",
+  "question": "Which is the smallest planet in the solar system?",
+  "choices": [
+   "Mercury",
+   "Mars",
+   "Pluto",
+   "Venus"
+  ],
+  "correctIndex": 0,
+  "funFact": "Mercury is only slightly larger than Earth's Moon, and it is shrinking as its core cools, wrinkling the surface into long cliffs.",
+  "explanation": "Pluto is smaller still but was reclassified as a dwarf planet in 2006.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-019",
+  "question": "What is the asteroid belt located between?",
+  "choices": [
+   "Earth and Mars",
+   "Mars and Jupiter",
+   "Jupiter and Saturn",
+   "Neptune and Pluto"
+  ],
+  "correctIndex": 1,
+  "funFact": "Despite the way films portray it, the objects are so far apart that spacecraft fly through without any real risk of hitting one.",
+  "explanation": "The region beyond Neptune is the Kuiper Belt, a different and much larger band of icy bodies.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spc-020",
+  "question": "What is the closest star to Earth after the Sun?",
+  "choices": [
+   "Sirius",
+   "Alpha Centauri A",
+   "Betelgeuse",
+   "Proxima Centauri"
+  ],
+  "correctIndex": 3,
+  "funFact": "It sits about 4.2 light years away and is a small red dwarf, far too faint to see without a telescope despite being our nearest neighbour.",
+  "explanation": "Sirius is the brightest star in the night sky but is about twice as far away.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-021",
+  "question": "How many people have walked on the Moon?",
+  "choices": [
+   "Two",
+   "Six",
+   "Twelve",
+   "Twenty-four"
+  ],
+  "correctIndex": 2,
+  "funFact": "Twelve walked on it across six landings between 1969 and 1972. Twenty-four have travelled to the Moon, but half of those stayed in orbit.",
+  "explanation": "Only two walked on it during the first landing, which is where the smaller guess usually comes from.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-022",
+  "question": "What are Saturn's rings mostly made of?",
+  "choices": [
+   "Rock",
+   "Ice",
+   "Gas",
+   "Dust from its moons"
+  ],
+  "correctIndex": 1,
+  "funFact": "They are almost entirely water ice, and though they stretch hundreds of thousands of kilometres across they are often only about ten metres thick.",
+  "explanation": "There is rocky dust mixed in, but the reflective brightness comes from ice.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-023",
+  "question": "What is a black hole's event horizon?",
+  "choices": [
+   "Its physical surface",
+   "The point of no return",
+   "Its magnetic field edge",
+   "The ring of orbiting gas"
+  ],
+  "correctIndex": 1,
+  "funFact": "Nothing dramatic happens locally at the boundary. If you crossed one you might not notice at the moment you did.",
+  "explanation": "The bright ring of orbiting gas is the accretion disc, which is outside the horizon and is what telescopes photograph.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-024",
+  "question": "Which planet has the strongest winds in the solar system?",
+  "choices": [
+   "Jupiter",
+   "Earth",
+   "Saturn",
+   "Neptune"
+  ],
+  "correctIndex": 3,
+  "funFact": "Winds there have been clocked above 2,000 kilometres per hour, which is strange for a planet receiving so little sunlight to drive them.",
+  "explanation": "Jupiter has the biggest storms by area, but Neptune has the fastest measured wind speeds.",
+  "category": "space",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spc-025",
+  "question": "What does NASA stand for?",
+  "choices": [
+   "National Aeronautics and Space Administration",
+   "North American Space Agency",
+   "National Astronautics and Science Authority",
+   "National Air and Space Association"
+  ],
+  "correctIndex": 0,
+  "funFact": "It was founded in 1958, directly in response to Sputnik, and absorbed an older aeronautics research body that dated back to 1915.",
+  "explanation": "Aeronautics comes first in the name because aircraft research was the agency's original job and is still part of it.",
+  "category": "space",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-001",
+  "question": "How many players are on a football pitch per team at kickoff?",
+  "choices": [
+   "Nine",
+   "Ten",
+   "Eleven",
+   "Twelve"
+  ],
+  "correctIndex": 2,
+  "funFact": "The number was fixed in the 1860s and has never changed, unlike almost every other rule in the game.",
+  "explanation": "Ten outfield players plus a goalkeeper makes eleven.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-002",
+  "question": "In which sport would you perform a 'slam dunk'?",
+  "choices": [
+   "Volleyball",
+   "Basketball",
+   "Handball",
+   "Water polo"
+  ],
+  "correctIndex": 1,
+  "funFact": "It was banned in US college basketball from 1967 to 1976, a rule widely understood to have been aimed at one dominant player.",
+  "explanation": "Volleyball has a spike, which is the closest equivalent move.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-003",
+  "question": "How many holes are played in a standard round of golf?",
+  "choices": [
+   "9",
+   "12",
+   "18",
+   "24"
+  ],
+  "correctIndex": 2,
+  "funFact": "St Andrews settled on 18 in 1764 by merging some short holes. Every other course simply copied it.",
+  "explanation": "Nine holes is a half round, which many courses offer, but the full round is 18.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-004",
+  "question": "What is the maximum break in snooker?",
+  "choices": [
+   "100",
+   "147",
+   "155",
+   "180"
+  ],
+  "correctIndex": 1,
+  "funFact": "Fifteen reds each followed by a black, then the colours in order. A 155 is possible only with a free ball, and has never been made in professional play.",
+  "explanation": "180 is the maximum score with three darts, which is where that number comes from.",
+  "category": "sport",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spo-005",
+  "question": "How often are the modern Summer Olympic Games held?",
+  "choices": [
+   "Every two years",
+   "Every three years",
+   "Every four years",
+   "Every five years"
+  ],
+  "correctIndex": 2,
+  "funFact": "The four-year gap is called an Olympiad, and it copies the ancient Greek cycle. Summer and Winter Games were split to alternate every two years in 1994.",
+  "explanation": "Something Olympic happens every two years now, which is why that answer feels right.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-006",
+  "question": "In chess, which piece can only move diagonally?",
+  "choices": [
+   "Rook",
+   "Knight",
+   "Queen",
+   "Bishop"
+  ],
+  "correctIndex": 3,
+  "funFact": "Because of this, each bishop is stuck on one colour for the whole game. A player who loses one has a permanent blind spot on those squares.",
+  "explanation": "The queen moves diagonally too, but is not limited to it.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-007",
+  "question": "What does a yellow card signify in football?",
+  "choices": [
+   "A caution",
+   "An immediate sending off",
+   "A substitution",
+   "A goal disallowed"
+  ],
+  "correctIndex": 0,
+  "funFact": "The idea came to a referee at a traffic light after a match where players had not understood they were being booked.",
+  "explanation": "A red card is the sending off. Two yellows in one match add up to one.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-008",
+  "question": "How long is a marathon?",
+  "choices": [
+   "26.2 miles",
+   "24 miles",
+   "30 miles",
+   "20 miles"
+  ],
+  "correctIndex": 0,
+  "funFact": "The odd distance was set at the 1908 London Games so the race could finish in front of the royal box.",
+  "explanation": "That is 42.195 kilometres, standardised in 1921 and unchanged since.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-009",
+  "question": "In tennis, what is a score of zero called?",
+  "choices": [
+   "Nil",
+   "Blank",
+   "Duck",
+   "Love"
+  ],
+  "correctIndex": 3,
+  "funFact": "One theory traces it to the French l'oeuf, an egg, for the shape of a zero. Another says it simply means playing for love rather than stakes.",
+  "explanation": "A duck is cricket, where it means a batter out without scoring.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-010",
+  "question": "Which country has won the most FIFA World Cups?",
+  "choices": [
+   "Germany",
+   "Italy",
+   "Argentina",
+   "Brazil"
+  ],
+  "correctIndex": 3,
+  "funFact": "Brazil has five and is the only country to have played in every tournament since the competition began in 1930.",
+  "explanation": "Germany and Italy have four each, which is close enough to make this a real question.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-011",
+  "question": "How many squares are on a chessboard?",
+  "choices": [
+   "36",
+   "49",
+   "64",
+   "81"
+  ],
+  "correctIndex": 2,
+  "funFact": "Eight by eight. The old legend about doubling grains of rice on each square ends at over 18 quintillion grains, more than all the rice ever grown.",
+  "explanation": "A draughts board in most countries uses the same 64 squares.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-012",
+  "question": "In rugby union, how many points is a try worth?",
+  "choices": [
+   "Three",
+   "Four",
+   "Five",
+   "Seven"
+  ],
+  "correctIndex": 2,
+  "funFact": "It was worth nothing at all originally. Scoring one only earned the right to try a kick at goal, which is where the name comes from.",
+  "explanation": "A conversion after the try adds two more, which is why seven is a common guess.",
+  "category": "sport",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spo-013",
+  "question": "What is the national sport of Japan?",
+  "choices": [
+   "Sumo",
+   "Judo",
+   "Baseball",
+   "Karate"
+  ],
+  "correctIndex": 0,
+  "funFact": "Sumo has religious roots in Shinto ritual, and the ring is purified with salt before bouts. Baseball is more watched, but sumo holds the official title.",
+  "explanation": "Baseball is enormously popular in Japan, which is why it often gets picked here.",
+  "category": "sport",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spo-014",
+  "question": "In which sport is the Ryder Cup contested?",
+  "choices": [
+   "Sailing",
+   "Cycling",
+   "Rowing",
+   "Golf"
+  ],
+  "correctIndex": 3,
+  "funFact": "It is one of the few elite golf events with no prize money. The teams play for nothing but the trophy.",
+  "explanation": "The America's Cup is the sailing one, which is the usual mix-up.",
+  "category": "sport",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spo-015",
+  "question": "How many players are in a standard volleyball team on court?",
+  "choices": [
+   "Five",
+   "Six",
+   "Seven",
+   "Nine"
+  ],
+  "correctIndex": 1,
+  "funFact": "Players rotate position clockwise every time their team wins back the serve, so everyone plays every role.",
+  "explanation": "Beach volleyball uses two per side, and five is basketball.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-016",
+  "question": "What is the object of the board game Go?",
+  "choices": [
+   "Capture the king",
+   "Surround territory",
+   "Reach the far side",
+   "Remove all pieces"
+  ],
+  "correctIndex": 1,
+  "funFact": "There are more legal Go positions than atoms in the observable universe, which is why it resisted computer play far longer than chess.",
+  "explanation": "Capturing the king is chess. In Go, capturing stones is a means to the end of holding territory.",
+  "category": "sport",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spo-017",
+  "question": "In Formula 1, what colour flag signals the end of a race?",
+  "choices": [
+   "Red",
+   "Yellow",
+   "Blue",
+   "Chequered"
+  ],
+  "correctIndex": 3,
+  "funFact": "Its origin is unclear. One popular story about chequered tablecloths at early American road races has never been substantiated.",
+  "explanation": "A red flag stops a race early, and yellow means caution.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-018",
+  "question": "How many rings are on the Olympic flag?",
+  "choices": [
+   "Four",
+   "Five",
+   "Six",
+   "Seven"
+  ],
+  "correctIndex": 1,
+  "funFact": "The five colours plus the white background were chosen because at least one of them appeared on every national flag in 1913.",
+  "explanation": "The rings represent five inhabited continental regions, interlocking to suggest the meeting of athletes.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-019",
+  "question": "In cricket, how many balls are in an over?",
+  "choices": [
+   "Four",
+   "Six",
+   "Eight",
+   "Ten"
+  ],
+  "correctIndex": 1,
+  "funFact": "Australia used eight-ball overs until 1979, so old scorecards from there do not line up with modern ones.",
+  "explanation": "Six has been the international standard for decades, but it has genuinely varied through history.",
+  "category": "sport",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spo-020",
+  "question": "Which athlete holds the men's 100 metres world record?",
+  "choices": [
+   "Carl Lewis",
+   "Usain Bolt",
+   "Tyson Gay",
+   "Yohan Blake"
+  ],
+  "correctIndex": 1,
+  "funFact": "He ran 9.58 seconds in Berlin in 2009, and reached a top speed of over 44 kilometres per hour mid-race.",
+  "explanation": "The record has stood for well over a decade, which is unusually long for a sprint event.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-021",
+  "question": "What is a 'hat-trick'?",
+  "choices": [
+   "Three successes in a row",
+   "A disallowed goal",
+   "A tied match",
+   "A substitution rule"
+  ],
+  "correctIndex": 0,
+  "funFact": "It began in cricket in the 1850s. A bowler who took three wickets in three balls was given a hat by his club.",
+  "explanation": "The term spread from cricket to football and hockey, keeping the same meaning.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-022",
+  "question": "In darts, what is the standard starting score in a leg of 501?",
+  "choices": [
+   "301",
+   "401",
+   "501",
+   "601"
+  ],
+  "correctIndex": 2,
+  "funFact": "You must finish on a double, which is why players work backwards to leave themselves a comfortable even number.",
+  "explanation": "301 is used in some shorter formats, and the odd starting number exists to stop a player finishing too quickly.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-023",
+  "question": "Which sport uses the terms 'birdie' and 'eagle'?",
+  "choices": [
+   "Archery",
+   "Badminton",
+   "Golf",
+   "Falconry"
+  ],
+  "correctIndex": 2,
+  "funFact": "Birdie came from American slang around 1900, where 'bird' meant excellent. Eagle and albatross followed, escalating the same idea.",
+  "explanation": "Badminton uses a shuttlecock, sometimes called a birdie, which is what makes it a tempting wrong answer.",
+  "category": "sport",
+  "difficulty": "easy"
+ },
+ {
+  "id": "spo-024",
+  "question": "How many points is a touchdown worth in American football?",
+  "choices": [
+   "Three",
+   "Six",
+   "Seven",
+   "Two"
+  ],
+  "correctIndex": 1,
+  "funFact": "The extra point kick afterwards is what usually makes it seven, but the touchdown itself is six.",
+  "explanation": "Three is a field goal and two is a safety or a two-point conversion.",
+  "category": "sport",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "spo-025",
+  "question": "In the Tour de France, what does the yellow jersey signify?",
+  "choices": [
+   "Best climber",
+   "Overall race leader",
+   "Best sprinter",
+   "Best young rider"
+  ],
+  "correctIndex": 1,
+  "funFact": "It is yellow because the newspaper that founded the race was printed on yellow paper.",
+  "explanation": "The polka dot jersey goes to the best climber and green to the points leader, usually a sprinter.",
+  "category": "sport",
+  "difficulty": "moderate"
+ }
+]

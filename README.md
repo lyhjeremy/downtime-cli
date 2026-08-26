@@ -1,0 +1,184 @@
+# downtime
+
+Wrap a long-running command. If it takes more than a few seconds, the terminal fills the wait with a couple of trivia questions instead of leaving you to reach for your phone. When the command finishes you get a one-line reminder of what you were doing, then the command's output, untouched.
+
+```bash
+downtime run claude -p "refactor the auth module"
+downtime run npm run build
+downtime run pytest -x
+```
+
+## Why
+
+Waiting on a build or an agent task creates a gap that is too short to start anything real and too long to sit through. Most people fill it by picking up a phone, and then the hard part is not the wait, it is getting back. Anything genuinely engaging (an article, a video, a side task) has the same problem: it does not want to end when your build does.
+
+Trivia is the opposite. Each question is a few seconds long, it finishes cleanly, and nothing carries over. When the command completes you can drop it mid-sentence and lose nothing.
+
+## Install
+
+```bash
+npm install -g downtime-cli
+```
+
+Or run it without installing:
+
+```bash
+npx downtime-cli run npm run build
+```
+
+Requires Node 18 or newer. It has no dependencies.
+
+## How it works
+
+```
+$ downtime run npm run build
+
+  downtime                                              1m 42s · 2/3
+  ──────────────────────────────────────────────────────────────────
+
+  Which country has the most time zones?
+
+      a) Russia
+      b) United States
+    ✓ c) France
+      d) China
+
+  Correct.
+  France covers 12 zones because of overseas territories stretching
+  from Tahiti to Réunion. Russia is second with 11.
+
+  ──────────────────────────────────────────────────────────────────
+  [n] next question
+  ⏳ npm run build · running
+```
+
+Then the moment the build finishes:
+
+```
+──────────────────────────────────────────────────────────────────
+✅ Done in 2m 14s:  npm run build
+Exit code 0 · Trivia: 3/4 correct
+──────────────────────────────────────────────────────────────────
+[the build's own output follows, exactly as it would have appeared]
+```
+
+Get a question wrong and it shows you the right answer with a short explanation. There is no penalty and no score kept between sessions. Being right earns you a fact, being wrong earns you a different one.
+
+## Behaviour worth knowing
+
+The trivia screen runs on the terminal's alternate buffer, so it never lands in your scrollback. Everything the wrapped command prints while the screen is occupied is held and replayed afterwards in order, on the same stream it came from. `downtime run` exits with the wrapped command's exit code, so it drops into scripts and CI without changing anything.
+
+If the command finishes before the threshold, downtime is invisible. No game, no recap, no extra line of output.
+
+One fidelity note: stdout and stderr are captured on separate pipes, so their order relative to each other during the held period is best effort. Order within each stream is exact. If you need the two perfectly interleaved, pipe the output, which puts downtime into transparent mode anyway.
+
+If either stdin or stdout is not a terminal (`downtime run x | tee log`, or anything in CI), downtime steps aside entirely and acts as a transparent wrapper.
+
+Ctrl-C forwards the interrupt to the whole process tree, restores the terminal, prints whatever output was captured, and exits 130. A second Ctrl-C escalates to SIGKILL.
+
+## Options
+
+```
+downtime run <command> [args...]
+downtime run [options] -- <command> [args...]
+```
+
+| Flag | Values | Default |
+|---|---|---|
+| `-t, --threshold <seconds>` | any positive number | `5` |
+| `--entry <mode>` | `auto`, `manual` | `auto` |
+| `--exit <mode>` | `immediate`, `finish_round` | `immediate` |
+| `--content <id>` | `trivia` | `trivia` |
+
+Use `--` when the wrapped command has flags that clash with downtime's own:
+
+```bash
+downtime run --threshold 15 -- pytest --exit-first
+```
+
+`entry.mode`
+
+- `auto` opens the trivia screen once the threshold passes.
+- `manual` prints one quiet line (`⏳ Still running. Press [d] for downtime mode`) and waits. If you never press it, nothing happens and the command output keeps streaming as normal.
+
+`exit.mode`
+
+- `immediate` closes the screen the instant the command exits, mid-question if that is where you are.
+- `finish_round` shows a `✅ task finished` marker instead and lets you land the answer. Press Enter to return whenever you like, or `n` for one more question.
+
+## Config
+
+Settings live in `~/.downtime/config.json`, created with defaults the first time you run it. Command-line flags override the file for a single run.
+
+```json
+{
+  "entry": {
+    "mode": "auto",
+    "thresholdSeconds": 5
+  },
+  "exit": {
+    "mode": "immediate"
+  },
+  "content": {
+    "module": "trivia"
+  }
+}
+```
+
+`downtime config` prints the file's location and the settings currently in effect. If the file has a value downtime does not understand, it says so on stderr and falls back to the default rather than rewriting your file.
+
+`~/.downtime/state.json` tracks which questions you have already seen so they do not come round again. Delete it to reset.
+
+## Limitations in 0.1
+
+Interactive commands are not supported. The wrapped command gets an empty stdin, because downtime mode needs to own the keyboard and a child process sharing the terminal would fight it for keystrokes. Wrapping something that stops to ask you a question will hang. Use print mode for agent tools (`claude -p "..."`) and stick to non-interactive builds, tests and scripts.
+
+Detecting that a child is blocked waiting on input, and handing the terminal back when it happens, is the main thing 0.2 needs. The event for it (`taskNeedsInput`) already exists in the runner and nothing emits it yet.
+
+Windows is untested. Nothing in the design rules it out, and the process-group handling already branches on platform, but it has only been run on macOS and Linux.
+
+## Adding questions
+
+The question bank is a single JSON file at `src/content/trivia/questions.json`, and adding to it is the easiest way to contribute. One object per question, no code involved:
+
+```json
+{
+  "id": "geo-026",
+  "question": "Which country has the most time zones?",
+  "choices": ["Russia", "United States", "France", "China"],
+  "correctIndex": 2,
+  "funFact": "France covers 12 zones because of overseas territories stretching from Tahiti to Réunion. Russia is second with 11.",
+  "explanation": "Russia is wider but spans 11 zones. China is almost as wide as the continental US yet runs the whole country on a single clock.",
+  "category": "geography",
+  "difficulty": "easy"
+}
+```
+
+`funFact` is shown when the player gets it right and `explanation` when they get it wrong, so both should teach something rather than just confirming the answer. Keep questions easy to moderate. The point is a mental break, not a challenge.
+
+`npm test` checks the whole bank for shape, duplicate ids, and whether the correct answer is spread evenly enough across the four positions that always guessing the same letter is not a strategy.
+
+## Architecture
+
+Three layers, deliberately separate, so new content and new triggers can be added without touching each other:
+
+- `src/runner.js` watches the child process and emits `taskStarted`, `thresholdCrossed`, `output`, `taskFinished`. It knows nothing about trivia or terminals.
+- `src/content/` holds content modules behind a small interface (`start`, `onKey`, `render`, `stop`, plus optional `summary` and `canExit`). Trivia is just the first one.
+- `src/tui/` owns the alternate screen buffer, raw-mode input, and terminal restoration on every exit path.
+- `src/session.js` wires them together and is the only file that knows all three exist.
+
+## Roadmap
+
+Tier 1, which is what this is, handles one command in one terminal. The rest is not built:
+
+- Tier 2: several wrapped commands at once, in one dashboard.
+- Tier 3: multiple windows and IDE terminals, so VS Code panes and tmux splits are covered.
+- Tier 4: a watcher on the laptop relaying start and stop signals to a companion app on a phone or tablet, where the content actually lives.
+
+Also planned: more content types (word games, vocabulary, stretch prompts), estimating how long a command will take from how long it took last time and sizing the content to fit, and a Claude Code plugin that triggers downtime mode from hooks so the wrapper is not needed.
+
+One thing that will not be built: streaks, daily goals, notifications, or anything else designed to bring you back. A tool for escaping an attention trap has no business becoming one.
+
+## License
+
+MIT

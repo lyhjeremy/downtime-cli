@@ -1,0 +1,47 @@
+{
+  "name": "downtime-cli",
+  "version": "0.1.0",
+  "description": "Wrap a long-running command and fill the wait with bounded trivia, then get a warm re-entry back to what you were doing.",
+  "type": "module",
+  "bin": {
+    "downtime": "bin/downtime"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "cli",
+    "trivia",
+    "productivity",
+    "focus",
+    "terminal",
+    "tui",
+    "wrapper",
+    "waiting",
+    "claude-code"
+  ],
+  "author": "lyhjeremy",
+  "license": "MIT",
+  "homepage": "https://github.com/lyhjeremy/downtime-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyhjeremy/downtime-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lyhjeremy/downtime-cli/issues"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}
