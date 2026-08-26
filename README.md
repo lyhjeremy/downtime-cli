@@ -8,6 +8,32 @@ downtime run npm run build
 downtime run pytest -x
 ```
 
+## Quick start
+
+Three things to know and you are done.
+
+**1. Put `downtime run` in front of any command you are about to wait on.**
+
+```bash
+downtime run npm run build
+downtime run claude -p "refactor the auth module"
+```
+
+Nothing else changes. The command's output, its exit code and its behaviour are the same as running it bare.
+
+**2. If it finishes in under 5 seconds, you will not see downtime at all.** Longer than that and the trivia appears. Answer with `a` to `d`, press `n` for another, press `q` if you would rather watch the output after all.
+
+**3. When the command finishes, you land back automatically** with a line telling you what you ran and how long it took, followed by the full output.
+
+That is the whole tool. Everything below is tuning.
+
+```bash
+downtime config set entry.thresholdSeconds 10   # wait longer before it kicks in
+downtime config set exit.mode finish_round      # let me finish the question
+downtime config                                 # show current settings
+DOWNTIME_DISABLE=1 downtime run npm test        # off for one run
+```
+
 ## Why
 
 Waiting on a build or an agent task creates a gap that is too short to start anything real and too long to sit through. Most people fill it by picking up a phone, and then the hard part is not the wait, it is getting back. Anything genuinely engaging (an article, a video, a side task) has the same problem: it does not want to end when your build does.
@@ -134,17 +160,60 @@ Settings live in `~/.downtime/config.json`, created with defaults the first time
 }
 ```
 
-`downtime config` prints the file's location and the settings currently in effect. If the file has a value downtime does not understand, it says so on stderr and falls back to the default rather than rewriting your file.
+Change one setting without opening an editor:
+
+```bash
+downtime config set entry.thresholdSeconds 10
+downtime config set entry.mode manual
+downtime config set exit.mode finish_round
+```
+
+`downtime config` prints the file's location and the settings currently in effect, and `downtime config path` prints just the path. If the file has a value downtime does not understand, it says so on stderr and falls back to the default rather than rewriting your file. If the config directory cannot be written at all, downtime runs on defaults and gets out of the way rather than failing.
 
 `~/.downtime/state.json` tracks which questions you have already seen so they do not come round again. Delete it to reset.
 
-## Limitations in 0.1
+## What it works with
 
-Interactive commands are not supported. The wrapped command gets an empty stdin, because downtime mode needs to own the keyboard and a child process sharing the terminal would fight it for keystrokes. Wrapping something that stops to ask you a question will hang. Use print mode for agent tools (`claude -p "..."`) and stick to non-interactive builds, tests and scripts.
+Downtime mode needs to own the keyboard, so the wrapped command is given an empty stdin that is already closed. That single fact decides everything below.
 
-Detecting that a child is blocked waiting on input, and handing the terminal back when it happens, is the main thing 0.2 needs. The event for it (`taskNeedsInput`) already exists in the runner and nothing emits it yet.
+**Works.** Anything that runs to completion without asking you a question: builds, test suites, installs, compilers, deploys, data jobs, and coding agents in their non-interactive mode.
 
-Windows is untested. Nothing in the design rules it out, and the process-group handling already branches on platform, but it has only been run on macOS and Linux.
+| Tool | Use |
+|---|---|
+| Claude Code | `downtime run claude -p "..."` |
+| Codex CLI | `downtime run codex exec "..."` |
+| Gemini CLI | `downtime run gemini -p "..."` |
+| Aider | `downtime run aider --message "..." --yes` |
+| Anything else | `downtime run <cmd>` if it does not need a TTY |
+
+Verified end to end against Claude Code. The other agent CLIs follow the same pattern (a non-interactive flag that prints and exits) but have not been run here, so treat those rows as the pattern to use rather than a test result.
+
+**Does not work.** Interactive sessions: bare `claude`, `codex` with no subcommand, `aider` in its REPL, `vim`, `top`, `git rebase -i`, anything that opens its own full-screen interface. These fail immediately and visibly rather than hanging: a tool that requires a TTY prints its own error and exits, and a tool that prompts for input reads end-of-file instead of your answer. Nothing is silently swallowed, but nothing useful happens either. Do not wrap them.
+
+The event for detecting a child blocked on input (`taskNeedsInput`) exists in the runner and nothing emits it yet. That is the main thing 0.2 needs.
+
+## Terminals and editors
+
+The trivia screen uses the alternate screen buffer, the same mechanism `less` and `vim` use, so it works anywhere those do and never touches your scrollback.
+
+| Where | Behaviour |
+|---|---|
+| macOS Terminal, iTerm2, Alacritty, Kitty, WezTerm, GNOME Terminal | Full support |
+| VS Code and Cursor integrated terminal | Full support |
+| JetBrains integrated terminal | Full support |
+| tmux and GNU screen | Full support |
+| Emacs `M-x shell`, restricted CI shells | Detected and skipped, see below |
+| Piped, redirected or non-interactive | Transparent wrapper, no trivia |
+
+If `TERM` is unset, `dumb`, or otherwise a terminal that cannot draw a full screen, downtime does not try. It runs your command as a plain wrapper instead, because filling someone's window with escape sequences is worse than skipping the game.
+
+`DOWNTIME_DISABLE=1` forces that same transparent behaviour anywhere, for one run or exported for a session. Useful in scripts, CI, and any terminal that misbehaves.
+
+Windows is untested. Nothing in the design rules it out, the process-group handling already branches on platform, and the alternate screen buffer works in Windows Terminal. It has only been run on macOS and Linux.
+
+## Long or noisy commands
+
+Output produced while the screen is occupied is held in memory. If a command produces more than 32 MB while you are playing, downtime stops holding it, hands back everything captured so far, and lets the rest stream normally. You lose the game, not a single line of output. Verified with a 40,000-line firehose: every line arrives, in order, with no gaps.
 
 ## Adding questions
 

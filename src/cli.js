@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import { loadConfig, applyOverrides, configPath, stateDir } from './config.js'
+import { loadConfig, applyOverrides, configPath, stateDir, writeSetting } from './config.js'
 import { runSession, registry } from './session.js'
 import { bold, dim, cyan, yellow } from './tui/ansi.js'
 
@@ -21,6 +21,7 @@ ${bold('Usage')}
   downtime run <command> [args...]
   downtime run [options] -- <command> [args...]
   downtime config
+  downtime config set <key> <value>
   downtime --help | --version
 
 ${bold('Options for run')}
@@ -35,6 +36,9 @@ ${bold('Examples')}
   downtime run claude -p "refactor the auth module"
   downtime run npm run build
   downtime run --threshold 15 --exit finish_round -- pytest -x
+  downtime config set entry.thresholdSeconds 10
+
+Set DOWNTIME_DISABLE=1 to turn downtime mode off without uninstalling.
 
 Config lives at ${dim(configPath())}
 `
@@ -134,13 +138,40 @@ export async function main(argv) {
     return 0
   }
 
-  const { config, created, warnings } = loadConfig()
+  const { config, created, warnings, readOnly } = loadConfig()
   for (const warning of warnings) {
     process.stderr.write(yellow(`downtime: ${warning}`) + '\n')
   }
 
   if (parsed.command === 'config') {
-    process.stdout.write(`${dim('config')}  ${configPath()}${created ? dim('  (just created)') : ''}\n`)
+    const [action, key, ...valueParts] = parsed.args
+    if (action === 'set') {
+      if (!key || valueParts.length === 0) {
+        process.stderr.write('downtime: usage is downtime config set <key> <value>\n')
+        process.exitCode = 2
+        return 2
+      }
+      try {
+        const { value } = writeSetting(key, valueParts.join(' '))
+        process.stdout.write(`${key} = ${JSON.stringify(value)}\n`)
+        return 0
+      } catch (err) {
+        process.stderr.write(`downtime: ${err.message}\n`)
+        process.exitCode = 2
+        return 2
+      }
+    }
+    if (action && action !== 'path') {
+      process.stderr.write(`downtime: unknown config command "${action}"\n`)
+      process.exitCode = 2
+      return 2
+    }
+    if (action === 'path') {
+      process.stdout.write(configPath() + '\n')
+      return 0
+    }
+    const note = readOnly ? dim('  (not writable, using defaults)') : created ? dim('  (just created)') : ''
+    process.stdout.write(`${dim('config')}  ${configPath()}${note}\n`)
     process.stdout.write(`${dim('state')}   ${stateDir()}\n\n`)
     process.stdout.write(JSON.stringify(config, null, 2) + '\n')
     return 0

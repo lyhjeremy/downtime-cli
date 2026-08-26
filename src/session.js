@@ -30,8 +30,19 @@ async function drain(stream) {
  * the middle to whichever content module is configured. Nothing here knows what
  * trivia is.
  */
+// A terminal has to be able to hold a full-screen drawing before we try one.
+// TERM=dumb covers Emacs shell buffers, some IDE consoles and restricted CI
+// shells; an unset TERM usually means the same thing. Getting this wrong fills
+// someone's window with escape sequences.
+export function terminalCanDrawTui(env = process.env) {
+  if (env.DOWNTIME_DISABLE) return false
+  const term = env.TERM
+  if (!term) return false
+  return !['dumb', 'unknown', 'cons25', 'emacs'].includes(term.toLowerCase())
+}
+
 export async function runSession({ command, args, config, contentOptions = {} }) {
-  const interactive = Boolean(process.stdout.isTTY && process.stdin.isTTY)
+  const interactive = Boolean(process.stdout.isTTY && process.stdin.isTTY) && terminalCanDrawTui()
 
   const runner = new Runner(command, args, {
     thresholdSeconds: config.entry.thresholdSeconds,
@@ -229,6 +240,12 @@ export async function runSession({ command, args, config, contentOptions = {} })
   function onSignal() {
     interrupt()
   }
+
+  runner.on('captureOverflow', () => {
+    // Holding this much output is worse than ending the game early. Everything
+    // captured so far is handed back and the rest streams as normal.
+    leaveDowntime({ resumeOutput: true })
+  })
 
   runner.on('thresholdCrossed', () => {
     if (config.entry.mode === 'manual') startManualPrompt()

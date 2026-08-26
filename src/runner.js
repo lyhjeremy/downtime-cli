@@ -1,6 +1,11 @@
 import { spawn } from 'node:child_process'
 import { EventEmitter } from 'node:events'
 
+// A chatty build held for the length of a long wait would otherwise grow the
+// buffer without limit. At this point downtime gets out of the way and lets the
+// output stream again, which loses nothing and keeps memory bounded.
+export const CAPTURE_LIMIT_BYTES = 32 * 1024 * 1024
+
 /**
  * The detection layer. Knows about child processes and time, and nothing about
  * trivia or terminals. Everything downstream subscribes to these events:
@@ -8,6 +13,7 @@ import { EventEmitter } from 'node:events'
  *   taskStarted       { command, args, startedAt }
  *   thresholdCrossed  { elapsedMs }
  *   output            { stream: 'stdout' | 'stderr', chunk: Buffer }
+ *   captureOverflow   { bufferedBytes }
  *   taskNeedsInput    { reason }            reserved; see README limitations
  *   taskFinished      { code, signal, durationMs }
  *
@@ -28,6 +34,9 @@ export class Runner extends EventEmitter {
     this.result = null
     this.capturing = false
     this.buffer = []
+    this.bufferedBytes = 0
+    this.overflowed = false
+    this.captureLimit = options.captureLimitBytes ?? CAPTURE_LIMIT_BYTES
     this.thresholdTimer = null
     this.thresholdCrossed = false
     this.writes = 0
@@ -106,6 +115,11 @@ export class Runner extends EventEmitter {
     this.writes += 1
     if (this.capturing) {
       this.buffer.push({ stream, chunk })
+      this.bufferedBytes += chunk.length
+      if (this.bufferedBytes > this.captureLimit && !this.overflowed) {
+        this.overflowed = true
+        this.emit('captureOverflow', { bufferedBytes: this.bufferedBytes })
+      }
     } else {
       const target = stream === 'stdout' ? process.stdout : process.stderr
       target.write(chunk)
@@ -134,6 +148,7 @@ export class Runner extends EventEmitter {
   flush() {
     const held = this.buffer
     this.buffer = []
+    this.bufferedBytes = 0
     for (const { stream, chunk } of held) {
       const target = stream === 'stdout' ? process.stdout : process.stderr
       target.write(chunk)

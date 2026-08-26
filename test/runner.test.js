@@ -77,3 +77,37 @@ test('an interrupt takes the whole process tree, not just the direct child', asy
   const [event] = await once(runner, 'taskFinished')
   assert.ok(event.durationMs < 5000, `took ${event.durationMs}ms, so the tree was not killed`)
 })
+
+test('a firehose of output ends the game rather than eating memory', async () => {
+  const runner = new Runner(
+    'node',
+    ['-e', 'const l="x".repeat(1000)+"\\n"; for(let i=0;i<300;i++) process.stdout.write(l)'],
+    { thresholdSeconds: 60, captureLimitBytes: 50_000 },
+  )
+  runner.startCapture()
+  let overflow = null
+  runner.on('captureOverflow', (event) => {
+    overflow = event
+    runner.stopCapture()
+    runner.flush()
+  })
+  runner.start()
+  await once(runner, 'taskFinished')
+  assert.ok(overflow, 'no overflow was reported')
+  assert.ok(overflow.bufferedBytes > 50_000)
+  assert.ok(runner.bufferedBytes < 50_000, 'buffer was not released')
+})
+
+test('the overflow warning fires once, not on every chunk', async () => {
+  const runner = new Runner(
+    'node',
+    ['-e', 'const l="y".repeat(1000)+"\\n"; for(let i=0;i<300;i++) process.stdout.write(l)'],
+    { thresholdSeconds: 60, captureLimitBytes: 10_000 },
+  )
+  runner.startCapture()
+  let count = 0
+  runner.on('captureOverflow', () => (count += 1))
+  runner.start()
+  await once(runner, 'taskFinished')
+  assert.equal(count, 1)
+})

@@ -1,3 +1,11 @@
 #!/usr/bin/env node
 import { main } from "../src/cli.js"
-main(process.argv.slice(2))
+
+// Anything that escapes main is a bug in downtime, not in the wrapped command.
+// Say so plainly rather than dumping a stack over someone's terminal. The
+// screen's own exit hook has already restored the terminal by this point.
+main(process.argv.slice(2)).catch((err) => {
+  process.stderr.write(`downtime: internal error: ${err?.message ?? err}\n`)
+  if (process.env.DOWNTIME_DEBUG) process.stderr.write(`${err?.stack ?? ''}\n`)
+  process.exitCode = 70
+})

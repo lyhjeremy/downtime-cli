@@ -26,7 +26,7 @@ export function loadState() {
 
 export function saveState(state) {
   try {
-    ensureStateDir()
+    if (ensureStateDir() === null) return
     const seen = state.seenQuestionIds.slice(-MAX_SEEN)
     writeFileSync(statePath(), JSON.stringify({ seenQuestionIds: seen }, null, 2) + '\n')
   } catch {

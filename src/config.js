@@ -36,19 +36,35 @@ function merge(base, override) {
   return out
 }
 
+// Returns null if the directory cannot be made. A read-only home, a locked-down
+// container or a sandbox is not a reason to stop someone's build from running.
 export function ensureStateDir() {
-  const dir = stateDir()
-  mkdirSync(dir, { recursive: true })
-  return dir
+  try {
+    const dir = stateDir()
+    mkdirSync(dir, { recursive: true })
+    return dir
+  } catch {
+    return null
+  }
 }
 
 // Reads config, creating it with defaults on first run. A malformed file is
 // reported rather than silently replaced, so nobody loses hand-edited settings.
 export function loadConfig() {
-  ensureStateDir()
+  const dir = ensureStateDir()
   const path = configPath()
+  if (dir === null) {
+    // Defaults in memory, nothing on disk, no warning. There is nothing the
+    // user needs to do about it mid-run, and a message on every single command
+    // would be worse than the missing file.
+    return { config: structuredClone(DEFAULTS), created: false, warnings: [], readOnly: true }
+  }
   if (!existsSync(path)) {
-    writeFileSync(path, JSON.stringify(DEFAULTS, null, 2) + '\n')
+    try {
+      writeFileSync(path, JSON.stringify(DEFAULTS, null, 2) + '\n')
+    } catch {
+      return { config: structuredClone(DEFAULTS), created: false, warnings: [], readOnly: true }
+    }
     return { config: structuredClone(DEFAULTS), created: true, warnings: [] }
   }
   let parsed = {}
@@ -84,4 +100,29 @@ export function validate(config, warnings = []) {
 
 export function applyOverrides(config, overrides) {
   return validate(merge(config, overrides))
+}
+
+// Writes a single dotted-path setting, validating before it touches the file.
+export function writeSetting(key, rawValue) {
+  const allowed = {
+    'entry.mode': (v) => (['auto', 'manual'].includes(v) ? v : null),
+    'entry.thresholdSeconds': (v) => {
+      const n = Number(v)
+      return Number.isFinite(n) && n >= 0 ? n : null
+    },
+    'exit.mode': (v) => (['immediate', 'finish_round'].includes(v) ? v : null),
+    'content.module': (v) => (typeof v === 'string' && v ? v : null),
+  }
+  if (!(key in allowed)) {
+    throw new Error(`unknown setting "${key}". Try one of: ${Object.keys(allowed).join(', ')}`)
+  }
+  const value = allowed[key](rawValue)
+  if (value === null) throw new Error(`"${rawValue}" is not valid for ${key}`)
+
+  if (ensureStateDir() === null) throw new Error(`cannot write to ${stateDir()}`)
+  const { config } = loadConfig()
+  const [section, field] = key.split('.')
+  config[section] = { ...config[section], [field]: value }
+  writeFileSync(configPath(), JSON.stringify(config, null, 2) + '\n')
+  return { key, value, config }
 }
