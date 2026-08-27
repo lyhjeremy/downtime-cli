@@ -2,28 +2,32 @@
 
 [![test](https://github.com/lyhjeremy/downtime-cli/actions/workflows/test.yml/badge.svg)](https://github.com/lyhjeremy/downtime-cli/actions/workflows/test.yml)
 
-Wrap a long-running command. If it takes more than a few seconds, the terminal fills the wait with a couple of trivia questions instead of leaving you to reach for your phone. When the command finishes you get a one-line reminder of what you were doing, then the command's output, untouched.
+Wrap a long-running command. If it takes more than a few seconds, the terminal fills the wait with trivia, including flags, country outlines and landmarks drawn right in the terminal, instead of leaving you to reach for your phone. When the command finishes you get a one-line reminder of what you were doing, then the command's output, untouched.
 
 ```bash
-downtime run claude -p "refactor the auth module"
-downtime run npm run build
-downtime run pytest -x
+dt npm run build
+dt claude -p "refactor the auth module"
+dt pytest -x
 ```
+
+There is a playable demo at **[lyhjeremy.github.io/downtime-cli](https://lyhjeremy.github.io/downtime-cli)**.
 
 ## Quick start
 
 Three things to know and you are done.
 
-**1. Put `downtime run` in front of any command you are about to wait on.**
+**1. Put `dt` in front of any command you are about to wait on.**
 
 ```bash
-downtime run npm run build
-downtime run claude -p "refactor the auth module"
+dt npm run build
+dt claude -p "refactor the auth module"
 ```
+
+`dt` and `downtime` are the same binary, and `downtime run <cmd>` is the explicit spelling of the same thing for scripts.
 
 Nothing else changes. The command's output, its exit code and its behaviour are the same as running it bare.
 
-**2. If it finishes in under 5 seconds, you will not see downtime at all.** Longer than that and the trivia appears. Answer with `a` to `d`, press `n` for another, press `q` if you would rather watch the output after all.
+**2. If it finishes in under 5 seconds, you will not see downtime at all.** Longer than that and the trivia appears. Answer with `a` to `d`, or move the highlight with the arrow keys and press Enter. `n` gets you another question; `q` steps out if you would rather watch the output after all.
 
 **3. When the command finishes, you land back automatically** with a line telling you what you ran and how long it took, followed by the full output.
 
@@ -44,17 +48,19 @@ Trivia is the opposite. Each question is a few seconds long, it finishes cleanly
 
 ## Install
 
-```bash
-npm install -g downtime-cli
-```
-
-Or run it without installing:
+Straight from GitHub, one line, no account needed:
 
 ```bash
-npx downtime-cli run npm run build
+npm install -g github:lyhjeremy/downtime-cli
 ```
 
-Requires Node 18 or newer. It has no dependencies. Tested on Linux and macOS against Node 18, 20 and 22.
+That gives you both commands, `dt` and `downtime`. Or try it once without installing anything:
+
+```bash
+npx -y github:lyhjeremy/downtime-cli npm run build
+```
+
+Requires Node 18 or newer. It has no dependencies. Tested on Linux and macOS against Node 18, 20 and 22. (`npm install -g downtime-cli` will work too once the package is published to the registry.)
 
 ## How it works
 
@@ -93,7 +99,7 @@ Exit code 0 · Trivia: 3/4 correct
 
 Get a question wrong and it shows you the right answer with a short explanation. There is no penalty and no score kept between sessions. Being right earns you a fact, being wrong earns you a different one.
 
-500 questions ship with it, across 20 categories: geography, science, space, animals, history, food, language, arts, sport, the human body, plus origins, myths, inventions, records, movies, music, mythology, psychology, oddities and numbers. They lean towards the surprising rather than the examinable. Where the answer is a widely believed thing that happens to be wrong, the question says so.
+550 questions ship with it, across 23 categories: geography, science, space, animals, history, food, language, arts, sport, the human body, origins, myths, inventions, records, movies, music, mythology, psychology, oddities and numbers, plus three picture categories: flags, country outlines and landmarks, drawn as coloured blocks and line art right in the terminal. On terminals without colour the pictures fall back to shading, so a flag still reads as light and dark. They lean towards the surprising rather than the examinable. Where the answer is a widely believed thing that happens to be wrong, the question says so.
 
 ## Behaviour worth knowing
 
@@ -141,7 +147,7 @@ downtime run --threshold 15 -- pytest --exit-first
 - `immediate` closes the screen the instant the command exits, mid-question if that is where you are.
 - `finish_round` shows a `✅ task finished` marker instead and lets you land the answer. Press Enter to return whenever you like, or `n` for one more question.
 
-Keys while the trivia is up: `a` to `d` or `1` to `4` to answer, `n` or space for the next question, `q` or Escape to step out without killing the command, Enter to return once the task has finished.
+Keys while the trivia is up: `a` to `d` or `1` to `4` to answer, arrow keys to move the highlight and Enter to pick it, `n` or space for the next question, `q` or Escape to step out without killing the command, Enter to return once the task has finished.
 
 ## Config
 

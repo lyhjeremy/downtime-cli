@@ -36,7 +36,16 @@ test('bad input is rejected rather than guessed at', () => {
   assert.throws(() => parseArgs(['run', '--entry', 'sometimes', 'ls']), /auto or manual/)
   assert.throws(() => parseArgs(['run', '--threshold', 'soon', 'ls']), /number of seconds/)
   assert.throws(() => parseArgs(['run', '--nope', 'ls']), /unknown option/)
-  assert.throws(() => parseArgs(['jog', 'ls']), /unknown command/)
+})
+
+test('the short form treats the first word as the command to wrap', () => {
+  const parsed = parseArgs(['npm', 'run', 'build'])
+  assert.equal(parsed.command, 'run')
+  assert.equal(parsed.target, 'npm')
+  assert.deepEqual(parsed.targetArgs, ['run', 'build'])
+  const withFlags = parseArgs(['-t', '3', 'pytest', '-x'])
+  assert.equal(withFlags.target, 'pytest')
+  assert.deepEqual(withFlags.overrides, { entry: { thresholdSeconds: 3 } })
 })
 
 test('help and version are recognised', () => {

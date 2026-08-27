@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>downtime</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230A1015%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2718%27 text-anchor=%27middle%27%3E%E2%8F%B3%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Wrap a long-running command. Get trivia while you wait, and land back on your task the moment it finishes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --page: #121A21;
+    --term: #0A1015;
+    --chrome: #161F28;
+    --edge: #24313C;
+    --text: #C8D6DE;
+    --dim: #718491;
+    --faint: #4A5A66;
+    --cyan: #4FC3CE;
+    --green: #7FBF8C;
+    --amber: #D8A657;
+    --red: #E28B84;
+    --white: #EDF3F6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.65;
+  }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .wrap { max-width: 60rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
+  a { color: var(--cyan); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 3px; }
+
+  header.site { padding: 2.2rem 0 0; display: flex; justify-content: space-between; align-items: baseline; }
+  .brand { font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 1.05rem; color: var(--white); }
+  .brand .tld { color: var(--cyan); }
+  nav a { color: var(--dim); font-size: 0.9rem; margin-left: 1.4rem; text-decoration: none; }
+  nav a:hover { color: var(--text); }
+
+  .hero { padding: clamp(2.5rem, 7vw, 5rem) 0 1.5rem; text-align: center; }
+  h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    margin: 0 0 0.8rem;
+    text-wrap: balance;
+    line-height: 1.2;
+  }
+  .sub { color: var(--dim); max-width: 42ch; margin: 0 auto 0.6rem; font-size: 1.1rem; text-wrap: balance; }
+  .try-hint { color: var(--faint); font-size: 0.85rem; font-family: "IBM Plex Mono", monospace; }
+
+  /* ---------- the terminal ---------- */
+  .terminal {
+    background: var(--term);
+    border: 1px solid var(--edge);
+    border-radius: 10px;
+    max-width: 46rem;
+    margin: 1.6rem auto 0;
+    text-align: left;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    overflow: hidden;
+  }
+  .tbar {
+    background: var(--chrome);
+    padding: 0.6rem 1rem;
+    display: flex; align-items: center; gap: 0.45rem;
+    font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; color: var(--faint);
+  }
+  .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--edge); }
+  .tbar span.title { margin-left: 0.5rem; letter-spacing: 0.06em; }
+  .screen {
+    padding: 1.2rem 1.3rem 1.1rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: clamp(0.72rem, 1.9vw, 0.88rem);
+    line-height: 1.55;
+    min-height: 24em;
+    display: flex; flex-direction: column;
+  }
+  .trow { display: flex; justify-content: space-between; gap: 1rem; }
+  .thead .l { color: var(--cyan); font-weight: 600; }
+  .thead .r { color: var(--faint); }
+  .cat { color: var(--faint); letter-spacing: 0.12em; font-size: 0.82em; margin-top: 0.9em; }
+  .qtext { color: var(--white); font-weight: 600; margin: 0.7em 0 0.9em; max-width: 48ch; }
+  .art { margin: 0.1em 0 0.9em; align-self: center; }
+  .art .arow { display: flex; height: 0.72em; }
+  .art .px { height: 100%; flex: none; }
+  .art.lineart { color: var(--dim); white-space: pre; line-height: 1.15; }
+  .choices { display: flex; flex-direction: column; gap: 0.15em; }
+  .choice {
+    display: flex; gap: 0.7em; align-items: baseline;
+    background: none; border: 0; padding: 0.18em 0.4em; margin: 0;
+    font: inherit; color: var(--text); text-align: left; cursor: pointer; border-radius: 4px;
+    width: 100%;
+  }
+  .choice:hover { background: rgba(79,195,206,0.08); }
+  .choice .mark { width: 1em; color: var(--cyan); flex: none; }
+  .choice .letter { color: var(--faint); flex: none; }
+  .choice.cursor .text { color: var(--white); font-weight: 600; }
+  .choice.right .text, .choice.right .letter { color: var(--green); }
+  .choice.right .mark { color: var(--green); }
+  .choice.wrong .text, .choice.wrong .letter { color: var(--red); }
+  .choice.wrong .mark { color: var(--red); }
+  .choice.faded .text { color: var(--faint); }
+  .feedback { margin-top: 0.9em; max-width: 50ch; }
+  .feedback .verdict { font-weight: 600; color: var(--white); }
+  .feedback .verdict.good::before { content: "✓ "; color: var(--green); }
+  .feedback .verdict.bad::before { content: "· "; color: var(--amber); }
+  .feedback .body { color: var(--dim); margin-top: 0.2em; }
+  .tfoot { margin-top: auto; padding-top: 1em; }
+  .rule { border: 0; border-top: 1px solid var(--edge); margin: 0 0 0.55em; }
+  .hints { display: flex; justify-content: space-between; gap: 1rem; color: var(--faint); flex-wrap: wrap; }
+  .hints .key { color: var(--text); font-weight: 600; }
+  .status.running::before { content: "⏳ "; }
+  .status.done { color: var(--green); }
+  .recap { text-align: left; }
+  .recap .line { color: var(--faint); }
+  .recap .ok { color: var(--green); font-weight: 600; }
+  .recap .cmd { color: var(--white); }
+  .recap .meta { color: var(--dim); }
+  .recap .out { color: var(--dim); margin-top: 0.8em; }
+  .replay {
+    margin-top: 1.2em; align-self: flex-start;
+    font: inherit; color: var(--cyan); background: none;
+    border: 1px solid var(--edge); border-radius: 6px; padding: 0.4em 0.9em; cursor: pointer;
+  }
+  .replay:hover { border-color: var(--cyan); }
+
+  /* ---------- install strip ---------- */
+  .install { max-width: 46rem; margin: 1.4rem auto 0; }
+  .cmdbox {
+    display: flex; align-items: center; gap: 0.8rem;
+    background: var(--term); border: 1px solid var(--edge); border-radius: 8px;
+    padding: 0.85rem 1.1rem;
+    font-family: "IBM Plex Mono", monospace; font-size: clamp(0.72rem, 2vw, 0.92rem);
+  }
+  .cmdbox .sig { color: var(--green); }
+  .cmdbox code { color: var(--white); overflow-x: auto; white-space: nowrap; flex: 1; scrollbar-width: none; }
+  .copy {
+    font: inherit; font-size: 0.78rem; color: var(--dim);
+    background: var(--chrome); border: 1px solid var(--edge); border-radius: 5px;
+    padding: 0.3rem 0.7rem; cursor: pointer; flex: none;
+  }
+  .copy:hover { color: var(--text); border-color: var(--dim); }
+  .install .after { color: var(--faint); font-size: 0.85rem; text-align: center; margin-top: 0.7rem; font-family: "IBM Plex Mono", monospace; }
+
+  /* ---------- sections ---------- */
+  section { padding: clamp(2.6rem, 6vw, 4.2rem) 0 0; }
+  section:last-of-type { padding-bottom: 3rem; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-family: "IBM Plex Mono", monospace; font-size: clamp(1.25rem, 3vw, 1.7rem);
+    font-weight: 600; letter-spacing: -0.02em; color: var(--white); margin: 0 0 1rem; text-wrap: balance;
+  }
+  p { max-width: 62ch; margin: 0 0 1rem; }
+  p.dimmed { color: var(--dim); }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1.4rem; }
+  .step {
+    background: var(--term); border: 1px solid var(--edge); border-radius: 8px; padding: 1.1rem 1.2rem;
+  }
+  .step .n { font-family: "IBM Plex Mono", monospace; color: var(--cyan); font-weight: 600; font-size: 0.85rem; }
+  .step h3 { font-family: "IBM Plex Mono", monospace; font-size: 1rem; color: var(--white); margin: 0.4rem 0 0.5rem; }
+  .step p { font-size: 0.92rem; color: var(--dim); margin: 0; }
+  .step code { color: var(--text); font-size: 0.85em; background: var(--chrome); padding: 0.1em 0.35em; border-radius: 3px; }
+
+  .keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); border: 1px solid var(--edge); border-radius: 8px; overflow: hidden; background: var(--term); margin-top: 1.2rem; }
+  .keyrow { padding: 0.7rem 1rem; border-bottom: 1px solid var(--chrome); border-right: 1px solid var(--chrome); display: flex; gap: 0.8rem; align-items: baseline; }
+  kbd {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; font-weight: 600;
+    background: var(--chrome); border: 1px solid var(--edge); border-bottom-width: 2px;
+    border-radius: 4px; padding: 0.1rem 0.45rem; color: var(--white); white-space: nowrap;
+  }
+  .keyrow span { color: var(--dim); font-size: 0.9rem; }
+
+  .tablebox { border: 1px solid var(--edge); border-radius: 8px; overflow-x: auto; background: var(--term); margin-top: 1.2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 0.65rem 1rem; border-bottom: 1px solid var(--chrome); }
+  th { font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); font-weight: 500; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td code { font-family: "IBM Plex Mono", monospace; font-size: 0.82em; color: var(--text); background: var(--chrome); padding: 0.1em 0.4em; border-radius: 3px; white-space: nowrap; }
+  .ok { color: var(--green); font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; }
+  .meh { color: var(--amber); font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; }
+
+  .promise { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.4rem; }
+  .promise > div { background: var(--term); border: 1px solid var(--edge); border-radius: 8px; padding: 1.1rem 1.2rem; }
+  .promise h3 { font-family: "IBM Plex Mono", monospace; font-size: 0.98rem; color: var(--white); margin: 0 0 0.5rem; }
+  .promise p { font-size: 0.92rem; color: var(--dim); margin: 0; }
+
+  footer { border-top: 1px solid var(--edge); padding: 1.8rem 0 2.5rem; color: var(--faint); font-size: 0.88rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site">
+    <div class="brand">downtime<span class="tld">-cli</span></div>
+    <nav>
+      <a href="#install">install</a>
+      <a href="#how">how</a>
+      <a href="#agents">agents</a>
+      <a href="https://github.com/lyhjeremy/downtime-cli">github</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Your build takes 90 seconds.<br>Your phone takes 20 minutes.</h1>
+    <p class="sub">downtime fills the wait with one trivia question at a time, then snaps back the instant your command finishes.</p>
+    <p class="try-hint">↓ this one is real. press a–d, or click. ↓</p>
+
+    <div class="terminal" id="term">
+      <div class="tbar" aria-hidden="true">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <span class="title">downtime run npm run build</span>
+      </div>
+      <div class="screen" id="screen" tabindex="0" aria-label="Playable downtime demo. Press A to D to answer."></div>
+    </div>
+
+    <div class="install" id="install">
+      <div class="cmdbox">
+        <span class="sig">$</span>
+        <code id="installCmd">npm install -g github:lyhjeremy/downtime-cli</code>
+        <button class="copy" id="copyBtn" type="button">copy</button>
+      </div>
+      <p class="after">then: <strong>dt</strong> &lt;any command&gt; &nbsp;·&nbsp; e.g. &nbsp;<strong>dt npm run build</strong></p>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="eyebrow">How it works</div>
+    <h2>Two letters in front of what you already type</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Prefix the command</h3>
+        <p><code>dt npm run build</code> · <code>dt pytest -x</code> · <code>dt claude -p "fix the tests"</code>. Output, exit code and behaviour are identical to running it bare, so it is safe anywhere.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>Under 5 seconds? Invisible.</h3>
+        <p>Longer, and the trivia takes over the screen. Answer with letters, numbers or arrow keys. Flags, maps and landmarks are drawn right in the terminal.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>It lets go when your task does</h3>
+        <p>The moment the command exits you get one line saying what ran and how long it took, then the full output, untouched. Nothing is ever lost.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Keys</div>
+    <h2>Everything the game understands</h2>
+    <div class="keys">
+      <div class="keyrow"><kbd>a</kbd>–<kbd>d</kbd><span>answer, or <kbd>1</kbd>–<kbd>4</kbd></span></div>
+      <div class="keyrow"><kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd><span>move the highlight and pick</span></div>
+      <div class="keyrow"><kbd>n</kbd><span>next question, space works too</span></div>
+      <div class="keyrow"><kbd>q</kbd> / <kbd>Esc</kbd><span>leave the game, command keeps running</span></div>
+      <div class="keyrow"><kbd>Enter</kbd><span>return, once the task has finished</span></div>
+      <div class="keyrow"><kbd>Ctrl</kbd>+<kbd>C</kbd><span>kill the command and everything it started</span></div>
+    </div>
+  </section>
+
+  <section id="agents">
+    <div class="eyebrow">Compatibility</div>
+    <h2>Made for the agent-wait era</h2>
+    <p class="dimmed">Anything that runs to completion works: builds, tests, installs, deploys, and coding agents in their non-interactive mode. Tools that open their own interface, like bare <code class="mono">claude</code> or <code class="mono">vim</code>, are the one thing not to wrap.</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Tool</th><th>Command</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Claude Code</td><td><code>dt claude -p "refactor the auth module"</code></td><td class="ok">verified</td></tr>
+          <tr><td>Codex CLI</td><td><code>dt codex exec "fix the failing test"</code></td><td class="meh">same pattern</td></tr>
+          <tr><td>Gemini CLI</td><td><code>dt gemini -p "explain this repo"</code></td><td class="meh">same pattern</td></tr>
+          <tr><td>Aider</td><td><code>dt aider --message "add tests" --yes</code></td><td class="meh">same pattern</td></tr>
+          <tr><td>Everything else</td><td><code>dt npm run build</code> · <code>dt cargo build</code> · <code>dt pytest</code></td><td class="ok">works</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Where</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>Terminal.app, iTerm2, Alacritty, Kitty, WezTerm, GNOME Terminal</td><td class="ok">full support</td></tr>
+          <tr><td>VS Code, Cursor and JetBrains integrated terminals</td><td class="ok">full support</td></tr>
+          <tr><td>tmux and GNU screen</td><td class="ok">full support</td></tr>
+          <tr><td>Emacs shells, dumb terminals, CI, pipes</td><td class="meh">skipped, runs as a plain wrapper</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Principles</div>
+    <h2>Two promises</h2>
+    <div class="promise">
+      <div>
+        <h3>Your output is sacred</h3>
+        <p>Everything printed while the game is up is held and replayed in order, on the stream it came from, with the real exit code. Verified against a 40,000-line firehose with zero lines lost.</p>
+      </div>
+      <div>
+        <h3>It will never trap you</h3>
+        <p>No streaks, no daily goals, no notifications, no feed. Bounded questions with a clean finish, so there is nothing to pull you back once your work is ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>MIT · zero dependencies · Node ≥ 18 · 550 questions, 23 categories</div>
+    <div><a href="https://github.com/lyhjeremy/downtime-cli">github.com/lyhjeremy/downtime-cli</a></div>
+  </footer>
+</div>
+
+<script>
+const QUESTIONS = [{"id":"inv-001","question":"The microwave oven was discovered when an engineer noticed what?","choices":["A melted chocolate bar in his pocket","A warm cup of tea","Popcorn popping on a shelf","A radar dish glowing"],"correctIndex":0,"funFact":"Percy Spencer was standing near a magnetron in 1945 when the bar in his pocket melted. He tried popcorn next, then an egg, which exploded in a colleague's face.","explanation":"The popcorn came second, as a deliberate test rather than the original clue.","category":"inventions","difficulty":"moderate"},{"id":"flg-001","question":"Which country's flag is this?","choices":["Japan","South Korea","Bangladesh","Palau"],"correctIndex":0,"funFact":"The design is at least 1,000 years old, but it only became the official national flag in 1999. Before that it was the flag by custom rather than law.","explanation":"Bangladesh has a red circle too, but on green, and Palau has a yellow circle on blue.","category":"flags","difficulty":"easy","art":{"palette":{"W":"white","R":"red"},"rows":["WWWWWWWWWWWW","WWWWWWWWWWWW","WWWWRRRRWWWW","WWWWRRRRWWWW","WWWWWWWWWWWW","WWWWWWWWWWWW"]}},{"id":"ani-002","question":"How many hearts does an octopus have?","choices":["One","Two","Three","Eight"],"correctIndex":2,"funFact":"Two pump blood through the gills and one pumps it round the body. The third stops beating when the octopus swims, which is why they prefer to crawl.","explanation":"Eight is the number of arms, which is the trap in the question.","category":"animals","difficulty":"moderate"},{"id":"myt-003","question":"Do we use only 10 percent of our brains?","choices":["Yes","No, we use nearly all of it","Only 40 percent","Only during sleep"],"correctIndex":1,"funFact":"Brain scans show activity across essentially the whole organ over a day. It also burns about 20 percent of your energy, which would be an absurd waste if 90 percent were idle.","explanation":"Damage to almost any small region causes noticeable problems, which would not happen if most of it were spare.","category":"myths","difficulty":"easy"},{"id":"flg-010","question":"Which country's flag is this?","choices":["Sweden","Norway","Finland","Denmark"],"correctIndex":0,"funFact":"Every Nordic cross flag copies Denmark's, which is often cited as the oldest continuously used national flag in the world.","explanation":"Finland is a blue cross on white, Denmark a white cross on red, Norway adds a blue inner cross.","category":"flags","difficulty":"easy","art":{"palette":{"B":"blue","Y":"yellow"},"rows":["BBBYYBBBBBBB","BBBYYBBBBBBB","YYYYYYYYYYYY","YYYYYYYYYYYY","BBBYYBBBBBBB","BBBYYBBBBBBB"]}},{"id":"num-014","question":"What is the Monty Hall problem's correct strategy?","choices":["Stay with your door","Pick randomly again","It makes no difference","Switch doors"],"correctIndex":3,"funFact":"Switching wins two times in three. Thousands of people, including mathematicians, wrote in to insist this was wrong when it was published.","explanation":"The host knowingly opens a losing door, and that information is what shifts the odds.","category":"numbers","difficulty":"moderate"},{"id":"spc-004","question":"Which planet rotates on its side, with an axis tilted about 98 degrees?","choices":["Uranus","Neptune","Saturn","Venus"],"correctIndex":0,"funFact":"The likely cause is an enormous ancient collision. Each pole gets 42 years of continuous sunlight, then 42 years of dark.","explanation":"Venus is the other odd one, spinning backwards, but its axis is close to upright.","category":"space","difficulty":"moderate"},{"id":"ori-017","question":"Why do we say 'hello' when answering the phone?","choices":["It was already a common greeting","Edison suggested it","Bell insisted on it","It tested clearest on early lines"],"correctIndex":1,"funFact":"Alexander Graham Bell wanted 'ahoy'. Edison pushed 'hello', and Edison won. We could all have been answering the phone like sailors.","explanation":"Hello existed as a word for hailing someone, but it was rare as a greeting before the telephone.","category":"origins","difficulty":"moderate"},{"id":"lmk-001","question":"What is this landmark?","choices":["The Eiffel Tower","Tokyo Tower","The Shard","Blackpool Tower"],"correctIndex":0,"funFact":"It was meant to stand for 20 years and be scrapped. It survived because the army found the top useful for radio, and it is repainted by hand every seven years.","explanation":"Tokyo Tower copied the shape deliberately, but painted orange and white. As a silhouette, Paris got there first.","category":"landmarks","difficulty":"easy","art":{"palette":null,"rows":["      /\\","     /  \\","    /----\\","    /    \\","   / /--\\ \\","  / /    \\ \\"," /_/      \\_\\","/_/________\\_\\"]}},{"id":"map-001","question":"Which country has this shape?","choices":["Chile","Italy","Portugal","Norway"],"correctIndex":1,"funFact":"The boot shape is so established that Italians describe regions by it: the toe is Calabria, the heel Puglia, and the ball of the foot kicks Sicily.","explanation":"Chile is a long thin strip and Norway is jagged with fjords. Nothing else in the world looks like a boot.","category":"maps","difficulty":"easy","art":{"palette":null,"rows":["        __","     _-'  \\_","     \\      \\","      \\      \\_","       |   __  \\","       \\_ |  \\_/","     ___ \\|","    / \\ \\ |\\","    \\_/  \\|_\\"]}},{"id":"psy-014","question":"What is 'the curse of knowledge'?","choices":["Forgetting what you learned","Knowing too many facts","Learning too fast","Being unable to imagine not knowing something"],"correctIndex":3,"funFact":"In one experiment, people tapping out a well-known tune expected half their listeners to name it. About one in forty did. In their own head, the music was playing.","explanation":"It is why experts write confusing documentation without realising it.","category":"psychology","difficulty":"moderate"},{"id":"rec-001","question":"What is the shortest war in recorded history?","choices":["Six days","Around 40 minutes","Three hours","One week"],"correctIndex":1,"funFact":"The Anglo-Zanzibar War of 1896 lasted roughly 38 to 45 minutes. The sultan's palace was shelled and it was over before most people knew it had started.","explanation":"The Six-Day War is short by modern standards, but this one was shorter than a lunch break.","category":"records","difficulty":"moderate"}];
+const COLORS = { red:'#C63B3B', white:'#EDF3F6', green:'#2F8C4C', blue:'#2B5BB8', yellow:'#E0C33B', black:'#101418', orange:'#E08A2E', lightblue:'#8FC6E8', darkblue:'#1B3A8C', darkred:'#8C1F1F', gray:'#5A6B76', magenta:'#B04FA8', cyan:'#4FA8B8' };
+const LETTERS = ['a','b','c','d'];
+const NICE = ['Nice one.','Got it.','Correct.',"That's the one.",'Spot on.','Yes.'];
+const MISS = ['Not this time.','Nope.','Not quite.','Close, but no.'];
+const TASK_TOTAL = 3; // questions until the fake build finishes
+
+let order = shuffle([...QUESTIONS.keys()]);
+let qi = 0, cursor = 0, selected = null, asked = 0, correct = 0, phase = 'play';
+let startedAt = Date.now();
+const screen = document.getElementById('screen');
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+function pick(list, seed){ let h=0; for(let i=0;i<seed.length;i++) h=(h*31+seed.charCodeAt(i))>>>0; return list[h%list.length]; }
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+function elapsed(){ const t=Math.floor((Date.now()-startedAt)/1000); const m=Math.floor(t/60), s=t%60; return m? m+'m '+String(s).padStart(2,'0')+'s' : s+'s'; }
+
+function artHtml(art){
+  if (!art) return '';
+  if (!art.palette) {
+    return '<div class="art lineart">'+art.rows.map(esc).join('\n')+'</div>';
+  }
+  // Merge runs of the same colour into one span so no hairline seams appear
+  // between cells at fractional pixel widths.
+  const rows = art.rows.map(row => {
+    let html = '', run = 0, prev = null;
+    const flush = () => { if (run) html += '<span class="px" style="width:'+(run*1.32)+'em;background:'+prev+'"></span>'; };
+    for (const k of row) {
+      const color = COLORS[art.palette[k]] || '#5A6B76';
+      if (color === prev) { run++; continue; }
+      flush(); prev = color; run = 1;
+    }
+    flush();
+    return '<div class="arow">' + html + '</div>';
+  }).join('');
+  return '<div class="art" aria-hidden="true">'+rows+'</div>';
+}
+
+function render(){
+  const q = QUESTIONS[order[qi % order.length]];
+  const done = phase === 'finished' || phase === 'recap';
+  if (phase === 'recap') { renderRecap(); return; }
+
+  let html = '<div class="trow thead"><span class="l">downtime</span><span class="r">'+elapsed()+(asked? ' · '+correct+' of '+asked:'')+'</span></div>';
+  html += '<div class="cat">'+esc(q.category.toUpperCase())+'</div>';
+  html += '<div class="qtext">'+esc(q.question)+'</div>';
+  html += artHtml(q.art);
+  html += '<div class="choices" role="listbox">';
+  q.choices.forEach((c,i)=>{
+    let cls='choice', mark='&nbsp;';
+    if (selected===null && i===cursor){ cls+=' cursor'; mark='▸'; }
+    if (selected!==null){
+      if (i===q.correctIndex){ cls+=' right'; mark='✓'; }
+      else if (i===selected){ cls+=' wrong'; mark='✗'; }
+      else cls+=' faded';
+    }
+    html += '<button type="button" class="'+cls+'" data-i="'+i+'"><span class="mark">'+mark+'</span><span class="letter">'+LETTERS[i]+'</span><span class="text">'+esc(c)+'</span></button>';
+  });
+  html += '</div>';
+  if (selected!==null){
+    const good = selected===q.correctIndex;
+    const body = good ? q.funFact : ('It was '+LETTERS[q.correctIndex]+', '+q.choices[q.correctIndex]+'. '+q.explanation);
+    html += '<div class="feedback"><div class="verdict '+(good?'good':'bad')+'">'+pick(good?NICE:MISS,q.id)+'</div><div class="body">'+esc(body)+'</div></div>';
+  }
+  const hint = selected===null
+    ? 'a–d answers · arrows + enter work too'
+    : (phase==='finished' ? '<span class="key">[enter]</span> back to your task · [n] one more' : '<span class="key">[n]</span> next question');
+  const status = phase==='finished'
+    ? '<span class="status done">✅ task finished</span>'
+    : '<span class="status running">npm run build</span>';
+  html += '<div class="tfoot"><hr class="rule"><div class="hints"><span>'+hint+'</span>'+status+'</div></div>';
+  screen.innerHTML = html;
+  screen.querySelectorAll('.choice').forEach(b=>b.addEventListener('click',()=>{ if(selected===null) answer(+b.dataset.i); else next(); }));
+}
+
+function renderRecap(){
+  const dur = elapsed();
+  screen.innerHTML =
+    '<div class="recap">'+
+    '<div class="line">──────────────────────────────────────────</div>'+
+    '<div><span class="ok">✅ Done</span> in <span class="cmd">'+dur+'</span>:&nbsp; <span class="cmd">npm run build</span></div>'+
+    '<div class="meta">Exit code 0 · Trivia: '+correct+'/'+asked+' correct</div>'+
+    '<div class="line">──────────────────────────────────────────</div>'+
+    '<div class="out">webpack 5.101.0 compiled successfully in 84421 ms<br>artifacts written to dist/ · 14 files, 2.3 MB</div>'+
+    '<div class="out">That snap-back is the product. Install it and the build is real.</div>'+
+    '</div>'+
+    '<button type="button" class="replay" id="replay">↻ play again</button>';
+  document.getElementById('replay').addEventListener('click', restart);
+}
+
+function answer(i){
+  const q = QUESTIONS[order[qi % order.length]];
+  selected = i; asked++;
+  if (i===q.correctIndex) correct++;
+  if (asked >= TASK_TOTAL) phase='finished';
+  render();
+}
+function next(){
+  if (phase==='finished'){ qi++; selected=null; cursor=0; render(); return; }
+  qi++; selected=null; cursor=0; render();
+}
+function restart(){
+  order = shuffle([...QUESTIONS.keys()]);
+  qi=0; cursor=0; selected=null; asked=0; correct=0; phase='play'; startedAt=Date.now();
+  render();
+}
+
+document.addEventListener('keydown', (e)=>{
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const tag = document.activeElement && document.activeElement.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  const k = e.key.toLowerCase();
+  if (phase==='recap'){ if(k==='enter'||k==='n'||k==='r'){ restart(); e.preventDefault(); } return; }
+  if (selected===null){
+    if (k==='arrowup'||k==='arrowleft'){ cursor=(cursor+3)%4; render(); e.preventDefault(); return; }
+    if (k==='arrowdown'||k==='arrowright'||k==='tab'){ cursor=(cursor+1)%4; render(); e.preventDefault(); return; }
+    let i = LETTERS.indexOf(k); if (i<0) i = ['1','2','3','4'].indexOf(k);
+    if (i<0 && k==='enter') i = cursor;
+    if (i>=0){ answer(i); e.preventDefault(); }
+    return;
+  }
+  if (k==='enter' && phase==='finished'){ phase='recap'; render(); e.preventDefault(); return; }
+  if (k==='n'||k===' '||k==='enter'){ next(); e.preventDefault(); }
+});
+
+setInterval(()=>{ if(phase==='play' && selected===null) render(); }, 1000);
+document.getElementById('copyBtn').addEventListener('click', async ()=>{
+  try { await navigator.clipboard.writeText(document.getElementById('installCmd').textContent); document.getElementById('copyBtn').textContent='copied'; setTimeout(()=>document.getElementById('copyBtn').textContent='copy',1500); } catch {}
+});
+render();
+</script>
+</body>
+</html>

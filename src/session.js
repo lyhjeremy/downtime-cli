@@ -145,9 +145,9 @@ export async function runSession({ command, args, config, contentOptions = {} })
       return
     }
     if (key === 'q' || key === '\x1b') {
-      // Escape hatch: leave the game but let the command carry on. Without this
-      // the only way out of downtime mode is to kill the thing you were waiting
-      // for.
+      // Escape hatch: leave the game but let the command carry on. A bare
+      // Escape quits; arrow keys arrive as longer sequences (\x1b[A and so on)
+      // and fall through to the content module instead.
       if (finished) finish()
       else leaveDowntime({ resumeOutput: true })
       return

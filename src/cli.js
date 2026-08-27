@@ -18,8 +18,9 @@ function version() {
 const HELP = `${cyan('downtime')}: fill the wait, then land back on your feet
 
 ${bold('Usage')}
-  downtime run <command> [args...]
-  downtime run [options] -- <command> [args...]
+  dt <command> [args...]              the short form
+  downtime run <command> [args...]    the explicit form, same thing
+  dt [options] -- <command> [args...]
   downtime config
   downtime config set <key> <value>
   downtime --help | --version
@@ -33,9 +34,9 @@ ${bold('Options for run')}
       --content <id>          content module to use (${registry.ids().join(', ')})
 
 ${bold('Examples')}
-  downtime run claude -p "refactor the auth module"
-  downtime run npm run build
-  downtime run --threshold 15 --exit finish_round -- pytest -x
+  dt npm run build
+  dt claude -p "refactor the auth module"
+  dt --threshold 15 --exit finish_round -- pytest -x
   downtime config set entry.thresholdSeconds 10
 
 Set DOWNTIME_DISABLE=1 to turn downtime mode off without uninstalling.
@@ -52,14 +53,16 @@ export function parseArgs(argv) {
   if (first === '--version' || first === '-v') return { command: 'version' }
   if (first === '--help' || first === '-h' || first === 'help') return { command: 'help' }
   if (first === 'config') return { command: 'config', args: rest }
-  if (first !== 'run') {
-    throw new UsageError(`unknown command "${first}". Try: downtime run <command>`)
-  }
+
+  // `dt npm run build` works without the word `run`. Anything that is not a
+  // known subcommand is treated as the command to wrap, so the short form is
+  // the natural one and `run` stays for scripts that prefer to be explicit.
+  const args = first === 'run' ? rest : [first, ...rest]
 
   const overrides = {}
   let i = 0
-  for (; i < rest.length; i++) {
-    const arg = rest[i]
+  for (; i < args.length; i++) {
+    const arg = args[i]
     if (arg === '--') {
       i++
       break
@@ -67,7 +70,7 @@ export function parseArgs(argv) {
     if (!arg.startsWith('-')) break
 
     const takeValue = () => {
-      const value = rest[++i]
+      const value = args[++i]
       if (value === undefined) throw new UsageError(`${arg} needs a value`)
       return value
     }
@@ -111,8 +114,8 @@ export function parseArgs(argv) {
     }
   }
 
-  const rem = rest.slice(i)
-  if (rem.length === 0) throw new UsageError('downtime run needs a command to run')
+  const rem = args.slice(i)
+  if (rem.length === 0) throw new UsageError('downtime needs a command to run, e.g. dt npm run build')
   return { command: 'run', overrides, target: rem[0], targetArgs: rem.slice(1) }
 }
 

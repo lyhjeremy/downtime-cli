@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { loadState, saveState } from '../../state.js'
 import { bold, dim, gray, green, red, cyan, yellow, wrapText, visibleLength } from '../../tui/ansi.js'
+import { renderArt, artWidth, detectColorDepth } from './art.js'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const LETTERS = ['a', 'b', 'c', 'd']
@@ -54,6 +55,7 @@ export function createTrivia(options = {}) {
   let index = 0
   let current = null
   let selected = null
+  let cursor = 0
   let asked = 0
   let correct = 0
   const seenThisSession = []
@@ -65,6 +67,7 @@ export function createTrivia(options = {}) {
     }
     current = queue[index++]
     selected = null
+    cursor = 0
     if (current) seenThisSession.push(current.id)
   }
 
@@ -87,9 +90,20 @@ export function createTrivia(options = {}) {
     onKey(key) {
       const k = key.toLowerCase()
       if (selected === null) {
+        // Arrow keys move a highlight; enter answers whatever is highlighted.
+        // Letters and numbers still answer directly, so both habits work.
+        if (key === '\x1b[A' || key === '\x1b[D') {
+          cursor = (cursor + 3) % 4
+          return true
+        }
+        if (key === '\x1b[B' || key === '\x1b[C' || key === '\t') {
+          cursor = (cursor + 1) % 4
+          return true
+        }
         const byLetter = LETTERS.indexOf(k)
         const byNumber = '1234'.indexOf(k)
-        const choice = byLetter >= 0 ? byLetter : byNumber
+        let choice = byLetter >= 0 ? byLetter : byNumber
+        if (choice < 0 && (key === '\r' || key === '\n')) choice = cursor
         if (choice >= 0 && current && choice < current.choices.length) {
           selected = choice
           asked += 1
@@ -106,7 +120,7 @@ export function createTrivia(options = {}) {
     },
 
     render(viewport) {
-      return renderFrame({ question: current, selected, asked, correct, viewport })
+      return renderFrame({ question: current, selected, cursor, asked, correct, viewport })
     },
 
     summary() {
@@ -137,7 +151,7 @@ function truncate(s, max) {
   return str.length <= max ? str : str.slice(0, Math.max(1, max - 1)) + '…'
 }
 
-export function renderFrame({ question, selected, asked, correct, viewport }) {
+export function renderFrame({ question, selected, cursor = 0, asked, correct, viewport }) {
   const rows = Math.max(8, viewport.rows || 24)
   const columns = Math.max(40, Math.min(viewport.columns || 80, 92))
   const width = columns - 4
@@ -168,12 +182,25 @@ export function renderFrame({ question, selected, asked, correct, viewport }) {
   for (const line of wrapText(question.question, width)) add(pad + bold(line), 0)
   add('', 7)
 
+  // The picture, when there is one. Colour grids carry their own ANSI; line
+  // art is drawn dim so it sits behind the choices rather than shouting.
+  if (question.art) {
+    const depth = viewport.colorDepth ?? detectColorDepth()
+    const artLines = renderArt(question.art, depth)
+    const indent = Math.max(0, Math.floor((width - artWidth(question.art)) / 2))
+    for (const line of artLines) {
+      add(pad + ' '.repeat(indent) + (question.art.palette ? line : dim(line)), 0)
+    }
+    add('', 7)
+  }
+
   question.choices.forEach((choice, i) => {
     const isCorrect = i === question.correctIndex
     const isPicked = i === selected
-    let mark = ' '
+    const isCursor = !answered && i === cursor
+    let mark = isCursor ? cyan('▸') : ' '
     let label = dim(LETTERS[i])
-    let text = choice
+    let text = isCursor ? bold(choice) : choice
     if (answered) {
       if (isCorrect) {
         mark = green('✓')
@@ -213,7 +240,7 @@ export function renderFrame({ question, selected, asked, correct, viewport }) {
     ? viewport.taskFinished
       ? `${bold('[enter]')} back to your task   ${dim('[n] one more')}`
       : `${bold('[n]')} next question   ${dim('[q] back to your task')}`
-    : dim('press a-d or 1-4')
+    : dim('a-d answers · arrows + enter work too')
   const status = viewport.taskFinished
     ? green('✅ task finished')
     : dim(`⏳ ${truncate(viewport.command, Math.max(10, width - 24))}`)

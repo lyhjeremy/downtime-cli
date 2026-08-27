@@ -1,10 +1,11 @@
 {
   "name": "downtime-cli",
-  "version": "0.1.0",
-  "description": "Wrap a long-running command and fill the wait with bounded trivia, then get a warm re-entry back to what you were doing.",
+  "version": "0.2.0",
+  "description": "Wrap a long-running command and fill the wait with trivia and terminal-art picture rounds, then land back on your task. No dependencies.",
   "type": "module",
   "bin": {
-    "downtime": "bin/downtime"
+    "downtime": "bin/downtime",
+    "dt": "bin/downtime"
   },
   "files": [
     "bin",
@@ -31,7 +32,7 @@
   ],
   "author": "lyhjeremy",
   "license": "MIT",
-  "homepage": "https://github.com/lyhjeremy/downtime-cli#readme",
+  "homepage": "https://lyhjeremy.github.io/downtime-cli",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lyhjeremy/downtime-cli.git"

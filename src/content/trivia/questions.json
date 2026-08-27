@@ -1125,6 +1125,833 @@
   "difficulty": "easy"
  },
  {
+  "id": "flg-001",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Japan",
+   "South Korea",
+   "Bangladesh",
+   "Palau"
+  ],
+  "correctIndex": 0,
+  "funFact": "The design is at least 1,000 years old, but it only became the official national flag in 1999. Before that it was the flag by custom rather than law.",
+  "explanation": "Bangladesh has a red circle too, but on green, and Palau has a yellow circle on blue.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "W": "white",
+    "R": "red"
+   },
+   "rows": [
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "WWWWRRRRWWWW",
+    "WWWWRRRRWWWW",
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW"
+   ]
+  }
+ },
+ {
+  "id": "flg-002",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Netherlands",
+   "Russia",
+   "France",
+   "Luxembourg"
+  ],
+  "correctIndex": 2,
+  "funFact": "The three vertical bands date to the Revolution, combining the red and blue of Paris with the royal white. For a while the red was at the hoist instead.",
+  "explanation": "The Netherlands, Russia and Luxembourg use the same three colours, but all in horizontal bands.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "B": "blue",
+    "W": "white",
+    "R": "red"
+   },
+   "rows": [
+    "BBBBWWWWRRRR",
+    "BBBBWWWWRRRR",
+    "BBBBWWWWRRRR",
+    "BBBBWWWWRRRR",
+    "BBBBWWWWRRRR",
+    "BBBBWWWWRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-003",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Mexico",
+   "Ireland",
+   "Italy",
+   "Hungary"
+  ],
+  "correctIndex": 2,
+  "funFact": "It began as a Napoleonic military flag, directly modelled on the French tricolour with green swapped in, reportedly the colour of Milan's civic guard.",
+  "explanation": "Ireland ends in orange rather than red, Mexico adds an eagle in the middle, and Hungary uses the same colours horizontally.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "G": "green",
+    "W": "white",
+    "R": "red"
+   },
+   "rows": [
+    "GGGGWWWWRRRR",
+    "GGGGWWWWRRRR",
+    "GGGGWWWWRRRR",
+    "GGGGWWWWRRRR",
+    "GGGGWWWWRRRR",
+    "GGGGWWWWRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-004",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Ivory Coast",
+   "Ireland",
+   "Italy",
+   "India"
+  ],
+  "correctIndex": 1,
+  "funFact": "Green stands for the Catholic tradition, orange for the Protestant one, and the white between them for peace between the two.",
+  "explanation": "Italy's third band is red, not orange. The Ivory Coast uses orange-white-green, the same flag in reverse.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "G": "green",
+    "W": "white",
+    "O": "orange"
+   },
+   "rows": [
+    "GGGGWWWWOOOO",
+    "GGGGWWWWOOOO",
+    "GGGGWWWWOOOO",
+    "GGGGWWWWOOOO",
+    "GGGGWWWWOOOO",
+    "GGGGWWWWOOOO"
+   ]
+  }
+ },
+ {
+  "id": "flg-005",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Belgium",
+   "Lithuania",
+   "Germany",
+   "Spain"
+  ],
+  "correctIndex": 2,
+  "funFact": "Black, red and gold trace back to the uniforms of a volunteer corps in the Napoleonic wars: black coats, red braid, gold buttons.",
+  "explanation": "Belgium uses nearly the same colours but in vertical bands with the black at the hoist.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "K": "black",
+    "R": "red",
+    "Y": "yellow"
+   },
+   "rows": [
+    "KKKKKKKKKKKK",
+    "KKKKKKKKKKKK",
+    "RRRRRRRRRRRR",
+    "RRRRRRRRRRRR",
+    "YYYYYYYYYYYY",
+    "YYYYYYYYYYYY"
+   ]
+  }
+ },
+ {
+  "id": "flg-006",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "France",
+   "Netherlands",
+   "Russia",
+   "Croatia"
+  ],
+  "correctIndex": 1,
+  "funFact": "The red was originally orange, for the House of Orange, but the dye faded so badly at sea that it was formally changed to red in the 1600s.",
+  "explanation": "France runs the same colours vertically. Russia orders them white-blue-red.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "R": "red",
+    "W": "white",
+    "B": "blue"
+   },
+   "rows": [
+    "RRRRRRRRRRRR",
+    "RRRRRRRRRRRR",
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "BBBBBBBBBBBB",
+    "BBBBBBBBBBBB"
+   ]
+  }
+ },
+ {
+  "id": "flg-007",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Russia",
+   "Slovakia",
+   "Netherlands",
+   "Serbia"
+  ],
+  "correctIndex": 0,
+  "funFact": "Peter the Great borrowed the colours from the Dutch flag after studying shipbuilding in the Netherlands, and reordered them.",
+  "explanation": "The Netherlands puts red on top. Slovakia and Serbia add coats of arms.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "W": "white",
+    "B": "blue",
+    "R": "red"
+   },
+   "rows": [
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "BBBBBBBBBBBB",
+    "BBBBBBBBBBBB",
+    "RRRRRRRRRRRR",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-008",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Ukraine",
+   "Kazakhstan",
+   "Argentina",
+   "Sweden"
+  ],
+  "correctIndex": 0,
+  "funFact": "Blue over yellow is usually read as sky over wheat fields, which is a fair summary of the landscape in much of the country.",
+  "explanation": "Sweden's blue and yellow form a Nordic cross rather than two bands.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "B": "blue",
+    "Y": "yellow"
+   },
+   "rows": [
+    "BBBBBBBBBBBB",
+    "BBBBBBBBBBBB",
+    "BBBBBBBBBBBB",
+    "YYYYYYYYYYYY",
+    "YYYYYYYYYYYY",
+    "YYYYYYYYYYYY"
+   ]
+  }
+ },
+ {
+  "id": "flg-009",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Indonesia",
+   "Malta",
+   "Monaco",
+   "Poland"
+  ],
+  "correctIndex": 3,
+  "funFact": "Indonesia and Monaco use exactly the same two bands the other way up, red over white, which has caused real diplomatic confusion.",
+  "explanation": "White over red is Poland. Red over white is Indonesia and Monaco.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "W": "white",
+    "R": "red"
+   },
+   "rows": [
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "RRRRRRRRRRRR",
+    "RRRRRRRRRRRR",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-010",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Sweden",
+   "Norway",
+   "Finland",
+   "Denmark"
+  ],
+  "correctIndex": 0,
+  "funFact": "Every Nordic cross flag copies Denmark's, which is often cited as the oldest continuously used national flag in the world.",
+  "explanation": "Finland is a blue cross on white, Denmark a white cross on red, Norway adds a blue inner cross.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "B": "blue",
+    "Y": "yellow"
+   },
+   "rows": [
+    "BBBYYBBBBBBB",
+    "BBBYYBBBBBBB",
+    "YYYYYYYYYYYY",
+    "YYYYYYYYYYYY",
+    "BBBYYBBBBBBB",
+    "BBBYYBBBBBBB"
+   ]
+  }
+ },
+ {
+  "id": "flg-011",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Switzerland",
+   "Denmark",
+   "Norway",
+   "England"
+  ],
+  "correctIndex": 1,
+  "funFact": "Legend says it fell from the sky during a battle in Estonia in 1219. It has been in continuous use since at least the 1300s.",
+  "explanation": "Norway's flag adds a blue cross inside the white one. Switzerland's cross does not reach the edges.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "R": "red",
+    "W": "white"
+   },
+   "rows": [
+    "RRRWWRRRRRRR",
+    "RRRWWRRRRRRR",
+    "WWWWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "RRRWWRRRRRRR",
+    "RRRWWRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-012",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Scotland",
+   "Finland",
+   "Greece",
+   "Sweden"
+  ],
+  "correctIndex": 1,
+  "funFact": "The blue cross on white was chosen in 1918, with the colours usually read as lakes and snow, of which Finland has a great deal of both.",
+  "explanation": "Sweden is the reverse pairing, a yellow cross on blue.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "W": "white",
+    "B": "blue"
+   },
+   "rows": [
+    "WWWBBWWWWWWW",
+    "WWWBBWWWWWWW",
+    "BBBBBBBBBBBB",
+    "BBBBBBBBBBBB",
+    "WWWBBWWWWWWW",
+    "WWWBBWWWWWWW"
+   ]
+  }
+ },
+ {
+  "id": "flg-013",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Israel",
+   "Finland",
+   "Uruguay",
+   "Greece"
+  ],
+  "correctIndex": 3,
+  "funFact": "The nine stripes are often said to stand for the nine syllables of the motto 'Freedom or Death' in Greek.",
+  "explanation": "Uruguay's stripes carry a sun in the canton instead of a cross.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "B": "blue",
+    "W": "white"
+   },
+   "rows": [
+    "BBBWWWWWWWWW",
+    "BBBWWWWWWWWW",
+    "WWWBBBBBBBBB",
+    "BBBWWWWWWWWW",
+    "WWWWWWWWWWWW",
+    "BBBBBBBBBBBB"
+   ]
+  }
+ },
+ {
+  "id": "flg-014",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Slovakia",
+   "Czechoslovakia nostalgia trap",
+   "Philippines",
+   "Czechia"
+  ],
+  "correctIndex": 3,
+  "funFact": "The blue triangle was added in 1920 precisely so the flag would stop being identical to Poland's.",
+  "explanation": "The Philippines also uses a hoist triangle, but with both stripes blue and red and a sun inside the triangle.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "W": "white",
+    "R": "red",
+    "B": "blue"
+   },
+   "rows": [
+    "BWWWWWWWWWWW",
+    "BBWWWWWWWWWW",
+    "BBBWWWWWWWWW",
+    "BBBRRRRRRRRR",
+    "BBRRRRRRRRRR",
+    "BRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-015",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "England",
+   "Georgia",
+   "Switzerland",
+   "Denmark"
+  ],
+  "correctIndex": 2,
+  "funFact": "One of only two square national flags, the other being Vatican City. The Red Cross emblem is this flag with the colours swapped.",
+  "explanation": "Denmark's cross is off-centre and reaches the edges. Switzerland's floats free.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "R": "red",
+    "W": "white"
+   },
+   "rows": [
+    "RRRRRRRRRRRR",
+    "RRRRRWWRRRRR",
+    "RRWWWWWWWWRR",
+    "RRWWWWWWWWRR",
+    "RRRRRWWRRRRR",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-016",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Chile",
+   "Liberia",
+   "United States",
+   "Malaysia"
+  ],
+  "correctIndex": 2,
+  "funFact": "The current 50-star version was designed for a school project in 1958, and it reportedly received a B minus.",
+  "explanation": "Malaysia and Liberia both echo the stripes-and-canton design, which is why they are the standard wrong answers.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "R": "red",
+    "W": "white",
+    "B": "blue"
+   },
+   "rows": [
+    "BBBBBRRRRRRR",
+    "BBBBBWWWWWWW",
+    "BBBBBRRRRRRR",
+    "WWWWWWWWWWWW",
+    "RRRRRRRRRRRR",
+    "WWWWWWWWWWWW"
+   ]
+  }
+ },
+ {
+  "id": "flg-017",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Guyana",
+   "Jamaica",
+   "Brazil",
+   "Tanzania"
+  ],
+  "correctIndex": 2,
+  "funFact": "The blue globe shows the sky over Rio on the morning the republic was declared in 1889, star by star.",
+  "explanation": "The yellow diamond on green is unmistakeable once seen. Jamaica uses a diagonal gold cross instead.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "G": "green",
+    "Y": "yellow",
+    "B": "blue"
+   },
+   "rows": [
+    "GGGGGGGGGGGG",
+    "GGGGYYYYGGGG",
+    "GGYYYBBYYYGG",
+    "GGYYYBBYYYGG",
+    "GGGGYYYYGGGG",
+    "GGGGGGGGGGGG"
+   ]
+  }
+ },
+ {
+  "id": "flg-018",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Ivory Coast",
+   "Ireland",
+   "India",
+   "Niger"
+  ],
+  "correctIndex": 2,
+  "funFact": "The wheel in the centre is the Ashoka Chakra, with 24 spokes, taken from a pillar built by the emperor Ashoka around 250 BC.",
+  "explanation": "Ireland's tricolour is vertical. Niger's is horizontal orange-white-green but with an orange disc.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "O": "orange",
+    "W": "white",
+    "G": "green",
+    "B": "blue"
+   },
+   "rows": [
+    "OOOOOOOOOOOO",
+    "OOOOOOOOOOOO",
+    "WWWWWBBWWWWW",
+    "WWWWWBBWWWWW",
+    "GGGGGGGGGGGG",
+    "GGGGGGGGGGGG"
+   ]
+  }
+ },
+ {
+  "id": "flg-019",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "China",
+   "Morocco",
+   "Vietnam",
+   "Turkey"
+  ],
+  "correctIndex": 0,
+  "funFact": "The large star is the Communist Party and the four small ones the classes of the people, arranged so each points towards the big star's centre.",
+  "explanation": "Vietnam has a single large star centred on red. Turkey pairs a star with a crescent.",
+  "category": "flags",
+  "difficulty": "easy",
+  "art": {
+   "palette": {
+    "R": "red",
+    "Y": "yellow"
+   },
+   "rows": [
+    "RYRRRRRRRRRR",
+    "YYYRYRRRRRRR",
+    "RYRRRYRRRRRR",
+    "RRRRYRRRRRRR",
+    "RRRRRRRRRRRR",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-020",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Morocco",
+   "Vietnam",
+   "Somalia",
+   "China"
+  ],
+  "correctIndex": 1,
+  "funFact": "The five points of the star are usually read as the five groups building the nation: intellectuals, farmers, workers, traders and soldiers.",
+  "explanation": "China's flag has five stars in the corner, not one in the middle. Somalia's star is white on light blue.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "R": "red",
+    "Y": "yellow"
+   },
+   "rows": [
+    "RRRRRRRRRRRR",
+    "RRRRRYYRRRRR",
+    "RRRYYYYYYRRR",
+    "RRRRYYYYRRRR",
+    "RRRRYRRYRRRR",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-021",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Bangladesh",
+   "Palau",
+   "Pakistan",
+   "Japan"
+  ],
+  "correctIndex": 0,
+  "funFact": "The red disc is set slightly towards the hoist so it looks centred when the flag flies. Japan's is truly centred.",
+  "explanation": "Japan is a red circle on white. Palau is a yellow circle on light blue.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "G": "green",
+    "R": "red"
+   },
+   "rows": [
+    "GGGGGGGGGGGG",
+    "GGGGGGGGGGGG",
+    "GGGGRRRGGGGG",
+    "GGGGRRRGGGGG",
+    "GGGGGGGGGGGG",
+    "GGGGGGGGGGGG"
+   ]
+  }
+ },
+ {
+  "id": "flg-022",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Turkey",
+   "Algeria",
+   "Tunisia",
+   "Pakistan"
+  ],
+  "correctIndex": 0,
+  "funFact": "The crescent and star long predate Islam here: versions appear on coins from Byzantium centuries before the Ottoman conquest.",
+  "explanation": "Tunisia puts its crescent and star inside a white circle. Pakistan adds a white hoist stripe and uses green.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "R": "red",
+    "W": "white"
+   },
+   "rows": [
+    "RRRRRRRRRRRR",
+    "RRRWWWRRRRRR",
+    "RRWWRRRWRWRR",
+    "RRWWRRRRWWRR",
+    "RRRWWWRRRRRR",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-023",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Austria",
+   "Denmark",
+   "Canada",
+   "Peru"
+  ],
+  "correctIndex": 2,
+  "funFact": "The maple leaf design was adopted in 1965 after a national debate remembered as the Great Flag Debate. The leaf has 11 points, chosen for how it read in wind-tunnel tests.",
+  "explanation": "Peru and Austria share the red-white-red bands but have nothing in the middle white band.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "R": "red",
+    "W": "white"
+   },
+   "rows": [
+    "RRWWWWWWWWRR",
+    "RRWWWRRWWWRR",
+    "RRWWRRRRWWRR",
+    "RRWRRRRRRWRR",
+    "RRWWWRRWWWRR",
+    "RRWWWWWWWWRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-024",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Uruguay",
+   "Honduras",
+   "Argentina",
+   "Guatemala"
+  ],
+  "correctIndex": 2,
+  "funFact": "The golden Sun of May in the centre commemorates the sun breaking through cloud during a 1810 independence demonstration.",
+  "explanation": "Guatemala and Honduras run their blue bands vertically and horizontally without the sun.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "L": "lightblue",
+    "W": "white",
+    "Y": "yellow"
+   },
+   "rows": [
+    "LLLLLLLLLLLL",
+    "LLLLLLLLLLLL",
+    "WWWWWYYWWWWW",
+    "WWWWWYYWWWWW",
+    "LLLLLLLLLLLL",
+    "LLLLLLLLLLLL"
+   ]
+  }
+ },
+ {
+  "id": "flg-025",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Ireland",
+   "Pakistan",
+   "Nigeria",
+   "Italy"
+  ],
+  "correctIndex": 2,
+  "funFact": "It was designed by a 23-year-old student in a 1959 competition. His original had a red sun in the middle band, which the judges removed.",
+  "explanation": "Green-white-green with nothing else on it is Nigeria alone among major flags.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "G": "green",
+    "W": "white"
+   },
+   "rows": [
+    "GGGGWWWWGGGG",
+    "GGGGWWWWGGGG",
+    "GGGGWWWWGGGG",
+    "GGGGWWWWGGGG",
+    "GGGGWWWWGGGG",
+    "GGGGWWWWGGGG"
+   ]
+  }
+ },
+ {
+  "id": "flg-026",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Thailand",
+   "Costa Rica",
+   "Cuba",
+   "North Korea"
+  ],
+  "correctIndex": 0,
+  "funFact": "The middle band was changed to dark blue during the First World War, reportedly in part to match the colours of the Allies.",
+  "explanation": "Costa Rica is the near-twin with the wide band red and the outer bands blue, exactly inverted.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "R": "red",
+    "W": "white",
+    "B": "darkblue"
+   },
+   "rows": [
+    "RRRRRRRRRRRR",
+    "WWWWWWWWWWWW",
+    "BBBBBBBBBBBB",
+    "BBBBBBBBBBBB",
+    "WWWWWWWWWWWW",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-027",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "Ecuador",
+   "Romania",
+   "Venezuela",
+   "Colombia"
+  ],
+  "correctIndex": 3,
+  "funFact": "The yellow half is often explained as the gold of the land, with blue for the two oceans and red for the blood spent on independence.",
+  "explanation": "Venezuela and Ecuador use the same colours in even bands with stars or arms added. The oversized yellow band is Colombia's tell.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "Y": "yellow",
+    "B": "blue",
+    "R": "red"
+   },
+   "rows": [
+    "YYYYYYYYYYYY",
+    "YYYYYYYYYYYY",
+    "YYYYYYYYYYYY",
+    "BBBBBBBBBBBB",
+    "BBBBBBBBBBBB",
+    "RRRRRRRRRRRR"
+   ]
+  }
+ },
+ {
+  "id": "flg-028",
+  "question": "Which country's flag is this?",
+  "choices": [
+   "United Kingdom",
+   "Australia",
+   "Norway",
+   "New Zealand"
+  ],
+  "correctIndex": 0,
+  "funFact": "It overlays three crosses: England's red on white, Scotland's white diagonal on blue, and Ireland's red diagonal. Wales does not appear at all.",
+  "explanation": "Australia and New Zealand carry this flag in their corner. Norway is a Nordic cross, a different construction entirely.",
+  "category": "flags",
+  "difficulty": "moderate",
+  "art": {
+   "palette": {
+    "B": "darkblue",
+    "W": "white",
+    "R": "red"
+   },
+   "rows": [
+    "WWBBWRRWBBWW",
+    "BWWBWRRWBWWB",
+    "WWWWWRRWWWWW",
+    "RRRRRRRRRRRR",
+    "WWWWWRRWWWWW",
+    "BWWBWRRWBWWB"
+   ]
+  }
+ },
+ {
   "id": "fud-001",
   "question": "Which spice is the most expensive by weight?",
   "choices": [
@@ -2998,6 +3825,623 @@
   "explanation": "The name blends interrogation and bang, which is printers' slang for the exclamation mark.",
   "category": "language",
   "difficulty": "moderate"
+ },
+ {
+  "id": "lmk-001",
+  "question": "What is this landmark?",
+  "choices": [
+   "The Eiffel Tower",
+   "Tokyo Tower",
+   "The Shard",
+   "Blackpool Tower"
+  ],
+  "correctIndex": 0,
+  "funFact": "It was meant to stand for 20 years and be scrapped. It survived because the army found the top useful for radio, and it is repainted by hand every seven years.",
+  "explanation": "Tokyo Tower copied the shape deliberately, but painted orange and white. As a silhouette, Paris got there first.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "      /\\",
+    "     /  \\",
+    "    /----\\",
+    "    /    \\",
+    "   / /--\\ \\",
+    "  / /    \\ \\",
+    " /_/      \\_\\",
+    "/_/________\\_\\"
+   ]
+  }
+ },
+ {
+  "id": "lmk-002",
+  "question": "What is this landmark?",
+  "choices": [
+   "The Luxor Las Vegas",
+   "The Louvre pyramid",
+   "Chichen Itza",
+   "The Pyramids of Giza"
+  ],
+  "correctIndex": 3,
+  "funFact": "The Great Pyramid was the tallest structure humans had ever built, and held that record for about 3,800 years.",
+  "explanation": "Chichen Itza is stepped with a flat top. Smooth-sided pyramids standing in a row are Giza.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "                  /\\",
+    "       /\\        /  \\",
+    "      /  \\      /    \\",
+    "     /    \\    /      \\",
+    "  /\\/      \\  /        \\",
+    " /__\\_______\\/__________\\__"
+   ]
+  }
+ },
+ {
+  "id": "lmk-003",
+  "question": "What is this landmark?",
+  "choices": [
+   "Philadelphia City Hall",
+   "Big Ben",
+   "St Mark’s Campanile",
+   "Rajabai Clock Tower"
+  ],
+  "correctIndex": 1,
+  "funFact": "Big Ben is strictly the bell inside, not the tower, which was renamed the Elizabeth Tower in 2012. Almost nobody uses either name correctly.",
+  "explanation": "A clock face high on a slim Gothic tower beside a river is one of the most reproduced silhouettes in the world.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "   /\\",
+    "  |--|",
+    "  |()|",
+    "  |--|",
+    "  |  |",
+    "  |  |",
+    "  |  |",
+    "  |  |",
+    " _|__|_"
+   ]
+  }
+ },
+ {
+  "id": "lmk-004",
+  "question": "What is this landmark?",
+  "choices": [
+   "The Statue of Liberty",
+   "The Colossus of Rhodes",
+   "The Motherland Calls",
+   "Christ the Redeemer"
+  ],
+  "correctIndex": 0,
+  "funFact": "The copper skin is about as thick as two pennies, and she was reddish-brown when unveiled. The green is a century of oxidation.",
+  "explanation": "Christ the Redeemer stands with both arms out level. One arm raised with a torch is Liberty.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "    \\ /",
+    "     |  o",
+    "    /|\\/|",
+    "   | \\ /|",
+    "   |  |  |",
+    "   |  |  |",
+    "   |__|__|",
+    "  /_______\\"
+   ]
+  }
+ },
+ {
+  "id": "lmk-005",
+  "question": "What is this landmark?",
+  "choices": [
+   "Humayun’s Tomb",
+   "St Basil’s Cathedral",
+   "The Taj Mahal",
+   "The Blue Mosque"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is a tomb, built by an emperor for his wife, and the four minarets lean slightly outwards so an earthquake would topple them away from the dome.",
+  "explanation": "The Blue Mosque has six minarets and a cascade of domes. One central dome between four minarets is the Taj.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "       __",
+    "    | (  ) |",
+    "    | /  \\ |",
+    " || |------| ||",
+    " || | |__| | ||",
+    " || | |  | | ||",
+    " ||_|_|__|_|_||"
+   ]
+  }
+ },
+ {
+  "id": "lmk-006",
+  "question": "What is this landmark?",
+  "choices": [
+   "Walt Disney Concert Hall",
+   "The Sydney Opera House",
+   "The Oslo Opera House",
+   "The Lotus Temple"
+  ],
+  "correctIndex": 1,
+  "funFact": "The roof shells were an unsolved engineering problem when construction began. The architect resigned before it opened and never returned to see it finished.",
+  "explanation": "Overlapping white sails on a harbour edge have no serious lookalike anywhere.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "        _   _",
+    "     _ / \\ / \\",
+    "  _ / |   |   \\",
+    " / |  |   |    \\",
+    "/__|__|___|_____\\",
+    "~~~~~~~~~~~~~~~~~~"
+   ]
+  }
+ },
+ {
+  "id": "lmk-007",
+  "question": "What is this landmark?",
+  "choices": [
+   "The Roman Forum",
+   "The Pantheon",
+   "The Arena of Nimes",
+   "The Colosseum"
+  ],
+  "correctIndex": 3,
+  "funFact": "It could reportedly be flooded for staged sea battles in its early years, and its stone was quarried for palaces for a thousand years after.",
+  "explanation": "Nimes has a strikingly similar Roman arena, which is why it is offered here, but the broken oval of arches means Rome to almost everyone.",
+  "category": "landmarks",
+  "difficulty": "moderate",
+  "art": {
+   "palette": null,
+   "rows": [
+    "      _______",
+    "   _/ n n n n \\_",
+    "  / n n n n n n \\",
+    " | n n n n n n n |",
+    " | n n n n n n n |",
+    " |_______________|"
+   ]
+  }
+ },
+ {
+  "id": "lmk-008",
+  "question": "What is this landmark?",
+  "choices": [
+   "Tower Bridge",
+   "The Brooklyn Bridge",
+   "The Forth Bridge",
+   "The Golden Gate Bridge"
+  ],
+  "correctIndex": 3,
+  "funFact": "The colour is called International Orange and began as a primer. The navy had wanted it painted in black and yellow stripes for visibility.",
+  "explanation": "Brooklyn Bridge has stone towers with pointed arches. Two steel towers with a swooping cable are the Golden Gate.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "   |\\        /|",
+    "   | \\_    _/ |",
+    "   |   \\__/   |",
+    "  _|__________|_",
+    " /  |        |  \\",
+    "~~~~~~~~~~~~~~~~~~"
+   ]
+  }
+ },
+ {
+  "id": "lmk-009",
+  "question": "What is this landmark?",
+  "choices": [
+   "Avebury",
+   "The Ring of Brodgar",
+   "Carnac",
+   "Stonehenge"
+  ],
+  "correctIndex": 3,
+  "funFact": "The largest stones weigh around 25 tonnes and came from 25 kilometres away. The smaller bluestones travelled about 250 kilometres from Wales.",
+  "explanation": "The other three are real stone circles, but only Stonehenge has the horizontal lintels lying across the top.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "  __   __   __",
+    " |  | |  | |  |",
+    " |  |_|  |_|  |",
+    " |   _    _   |",
+    " |  | |  | |  |",
+    " |__| |__| |__|"
+   ]
+  }
+ },
+ {
+  "id": "lmk-010",
+  "question": "What is this landmark?",
+  "choices": [
+   "The Leaning Tower of Pisa",
+   "The Round Tower",
+   "The Tower of Belem",
+   "Galata Tower"
+  ],
+  "correctIndex": 0,
+  "funFact": "It began leaning before it was finished, so the upper floors were built at an angle to compensate, which makes the tower slightly banana-shaped.",
+  "explanation": "A cylindrical tower would stand straight in silhouette. The lean is the entire identity of this one.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "     __",
+    "    /_/|",
+    "   /_/ |",
+    "   /_/ |",
+    "  /_/ |",
+    "  /_/ |",
+    " /_/ |",
+    " |__/"
+   ]
+  }
+ },
+ {
+  "id": "lmk-011",
+  "question": "What is this landmark?",
+  "choices": [
+   "The Angkor faces",
+   "The Moai of Easter Island",
+   "The Sphinx",
+   "The Olmec heads"
+  ],
+  "correctIndex": 1,
+  "funFact": "Nearly 900 of them stand on the island, and many have full bodies buried to the shoulders. The famous heads are only the visible third.",
+  "explanation": "Olmec heads are rounded and helmeted. Long faces with heavy brows standing in a row are the moai.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "   ____    ____",
+    "  /    \\  /    \\",
+    " |  __  ||  __  |",
+    " | |__| || |__| |",
+    " |  __  ||  __  |",
+    " | |  | || |  | |",
+    " |_|  |_||_|  |_|"
+   ]
+  }
+ },
+ {
+  "id": "lmk-012",
+  "question": "What is this landmark?",
+  "choices": [
+   "Vesuvius",
+   "The Matterhorn",
+   "Mount Fuji",
+   "Kilimanjaro"
+  ],
+  "correctIndex": 2,
+  "funFact": "It is climbable in a day and about 300,000 people do it every year, mostly at night so they reach the summit for sunrise.",
+  "explanation": "The Matterhorn is a jagged crooked horn. A symmetrical cone with a snow cap is Fuji, and half of Japanese art agrees.",
+  "category": "landmarks",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "      _/\\_",
+    "     / ** \\",
+    "    / **** \\",
+    "   /  ****  \\",
+    "  /          \\",
+    " /            \\",
+    "/______________\\"
+   ]
+  }
+ },
+ {
+  "id": "map-001",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Chile",
+   "Italy",
+   "Portugal",
+   "Norway"
+  ],
+  "correctIndex": 1,
+  "funFact": "The boot shape is so established that Italians describe regions by it: the toe is Calabria, the heel Puglia, and the ball of the foot kicks Sicily.",
+  "explanation": "Chile is a long thin strip and Norway is jagged with fjords. Nothing else in the world looks like a boot.",
+  "category": "maps",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "        __",
+    "     _-'  \\_",
+    "     \\      \\",
+    "      \\      \\_",
+    "       |   __  \\",
+    "       \\_ |  \\_/",
+    "     ___ \\|",
+    "    / \\ \\ |\\",
+    "    \\_/  \\|_\\"
+   ]
+  }
+ },
+ {
+  "id": "map-002",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Australia",
+   "Mongolia",
+   "Kazakhstan",
+   "Brazil"
+  ],
+  "correctIndex": 0,
+  "funFact": "The small shape hanging below the mainland is Tasmania, which mapmakers accidentally leave off so often that it has become a national running joke.",
+  "explanation": "Brazil tapers to the south rather than sitting wide. Kazakhstan and Mongolia are landlocked without the clean southern bight.",
+  "category": "maps",
+  "difficulty": "moderate",
+  "art": {
+   "palette": null,
+   "rows": [
+    "      __/\\_/\\___",
+    "   __/          \\_/\\",
+    "  /                 \\",
+    " |                   |",
+    " \\_                _/",
+    "   \\              /",
+    "    \\_____/\\_____/",
+    "            \\_/"
+   ]
+  }
+ },
+ {
+  "id": "map-003",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Iran",
+   "India",
+   "Thailand",
+   "Pakistan"
+  ],
+  "correctIndex": 1,
+  "funFact": "The southern triangle points at Sri Lanka, and the northern edge holds most of the Himalayas, so the outline runs from coral sea to the highest ground on Earth.",
+  "explanation": "Thailand has a long tail running down the Malay peninsula. The clean V taper into the ocean is India's signature.",
+  "category": "maps",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "    _/\\___/\\____",
+    "   /            \\_",
+    "  |               |",
+    "   \\_    ___     /",
+    "     \\  /   \\   /",
+    "      \\/     \\_/",
+    "       \\      /",
+    "        \\    /",
+    "         \\  /",
+    "          \\/"
+   ]
+  }
+ },
+ {
+  "id": "map-004",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Vietnam",
+   "Norway",
+   "Argentina",
+   "Chile"
+  ],
+  "correctIndex": 3,
+  "funFact": "On average about 180 kilometres wide but 4,300 long. Laid across Europe it would stretch from Lisbon past Moscow.",
+  "explanation": "Norway is also long but hangs at an angle with a heavily broken coast. Vietnam has a distinct S-curve.",
+  "category": "maps",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "  __",
+    " |  \\",
+    " |  |",
+    " |  |",
+    " |  |",
+    " |  |",
+    " |  |",
+    " |  |",
+    " \\  |",
+    "  \\_/"
+   ]
+  }
+ },
+ {
+  "id": "map-005",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Philippines",
+   "Japan",
+   "New Zealand",
+   "Indonesia"
+  ],
+  "correctIndex": 1,
+  "funFact": "The four main islands arc for about 3,000 kilometres, which is why the north gets ice floes while the south grows pineapples.",
+  "explanation": "New Zealand is two islands rather than an arc of four, and the Philippines is a scatter of thousands.",
+  "category": "maps",
+  "difficulty": "moderate",
+  "art": {
+   "palette": null,
+   "rows": [
+    "     __",
+    "    /  \\",
+    "    \\   \\_",
+    "     \\    \\",
+    "      \\    \\__",
+    "       \\      \\",
+    "       /   __  \\",
+    "      /  _/  \\_|",
+    "   __/  /",
+    "  /_/| /",
+    "     |/"
+   ]
+  }
+ },
+ {
+  "id": "map-006",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Germany",
+   "Poland",
+   "Spain",
+   "France"
+  ],
+  "correctIndex": 3,
+  "funFact": "French people genuinely call the mainland l'Hexagone, the hexagon, and the word appears in news reporting as a routine synonym for the country.",
+  "explanation": "Spain is squarer, with Portugal bitten out of its west side. Germany is taller than it is wide.",
+  "category": "maps",
+  "difficulty": "moderate",
+  "art": {
+   "palette": null,
+   "rows": [
+    "    ___/\\____",
+    "   /         \\",
+    "  |           \\",
+    "   \\_          |",
+    "  ___|         |",
+    " |            /",
+    "  \\    ______/",
+    "   \\__/   \\_/"
+   ]
+  }
+ },
+ {
+  "id": "map-007",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Greece",
+   "United Kingdom",
+   "Iceland",
+   "Ireland"
+  ],
+  "correctIndex": 1,
+  "funFact": "The ragged west side is Scotland's sea lochs and the Welsh coast. The small shape at lower left is Northern Ireland, on the island next door.",
+  "explanation": "Ireland on its own is more of an oval, and Iceland is a compact blob with fjords on every side.",
+  "category": "maps",
+  "difficulty": "moderate",
+  "art": {
+   "palette": null,
+   "rows": [
+    "       _/\\",
+    "      /   |",
+    "      \\_  \\",
+    "     _/    |",
+    "     \\_   _/",
+    " /\\    | /",
+    " \\/   /  \\",
+    "     |    \\",
+    "      \\_/\\_\\"
+   ]
+  }
+ },
+ {
+  "id": "map-008",
+  "question": "Which continent is this?",
+  "choices": [
+   "South America",
+   "Asia",
+   "North America",
+   "Africa"
+  ],
+  "correctIndex": 3,
+  "funFact": "The usual world map hides how large it is: Africa would swallow the United States, China, India and most of Europe together.",
+  "explanation": "South America also tapers south but bulges to the northwest. The wide top and the Horn on the right edge are the tells.",
+  "category": "maps",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "   ____/\\____",
+    "  /          \\",
+    "  \\           \\",
+    "   \\           \\",
+    "    \\___    ___/",
+    "        \\   \\",
+    "        |    |",
+    "        \\    |",
+    "         \\  /",
+    "          \\/|"
+   ]
+  }
+ },
+ {
+  "id": "map-009",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Australia",
+   "Brazil",
+   "Argentina",
+   "DR Congo"
+  ],
+  "correctIndex": 1,
+  "funFact": "It borders every South American country except two, Chile and Ecuador, and holds about half the continent's land and people.",
+  "explanation": "Argentina tapers all the way down to a point at Tierra del Fuego. Brazil bulges east into the Atlantic.",
+  "category": "maps",
+  "difficulty": "moderate",
+  "art": {
+   "palette": null,
+   "rows": [
+    "      ____",
+    "   __/    \\__",
+    "  /          \\_",
+    " |             |",
+    " |             |",
+    "  \\_          /",
+    "    \\        /",
+    "     |     _/",
+    "     \\    /",
+    "      \\__/"
+   ]
+  }
+ },
+ {
+  "id": "map-010",
+  "question": "Which country has this shape?",
+  "choices": [
+   "Canada",
+   "China",
+   "United States",
+   "Russia"
+  ],
+  "correctIndex": 2,
+  "funFact": "The straight top is the 49th parallel, one of the longest straight borders on Earth. The tail at lower right is Florida.",
+  "explanation": "Canada sits above that straight line and is far more broken up by islands and bays. The Florida tail settles it.",
+  "category": "maps",
+  "difficulty": "easy",
+  "art": {
+   "palette": null,
+   "rows": [
+    "  __________________",
+    " |                  \\__",
+    " |                    |",
+    "  \\                  /",
+    "   \\             ___/",
+    "    \\___        /",
+    "        \\______/\\",
+    "                 \\|"
+   ]
+  }
  },
  {
   "id": "mov-001",
