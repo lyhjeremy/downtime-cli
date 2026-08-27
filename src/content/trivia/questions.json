@@ -1498,12 +1498,12 @@
     "W": "white"
    },
    "rows": [
-    "BBBWWWWWWWWW",
-    "BBBWWWWWWWWW",
-    "WWWBBBBBBBBB",
-    "BBBWWWWWWWWW",
+    "BWBBBBBBBBBB",
     "WWWWWWWWWWWW",
-    "BBBBBBBBBBBB"
+    "BWBBBBBBBBBB",
+    "WWWWWWWWWWWW",
+    "BBBBBBBBBBBB",
+    "WWWWWWWWWWWW"
    ]
   }
  },

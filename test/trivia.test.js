@@ -189,3 +189,12 @@ test('an art question fits a normal window with the picture intact', () => {
     assert.ok(/[░▒▓█\/\\|_(]/.test(frame), `${q.id} art missing from frame`)
   }
 })
+
+test('batched input splits into individual keys', async () => {
+  const { splitKeys } = await import('../src/tui/screen.js')
+  assert.deepEqual(splitKeys('\x1b[B\x1b[B\r'), ['\x1b[B', '\x1b[B', '\r'])
+  assert.deepEqual(splitKeys('ab'), ['a', 'b'])
+  assert.deepEqual(splitKeys('\x1b'), ['\x1b'])
+  assert.deepEqual(splitKeys('\x1bOP'), ['\x1bOP'])
+  assert.deepEqual(splitKeys('n\x1b[A'), ['n', '\x1b[A'])
+})

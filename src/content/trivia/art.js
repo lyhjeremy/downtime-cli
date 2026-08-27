@@ -31,7 +31,9 @@ const EXTENDED_BG = {
   lightblue: { ext: '48;5;117', basic: '46' },
 }
 
-// Monochrome fallback: shading by luminance so light areas stay light.
+// Monochrome fallback: shading by luminance so light areas stay light. Green
+// gets a quadrant glyph of its own rather than sharing red's, or Bangladesh
+// (a red disc on green) would collapse into one solid block.
 const MONO = {
   white: '░',
   yellow: '▒',
@@ -39,7 +41,7 @@ const MONO = {
   lightblue: '▒',
   cyan: '▒',
   red: '▓',
-  green: '▓',
+  green: '▚',
   magenta: '▓',
   gray: '▓',
   blue: '█',

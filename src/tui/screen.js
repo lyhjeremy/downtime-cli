@@ -97,8 +97,14 @@ export class Screen {
 
   // Arrow-function fields rather than methods: these are added and removed as
   // listeners, so each needs a stable identity.
+  //
+  // A single stdin chunk can hold several keystrokes: a pty delivers fast
+  // typing batched, and paste arrives all at once. Split the chunk into
+  // individual keys so an arrow followed by Enter is two events, not one
+  // unrecognisable string.
   #handleKey = (data) => {
-    if (this.onKey) this.onKey(String(data))
+    if (!this.onKey) return
+    for (const key of splitKeys(String(data))) this.onKey(key)
   }
 
   #attachSafetyNets() {
@@ -118,4 +124,36 @@ export class Screen {
     process.off('uncaughtException', this.#restoreAndRethrow)
     throw err
   }
+}
+
+// Splits raw terminal input into key tokens: CSI escape sequences (\x1b[ ... final
+// byte), SS3 sequences (\x1bO + byte), a lone Escape, or single characters.
+export function splitKeys(data) {
+  const keys = []
+  let i = 0
+  while (i < data.length) {
+    const ch = data[i]
+    if (ch === '\x1b') {
+      const next = data[i + 1]
+      if (next === '[') {
+        let j = i + 2
+        // parameters and intermediates, then one final byte in @ to ~
+        while (j < data.length && !(data[j] >= '@' && data[j] <= '~')) j++
+        keys.push(data.slice(i, Math.min(j + 1, data.length)))
+        i = j + 1
+        continue
+      }
+      if (next === 'O' && i + 2 < data.length) {
+        keys.push(data.slice(i, i + 3))
+        i += 3
+        continue
+      }
+      keys.push('\x1b')
+      i += 1
+      continue
+    }
+    keys.push(ch)
+    i += 1
+  }
+  return keys
 }

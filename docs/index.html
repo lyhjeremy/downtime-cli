@@ -41,7 +41,7 @@
   a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 3px; }
 
   header.site { padding: 2.2rem 0 0; display: flex; justify-content: space-between; align-items: baseline; }
-  .brand { font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 1.05rem; color: var(--white); }
+  .brand { font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 1.05rem; color: var(--white); white-space: nowrap; }
   .brand .tld { color: var(--cyan); }
   nav a { color: var(--dim); font-size: 0.9rem; margin-left: 1.4rem; text-decoration: none; }
   nav a:hover { color: var(--text); }
@@ -219,7 +219,7 @@
   <div class="hero">
     <h1>Your build takes 90 seconds.<br>Your phone takes 20 minutes.</h1>
     <p class="sub">downtime fills the wait with one trivia question at a time, then snaps back the instant your command finishes.</p>
-    <p class="try-hint">↓ this one is real. press a–d, or click. ↓</p>
+    <p class="try-hint">↓ this one is real. press a-d, or click. ↓</p>
 
     <div class="terminal" id="term">
       <div class="tbar" aria-hidden="true">
@@ -390,7 +390,7 @@ function render(){
     html += '<div class="feedback"><div class="verdict '+(good?'good':'bad')+'">'+pick(good?NICE:MISS,q.id)+'</div><div class="body">'+esc(body)+'</div></div>';
   }
   const hint = selected===null
-    ? 'a–d answers · arrows + enter work too'
+    ? 'a-d answers · arrows + enter work too'
     : (phase==='finished' ? '<span class="key">[enter]</span> back to your task · [n] one more' : '<span class="key">[n]</span> next question');
   const status = phase==='finished'
     ? '<span class="status done">✅ task finished</span>'
