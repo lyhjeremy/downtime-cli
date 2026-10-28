@@ -207,7 +207,7 @@ export function renderFrame({ question, selected, cursor = 0, asked, correct, vi
         label = green(LETTERS[i])
         text = green(choice)
       } else if (isPicked) {
-        mark = red('✗')
+        mark = red('x')
         label = red(LETTERS[i])
         text = red(choice)
       } else {

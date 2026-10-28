@@ -28,7 +28,7 @@ export function buildRecap({ command, args, durationMs, exitCode, signal, conten
   const rule = dim('─'.repeat(Math.max(20, Math.min(width, 78))))
   const cmd = quoteCommand(command, args)
   const ok = exitCode === 0 && !signal
-  const verdict = ok ? green('✅ Done') : red(`❌ Failed`)
+  const verdict = ok ? green('Done') : red('Failed')
   const outcome = signal ? `Killed by ${signal}` : `Exit code ${exitCode}`
 
   const lines = [

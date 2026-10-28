@@ -3,324 +3,257 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>downtime</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230A1015%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2718%27 text-anchor=%27middle%27%3E%E2%8F%B3%3C/text%3E%3C/svg%3E">
-<meta name="description" content="Wrap a long-running command. Get trivia while you wait, and land back on your task the moment it finishes.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<title>downtime: trivia while a long command runs</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23191B1A%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27monospace%27 font-size=%2715%27 font-weight=%27700%27 fill=%27%23E3E5E1%27 text-anchor=%27middle%27%3Edt%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Wrap a long-running command. Get trivia in the terminal while you wait, and land back on your task with the full output the moment it finishes.">
 <style>
+  @font-face{font-family:"IBM Plex Sans Condensed";src:url("fonts/IBMPlexSansCondensed-600.woff2")format("woff2");font-weight:600;font-display:swap}
+  @font-face{font-family:"IBM Plex Mono";src:url("fonts/IBMPlexMono-400.woff2")format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"IBM Plex Mono";src:url("fonts/IBMPlexMono-600.woff2")format("woff2");font-weight:600;font-display:swap}
+  @font-face{font-family:"IBM Plex Sans";src:url("fonts/IBMPlexSans-400.woff2")format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"IBM Plex Sans";src:url("fonts/IBMPlexSans-600.woff2")format("woff2");font-weight:600;font-display:swap}
+  /* Ledger family: workshop. Tokens from _ai-projects-tooling/ledger/families/tokens/workshop.css */
   :root {
-    --page: #121A21;
-    --term: #0A1015;
-    --chrome: #161F28;
-    --edge: #24313C;
-    --text: #C8D6DE;
-    --dim: #718491;
-    --faint: #4A5A66;
-    --cyan: #4FC3CE;
-    --green: #7FBF8C;
-    --amber: #D8A657;
-    --red: #E28B84;
-    --white: #EDF3F6;
+    --paper: #E9EAE6; --panel: #F2F3EF; --ink: #191B1A; --ink-2: #4B504D;
+    --rule: #C3C6C1; --edge: #727773; --signal: #2F6243; --signal-2: #7C5A26;
+    /* The demo screen is a terminal: it keeps the dark family values in both themes. */
+    --term: #191B1A; --term-panel: #1F2220; --term-text: #E3E5E1; --term-dim: #A0A6A1; --term-faint: #7E8580;
+    --term-rule: #373B38; --term-good: #7DC096; --term-warn: #CBA668;
+    --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+    --font-body: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
   }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body {
-    margin: 0;
-    background: var(--page);
-    color: var(--text);
-    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
-    font-size: 1.02rem;
-    line-height: 1.65;
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #161817; --panel: #1F2220; --ink: #E3E5E1; --ink-2: #A0A6A1;
+      --rule: #373B38; --edge: #686E6A; --signal: #7DC096; --signal-2: #CBA668;
+      --term: #101211; --term-panel: #191B1A;
+    }
   }
-  .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
-  .wrap { max-width: 60rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
-  a { color: var(--cyan); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 3px; }
+  * { box-sizing: border-box; border-radius: 0; }
+  html, body { margin: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+  a { color: var(--signal); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+  code, kbd, .mono { font-family: var(--font-mono); }
+  .wrap { width: min(100% - 2rem, 60rem); margin: 0 auto; }
 
-  header.site { padding: 2.2rem 0 0; display: flex; justify-content: space-between; align-items: baseline; }
-  .brand { font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 1.05rem; color: var(--white); white-space: nowrap; }
-  .brand .tld { color: var(--cyan); }
-  nav a { color: var(--dim); font-size: 0.9rem; margin-left: 1.4rem; text-decoration: none; }
-  nav a:hover { color: var(--text); }
+  .masthead { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 16px;
+              border: 1px solid var(--edge); padding: 10px 14px; margin-top: 20px; }
+  .brand { font: 600 19px/1.2 var(--font-mono); margin: 0; }
+  .masthead nav { display: flex; gap: 4px 16px; flex-wrap: wrap; font: 12px/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: .1em; }
+  .masthead nav a { color: var(--ink-2); text-decoration: none; }
+  .masthead nav a:hover { color: var(--ink); text-decoration: underline; }
 
-  .hero { padding: clamp(2.5rem, 7vw, 5rem) 0 1.5rem; text-align: center; }
-  h1 {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: clamp(1.7rem, 4.5vw, 2.8rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--white);
-    margin: 0 0 0.8rem;
-    text-wrap: balance;
-    line-height: 1.2;
-  }
-  .sub { color: var(--dim); max-width: 42ch; margin: 0 auto 0.6rem; font-size: 1.1rem; text-wrap: balance; }
-  .try-hint { color: var(--faint); font-size: 0.85rem; font-family: "IBM Plex Mono", monospace; }
+  .hero { padding: 34px 0 10px; }
+  .kicker { font: 600 13px/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: .12em; color: var(--signal); margin: 0 0 10px; }
+  h1 { font: 600 clamp(34px, 5.6vw, 60px)/1.02 var(--font-display); letter-spacing: -.02em; margin: 0; max-width: 19ch; }
+  .sub { font-size: 19px; color: var(--ink-2); max-width: 56ch; margin: 16px 0 0; }
 
-  /* ---------- the terminal ---------- */
-  .terminal {
-    background: var(--term);
-    border: 1px solid var(--edge);
-    border-radius: 10px;
-    max-width: 46rem;
-    margin: 1.6rem auto 0;
-    text-align: left;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
-    overflow: hidden;
-  }
-  .tbar {
-    background: var(--chrome);
-    padding: 0.6rem 1rem;
-    display: flex; align-items: center; gap: 0.45rem;
-    font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; color: var(--faint);
-  }
-  .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--edge); }
-  .tbar span.title { margin-left: 0.5rem; letter-spacing: 0.06em; }
+  /* the demo: a plain bordered terminal block, captioned */
+  figure.demo { margin: 30px 0 0; }
+  .demo-head { display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; padding: 8px 14px;
+               border: 1px solid var(--edge); border-bottom: 0; font: 600 11.5px/1.4 var(--font-mono);
+               letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); background: var(--panel); }
   .screen {
-    padding: 1.2rem 1.3rem 1.1rem;
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: clamp(0.72rem, 1.9vw, 0.88rem);
-    line-height: 1.55;
-    min-height: 24em;
+    background: var(--term); color: var(--term-text); border: 1px solid var(--edge);
+    padding: 1.1rem 1.25rem 1rem; font-family: var(--font-mono);
+    font-size: clamp(0.74rem, 1.9vw, 0.9rem); line-height: 1.55; min-height: 25em;
     display: flex; flex-direction: column;
   }
+  .screen:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+  figure.demo figcaption { font-size: 14px; color: var(--ink-2); margin-top: 10px; max-width: 70ch; }
   .trow { display: flex; justify-content: space-between; gap: 1rem; }
-  .thead .l { color: var(--cyan); font-weight: 600; }
-  .thead .r { color: var(--faint); }
-  .cat { color: var(--faint); letter-spacing: 0.12em; font-size: 0.82em; margin-top: 0.9em; }
-  .qtext { color: var(--white); font-weight: 600; margin: 0.7em 0 0.9em; max-width: 48ch; }
+  .thead .l { color: var(--term-good); font-weight: 600; }
+  .thead .r { color: var(--term-faint); }
+  .cat { color: var(--term-faint); letter-spacing: 0.12em; font-size: 0.82em; margin-top: 0.9em; }
+  .qtext { color: var(--term-text); font-weight: 600; margin: 0.7em 0 0.9em; max-width: 48ch; }
   .art { margin: 0.1em 0 0.9em; align-self: center; }
   .art .arow { display: flex; height: 0.72em; }
   .art .px { height: 100%; flex: none; }
-  .art.lineart { color: var(--dim); white-space: pre; line-height: 1.15; }
+  .art.lineart { color: var(--term-dim); white-space: pre; line-height: 1.15; }
   .choices { display: flex; flex-direction: column; gap: 0.15em; }
-  .choice {
-    display: flex; gap: 0.7em; align-items: baseline;
-    background: none; border: 0; padding: 0.18em 0.4em; margin: 0;
-    font: inherit; color: var(--text); text-align: left; cursor: pointer; border-radius: 4px;
-    width: 100%;
-  }
-  .choice:hover { background: rgba(79,195,206,0.08); }
-  .choice .mark { width: 1em; color: var(--cyan); flex: none; }
-  .choice .letter { color: var(--faint); flex: none; }
-  .choice.cursor .text { color: var(--white); font-weight: 600; }
-  .choice.right .text, .choice.right .letter { color: var(--green); }
-  .choice.right .mark { color: var(--green); }
-  .choice.wrong .text, .choice.wrong .letter { color: var(--red); }
-  .choice.wrong .mark { color: var(--red); }
-  .choice.faded .text { color: var(--faint); }
+  .choice { display: flex; gap: 0.7em; align-items: baseline; background: none; border: 0; padding: 0.18em 0.4em; margin: 0;
+            font: inherit; color: var(--term-text); text-align: left; cursor: pointer; width: 100%; }
+  .choice:hover { background: var(--term-panel); }
+  .choice .mark { width: 1em; color: var(--term-text); flex: none; }
+  .choice .letter { color: var(--term-faint); flex: none; }
+  .choice.cursor .text { font-weight: 600; }
+  .choice.right .text, .choice.right .letter, .choice.right .mark { color: var(--term-good); }
+  .choice.wrong .text, .choice.wrong .letter, .choice.wrong .mark { color: var(--term-warn); }
+  .choice.faded .text { color: var(--term-faint); }
   .feedback { margin-top: 0.9em; max-width: 50ch; }
-  .feedback .verdict { font-weight: 600; color: var(--white); }
-  .feedback .verdict.good::before { content: "✓ "; color: var(--green); }
-  .feedback .verdict.bad::before { content: "· "; color: var(--amber); }
-  .feedback .body { color: var(--dim); margin-top: 0.2em; }
+  .feedback .verdict { font-weight: 600; color: var(--term-text); }
+  .feedback .verdict.good::before { content: "+ "; color: var(--term-good); }
+  .feedback .verdict.bad::before { content: "x "; color: var(--term-warn); }
+  .feedback .body { color: var(--term-dim); margin-top: 0.2em; }
   .tfoot { margin-top: auto; padding-top: 1em; }
-  .rule { border: 0; border-top: 1px solid var(--edge); margin: 0 0 0.55em; }
-  .hints { display: flex; justify-content: space-between; gap: 1rem; color: var(--faint); flex-wrap: wrap; }
-  .hints .key { color: var(--text); font-weight: 600; }
-  .status.running::before { content: "⏳ "; }
-  .status.done { color: var(--green); }
+  .rule { border: 0; border-top: 1px solid var(--term-rule); margin: 0 0 0.55em; }
+  .hints { display: flex; justify-content: space-between; gap: 0.3rem 1rem; color: var(--term-faint); flex-wrap: wrap; }
+  .hints .key { color: var(--term-text); font-weight: 600; }
+  .status.done { color: var(--term-good); }
   .recap { text-align: left; }
-  .recap .line { color: var(--faint); }
-  .recap .ok { color: var(--green); font-weight: 600; }
-  .recap .cmd { color: var(--white); }
-  .recap .meta { color: var(--dim); }
-  .recap .out { color: var(--dim); margin-top: 0.8em; }
-  .replay {
-    margin-top: 1.2em; align-self: flex-start;
-    font: inherit; color: var(--cyan); background: none;
-    border: 1px solid var(--edge); border-radius: 6px; padding: 0.4em 0.9em; cursor: pointer;
-  }
-  .replay:hover { border-color: var(--cyan); }
+  .recap .line { color: var(--term-faint); overflow: hidden; white-space: nowrap; }
+  .recap .ok { color: var(--term-good); font-weight: 600; }
+  .recap .cmd { color: var(--term-text); }
+  .recap .meta { color: var(--term-dim); }
+  .recap .out { color: var(--term-dim); margin-top: 0.8em; }
+  .replay { margin-top: 1.2em; align-self: flex-start; font: inherit; color: var(--term-text); background: none;
+            border: 1px solid var(--term-faint); padding: 0.4em 0.9em; cursor: pointer; }
+  .replay:hover { border-color: var(--term-text); }
 
-  /* ---------- install strip ---------- */
-  .install { max-width: 46rem; margin: 1.4rem auto 0; }
-  .cmdbox {
-    display: flex; align-items: center; gap: 0.8rem;
-    background: var(--term); border: 1px solid var(--edge); border-radius: 8px;
-    padding: 0.85rem 1.1rem;
-    font-family: "IBM Plex Mono", monospace; font-size: clamp(0.72rem, 2vw, 0.92rem);
-  }
-  .cmdbox .sig { color: var(--green); }
-  .cmdbox code { color: var(--white); overflow-x: auto; white-space: nowrap; flex: 1; scrollbar-width: none; }
-  .copy {
-    font: inherit; font-size: 0.78rem; color: var(--dim);
-    background: var(--chrome); border: 1px solid var(--edge); border-radius: 5px;
-    padding: 0.3rem 0.7rem; cursor: pointer; flex: none;
-  }
-  .copy:hover { color: var(--text); border-color: var(--dim); }
-  .install .after { color: var(--faint); font-size: 0.85rem; text-align: center; margin-top: 0.7rem; font-family: "IBM Plex Mono", monospace; }
+  .install { margin: 22px 0 0; }
+  .cmdbox { display: flex; align-items: center; gap: 0.8rem; border: 1px solid var(--edge); background: var(--panel);
+            padding: 0.75rem 1rem; font-family: var(--font-mono); font-size: clamp(0.74rem, 2vw, 0.95rem); }
+  .cmdbox .sig { color: var(--ink-2); }
+  .cmdbox code { color: var(--ink); overflow-x: auto; white-space: nowrap; flex: 1; }
+  .copy { font: 600 13px var(--font-body); color: var(--paper); background: var(--ink); border: 1px solid var(--ink);
+          padding: 0.4rem 0.8rem; cursor: pointer; flex: none; }
+  .copy:hover { background: var(--signal); border-color: var(--signal); }
+  .install .after { font: 14px/1.5 var(--font-mono); color: var(--ink-2); margin: 10px 0 0; }
 
-  /* ---------- sections ---------- */
-  section { padding: clamp(2.6rem, 6vw, 4.2rem) 0 0; }
-  section:last-of-type { padding-bottom: 3rem; }
-  .eyebrow {
-    font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; font-weight: 500;
-    letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.5rem;
-  }
-  h2 {
-    font-family: "IBM Plex Mono", monospace; font-size: clamp(1.25rem, 3vw, 1.7rem);
-    font-weight: 600; letter-spacing: -0.02em; color: var(--white); margin: 0 0 1rem; text-wrap: balance;
-  }
-  p { max-width: 62ch; margin: 0 0 1rem; }
-  p.dimmed { color: var(--dim); }
+  section.part { padding: 52px 0 0; }
+  .eyebrow { font: 600 12px/1.4 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--signal); margin: 0 0 8px; }
+  h2 { font: 600 clamp(26px, 3.4vw, 36px)/1.1 var(--font-display); letter-spacing: -.015em; margin: 0 0 14px; max-width: 24ch; }
+  p { max-width: 64ch; margin: 0 0 14px; }
+  p.dimmed { color: var(--ink-2); }
 
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1.4rem; }
-  .step {
-    background: var(--term); border: 1px solid var(--edge); border-radius: 8px; padding: 1.1rem 1.2rem;
-  }
-  .step .n { font-family: "IBM Plex Mono", monospace; color: var(--cyan); font-weight: 600; font-size: 0.85rem; }
-  .step h3 { font-family: "IBM Plex Mono", monospace; font-size: 1rem; color: var(--white); margin: 0.4rem 0 0.5rem; }
-  .step p { font-size: 0.92rem; color: var(--dim); margin: 0; }
-  .step code { color: var(--text); font-size: 0.85em; background: var(--chrome); padding: 0.1em 0.35em; border-radius: 3px; }
+  ol.steps { list-style: none; margin: 18px 0 0; padding: 0; border-top: 1px solid var(--edge); }
+  ol.steps li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 0 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  ol.steps .n { font: 600 13px/1.9 var(--font-mono); color: var(--signal); }
+  ol.steps h3 { font: 600 20px/1.25 var(--font-display); margin: 0 0 4px; }
+  ol.steps p { margin: 0; color: var(--ink-2); }
+  code.inl { font-size: .88em; background: color-mix(in srgb, var(--ink) 7%, transparent); padding: .1em .35em; }
 
-  .keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); border: 1px solid var(--edge); border-radius: 8px; overflow: hidden; background: var(--term); margin-top: 1.2rem; }
-  .keyrow { padding: 0.7rem 1rem; border-bottom: 1px solid var(--chrome); border-right: 1px solid var(--chrome); display: flex; gap: 0.8rem; align-items: baseline; }
-  kbd {
-    font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; font-weight: 600;
-    background: var(--chrome); border: 1px solid var(--edge); border-bottom-width: 2px;
-    border-radius: 4px; padding: 0.1rem 0.45rem; color: var(--white); white-space: nowrap;
-  }
-  .keyrow span { color: var(--dim); font-size: 0.9rem; }
+  .keys { margin: 18px 0 0; border: 1px solid var(--edge); }
+  .keys div { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 4px 14px; padding: 10px 14px; border-bottom: 1px solid var(--rule); align-items: baseline; }
+  .keys div:last-child { border-bottom: 0; }
+  @media (max-width: 560px) { .keys div { grid-template-columns: 1fr; } }
+  .keys span { color: var(--ink-2); font-size: 15.5px; }
+  kbd { font: 600 13px var(--font-mono); border: 1px solid var(--edge); padding: 0.05rem 0.4rem; background: var(--panel); color: var(--ink); white-space: nowrap; }
 
-  .tablebox { border: 1px solid var(--edge); border-radius: 8px; overflow-x: auto; background: var(--term); margin-top: 1.2rem; }
-  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
-  th, td { text-align: left; padding: 0.65rem 1rem; border-bottom: 1px solid var(--chrome); }
-  th { font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); font-weight: 500; }
+  .tablebox { border: 1px solid var(--edge); overflow-x: auto; background: var(--panel); margin-top: 18px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: baseline; }
+  th { font: 600 11px var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
   tbody tr:last-child td { border-bottom: 0; }
-  td code { font-family: "IBM Plex Mono", monospace; font-size: 0.82em; color: var(--text); background: var(--chrome); padding: 0.1em 0.4em; border-radius: 3px; white-space: nowrap; }
-  .ok { color: var(--green); font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; }
-  .meh { color: var(--amber); font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; }
+  td code { font-size: .85em; white-space: nowrap; }
+  .ok { color: var(--signal); font: 600 12.5px var(--font-mono); white-space: nowrap; }
+  .meh { color: var(--signal-2); font: 600 12.5px var(--font-mono); white-space: nowrap; }
 
-  .promise { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.4rem; }
-  .promise > div { background: var(--term); border: 1px solid var(--edge); border-radius: 8px; padding: 1.1rem 1.2rem; }
-  .promise h3 { font-family: "IBM Plex Mono", monospace; font-size: 0.98rem; color: var(--white); margin: 0 0 0.5rem; }
-  .promise p { font-size: 0.92rem; color: var(--dim); margin: 0; }
+  dl.rules { margin: 18px 0 0; border-top: 1px solid var(--edge); }
+  dl.rules div { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 4px 14px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  @media (max-width: 560px) { dl.rules div { grid-template-columns: 1fr; } }
+  dl.rules dt { font: 600 18px/1.3 var(--font-display); }
+  dl.rules dd { margin: 0; color: var(--ink-2); }
 
-  footer { border-top: 1px solid var(--edge); padding: 1.8rem 0 2.5rem; color: var(--faint); font-size: 0.88rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  footer { border-top: 1px solid var(--rule); margin-top: 56px; padding: 18px 0 50px; color: var(--ink-2); font-size: 14px;
+           display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; }
+  footer a { color: var(--ink-2); }
 </style>
 </head>
 <body>
 
 <div class="wrap">
-  <header class="site">
-    <div class="brand">downtime<span class="tld">-cli</span></div>
-    <nav>
+  <header class="masthead">
+    <p class="brand">downtime</p>
+    <nav aria-label="Sections">
       <a href="#install">install</a>
-      <a href="#how">how</a>
-      <a href="#agents">agents</a>
-      <a href="https://github.com/lyhjeremy/downtime-cli">github</a>
+      <a href="#how">how it works</a>
+      <a href="#agents">what it wraps</a>
+      <a href="https://github.com/lyhjeremy/downtime-cli">source</a>
     </nav>
   </header>
 
   <div class="hero">
-    <h1>Your build takes 90 seconds.<br>Your phone takes 20 minutes.</h1>
-    <p class="sub">downtime fills the wait with one trivia question at a time, then snaps back the instant your command finishes.</p>
-    <p class="try-hint">↓ this one is real. press a-d, or click. ↓</p>
+    <p class="kicker">Zero-dependency Node CLI</p>
+    <h1>Put dt in front of a slow command and play trivia until it finishes</h1>
+    <p class="sub">When the command exits, the game closes mid-question and you get one line saying what ran and how long it took, then the command's full output, untouched.</p>
 
-    <div class="terminal" id="term">
-      <div class="tbar" aria-hidden="true">
-        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-        <span class="title">downtime run npm run build</span>
-      </div>
-      <div class="screen" id="screen" tabindex="0" aria-label="Playable downtime demo. Press A to D to answer."></div>
-    </div>
+    <figure class="demo">
+      <div class="demo-head" aria-hidden="true"><span>$ dt npm run build</span><span>playable: a to d, or click</span></div>
+      <div class="screen" id="screen" tabindex="0" aria-label="Playable downtime demo. Press A to D to answer, N for the next question."></div>
+      <figcaption>A browser copy of the trivia screen, using 12 of the 550 questions in <code>questions.json</code>. The build is simulated and "finishes" after three answers. In a real terminal the right answer gets a check mark and the colors come from your theme.</figcaption>
+    </figure>
 
     <div class="install" id="install">
       <div class="cmdbox">
         <span class="sig">$</span>
         <code id="installCmd">npm install -g github:lyhjeremy/downtime-cli</code>
-        <button class="copy" id="copyBtn" type="button">copy</button>
+        <button class="copy" id="copyBtn" type="button">Copy</button>
       </div>
-      <p class="after">then: <strong>dt</strong> &lt;any command&gt; &nbsp;·&nbsp; e.g. &nbsp;<strong>dt npm run build</strong></p>
+      <p class="after">Then <strong>dt</strong> &lt;any command&gt;, for example <strong>dt npm run build</strong>. Node 18 or newer.</p>
     </div>
   </div>
 
-  <section id="how">
-    <div class="eyebrow">How it works</div>
+  <section class="part" id="how">
+    <p class="eyebrow">How it works</p>
     <h2>Two letters in front of what you already type</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="n">1</div>
-        <h3>Prefix the command</h3>
-        <p><code>dt npm run build</code> · <code>dt pytest -x</code> · <code>dt claude -p "fix the tests"</code>. Output, exit code and behaviour are identical to running it bare, so it is safe anywhere.</p>
-      </div>
-      <div class="step">
-        <div class="n">2</div>
-        <h3>Under 5 seconds? Invisible.</h3>
-        <p>Longer, and the trivia takes over the screen. Answer with letters, numbers or arrow keys. Flags, maps and landmarks are drawn right in the terminal.</p>
-      </div>
-      <div class="step">
-        <div class="n">3</div>
-        <h3>It lets go when your task does</h3>
-        <p>The moment the command exits you get one line saying what ran and how long it took, then the full output, untouched. Nothing is ever lost.</p>
-      </div>
-    </div>
+    <ol class="steps">
+      <li><span class="n">01</span><div><h3>Prefix the command</h3>
+        <p><code class="inl">dt npm run build</code>, <code class="inl">dt pytest -x</code>, <code class="inl">dt claude -p "fix the tests"</code>. Output, exit code and behavior are the same as running it bare.</p></div></li>
+      <li><span class="n">02</span><div><h3>Under 5 seconds, nothing happens</h3>
+        <p>Past the threshold the trivia takes over the screen, on the terminal's alternate buffer so it never reaches your scrollback. Answer with letters, numbers or the arrow keys. Flags, country outlines and landmarks are drawn in the terminal.</p></div></li>
+      <li><span class="n">03</span><div><h3>It lets go when your command does</h3>
+        <p>Everything the command printed while the game was up is held and replayed in order, on the stream it came from, with the real exit code.</p></div></li>
+    </ol>
   </section>
 
-  <section>
-    <div class="eyebrow">Keys</div>
+  <section class="part">
+    <p class="eyebrow">Keys</p>
     <h2>Everything the game understands</h2>
     <div class="keys">
-      <div class="keyrow"><kbd>a</kbd>–<kbd>d</kbd><span>answer, or <kbd>1</kbd>–<kbd>4</kbd></span></div>
-      <div class="keyrow"><kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd><span>move the highlight and pick</span></div>
-      <div class="keyrow"><kbd>n</kbd><span>next question, space works too</span></div>
-      <div class="keyrow"><kbd>q</kbd> / <kbd>Esc</kbd><span>leave the game, command keeps running</span></div>
-      <div class="keyrow"><kbd>Enter</kbd><span>return, once the task has finished</span></div>
-      <div class="keyrow"><kbd>Ctrl</kbd>+<kbd>C</kbd><span>kill the command and everything it started</span></div>
+      <div><span><kbd>a</kbd> to <kbd>d</kbd>, or <kbd>1</kbd> to <kbd>4</kbd></span><span>answer</span></div>
+      <div><span><kbd>Up</kbd> <kbd>Down</kbd> <kbd>Enter</kbd></span><span>move the highlight and pick</span></div>
+      <div><span><kbd>n</kbd> or <kbd>Space</kbd></span><span>next question</span></div>
+      <div><span><kbd>q</kbd> or <kbd>Esc</kbd></span><span>leave the game; the command keeps running</span></div>
+      <div><span><kbd>Enter</kbd></span><span>return to your task once it has finished</span></div>
+      <div><span><kbd>Ctrl</kbd>+<kbd>C</kbd></span><span>stop the command and everything it started, then print what it had output</span></div>
     </div>
   </section>
 
-  <section id="agents">
-    <div class="eyebrow">Compatibility</div>
-    <h2>Made for the agent-wait era</h2>
-    <p class="dimmed">Anything that runs to completion works: builds, tests, installs, deploys, and coding agents in their non-interactive mode. Tools that open their own interface, like bare <code class="mono">claude</code> or <code class="mono">vim</code>, are the one thing not to wrap.</p>
+  <section class="part" id="agents">
+    <p class="eyebrow">Compatibility</p>
+    <h2>Anything that runs to completion</h2>
+    <p class="dimmed">Builds, tests, installs, deploys, and coding agents in their non-interactive mode. The wrapped command gets an empty stdin, so tools that open their own interface, like bare <code class="inl">claude</code> or <code class="inl">vim</code>, fail at once and visibly. Don't wrap those.</p>
     <div class="tablebox">
       <table>
-        <thead><tr><th>Tool</th><th>Command</th><th></th></tr></thead>
+        <thead><tr><th>Tool</th><th>Command</th><th>Status</th></tr></thead>
         <tbody>
-          <tr><td>Claude Code</td><td><code>dt claude -p "refactor the auth module"</code></td><td class="ok">verified</td></tr>
-          <tr><td>Codex CLI</td><td><code>dt codex exec "fix the failing test"</code></td><td class="meh">same pattern</td></tr>
-          <tr><td>Gemini CLI</td><td><code>dt gemini -p "explain this repo"</code></td><td class="meh">same pattern</td></tr>
-          <tr><td>Aider</td><td><code>dt aider --message "add tests" --yes</code></td><td class="meh">same pattern</td></tr>
-          <tr><td>Everything else</td><td><code>dt npm run build</code> · <code>dt cargo build</code> · <code>dt pytest</code></td><td class="ok">works</td></tr>
+          <tr><td>Claude Code</td><td><code>dt claude -p "refactor the auth module"</code></td><td class="ok">tested</td></tr>
+          <tr><td>Codex CLI</td><td><code>dt codex exec "fix the failing test"</code></td><td class="meh">same pattern, untested</td></tr>
+          <tr><td>Gemini CLI</td><td><code>dt gemini -p "explain this repo"</code></td><td class="meh">same pattern, untested</td></tr>
+          <tr><td>Aider</td><td><code>dt aider --message "add tests" --yes</code></td><td class="meh">same pattern, untested</td></tr>
+          <tr><td>Everything else</td><td><code>dt npm run build</code>, <code>dt cargo build</code>, <code>dt pytest</code></td><td class="ok">works</td></tr>
         </tbody>
       </table>
     </div>
     <div class="tablebox">
       <table>
-        <thead><tr><th>Where</th><th></th></tr></thead>
+        <thead><tr><th>Where</th><th>Behavior</th></tr></thead>
         <tbody>
           <tr><td>Terminal.app, iTerm2, Alacritty, Kitty, WezTerm, GNOME Terminal</td><td class="ok">full support</td></tr>
           <tr><td>VS Code, Cursor and JetBrains integrated terminals</td><td class="ok">full support</td></tr>
           <tr><td>tmux and GNU screen</td><td class="ok">full support</td></tr>
-          <tr><td>Emacs shells, dumb terminals, CI, pipes</td><td class="meh">skipped, runs as a plain wrapper</td></tr>
+          <tr><td>Emacs shells, dumb terminals, CI, pipes</td><td class="meh">plain wrapper, no trivia</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section>
-    <div class="eyebrow">Principles</div>
-    <h2>Two promises</h2>
-    <div class="promise">
-      <div>
-        <h3>Your output is sacred</h3>
-        <p>Everything printed while the game is up is held and replayed in order, on the stream it came from, with the real exit code. Verified against a 40,000-line firehose with zero lines lost.</p>
-      </div>
-      <div>
-        <h3>It will never trap you</h3>
-        <p>No streaks, no daily goals, no notifications, no feed. Bounded questions with a clean finish, so there is nothing to pull you back once your work is ready.</p>
-      </div>
-    </div>
+  <section class="part">
+    <p class="eyebrow">Design rules</p>
+    <h2>Two things it will not do</h2>
+    <dl class="rules">
+      <div><dt>Lose output</dt><dd>Held output is replayed in order with the real exit code. In a test with a 40,000-line firehose every line arrived, in order. Past 32 MB held, the game ends early and the rest streams normally.</dd></div>
+      <div><dt>Ask you back</dt><dd>No streaks, daily goals, notifications or feed. Each question finishes in a few seconds and carries nothing over, so there is nothing to return to once your work is ready.</dd></div>
+    </dl>
   </section>
 
   <footer>
-    <div>MIT · zero dependencies · Node ≥ 18 · 550 questions, 23 categories</div>
-    <div><a href="https://github.com/lyhjeremy/downtime-cli">github.com/lyhjeremy/downtime-cli</a></div>
+    <span>MIT · no dependencies · Node 18 or newer · 550 questions in 23 categories</span>
+    <a href="https://github.com/lyhjeremy/downtime-cli">github.com/lyhjeremy/downtime-cli</a>
   </footer>
 </div>
 
@@ -377,8 +310,8 @@ function render(){
     let cls='choice', mark='&nbsp;';
     if (selected===null && i===cursor){ cls+=' cursor'; mark='▸'; }
     if (selected!==null){
-      if (i===q.correctIndex){ cls+=' right'; mark='✓'; }
-      else if (i===selected){ cls+=' wrong'; mark='✗'; }
+      if (i===q.correctIndex){ cls+=' right'; mark='+'; }
+      else if (i===selected){ cls+=' wrong'; mark='x'; }
       else cls+=' faded';
     }
     html += '<button type="button" class="'+cls+'" data-i="'+i+'"><span class="mark">'+mark+'</span><span class="letter">'+LETTERS[i]+'</span><span class="text">'+esc(c)+'</span></button>';
@@ -393,8 +326,8 @@ function render(){
     ? 'a-d answers · arrows + enter work too'
     : (phase==='finished' ? '<span class="key">[enter]</span> back to your task · [n] one more' : '<span class="key">[n]</span> next question');
   const status = phase==='finished'
-    ? '<span class="status done">✅ task finished</span>'
-    : '<span class="status running">npm run build</span>';
+    ? '<span class="status done">task finished</span>'
+    : '<span class="status running">running: npm run build</span>';
   html += '<div class="tfoot"><hr class="rule"><div class="hints"><span>'+hint+'</span>'+status+'</div></div>';
   screen.innerHTML = html;
   screen.querySelectorAll('.choice').forEach(b=>b.addEventListener('click',()=>{ if(selected===null) answer(+b.dataset.i); else next(); }));
@@ -405,13 +338,12 @@ function renderRecap(){
   screen.innerHTML =
     '<div class="recap">'+
     '<div class="line">──────────────────────────────────────────</div>'+
-    '<div><span class="ok">✅ Done</span> in <span class="cmd">'+dur+'</span>:&nbsp; <span class="cmd">npm run build</span></div>'+
+    '<div><span class="ok">Done</span> in <span class="cmd">'+dur+'</span>:&nbsp; <span class="cmd">npm run build</span></div>'+
     '<div class="meta">Exit code 0 · Trivia: '+correct+'/'+asked+' correct</div>'+
     '<div class="line">──────────────────────────────────────────</div>'+
-    '<div class="out">webpack 5.101.0 compiled successfully in 84421 ms<br>artifacts written to dist/ · 14 files, 2.3 MB</div>'+
-    '<div class="out">That snap-back is the product. Install it and the build is real.</div>'+
+    '<div class="out">[the build\'s own output follows here, exactly as it would have appeared]</div>'+
     '</div>'+
-    '<button type="button" class="replay" id="replay">↻ play again</button>';
+    '<button type="button" class="replay" id="replay">Play again</button>';
   document.getElementById('replay').addEventListener('click', restart);
 }
 
@@ -436,11 +368,19 @@ document.addEventListener('keydown', (e)=>{
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   const tag = document.activeElement && document.activeElement.tagName;
   if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  // Only take keys when the demo has focus, or nothing else does and the demo is on screen,
+  // so arrow keys still scroll the page and Tab still moves focus.
+  const inTerm = screen.contains(document.activeElement);
+  const r = screen.getBoundingClientRect();
+  const onScreen = r.top < innerHeight && r.bottom > 0;
+  if (!inTerm && !(document.activeElement === document.body && onScreen)) return;
+  if (e.key === 'Tab') return;
   const k = e.key.toLowerCase();
+  if (!inTerm && k.startsWith('arrow')) return;
   if (phase==='recap'){ if(k==='enter'||k==='n'||k==='r'){ restart(); e.preventDefault(); } return; }
   if (selected===null){
     if (k==='arrowup'||k==='arrowleft'){ cursor=(cursor+3)%4; render(); e.preventDefault(); return; }
-    if (k==='arrowdown'||k==='arrowright'||k==='tab'){ cursor=(cursor+1)%4; render(); e.preventDefault(); return; }
+    if (k==='arrowdown'||k==='arrowright'){ cursor=(cursor+1)%4; render(); e.preventDefault(); return; }
     let i = LETTERS.indexOf(k); if (i<0) i = ['1','2','3','4'].indexOf(k);
     if (i<0 && k==='enter') i = cursor;
     if (i>=0){ answer(i); e.preventDefault(); }
@@ -452,7 +392,7 @@ document.addEventListener('keydown', (e)=>{
 
 setInterval(()=>{ if(phase==='play' && selected===null) render(); }, 1000);
 document.getElementById('copyBtn').addEventListener('click', async ()=>{
-  try { await navigator.clipboard.writeText(document.getElementById('installCmd').textContent); document.getElementById('copyBtn').textContent='copied'; setTimeout(()=>document.getElementById('copyBtn').textContent='copy',1500); } catch {}
+  try { await navigator.clipboard.writeText(document.getElementById('installCmd').textContent); document.getElementById('copyBtn').textContent='Copied'; setTimeout(()=>document.getElementById('copyBtn').textContent='Copy',1500); } catch {}
 });
 render();
 </script>

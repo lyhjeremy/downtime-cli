@@ -18,8 +18,6 @@ dt pytest -x
 
 ## Quick start
 
-Three things to know and you are done.
-
 **1. Put `dt` in front of any command you are about to wait on.**
 
 ```bash
@@ -33,7 +31,7 @@ dt claude -p "refactor the auth module"
 
 **3. When the command finishes, you land back automatically** with a line telling you what you ran and how long it took, followed by the full output.
 
-That is the whole tool. Everything below is tuning. There is a one-page version of this at the [field guide](https://claude.ai/code/artifact/c6f50baf-fc3a-481a-ab6c-9948436b6e7a).
+The rest of this file is tuning. There is a one-page version of this at the [field guide](https://claude.ai/code/artifact/c6f50baf-fc3a-481a-ab6c-9948436b6e7a).
 
 ```bash
 downtime config set entry.thresholdSeconds 10   # wait longer before it kicks in
@@ -99,7 +97,7 @@ Exit code 0 · Trivia: 3/4 correct
 [the build's own output follows, exactly as it would have appeared]
 ```
 
-In the terminal the chosen answer and the finish line are marked with check-mark glyphs and drawn in color; they are plain text above. Get a question wrong and it shows you the right answer with a short explanation. Scores are forgotten when the session ends, and a wrong answer costs nothing: being right earns you a fact, and being wrong earns you a different one.
+In the terminal the right answer and the `task finished` marker carry a check-mark glyph, a wrong pick is marked `x`, and all of it is drawn in color; the samples above are plain text. The [playable demo](https://lyhjeremy.github.io/downtime-cli) is a browser copy of this screen with 12 of the questions. Get a question wrong and it shows you the right answer with a short explanation. Scores are forgotten when the session ends, and a wrong answer costs nothing: being right earns you a fact, and being wrong earns you a different one.
 
 550 questions ship with it, across 23 categories: geography, science, space, animals, history, food, language, arts, sport, the human body, origins, myths, inventions, records, movies, music, mythology, psychology, oddities and numbers, plus three picture categories: flags, country outlines and landmarks, drawn as colored blocks and line art right in the terminal. On terminals without color the pictures fall back to shading, so a flag still reads as light and dark. They lean toward surprising facts over the kind you would be examined on. Where the answer is a widely believed thing that happens to be wrong, the question says so.
 
