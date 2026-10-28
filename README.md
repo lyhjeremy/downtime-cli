@@ -14,7 +14,7 @@ dt pytest -x
 
 - 550 questions in 23 categories, including flags, country outlines and landmarks drawn in the terminal.
 - No runtime dependencies; Node 18 or newer. CI runs 56 tests on Linux and macOS against Node 18, 20 and 22.
-- Transparent when it should be: commands under 5 seconds, piped output, CI and dumb terminals see no trivia, and the wrapped command's exit code is passed through.
+- It stays out of the way when it should: commands under 5 seconds, piped output, CI and dumb terminals get plain output with no trivia, and the wrapped command's exit code is passed through.
 
 ## Quick start
 
@@ -27,11 +27,9 @@ dt npm run build
 dt claude -p "refactor the auth module"
 ```
 
-`dt` and `downtime` are the same binary, and `downtime run <cmd>` is the explicit spelling of the same thing for scripts.
+`dt` and `downtime` are the same binary, and `downtime run <cmd>` is the explicit spelling of the same thing for scripts. The command's output, exit code and behavior are the same as running it bare.
 
-Nothing else changes. The command's output, its exit code and its behavior are the same as running it bare.
-
-**2. If it finishes in under 5 seconds, you will not see downtime at all.** Longer than that and the trivia appears. Answer with `a` to `d`, or move the highlight with the arrow keys and press Enter. `n` gets you another question; `q` steps out if you would rather watch the output after all.
+**2. A command that finishes in under 5 seconds never shows downtime at all.** Past that, the trivia appears. Answer with `a` to `d`, or move the highlight with the arrow keys and press Enter. `n` gets you another question; `q` steps out if you want to watch the output after all.
 
 **3. When the command finishes, you land back automatically** with a line telling you what you ran and how long it took, followed by the full output.
 
@@ -46,13 +44,13 @@ DOWNTIME_DISABLE=1 downtime run npm test        # off for one run
 
 ## Why
 
-Waiting on a build or an agent task creates a gap that is too short to start anything real and too long to sit through. Most people fill it by picking up a phone, and then the hard part is not the wait, it is getting back. Anything genuinely engaging (an article, a video, a side task) has the same problem: it does not want to end when your build does.
+Waiting on a build or an agent task leaves a gap too short to start anything and too long to sit through. Most people pick up a phone, and the hard part turns out to be getting back. An article, a video or a side task has the same problem, because none of them wants to end when your build does.
 
-Trivia is the opposite. Each question is a few seconds long, it finishes cleanly, and nothing carries over. When the command completes you can drop it mid-sentence and lose nothing.
+A trivia question lasts a few seconds, finishes cleanly and carries nothing over, so when the command completes you can drop it mid-sentence and lose nothing.
 
 ## Install
 
-Straight from GitHub, one line, no account needed:
+Install straight from GitHub with one line (you don't need an npm account):
 
 ```bash
 npm install -g github:lyhjeremy/downtime-cli
@@ -64,7 +62,7 @@ That gives you both commands, `dt` and `downtime`. Or try it once without instal
 npx -y github:lyhjeremy/downtime-cli npm run build
 ```
 
-Requires Node 18 or newer. It has no dependencies. Tested on Linux and macOS against Node 18, 20 and 22. (`npm install -g downtime-cli` will work too once the package is published to the registry.)
+It needs Node 18 or newer and has no dependencies, and it is tested on Linux and macOS against Node 18, 20 and 22. (`npm install -g downtime-cli` will work too once the package is published to the registry.)
 
 ## How it works
 
@@ -101,25 +99,25 @@ Exit code 0 · Trivia: 3/4 correct
 [the build's own output follows, exactly as it would have appeared]
 ```
 
-In the terminal the chosen answer and the finish line are marked with check-mark glyphs and drawn in color; they are plain text above. Get a question wrong and it shows you the right answer with a short explanation. There is no penalty and no score kept between sessions. Being right earns you a fact, being wrong earns you a different one.
+In the terminal the chosen answer and the finish line are marked with check-mark glyphs and drawn in color; they are plain text above. Get a question wrong and it shows you the right answer with a short explanation. Scores are forgotten when the session ends, and a wrong answer costs nothing: being right earns you a fact, and being wrong earns you a different one.
 
-550 questions ship with it, across 23 categories: geography, science, space, animals, history, food, language, arts, sport, the human body, origins, myths, inventions, records, movies, music, mythology, psychology, oddities and numbers, plus three picture categories: flags, country outlines and landmarks, drawn as colored blocks and line art right in the terminal. On terminals without color the pictures fall back to shading, so a flag still reads as light and dark. They lean towards the surprising rather than the examinable. Where the answer is a widely believed thing that happens to be wrong, the question says so.
+550 questions ship with it, across 23 categories: geography, science, space, animals, history, food, language, arts, sport, the human body, origins, myths, inventions, records, movies, music, mythology, psychology, oddities and numbers, plus three picture categories: flags, country outlines and landmarks, drawn as colored blocks and line art right in the terminal. On terminals without color the pictures fall back to shading, so a flag still reads as light and dark. They lean toward surprising facts over the kind you would be examined on. Where the answer is a widely believed thing that happens to be wrong, the question says so.
 
 ## Behavior worth knowing
 
 The trivia screen runs on the terminal's alternate buffer, so it never lands in your scrollback. Everything the wrapped command prints while the screen is occupied is held and replayed afterwards in order, on the same stream it came from. `downtime run` exits with the wrapped command's exit code, so it drops into scripts and CI without changing anything.
 
-If the command finishes before the threshold, downtime is invisible. No game, no recap, no extra line of output.
+If the command finishes before the threshold, downtime is invisible: you get the command's output and nothing else.
 
-One fidelity note: stdout and stderr are captured on separate pipes, so their order relative to each other during the held period is best effort. Order within each stream is exact. If you need the two perfectly interleaved, pipe the output, which puts downtime into transparent mode anyway.
+One fidelity note: stdout and stderr are captured on separate pipes, so their order relative to each other during the held period is best effort (order within each stream is exact). If you need the two perfectly interleaved, pipe the output, which puts downtime into transparent mode anyway.
 
 If either stdin or stdout is not a terminal (`downtime run x | tee log`, or anything in CI), downtime steps aside entirely and acts as a transparent wrapper.
 
-Ctrl-C forwards the interrupt to the whole process tree, restores the terminal, prints whatever output was captured, and exits 130. A second Ctrl-C escalates to SIGKILL. Once the command has finished, Ctrl-C simply closes the session rather than trying to signal something that is already gone.
+Ctrl-C forwards the interrupt to the whole process tree, restores the terminal, prints whatever output was captured, and exits 130. A second Ctrl-C escalates to SIGKILL. Once the command has finished, Ctrl-C just closes the session, since there is nothing left to signal.
 
 Press `q` or Escape to leave the trivia without killing anything. The command carries on, held output is handed back, and the rest streams as normal. You still get the recap when it finishes.
 
-Because output is captured through a pipe, most tools would normally switch their color off. When your own terminal is a TTY, downtime sets `FORCE_COLOR` and `CLICOLOR_FORCE` for the child so colored build output survives. Anything you have set yourself takes precedence, and nothing is set when the output is genuinely being piped somewhere.
+Because output is captured through a pipe, most tools would normally switch their color off. When your own terminal is a TTY, downtime sets `FORCE_COLOR` and `CLICOLOR_FORCE` for the child so colored build output survives. Anything you have set yourself takes precedence, and nothing is set when the output is going into a pipe.
 
 ## Options
 
@@ -180,7 +178,7 @@ downtime config set entry.mode manual
 downtime config set exit.mode finish_round
 ```
 
-`downtime config` prints the file's location and the settings currently in effect, and `downtime config path` prints just the path. If the file has a value downtime does not understand, it says so on stderr and falls back to the default rather than rewriting your file. If the config directory cannot be written at all, downtime runs on defaults and gets out of the way rather than failing.
+`downtime config` prints the file's location and the settings currently in effect, and `downtime config path` prints just the path. If the file has a value downtime does not understand, it says so on stderr, uses the default and leaves your file alone. If the config directory cannot be written at all, downtime runs on defaults and still runs your command.
 
 `~/.downtime/state.json` tracks which questions you have already seen so they do not come around again. Delete it to reset.
 
@@ -198,11 +196,11 @@ Downtime mode needs to own the keyboard, so the wrapped command is given an empt
 | Aider | `downtime run aider --message "..." --yes` |
 | Anything else | `downtime run <cmd>` if it does not need a TTY |
 
-Verified end to end against Claude Code. The other agent CLIs follow the same pattern (a non-interactive flag that prints and exits) but have not been run here, so treat those rows as the pattern to use rather than a test result.
+I have verified it end to end against Claude Code. The other agent CLIs follow the same pattern (a non-interactive flag that prints and exits) but have not been run here, so those rows show the pattern to use and are untested.
 
-**Does not work.** Interactive sessions: bare `claude`, `codex` with no subcommand, `aider` in its REPL, `vim`, `top`, `git rebase -i`, anything that opens its own full-screen interface. These fail immediately and visibly rather than hanging: a tool that requires a TTY prints its own error and exits, and a tool that prompts for input reads end-of-file instead of your answer. Nothing is silently swallowed, but nothing useful happens either. Do not wrap them.
+**Does not work.** Interactive sessions: bare `claude`, `codex` with no subcommand, `aider` in its REPL, `vim`, `top`, `git rebase -i`, anything that opens its own full-screen interface. These fail at once, and visibly. A tool that requires a TTY prints its own error and exits, and a tool that prompts for input reads end-of-file instead of your answer; nothing hangs or gets silently swallowed, and nothing useful happens either. Do not wrap them.
 
-The event for detecting a child blocked on input (`taskNeedsInput`) is reserved in the runner and nothing emits it yet. That is the main gap for the next release.
+The event for detecting a child blocked on input (`taskNeedsInput`) is reserved in the runner, but nothing emits it yet; that is the main gap for the next release.
 
 ## Terminals and editors
 
@@ -217,19 +215,19 @@ The trivia screen uses the alternate screen buffer, the same mechanism `less` an
 | Emacs `M-x shell`, restricted CI shells | Detected and skipped, see below |
 | Piped, redirected or non-interactive | Transparent wrapper, no trivia |
 
-If `TERM` is unset, `dumb`, or otherwise a terminal that cannot draw a full screen, downtime does not try. It runs your command as a plain wrapper instead, because filling someone's window with escape sequences is worse than skipping the game.
+If `TERM` is unset, `dumb`, or some other terminal that cannot draw a full screen, downtime runs your command as a plain wrapper, because filling someone's window with escape sequences is worse than skipping the game.
 
-`DOWNTIME_DISABLE=1` forces that same transparent behavior anywhere, for one run or exported for a session. Useful in scripts, CI, and any terminal that misbehaves.
+`DOWNTIME_DISABLE=1` forces that same transparent behavior anywhere, for one run or exported for a session, which is useful in scripts, CI and any terminal that misbehaves.
 
-Windows is untested. Nothing in the design rules it out, the process-group handling already branches on platform, and the alternate screen buffer works in Windows Terminal. It has only been run on macOS and Linux.
+Windows is untested; it has only been run on macOS and Linux. Nothing in the design rules it out, though: the process-group handling already branches on platform, and the alternate screen buffer works in Windows Terminal.
 
 ## Long or noisy commands
 
-Output produced while the screen is occupied is held in memory. If a command produces more than 32 MB while you are playing, downtime stops holding it, hands back everything captured so far, and lets the rest stream normally. You lose the game, not a single line of output. Verified with a 40,000-line firehose: every line arrives, in order, with no gaps.
+Output produced while the screen is occupied is held in memory. If a command produces more than 32 MB while you are playing, downtime stops holding it, hands back everything captured so far, and lets the rest stream normally. The game ends early and every line of output survives; in a test with a 40,000-line firehose, every line arrived in order with no gaps.
 
 ## Adding questions
 
-The question bank is a single JSON file at `src/content/trivia/questions.json`, and adding to it is the easiest way to contribute. One object per question, no code involved:
+The question bank is a single JSON file at `src/content/trivia/questions.json`, and adding to it is the easiest way to contribute. Each question is one object, with no code involved:
 
 ```json
 {
@@ -244,26 +242,26 @@ The question bank is a single JSON file at `src/content/trivia/questions.json`, 
 }
 ```
 
-`funFact` is shown when the player gets it right and `explanation` when they get it wrong, so both should teach something rather than just confirming the answer. Keep questions easy to moderate. The point is a mental break, not a challenge.
+`funFact` is shown when the player gets it right and `explanation` when they get it wrong, so both should teach something beyond the answer itself. Keep questions easy to moderate; the point is a mental break.
 
-`npm test` checks the whole bank for shape, duplicate ids, thin or missing reward text, questions that accidentally contain their own answer, and whether the correct answer is spread evenly across the four positions. At present the split is 138, 138, 138 and 136 across a, b, c and d, so always guessing the same letter gets you nowhere.
+`npm test` checks the whole bank for shape, duplicate ids, thin or missing reward text, questions that accidentally contain their own answer, and whether the correct answer is spread evenly across the four positions. The split is currently 138, 138, 138 and 136 across a, b, c and d, so always guessing the same letter gets you nowhere.
 
 ## Architecture
 
-Three layers, deliberately separate, so new content and new triggers can be added without touching each other:
+Three layers are kept apart, plus one file that joins them, so new content and new triggers can be added independently:
 
 - `src/runner.js` watches the child process and emits `taskStarted`, `thresholdCrossed`, `output`, `taskFinished`. It knows nothing about trivia or terminals.
-- `src/content/` holds content modules behind a small interface (`start`, `onKey`, `render`, `stop`, plus optional `summary` and `canExit`). Trivia is just the first one.
+- `src/content/` holds content modules behind a small interface (`start`, `onKey`, `render`, `stop`, plus optional `summary` and `canExit`). Trivia is the first one.
 - `src/tui/` owns the alternate screen buffer, raw-mode input, and terminal restoration on every exit path.
 - `src/session.js` wires them together and is the only file that knows all three exist.
 
 ## Roadmap
 
-Tier 1, which is what this is, handles one command in one terminal. The rest is not built:
+This is tier 1, which handles one command in one terminal. The later tiers are unbuilt:
 
 - Tier 2: several wrapped commands at once, in one dashboard.
 - Tier 3: multiple windows and IDE terminals, so VS Code panes and tmux splits are covered.
-- Tier 4: a watcher on the laptop relaying start and stop signals to a companion app on a phone or tablet, where the content actually lives.
+- Tier 4: a watcher on the laptop relaying start and stop signals to a companion app on a phone or tablet, where the content would live.
 
 Also planned: more content types (word games, vocabulary, stretch prompts), estimating how long a command will take from how long it took last time and sizing the content to fit, and a Claude Code plugin that triggers downtime mode from hooks so the wrapper is not needed.
 
